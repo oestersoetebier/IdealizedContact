@@ -24,18 +24,21 @@ This Modelica package is free software and the use is completely at your own ris
 
 The library was developed by:
 
-Heinz Nixdorf Institute
-
-Control Engineering and Mechatronics 
-University of Paderborn 
-Fürstenallee 11, 
-33102 Paderborn 
-Germany
+Heinz Nixdorf Institute  
+Control Engineering and Mechatronics  
+University of Paderborn  
+Fürstenallee 11  
+33102 Paderborn  
+Germany  
 web: https://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/
 
 Contributers:
 * Peng Wang
 * Felix Oestersötebier
+
+You may report any issues with using the [Issues](../../issues) button.
+
+Contributions in shape of [Pull Requests](../../pulls) are welcome.
 
 ## Acknowledgements: 
 This work was developed in the project [ENTIME](http://entime.upb.de/): Entwurfstechnik Intelligente Mechatronik (Design Methods for Intelligent Mechatronic Systems). The project ENTIME is funded by the state of North Rhine-Westphalia (NRW), Germany and the EUROPEAN UNION, European Regional Development Fund, Investing in your future. 
