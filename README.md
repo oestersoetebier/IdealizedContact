@@ -6,14 +6,14 @@ Modeling of multibody mechanics plays a central role in the design of mechatroni
 The aim is to bring the designer in the position to perform simulations of industrial applications including contacts. Thereby, the analysis of the principle functional capability of the system in the course of the conceptual design is focused. This entails specialized modeling principles concerning the usability and the interpretation of the simulation results, which both should be relatively easy. In addition, it should be possible to define each component separately in order to be able to reuse and combine approved patterns in new applications.
 
 The library was presented at the 10th International Modelica Conference (https://modelica.org/events/modelica2014/proceedings/html/sessions/session_libraries.html). 
-Detailed explenations of the concept can be found in the paper. Exemplarily the results of chosen experiments are shown therein. They are compared with benchmark simulations in RecurDyn. 
+Detailed explenations of the concept can be found in the [paper](https://modelica.org/events/modelica2014/proceedings/html/submissions/ECP14096929_OestersotebierWangTrachtler.pdf). Exemplarily the results of chosen experiments are shown therein. They are compared with benchmark simulations in RecurDyn. 
 
 ## Current release
 
-Download [Latest development version](../../archive/master.zip)
+Download [latest development version](../../archive/master.zip)
 
 #### Release notes
-* [Version v0.1.0 (2014-05-07)] initial version
+* [Version v0.1.0 (2014-05-07)] initial version based on the one presented at Modelica 2014
   
 
 ## License
@@ -24,19 +24,22 @@ This Modelica package is free software and the use is completely at your own ris
 
 The library was developed by:
 
-Heinz Nixdorf Institute
-
-Control Engineering and Mechatronics 
-University of Paderborn 
-Fürstenallee 11, 
-33102 Paderborn 
-Germany
+Heinz Nixdorf Institute  
+Control Engineering and Mechatronics  
+University of Paderborn  
+Fürstenallee 11  
+33102 Paderborn  
+Germany  
 web: https://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/
 
 Contributers:
 * Peng Wang
 * Felix Oestersötebier
 
+You may report any issues with using the [Issues](../../issues) button.
+
+Contributions in shape of [Pull Requests](../../pulls) are welcome.
+
 ## Acknowledgements: 
-This work was developed in the project [ENTIME](http://entime.upb.de/): Entwurfstechnik Intelligente Mechatronik (Design Methods for Intelligent Mechatronic Systems). The project ENTIME is funded by the state of North Rhine-Westphalia (NRW), Germany and the EUROPEAN UNION, European Regional Development Fund, Investing in your future. 
+This work was partly developed in the project [ENTIME](http://entime.upb.de/): Entwurfstechnik Intelligente Mechatronik (Design Methods for Intelligent Mechatronic Systems). The project ENTIME is funded by the state of North Rhine-Westphalia (NRW), Germany and the EUROPEAN UNION, European Regional Development Fund, Investing in your future. 
 
