@@ -6,7 +6,7 @@ Modeling of multibody mechanics plays a central role in the design of mechatroni
 The aim is to bring the designer in the position to perform simulations of industrial applications including contacts. Thereby, the analysis of the principle functional capability of the system in the course of the conceptual design is focused. This entails specialized modeling principles concerning the usability and the interpretation of the simulation results, which both should be relatively easy. In addition, it should be possible to define each component separately in order to be able to reuse and combine approved patterns in new applications.
 
 The library was presented at the 10th International Modelica Conference (https://modelica.org/events/modelica2014/proceedings/html/sessions/session_libraries.html). 
-Detailed explenations of the concept can be found in the [paper](https://modelica.org/events/modelica2014/proceedings/html/submissions/ECP14096929_OestersotebierWangTrachtler.pdf). Exemplarily the results of chosen experiments are shown therein. They are compared with benchmark simulations in RecurDyn. 
+Detailed explanations of the concept can be found in the [paper](http://dx.doi.org/10.3384/ecp14096929). Exemplarily the results of chosen experiments are shown therein. They are compared with benchmark simulations in RecurDyn. 
 
 ## Current release
 
@@ -27,14 +27,14 @@ The library was developed by:
 Heinz Nixdorf Institute  
 Control Engineering and Mechatronics  
 University of Paderborn  
-Fürstenallee 11  
+Fï¿½rstenallee 11  
 33102 Paderborn  
 Germany  
 web: https://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/
 
 Contributers:
 * Peng Wang
-* Felix Oestersötebier
+* Felix Oestersï¿½tebier
 
 You may report any issues with using the [Issues](../../issues) button.
 
