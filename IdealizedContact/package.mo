@@ -821,7 +821,7 @@ printing and shipping costs may be recovered.</p>
           thickness=0.5,
           smooth=Smooth.None));
       connect(cylinder.contact_lateral,contact. Port2) annotation (Line(
-          points={{37.68,6.26},{37.68,11.36},{38,11.36},{38,16.9}},
+          points={{39,6.26},{39,11.36},{38,11.36},{38,16.9}},
           color={255,128,0},
           thickness=1,
           smooth=Smooth.None));
@@ -1148,7 +1148,7 @@ printing and shipping costs may be recovered.</p>
           thickness=0.5,
           smooth=Smooth.None));
       connect(cylinder.contact_lateral,contact. Port1) annotation (Line(
-          points={{6.8,46.6},{6.8,64},{34,64},{34,30.9}},
+          points={{8,46.6},{8,64},{34,64},{34,30.9}},
           color={255,128,0},
           thickness=1,
           smooth=Smooth.None));
@@ -3234,7 +3234,7 @@ Integration of the two blocks is in progress.")}));
         outer parameter SI.TranslationalDampingConstant dampingCoefficient;
         outer parameter Real n1;
         outer parameter Real n2;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
+        outer parameter SI.CoefficientOfFriction mue_r;
         outer parameter Real gamma1;
         outer parameter Real gamma2;
         outer parameter Real gamma3;
@@ -5752,7 +5752,7 @@ Integration of the two blocks is in progress.")}));
         outer parameter SI.TranslationalDampingConstant dampingCoefficient;
         outer parameter Real n1;
         outer parameter Real n2;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
+        outer parameter SI.CoefficientOfFriction mue_r;
         outer parameter Real gamma1;
         outer parameter Real gamma2;
         outer parameter Real gamma3;
