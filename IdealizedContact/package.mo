@@ -902,7 +902,7 @@ printing and shipping costs may be recovered.</p>
           points={{25.34,55.22},{25.34,55.975},{48,55.975},{48,23.26}},
           color={255,128,0},
           smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),graphics));
+      
     end Example3;
 
     model Example4 "Sphere to circle"
@@ -2433,8 +2433,7 @@ Integration of the two blocks is in progress.")}));
           thickness=0.5,
           smooth=Smooth.None));
       annotation (Diagram(coordinateSystem(extent={{-100,-100},{100,100}},
-              preserveAspectRatio=false),
-                          graphics),
+              preserveAspectRatio=false)),
         Icon(coordinateSystem(extent={{-100,-100},{100,100}},    preserveAspectRatio=false),
              graphics={
             Text(
@@ -2619,8 +2618,7 @@ Integration of the two blocks is in progress.")}));
           color={255,128,0},
           smooth=Smooth.None));
       annotation (Diagram(coordinateSystem(extent={{-100,-100},{100,100}},
-              preserveAspectRatio=false),
-                          graphics), Icon(coordinateSystem(extent={{-100,-100},
+              preserveAspectRatio=false)), Icon(coordinateSystem(extent={{-100,-100},
               {100,100}},  preserveAspectRatio=false),
                                           graphics={
             Ellipse(
@@ -8458,8 +8456,7 @@ Integration of the two blocks is in progress.")}));
               pattern=LinePattern.None,
               smooth=Smooth.None));
           annotation (Diagram(coordinateSystem(extent={{-100,-120},{100,140}},
-                  preserveAspectRatio=true),
-                              graphics), Icon(coordinateSystem(extent={{-100,
+                  preserveAspectRatio=true)), Icon(coordinateSystem(extent={{-100,
                     -120},{100,140}})));
         end MovePointCylinderToCylinderLine;
 
@@ -9341,8 +9338,7 @@ Integration of the two blocks is in progress.")}));
               thickness=0.5,
               smooth=Smooth.None));
           annotation (Diagram(coordinateSystem(extent={{-360,-180},{200,180}},
-                  preserveAspectRatio=false),
-                              graphics), Icon(coordinateSystem(extent={{-360,
+                  preserveAspectRatio=false)), Icon(coordinateSystem(extent={{-360,
                     -180},{200,180}}, preserveAspectRatio=false), graphics));
         end MovePointCylinderToCylinderPoint;
 
