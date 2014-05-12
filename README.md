@@ -27,14 +27,14 @@ The library was developed by:
 Heinz Nixdorf Institute  
 Control Engineering and Mechatronics  
 University of Paderborn  
-F�rstenallee 11  
+F&uuml;rstenallee 11  
 33102 Paderborn  
 Germany  
 web: https://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/
 
 Contributers:
 * Peng Wang
-* Felix Oesters�tebier
+* Felix Oesters&ouml;tebier
 
 You may report any issues with using the [Issues](../../issues) button.
 
