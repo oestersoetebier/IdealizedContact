@@ -13,7 +13,7 @@ Detailed explanations of the concept can be found in the [paper](http://dx.doi.o
 Download [latest development version](../../archive/master.zip)
 
 #### Release notes
-* [Version v0.1.0 (2014-05-07)] initial version based on the one presented at Modelica 2014
+* [Version v0.1.0 (2014-05-07)](https://github.com/oestersoetebier/IdealizedContact/archive/v0.1.0.zip): initial version based on the one presented at Modelica 2014
   
 
 ## License
