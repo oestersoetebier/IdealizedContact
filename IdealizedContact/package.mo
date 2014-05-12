@@ -48,7 +48,7 @@ extends Modelica.Icons.Package;
 
     class Literature "Literature"
     extends Modelica.Icons.References;
-      annotation (preferredView="info", Documentation(info="<!DOCTYPE html> <html>
+      annotation (preferredView="info", Documentation(info="<!DOCTYPE html><html>
 <p>The library is described in:</p>
 <p>Felix Oesters&ouml;tebier, Peng Wang and Ansgar Tr&auml;chtler: <b><a href=\"modelica://IdealizedContact/Ressources/Documentation/Idealized Modelica Contact Library_Final_Paper.pdf\"> A Modelica Contact Library for Idealized Simulation of Independently Defined Contact Surfaces </a> </b>submitted to the <b>10th International Modelica Conference 2014</b> in Lund/Sweden.</p>
 <p><br/>It is furthermore based on the following theses: </p>
@@ -752,9 +752,6 @@ printing and shipping costs may be recovered.</p>
           color={255,128,0},
           smooth=Smooth.None));
 
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics));
     end Example1;
 
     model Example2 "Sphere to cylinder"
@@ -829,9 +826,6 @@ printing and shipping costs may be recovered.</p>
           points={{17.34,49.22},{37.2889,49.22},{37.2889,38.9},{38,38.9}},
           color={255,128,0},
           smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics));
     end Example2;
 
     model Example3 "Sphere to rectangle"
@@ -908,9 +902,7 @@ printing and shipping costs may be recovered.</p>
           points={{25.34,55.22},{25.34,55.975},{48,55.975},{48,23.26}},
           color={255,128,0},
           smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                          graphics));
+      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),graphics));
     end Example3;
 
     model Example4 "Sphere to circle"
@@ -982,9 +974,6 @@ printing and shipping costs may be recovered.</p>
           points={{15.4,50.2},{30.4667,50.2},{30.4667,40.9},{30,40.9}},
           color={255,128,0},
           smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics));
     end Example4;
 
     model Example5 "Cylinder to rectangle"
@@ -1076,9 +1065,6 @@ printing and shipping costs may be recovered.</p>
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics));
     end Example5;
 
     model Example6 "Cylinder to circle"
@@ -1172,7 +1158,6 @@ printing and shipping costs may be recovered.</p>
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
-      annotation (Diagram(graphics));
     end Example6;
 
     model Example7 "Rectangle to rectangle"
@@ -1300,9 +1285,6 @@ printing and shipping costs may be recovered.</p>
           points={{31.1,40.1},{31.1,40.05},{39,40.05},{39,28.81}},
           color={255,128,0},
           smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                          graphics));
     end Example7;
 
     model Example8 "Circle to rectangle"
@@ -1401,7 +1383,6 @@ printing and shipping costs may be recovered.</p>
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
-      annotation (Diagram(graphics));
     end Example8;
 
     model Example9 "Sphere to two rectangular surfaces"
@@ -1511,9 +1492,6 @@ printing and shipping costs may be recovered.</p>
           points={{17.28,62.24},{17.28,62.825},{84,62.825},{84,-12.92}},
           color={255,128,0},
           smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics));
     end Example9;
 
     model Example10 "Cylinder to Cylinder Point"
@@ -1599,8 +1577,8 @@ printing and shipping costs may be recovered.</p>
               extent={{-36,94},{40,52}},
               lineColor={255,0,0},
               textStyle={TextStyle.Bold},
-              textString="The collision of two cylinders can lead to linear or punctiform contact regions. 
-The calculation for these two cases is currently seperated in two blocks. 
+              textString="The collision of two cylinders can lead to linear or punctiform contact regions.
+The calculation for these two cases is currently seperated in two blocks.
 Integration of the two blocks is in progress.")}));
     end Example10;
 
@@ -1693,8 +1671,8 @@ Integration of the two blocks is in progress.")}));
               extent={{-44,84},{32,42}},
               lineColor={255,0,0},
               textStyle={TextStyle.Bold},
-              textString="The collision of two cylinders can lead to linear or punctiform contact regions. 
-The calculation for these two cases is currently seperated in two blocks. 
+              textString="The collision of two cylinders can lead to linear or punctiform contact regions.
+The calculation for these two cases is currently seperated in two blocks.
 Integration of the two blocks is in progress.")}));
     end Example11;
 
@@ -1782,8 +1760,8 @@ Integration of the two blocks is in progress.")}));
               extent={{-36,94},{40,52}},
               lineColor={255,0,0},
               textStyle={TextStyle.Bold},
-              textString="The collision of two cylinders can lead to linear or punctiform contact regions. 
-The calculation for these two cases is currently seperated in two blocks. 
+              textString="The collision of two cylinders can lead to linear or punctiform contact regions.
+The calculation for these two cases is currently seperated in two blocks.
 Integration of the two blocks is in progress.")}));
     end Example12;
    annotation(preferredView="info", Documentation(info="<!DOCTYPE html><html>
@@ -1890,9 +1868,7 @@ Integration of the two blocks is in progress.")}));
           smooth=Smooth.None));
       annotation (Documentation(info="<!DOCTYPE html><html>
 <p>The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions can be parameterized. In order to be able to use them in the contact block we introduce a new interface to connect the surface definition with the contact block of this library. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library. It comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system of the contact surface. This model defines a spherical contact surface.</p>
-</html>"),     Diagram(graphics),
-                  Diagram(graphics),
-        Icon(graphics={
+</html>"),        Icon(graphics={
             Text(
               extent={{-100,-74},{106,-96}},
               lineColor={255,128,0},
@@ -2017,7 +1993,7 @@ Integration of the two blocks is in progress.")}));
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
-      annotation (Diagram(graphics), Icon(graphics={
+      annotation ( Icon(graphics={
             Ellipse(
               extent={{-86,60},{-42,-60}},
               lineColor={0,0,0},
@@ -2184,7 +2160,7 @@ Integration of the two blocks is in progress.")}));
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
-      annotation (Diagram(graphics), Icon(graphics={
+      annotation ( Icon(graphics={
             Text(
               extent={{-100,-80},{102,-100}},
               lineColor={255,128,0},
@@ -2377,7 +2353,6 @@ Integration of the two blocks is in progress.")}));
               fillColor={255,255,255},
               fillPattern=FillPattern.Solid,
               textString="%name")}),
-          Diagram(graphics),
         Documentation(info="<!DOCTYPE html><html>
 <p>The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions can be parameterized. In order to be able to use them in the contact block we introduce a new interface to connect the surface definition with the contact block of this library. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library. It comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system of the contact surface. This model defines a circular, plane contact surface.</p>
 </html>"));
@@ -2460,7 +2435,6 @@ Integration of the two blocks is in progress.")}));
       annotation (Diagram(coordinateSystem(extent={{-100,-100},{100,100}},
               preserveAspectRatio=false),
                           graphics),
-                  Diagram(graphics),
         Icon(coordinateSystem(extent={{-100,-100},{100,100}},    preserveAspectRatio=false),
              graphics={
             Text(
@@ -2791,12 +2765,10 @@ Integration of the two blocks is in progress.")}));
         width=width,
         widthDirection=widthDirection) if enableSurface3
         annotation (Placement(transformation(extent={{-10,-10},{10,10}},
-            rotation=0,
             origin={58,0})));
       Modelica.Mechanics.MultiBody.Parts.FixedTranslation fixedTranslation2(r=(length)
             /2*lengthDirection)              annotation (Placement(transformation(
             extent={{-10,-10},{10,10}},
-            rotation=0,
             origin={24,0})));
       Interfaces.Contact_a contact_a3 if enableSurface3 annotation (Placement(transformation(extent={{72,-10},
                 {92,10}}),       iconTransformation(extent={{72,-10},{92,10}})));
@@ -2834,7 +2806,6 @@ Integration of the two blocks is in progress.")}));
       Modelica.Mechanics.MultiBody.Parts.FixedTranslation fixedTranslation5(r=(width)
             /2*widthDirection)               annotation (Placement(transformation(
             extent={{-10,-10},{10,10}},
-            rotation=0,
             origin={38,38})));
       Interfaces.Contact_a contact_a5 if enableSurface5 annotation (Placement(transformation(extent={{52,82},
                 {72,102}}),       iconTransformation(extent={{52,82},{72,102}})));
@@ -2968,9 +2939,7 @@ Integration of the two blocks is in progress.")}));
           points={{62,92},{62,92}},
           color={255,128,0},
           smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics), Icon(coordinateSystem(preserveAspectRatio=
+      annotation ( Icon(coordinateSystem(preserveAspectRatio=
                 false, extent={{-100,-100},{100,100}}),
                                           graphics={
             Text(
@@ -3126,7 +3095,7 @@ Integration of the two blocks is in progress.")}));
           color={255,128,0},
           smooth=Smooth.None));
         annotation (Placement(transformation(extent={{-20,0},{0,20}})),
-                  Diagram(graphics), Icon(graphics={Rectangle(
+ Icon(graphics={Rectangle(
               extent={{-100,100},{100,-100}},
               lineColor={255,128,0},
               fillColor={255,128,0},
@@ -3349,7 +3318,7 @@ Integration of the two blocks is in progress.")}));
                                  lineColor={255,128,0}), Text(
                 extent={{-82,10},{82,-10}},
                 lineColor={0,0,255},
-                textString="Ball-Ball")}),  Diagram(graphics));
+                textString="Ball-Ball")}));
       end SphereToSphere;
     extends Modelica.Icons.Package;
       model SphereToCylinder
@@ -3468,7 +3437,7 @@ Integration of the two blocks is in progress.")}));
             points={{-11.6,-26},{-56,-26},{-56,18}},
             color={0,0,127},
             smooth=Smooth.None));
-        annotation (Diagram(graphics), Icon(graphics={Rectangle(extent={{-100,100},{100,
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},{100,
                     -100}},      lineColor={255,128,0}), Text(
                 extent={{-82,10},{82,-10}},
                 lineColor={0,0,255},
@@ -3595,7 +3564,7 @@ Integration of the two blocks is in progress.")}));
             points={{-21.6,-9.2},{-21.6,-3.6},{-24,-3.6},{-24,18.4}},
             color={0,0,127},
             smooth=Smooth.None));
-        annotation (Diagram(graphics), Icon(graphics={Rectangle(extent={{-100,100},{100,
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},{100,
                     -100}},      lineColor={255,128,0}), Text(
                 extent={{-82,10},{82,-10}},
                 lineColor={0,0,255},
@@ -3721,7 +3690,7 @@ Integration of the two blocks is in progress.")}));
             points={{-1.6,-22.8},{-28,-22.8},{-28,18.4}},
             color={0,0,127},
             smooth=Smooth.None));
-        annotation (Diagram(graphics), Icon(graphics={Rectangle(extent={{-100,100},{100,
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},{100,
                     -100}},      lineColor={255,128,0}), Text(
                 extent={{-82,10},{82,-10}},
                 lineColor={0,0,255},
@@ -3758,13 +3727,11 @@ Integration of the two blocks is in progress.")}));
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,10})));
           Modelica.Blocks.Interfaces.RealInput vector_ball2[12] "radius ball"
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-30})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_ball1_ball2(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
@@ -3975,7 +3942,6 @@ Integration of the two blocks is in progress.")}));
               color={95,95,95},
               pattern=LinePattern.Dot,
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end MovePointSphereToSphere;
 
         model ForceSphereToSphere
@@ -4011,20 +3977,17 @@ Integration of the two blocks is in progress.")}));
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-40})));
           Modelica.Blocks.Interfaces.RealInput vector_ball2[12] "radius ball"
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-80})));
       public
           Modelica.Mechanics.MultiBody.Forces.Force force(resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a,
               animation=false) "Force resolved in BCS4 in contact point2"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-10,80})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a2
           "contact point2 on ball2 (BCS4 based on BCS2)"
@@ -4043,7 +4006,6 @@ Integration of the two blocks is in progress.")}));
           "relative position contact point ball1 resolved in BCS contact point ball2"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-10,60})));
           Modelica.Blocks.Interfaces.RealInput pos_rel_BCS2[3]
           "relative position center of ball1 resolved in BCS2"
@@ -4185,7 +4147,6 @@ Integration of the two blocks is in progress.")}));
               points={{-93.2,-80},{-108,-80}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end ForceSphereToSphere;
 
         model MovePointSphereToCylinder
@@ -4225,8 +4186,7 @@ Integration of the two blocks is in progress.")}));
           "relative position center of ball resolved in BCSA"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=90,
-                origin={0,0})));
+                rotation=90)));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_b frame_b1
           "contact point on cylinder surface BCS4 based on BCS2"
             annotation (Placement(transformation(extent={{86,-76},{118,-44}})));
@@ -4234,13 +4194,11 @@ Integration of the two blocks is in progress.")}));
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,20})));
           Modelica.Blocks.Interfaces.RealInput vector_cy[12]
           "length/width direction and R L"                     annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-20})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_cy_b(resolveInFrame=
                 Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
@@ -4345,7 +4303,6 @@ Integration of the two blocks is in progress.")}));
           "relative position contact point on ball surface resolved in BCS1"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-54,80})));
           Modelica.Blocks.Interfaces.RealOutput pos_ctb_BCS1[3]
           "relative position contact point on ball surface resolved in BCS1"
@@ -4508,7 +4465,6 @@ Integration of the two blocks is in progress.")}));
               color={95,95,95},
               pattern=LinePattern.Dot,
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end MovePointSphereToCylinder;
 
         model ForceSphereToCylinder
@@ -4547,40 +4503,34 @@ Integration of the two blocks is in progress.")}));
               animation=false) "Force resolved in BCS4 based on BCS2"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={0,80})));
           Modelica.Blocks.Interfaces.RealInput pos_ctb_BCS4[3]
           "relative position contact point ball resolved in BCS4 contact point on cylinder Surface"
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,70})));
           Modelica.Blocks.Interfaces.RealInput pos_b_BCSA[3]
           "relative position center of ball mass resolved in BCSA"
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,36})));
           Modelica.Blocks.Interfaces.RealInput Vector_ball[12] "radius ball"
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-60})));
           Modelica.Blocks.Interfaces.RealInput vector_cy[12]
           "length/width direction and R L"                     annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-100})));
           Modelica.Blocks.Interfaces.RealInput w_mov1[3]
           "absolut anglular velocity contact point ball resolved in BCS1"
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,0})));
           Real R "radius ball";
 
@@ -4643,14 +4593,12 @@ Integration of the two blocks is in progress.")}));
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-30})));
           Modelica.Blocks.Interfaces.RealInput pos_ctb_BCS1[3]
           "relative position contact point on ball surface resolved in BCS1"
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,100})));
         equation
            R=deMultiplex1.y4[1];
@@ -4736,7 +4684,6 @@ Integration of the two blocks is in progress.")}));
               points={{-108,-100},{-93.2,-100}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end ForceSphereToCylinder;
 
         model MovePointSphereToRectangle
@@ -4784,7 +4731,6 @@ Integration of the two blocks is in progress.")}));
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,10})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_ball_rectangle(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
@@ -4815,7 +4761,6 @@ Integration of the two blocks is in progress.")}));
           "length/width direction and L_W_H"                   annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-30})));
 
           Modelica.Mechanics.MultiBody.Parts.PointMass move_point_rectangle(
@@ -5028,7 +4973,6 @@ Integration of the two blocks is in progress.")}));
               color={95,95,95},
               pattern=LinePattern.Dot,
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end MovePointSphereToRectangle;
 
         model ForceSphereToRectangle
@@ -5122,7 +5066,6 @@ Integration of the two blocks is in progress.")}));
               animation=false) "Force resolved in BCS4 based on BCS2"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-30,70})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a1
           "contact point rectangle BCS4 based on BCS2"
@@ -5255,7 +5198,6 @@ Integration of the two blocks is in progress.")}));
               points={{-95.2,-94},{-108,-94}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(graphics), Icon(graphics));
         end ForceSphereToRectangle;
 
         model MovePointSphereToCircle
@@ -5347,7 +5289,6 @@ Integration of the two blocks is in progress.")}));
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,10})));
           Modelica.Blocks.Interfaces.RealOutput pos_rel[3]
           "relative position contact point ball resolved in BCS2"
@@ -5365,7 +5306,6 @@ Integration of the two blocks is in progress.")}));
           "V-Dl-Dw direction and Radius"                       annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-30})));
           IdealizedContact.Components.Utilities.variablePrism1 variablePrism_ball
             annotation (Placement(transformation(extent={{46,50},{66,70}})));
@@ -5532,7 +5472,6 @@ Integration of the two blocks is in progress.")}));
               points={{40,77.4},{40,-108}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end MovePointSphereToCircle;
 
         model ForceSphereToCircle
@@ -5574,7 +5513,6 @@ Integration of the two blocks is in progress.")}));
               animation=false) "Force resolved in BCS4"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-30,80})));
           Modelica.Blocks.Interfaces.BooleanOutput contact annotation (Placement(
                 transformation(
@@ -5735,7 +5673,6 @@ Integration of the two blocks is in progress.")}));
               points={{-108,-94},{-93.2,-94}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end ForceSphereToCircle;
        annotation(preferredView="info");
       end Components;
@@ -5929,7 +5866,7 @@ Integration of the two blocks is in progress.")}));
             points={{0.44,-2.16},{-12.78,-2.16},{-12.78,9.6},{-13.8,9.6}},
             color={0,0,127},
             smooth=Smooth.None));
-        annotation (Diagram(graphics), Icon(graphics={Rectangle(extent={{-100,100},
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-82,8},{82,-12}},
                 lineColor={0,0,255},
@@ -6093,8 +6030,7 @@ Integration of the two blocks is in progress.")}));
                     -100}},      lineColor={255,128,0}), Text(
                 extent={{-84,10},{80,-10}},
                 lineColor={0,0,255},
-                textString="Cylinder-Circle")}),
-                                         Diagram(graphics));
+                textString="Cylinder-Circle")}));
       end CylinderToCircle;
 
       model CylinderToCylinderPoint
@@ -6219,9 +6155,7 @@ Integration of the two blocks is in progress.")}));
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
-                textString="Cylinder-Cylinder")}),         Diagram(
-              coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                  100,100}}),                                      graphics));
+                textString="Cylinder-Cylinder")}));
       end CylinderToCylinderPoint;
 
       model CylinderToCylinderLine
@@ -6396,9 +6330,7 @@ Integration of the two blocks is in progress.")}));
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
-                textString="Cylinder-Cylinder")}),         Diagram(
-              coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                                                                   graphics));
+                textString="Cylinder-Cylinder")}));
       end CylinderToCylinderLine;
 
       model CylinderToCylinderCombined
@@ -6674,8 +6606,8 @@ Integration of the two blocks is in progress.")}));
                 extent={{-30,106},{46,64}},
                 lineColor={255,0,0},
                 textStyle={TextStyle.Bold},
-                textString="The collision of two cylinders can lead to linear or punctiform contact regions. 
-The calculation for these two cases is currently seperated in two blocks. 
+                textString="The collision of two cylinders can lead to linear or punctiform contact regions.
+The calculation for these two cases is currently seperated in two blocks.
 Integration of the two blocks is in progress.")}));
       end CylinderToCylinderCombined;
 
@@ -6713,7 +6645,6 @@ Integration of the two blocks is in progress.")}));
           "center of rectangle BCS2"
                                   annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
-                rotation=0,
                 origin={-102,-60})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_p_lc(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
@@ -6743,7 +6674,6 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,20}), iconTransformation(extent={{-116,12},{-100,28}})));
 
           Modelica.Mechanics.MultiBody.Sensors.TansformRelativeVector
@@ -6761,7 +6691,6 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_rectangle[12]
           "length/width-direction and L_W_H"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-20})));
       protected
           Real Length_Direction_c[3] "length direction cylinder";
@@ -6843,7 +6772,6 @@ Integration of the two blocks is in progress.")}));
           "position contact point cylinder resolved in BCS2"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={70,-36})));
           Modelica.Mechanics.MultiBody.Parts.PointMass contact_point_rectangle(
             m=0,
@@ -6861,7 +6789,6 @@ Integration of the two blocks is in progress.")}));
           "relativ position cylinder contact point resolved in BCS1a"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-8,34})));
           Modelica.Blocks.Interfaces.RealOutput pos_ctc_BCS1a[3]
           "relativ position cylinder contact point resolved in BCS1a (from rP_p_lc)"
@@ -6873,7 +6800,6 @@ Integration of the two blocks is in progress.")}));
           "relative angular velocity contact point cylinder resolved in BCS1a"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={88,20})));
         equation
           R_l=deMultiplex2.y4;
@@ -7087,7 +7013,6 @@ Integration of the two blocks is in progress.")}));
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
-          annotation (Diagram(graphics), Icon(graphics));
         end MovePointCylinderToRectangle;
 
         model ForceCylinderToRectangle
@@ -7151,7 +7076,6 @@ Integration of the two blocks is in progress.")}));
              resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
           "relative position offset contact point cylinder resolved in BCS2"
            annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={-54,-46})));
          Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngles aA(sequence={1,2,3})
           "absolut rotation angles between BCS2 and ICS via 'sequence'"
@@ -7162,21 +7086,18 @@ Integration of the two blocks is in progress.")}));
          Modelica.Blocks.Interfaces.RealInput pos_rel_c_L[3]
           "relativ position center of cylinder top/bottom surface resolved in BCS2"
            annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={-106,60})));
 
       public
          Modelica.Blocks.Interfaces.BooleanOutput contact annotation (Placement(
                transformation(
                extent={{-7,-7},{7,7}},
-               rotation=0,
                origin={107,61})));
          Modelica.Mechanics.MultiBody.Forces.Force f_l(resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a,
              animation=false)
           "force resolved in contact point on rectangle surface BCS4"
            annotation (Placement(transformation(
                extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={-54,-20})));
          Modelica.Blocks.Interfaces.RealInput angles[3]
           "angle_LotL & angle_LotW &angle_LH"
@@ -7184,12 +7105,10 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_rectangle[12]
           "length/width-direction and L_W_H"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-94})));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-54})));
           Modelica.Mechanics.MultiBody.Parts.PointMass contact_point_cylinder(
             m=0,
@@ -7293,7 +7212,6 @@ Integration of the two blocks is in progress.")}));
          Modelica.Blocks.Interfaces.RealInput pos_ctc_BCS1a[3]
           "relativ position cylinder contact point resolved in BCS1a (from rP_p_lc)"
            annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={-106,92})));
         equation
 
@@ -7450,7 +7368,6 @@ Integration of the two blocks is in progress.")}));
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
-         annotation (Diagram(graphics));
         end ForceCylinderToRectangle;
 
         model MovePointCylinderToCircle
@@ -7499,7 +7416,6 @@ Integration of the two blocks is in progress.")}));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a1
           "center of circle BCS2" annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
-                rotation=0,
                 origin={-102,-60})));
           Modelica.Blocks.Interfaces.RealOutput w_rel[3]
           "relative angular velocity contact point cylinder resolved in BCS1a (from aAV)"
@@ -7515,11 +7431,9 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,20})));
           Modelica.Blocks.Interfaces.RealInput vector_circle[12]
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-20})));
           Modelica.Blocks.Interfaces.RealOutput angles[3] "angle_LL angle_LW"
                                                               annotation (Placement(
@@ -7533,7 +7447,6 @@ Integration of the two blocks is in progress.")}));
           "relativ position center of cylinder top/bottom surface resolved in center of rectangle surface"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={2,-82})));
       protected
           Real Length_Direction_cy[3] "length direction cylinder";
@@ -7619,7 +7532,6 @@ Integration of the two blocks is in progress.")}));
           "relative angular velocity contact point cylinder resolved in BCS1a"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={86,16})));
           Modelica.Blocks.Interfaces.RealOutput pos_ctc_BCS1a[3]
           "relativ position cylinder contact point resolved in BCS1a (from rP_p_lc)"
@@ -7631,7 +7543,6 @@ Integration of the two blocks is in progress.")}));
           "relativ position cylinder contact point resolved in BCS1a"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={4,24})));
         equation
 
@@ -7841,7 +7752,6 @@ Integration of the two blocks is in progress.")}));
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end MovePointCylinderToCircle;
 
         model ForceCylinderToCircle
@@ -7919,25 +7829,21 @@ Integration of the two blocks is in progress.")}));
          Modelica.Blocks.Interfaces.RealInput pos_rel_c_L[3]
           "Relative position center of cylinder left side resolved BCS circle yd"
            annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={-106,58})));
       public
          Modelica.Blocks.Interfaces.BooleanOutput contact annotation (Placement(
                transformation(
                extent={{-7,-7},{7,7}},
-               rotation=0,
                origin={107,61})));
          Modelica.Blocks.Interfaces.RealInput angles[3]
           "angle_cyL_mp(angles between cylinder length direction and relative position cylinder movepoint resolved in BCS circle) & angle_LotDW & angle_LH"
            annotation (Placement(transformation(extent={{-112,-28},{-100,-16}})));
           Modelica.Blocks.Interfaces.RealInput vector_circle[12]
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-94})));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-54})));
           Modelica.Mechanics.MultiBody.Parts.PointMass contact_point_cylinder(
             m=0,
@@ -8017,7 +7923,6 @@ Integration of the two blocks is in progress.")}));
             exact=exact)
                         annotation (Placement(transformation(
                 extent={{-7,-7},{7,7}},
-                rotation=0,
                 origin={27,-1})));
           Modelica.Blocks.Routing.DeMultiplex4 deMultiplex2(
             n1=3,
@@ -8032,7 +7937,6 @@ Integration of the two blocks is in progress.")}));
          Modelica.Blocks.Interfaces.RealInput pos_ctc_BCS1a[3]
           "relativ position cylinder contact point resolved in BCS1a (from rP_p_lc)"
            annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={-106,88})));
         equation
           V_Direction_c=deMultiplex3.y1;
@@ -8181,9 +8085,6 @@ Integration of the two blocks is in progress.")}));
               points={{-95.2,-94},{-108,-94}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,
-                    -100},{100,100}}),
-                              graphics));
         end ForceCylinderToCircle;
 
         model MovePointCylinderToCylinderLine
@@ -8212,13 +8113,11 @@ Integration of the two blocks is in progress.")}));
           "center of mass cylinder1 BCS1"
                                   annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
-                rotation=0,
                 origin={-102,60})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a2
           "center of mass cylinder2 BCS2"
                                   annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
-                rotation=0,
                 origin={-102,-60})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_b frame_b2
           "contact point cylinder2 BCS4 based on BCS2"
@@ -8229,12 +8128,10 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder2[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-20})));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder1[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,20})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_c2_c1(resolveInFrame=
                Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
@@ -8296,7 +8193,6 @@ Integration of the two blocks is in progress.")}));
                 Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-18,-20})));
           Modelica.Blocks.Routing.DeMultiplex4 deMultiplex1(
             n1=3,
@@ -8602,23 +8498,19 @@ Integration of the two blocks is in progress.")}));
           "center of mass cylinder1 in BCS3"
                                   annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
-                rotation=0,
                 origin={-102,60})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a2
           "center of mass cylinder2 in BCS3"
                                   annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
-                rotation=0,
                 origin={-102,-60})));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder2[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-20})));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder1[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,20})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a3
           "contact point cylinder2 BCS4 based on BCS2"
@@ -8637,7 +8529,6 @@ Integration of the two blocks is in progress.")}));
           "relativ position cylinder1 contact point resolved in BCS4"
            annotation (Placement(transformation(
                extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={10,70})));
 
          Real Length_Direction_cy1[3]
@@ -8719,7 +8610,6 @@ Integration of the two blocks is in progress.")}));
               animation=false) "Force resolved in BCS2"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={10,88})));
           Modelica.Blocks.Routing.DeMultiplex4 deMultiplex1(
             n1=3,
@@ -8747,14 +8637,12 @@ Integration of the two blocks is in progress.")}));
           "relativ position contact point cylinder1 resolved in BCS1"
            annotation (Placement(transformation(
                extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={54,26})));
          Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_ct2_BCS2(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
           "relativ position contact point cylinder2 resolved in BCS2"
            annotation (Placement(transformation(
                extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={-44,-36})));
         equation
            R_l_cy1=deMultiplex1.y4;
@@ -8897,7 +8785,6 @@ Integration of the two blocks is in progress.")}));
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end ForceCylinderToCylinderLine;
 
         model MovePointCylinderToCylinderPoint
@@ -8939,7 +8826,6 @@ Integration of the two blocks is in progress.")}));
           "Transformation length-direction cylinder1 from BCS1 to ICS"
             annotation (Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-80,60})));
           Modelica.Mechanics.MultiBody.Sensors.TansformAbsoluteVector tansformVectorCy2(
               frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_a,
@@ -8947,7 +8833,6 @@ Integration of the two blocks is in progress.")}));
           "Transformation length-direction cylinder2 from BCS2 to ICS"
             annotation (Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-80,-60})));
           Modelica.Mechanics.MultiBody.Sensors.AbsolutePosition absP_bt_cy1(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.world)
@@ -9079,14 +8964,12 @@ Integration of the two blocks is in progress.")}));
           "center of mass cylinder1 BCS1"
                                   annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
-                rotation=0,
                 origin={-102,60}), iconTransformation(extent={{-374,128},{-354,
                     148}})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a2
           "center of mass cylinder2 BCS2"
                                   annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
-                rotation=0,
                 origin={-102,-60}), iconTransformation(extent={{-364,-150},{
                     -344,-130}})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_b frame_b2
@@ -9100,12 +8983,10 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder2[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-368,-24})));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder1[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-368,16})));
 
          Real Length_Direction_cy1[3] "default (1,0,0) resolved in BCS1";
@@ -9501,7 +9382,6 @@ Integration of the two blocks is in progress.")}));
           "relativ position cylinder1 contact point resolved in BCS4"
            annotation (Placement(transformation(
                extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={10,58})));
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV1(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
@@ -9521,7 +9401,6 @@ Integration of the two blocks is in progress.")}));
               animation=false) "Force resolved in BCS4"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={10,80})));
           Modelica.Blocks.Routing.DeMultiplex4 deMultiplex1(
             n1=3,
@@ -9537,23 +9416,19 @@ Integration of the two blocks is in progress.")}));
           "center of mass cylinder1 in BCS1"
                                   annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
-                rotation=0,
                 origin={-102,60})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a2
           "center of mass cylinder2 in BCS2"
                                   annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
-                rotation=0,
                 origin={-102,-60})));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder2[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-20})));
           Modelica.Blocks.Interfaces.RealInput vector_cylinder1[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,20})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a3
           "contact point cylinder2 BCS4"
@@ -9645,14 +9520,12 @@ Integration of the two blocks is in progress.")}));
           "relativ position contact point cylinder2 resolved in BCS2"
            annotation (Placement(transformation(
                extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={-44,-36})));
          Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_ct1_BCS1(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
           "relativ position contact point cylinder1 resolved in BCS1"
            annotation (Placement(transformation(
                extent={{-6,-6},{6,6}},
-               rotation=0,
                origin={40,12})));
         equation
            R_l_cy1=deMultiplex1.y4;
@@ -9795,8 +9668,6 @@ Integration of the two blocks is in progress.")}));
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
-          annotation (Diagram(coordinateSystem(preserveAspectRatio=true,
-                  extent={{-100,-100},{100,100}}), graphics));
         end ForceCylinderToCylinderPoint;
          annotation(preferredView="info");
       end Components;
@@ -10031,7 +9902,7 @@ Integration of the two blocks is in progress.")}));
             points={{3,30},{14,30},{14,-29.7},{3.3,-29.7}},
             color={0,0,127},
             smooth=Smooth.None));
-        annotation (Diagram(graphics), Icon(graphics={Rectangle(extent={{-100,100},
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
@@ -10213,8 +10084,7 @@ Integration of the two blocks is in progress.")}));
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
-                textString="Circle-Rectangle")}),
-                                         Diagram(graphics));
+                textString="Circle-Rectangle")}));
       end CircleToRectangle;
 
       package Components
@@ -10242,7 +10112,6 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_b[12]
           "L/W-direction and L_W_H"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,20})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_b frame_b1
           "contact point rectangle1 BCS3"
@@ -10253,7 +10122,6 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_q[12]
           "Length/Width-direction and L_W_H"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-40})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a2
           "frame center of rectangle2 BCS2"
@@ -10395,7 +10263,6 @@ Integration of the two blocks is in progress.")}));
               points={{-108,-40},{-95.2,-40}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end MovePointRectangleToRectangle;
 
         model ForceRectangleToRectangle
@@ -10440,12 +10307,10 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_q[12]
           "Length/Width-direction and L_W_H"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,-40})));
           Modelica.Blocks.Interfaces.RealInput vector_b[12]
           "Length/Width-direction and L_W_H"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-108,40})));
 
           Real L_direction_1[3] "length direction rectangle1";
@@ -10501,7 +10366,6 @@ Integration of the two blocks is in progress.")}));
               animation=false) "supporting force resolved in frame-a"
             annotation (Placement(transformation(
                 extent={{-7,-7},{7,7}},
-                rotation=0,
                 origin={19,-1})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a1
           "contact point rectangle2 BCS4"
@@ -10520,14 +10384,12 @@ Integration of the two blocks is in progress.")}));
           "relative position offset_x move point box resolved in frame center of planar surface"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={34,-60})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_w(resolveInFrame=
                 Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
           "relative position offset_z move point box resolved in frame center of planar surface"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={74,-80})));
       public
           Modelica.Mechanics.MultiBody.Forces.Force force_r2(
@@ -10535,14 +10397,12 @@ Integration of the two blocks is in progress.")}));
               animation=false) "supporting force resolved in frame-a"
             annotation (Placement(transformation(
                 extent={{-7,-7},{7,7}},
-                rotation=0,
                 origin={-13,-21})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP(resolveInFrame=
                 Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
           "Relative position move point square box resolved in frame center of square planar (R 1-2-3-4 & L 1-2-3-4)"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-50,80})));
           Modelica.Mechanics.MultiBody.Parts.PointMass offset2_cp1(
             m=0,
@@ -10799,7 +10659,6 @@ Integration of the two blocks is in progress.")}));
               points={{-95.2,-40},{-100.6,-40},{-100.6,-40},{-108,-40}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(graphics), Icon(graphics));
         end ForceRectangleToRectangle;
 
         model MovePointCircleToRectangle
@@ -10832,12 +10691,10 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_rectangle[12]
           "L/W-direction and L_W_H"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-106,-20})));
           Modelica.Blocks.Interfaces.RealInput vector_circle[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-106,20})));
 
           IdealizedContact.ContactBlock.PlanarContact.Components.SubsystemMovePointCircleToRectangle
@@ -11048,7 +10905,6 @@ Integration of the two blocks is in progress.")}));
               points={{-106,-20},{-41.2,-20}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end MovePointCircleToRectangle;
 
         model ForceCircleToRectangle
@@ -11102,26 +10958,22 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_circle[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-106,20})));
           Modelica.Blocks.Interfaces.RealInput vector_rectangle[12]
           "L/W-direction and L_W_H"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-106,-20})));
       public
           Modelica.Mechanics.MultiBody.Forces.Force force_cr(resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a,
               animation=false) "supporting force resolved in frame-a circle"
             annotation (Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-46,60})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_cr(resolveInFrame=
                 Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
           "Relative position move point rectangle resolved in frame center of circle"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-46,80})));
 
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a2
@@ -11140,14 +10992,12 @@ Integration of the two blocks is in progress.")}));
               animation=false) "supporting force resolved in frame-a rectangle"
             annotation (Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-30,-24})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP(resolveInFrame=
                 Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
           "Relative position move point circle resolved in frame center of rectangle"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={4,-92})));
       public
           Modelica.Mechanics.MultiBody.Forces.Force force_rc2(
@@ -11155,21 +11005,18 @@ Integration of the two blocks is in progress.")}));
               animation=false) "supporting force resolved in frame-a rectangle"
             annotation (Placement(transformation(
                 extent={{-8,-8},{8,8}},
-                rotation=0,
                 origin={-32,-60})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_l(resolveInFrame=
                 Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
           "relative position offset_x move point box resolved in frame center of planar surface"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-28,6})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP_w(resolveInFrame=
                 Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
           "relative position offset_z move point box resolved in frame center of planar surface"
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-32,-80})));
           Modelica.Mechanics.MultiBody.Parts.PointMass fixpoint2(
             m=0,
@@ -11312,10 +11159,10 @@ Integration of the two blocks is in progress.")}));
            t_z=R/100;
            contact_cr = (abs(rP_cr.r_rel*V_direction_C)>=0) and abs(rP_cr.r_rel*V_direction_C)<=t_max and (sqrt((rP_cr.r_rel*Dl_direction_C)^2+(rP_cr.r_rel*Dw_direction_C)^2)<=R);
 
-           contact_bl = ((rP_l.r_rel*H_direction_R)<=0) and (rP_l.r_rel*H_direction_R)>=-t_max and (abs(rP_l.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_l.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001) 
+           contact_bl = ((rP_l.r_rel*H_direction_R)<=0) and (rP_l.r_rel*H_direction_R)>=-t_max and (abs(rP_l.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_l.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001)
     contact move point in L direction of square b based on square q";
 
-           contact_bw = ((rP_w.r_rel*H_direction_R)<=0) and (rP_w.r_rel*H_direction_R)>=-t_max and (abs(rP_w.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_w.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001) 
+           contact_bw = ((rP_w.r_rel*H_direction_R)<=0) and (rP_w.r_rel*H_direction_R)>=-t_max and (abs(rP_w.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_w.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001)
     contact move point in W direction of square b based on square q";
 
         //--------------------------------------------------------------
@@ -11507,7 +11354,6 @@ Integration of the two blocks is in progress.")}));
               points={{-93.2,-20},{-106,-20}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end ForceCircleToRectangle;
 
         model SubsystemMovePointCircleToRectangle
@@ -11541,12 +11387,10 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_circle[12]
           "length_direction and radius and half_length"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-106,-20})));
           Modelica.Blocks.Interfaces.RealInput vector_rectangle[12]
           "L/W-direction and L_W_H"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-                rotation=0,
                 origin={-106,-60})));
 
       protected
@@ -11645,7 +11489,6 @@ Integration of the two blocks is in progress.")}));
               points={{-106,-60},{-87.2,-60}},
               color={0,0,127},
               smooth=Smooth.None));
-          annotation (Diagram(graphics));
         end SubsystemMovePointCircleToRectangle;
        annotation(preferredView="info");
       end Components;
@@ -11780,7 +11623,7 @@ Integration of the two blocks is in progress.")}));
        angle=smooth(2, if norm1*norm2>0.0001 then Modelica.Math.acos((vector1*vector2)/(norm1*norm2)) else t);
         //angle=  Modelica.Math.acos((vector1*vector2));
 
-        annotation (Diagram(graphics), Documentation(info="<html>
+        annotation ( Documentation(info="<html>
 <p>Block to calculate the angle between two given vectors. The vector1 and vector2 are three-dimensional Euclidean vector and should not be zero vector.</p>
 </html>"));
       end angleBetweenTwoVectorsBlock;
@@ -11804,7 +11647,7 @@ Integration of the two blocks is in progress.")}));
           c =smooth(2, abs(a*abs(cos(beta*sign(beta-pi/2))) - 0.5*sqrt(abs((2*a*abs(cos(beta*sign(beta-pi/2))))^2 - 4*(a^2 - b^2)))));
           //c =smooth(2, abs(a*abs(cos(beta*sign(beta-pi/2))) - 0.5*sqrt(abs((2*a*abs(cos(beta*sign(beta-pi/2))))^2 - 4*(a^2 - b^2)))));
           //beta*sign(beta-pi/2) singularitätspunkt bei beta=pi/2 vermeiden
-        annotation (Diagram(graphics), Documentation(info="<!DOCTYPE html><html>
+        annotation ( Documentation(info="<!DOCTYPE html><html>
 <p>According to the cosine rules, the length <i><b>c</b> </i>of the side of a triangle is calculated. The two sides <i><b>a</b></i> and <i><b>b</b></i> and the angle beta between them are given.</p>
 </html>"));
       end cosineRulesBlock;
@@ -11828,7 +11671,7 @@ Integration of the two blocks is in progress.")}));
                   {120,30}})));
       equation
         vector_out = (vector_in*u)*u + (vector_in*v)*v;
-        annotation (Diagram(graphics), Documentation(info="<html>
+        annotation ( Documentation(info="<html>
 <p>Block to calculate the orthogonal projection of vector_in on a plane, which is defined by vector_u and vector_v. The inputs vector_u and vector_v can be perpendicular but cannot be parallel.</p>
 </html>"));
       end orthogonalProjectionBlock;
@@ -11891,7 +11734,7 @@ Integration of the two blocks is in progress.")}));
             points={{81,0},{110,0}},
             color={0,0,127},
             smooth=Smooth.None));
-        annotation (Diagram(graphics), Documentation(info="<html>
+        annotation ( Documentation(info="<html>
 <p>Block to locate the intersection points on two lines in space with limiter.</p>
 </html>"));
       end intersectionOfTwoLinesBlock;
@@ -12169,10 +12012,6 @@ Integration of the two blocks is in progress.")}));
                 extent={{17,-101},{107,-80}},
                 lineColor={0,0,0},
                 textString="s_ref")}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics),
           Documentation(info="<!DOCTYPE html><html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Prismatic joint. The axis of translation can be now be set via the input n. Furthermore, the input s_ref sets the distance between the to frames (compare to useAxisFlange option of the original block).</p>
 </html>"));
@@ -12185,12 +12024,10 @@ Integration of the two blocks is in progress.")}));
 
         Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a
         "Coordinate system fixed to the joint with one cut-force and cut-torque"
-          annotation (Placement(transformation(extent={{-116,-16},{-84,16}},
-                rotation=0)));
+          annotation (Placement(transformation(extent={{-116,-16},{-84,16}})));
         Modelica.Mechanics.MultiBody.Interfaces.Frame_b frame_b
         "Coordinate system fixed to the joint with one cut-force and cut-torque"
-          annotation (Placement(transformation(extent={{84,-16},{116,16}},
-                rotation=0)));
+          annotation (Placement(transformation(extent={{84,-16},{116,16}})));
 
     protected
         outer Modelica.Mechanics.MultiBody.World world;
@@ -12290,10 +12127,6 @@ Integration of the two blocks is in progress.")}));
                 extent={{34,-129},{91,-98}},
                 lineColor={0,0,0},
                 textString="phi")}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics),
           Documentation(info="<!DOCTYPE html><html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Revolute joint. The axis of rotation can be now be set via the input n. Furthermore, the input phi_ref sets the angle between the to frames (compare to useAxisFlange option of the original block).</p>
 </html>"));
@@ -12306,11 +12139,10 @@ Integration of the two blocks is in progress.")}));
         extends Modelica.Mechanics.MultiBody.Interfaces.PartialElementaryJoint;
         Modelica.Mechanics.Translational.Interfaces.Flange_a axis
         "1-dim. translational flange that drives the joint"
-          annotation (Placement(transformation(extent={{90,50},{70,70}}, rotation=0)));
+          annotation (Placement(transformation(extent={{90,50},{70,70}})));
         Modelica.Mechanics.Translational.Interfaces.Flange_b support
         "1-dim. translational flange of the drive drive support (assumed to be fixed in the world frame, NOT in the joint)"
-          annotation (Placement(transformation(extent={{-30,50},{-50,70}}, rotation=
-                 0)));
+          annotation (Placement(transformation(extent={{-30,50},{-50,70}})));
         constant SI.Position s_offset=0
         "Relative distance offset (distance between frame_a and frame_b = s_offset + s)"
           annotation (Evaluate=false);
@@ -12433,10 +12265,6 @@ Possible reasons:
                 fillColor={192,192,192},
                 fillPattern=FillPattern.Solid,
                 lineColor={0,0,255})}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics),
           Documentation(info="<!DOCTYPE html><html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Prismatic joint. The axis of translation can be now be set via the input n.</p>
 </html>"));
@@ -12449,21 +12277,17 @@ Possible reasons:
 
         Modelica.Mechanics.Rotational.Interfaces.Flange_a axis
         "1-dim. rotational flange that drives the joint"
-          annotation (Placement(transformation(extent={{10,90},{-10,110}}, rotation=
-                 0)));
+          annotation (Placement(transformation(extent={{10,90},{-10,110}})));
         Modelica.Mechanics.Rotational.Interfaces.Flange_b support
         "1-dim. rotational flange of the drive support (assumed to be fixed in the world frame, NOT in the joint)"
-          annotation (Placement(transformation(extent={{-70,90},{-50,110}},
-                rotation=0)));
+          annotation (Placement(transformation(extent={{-70,90},{-50,110}})));
 
         Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a
         "Coordinate system fixed to the joint with one cut-force and cut-torque"
-          annotation (Placement(transformation(extent={{-116,-16},{-84,16}},
-                rotation=0)));
+          annotation (Placement(transformation(extent={{-116,-16},{-84,16}})));
         Modelica.Mechanics.MultiBody.Interfaces.Frame_b frame_b
         "Coordinate system fixed to the joint with one cut-force and cut-torque"
-          annotation (Placement(transformation(extent={{84,-16},{116,16}},
-                rotation=0)));
+          annotation (Placement(transformation(extent={{84,-16},{116,16}})));
         constant SI.Angle phi_offset=0
         "Relative angle offset (angle = phi_offset + phi)";
 
@@ -12643,10 +12467,6 @@ Possible reasons:
                 visible=useAxisFlange,
                 points={{-70,100},{-90,80}},
                 color={0,0,0})}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics),
           Documentation(info="<!DOCTYPE html><html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Revolute joint. The axis of rotation can be now be set via the input n.</p>
 </html>"));
@@ -12725,7 +12545,7 @@ Possible reasons:
           length_=0;
         end if;
         annotation (
-          Documentation(info="<!DOCTYPE html> <HTML><p>This model is a modification of <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.FixedShape\">Modelica.Mechanics.MultiBody.Visualizers.FixedShape</a>. The animation can be disabled via the boolean input. Therefore, the dimensions of the animation are set to 0.
+          Documentation(info="<!DOCTYPE html><html><p>This model is a modification of <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.FixedShape\">Modelica.Mechanics.MultiBody.Visualizers.FixedShape</a>. The animation can be disabled via the boolean input. Therefore, the dimensions of the animation are set to 0.
 </p></HTML>"),       Icon(coordinateSystem(
               preserveAspectRatio=true,
               extent={{-100,-100},{100,100}},
@@ -12753,11 +12573,7 @@ Possible reasons:
               Text(
                 extent={{-150,100},{150,60}},
                 textString="%name",
-                lineColor={0,0,255})}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics));
+                lineColor={0,0,255})}));
       end FixedShapeVarAnimation;
 
       model PointMassVarAnimation
@@ -12767,8 +12583,7 @@ Possible reasons:
         import Modelica.Mechanics.MultiBody.Types;
         Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a
         "Coordinate system fixed at center of mass point"
-          annotation (Placement(transformation(extent={{-16,-16},{16,16}}, rotation=
-                 0)));
+          annotation (Placement(transformation(extent={{-16,-16},{16,16}})));
         parameter Boolean animation=true
         "= true, if animation shall be enabled (show sphere)";
         parameter SI.Mass m(min=0) "Mass of mass point";
@@ -12877,10 +12692,6 @@ the only case where this is done.
                 lineColor={0,0,0},
                 fillPattern=FillPattern.Sphere,
                 fillColor={0,127,255})}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics),
           Documentation(info="<!DOCTYPE html><HTML><p>This rigid body is a modification of <a href=\"modelica://Modelica.Mechanics.MultiBody.Parts.PointMass\">Modelica.Mechanics.MultiBody.Parts.PointMass</a>. The animation can be disabled via the boolean input. Therefore, the diameter of the sphere is set to 0.
 </p></HTML>"));
       end PointMassVarAnimation;
@@ -12897,15 +12708,12 @@ the only case where this is done.
                                                            annotation (
           Placement(transformation(
             extent={{-8,-8},{8,8}},
-            rotation=0,
             origin={-108,10})));
       Modelica.Blocks.Interfaces.RealInput vector_2[12] "port2_vector"
                                                            annotation (
           Placement(transformation(
             extent={{-8,-8},{8,8}},
-            rotation=0,
             origin={-108,-30})));
-      annotation (Diagram(graphics));
     end PartialContactBlock;
    annotation(preferredView="info");
   end Components;
@@ -12950,11 +12758,5 @@ the only case where this is done.
   end Interfaces;
 
 
-  annotation (Window(
-    x=0.45,
-    y=0.01,
-    width=0.44,
-    height=0.65,
-    library=1,
-    autolayout=1),version="0.1.0", uses(Modelica(version="3.2")), preferredView="info");
+  annotation (version="0.1.0", uses(Modelica(version="3.2")), preferredView="info");
 end IdealizedContact;
