@@ -10,7 +10,7 @@ extends Modelica.Icons.Package;
     extends Modelica.Icons.Information;
       annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
 <p>To describe elementary <a href=\"modelica://IdealizedContact.ContactSurfaces\">contact surfaces</a>, the library provides ready-to-use blocks. The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions of the surface can be parameterized. In order to be able to use the dimensions in the contact block we introduce a new interface to connect the surface definition with a contact block. The figure shows the resulting shape of the contact area for all possible combinations, as well as the number of contact points to describe it.</p>
-<p><br/><img src=\"modelica://IdealizedContact/Images/table_contactsurfaces.png\"/></p>
+<p><br/><img src=\"modelica://IdealizedContact/Resources/Images/table_contactsurfaces.png\"/></p>
 </html>"));
     end ContactSurfaces;
 
@@ -18,7 +18,7 @@ extends Modelica.Icons.Package;
     extends Modelica.Icons.Information;
       annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
 <p>The library includes predefined, <a href=\"modelica://IdealizedContact.ElementaryContactBodies\">elementary bodies</a> like cuboids or cylinders which combine several contact surfaces and include a Multibody block. Each contact surface can be enabled seperately. These do contain masses and moments of inertia, which are calculated by the dimensions and the density of the material. The Figure displays the<b> ElementaryContactBodies</b> that are currently available.</p>
-<p><img src=\"modelica://IdealizedContact/Images/ElementaryContactBodies.png\"/> </p>
+<p><img src=\"modelica://IdealizedContact/Resources/Images/ElementaryContactBodies.png\"/> </p>
 </html>"));
     end ElementaryContactBodies;
 
@@ -27,13 +27,13 @@ extends Modelica.Icons.Package;
       annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
 <p>The <a href=\"modelica://IdealizedContact.ContactBlock.Contact\">contact block</a> calculates the appropriate force depending on the combination of surfaces. It is connected to a corresponding pair of contact surfaces. So, the respective combination of contact surfaces has to be chosen at first by setting the parameter contactDefinition. This will use the Modelica replaceable statement to define the appropiate components of the contact block. Then connect the contact interfaces of the two contact surfaces to the respective port of the contact block (first&nbsp;surface&nbsp;mentioned&nbsp;must&nbsp;be&nbsp;connected&nbsp;to&nbsp;port&nbsp;1).</p>
 <p>In the case of a collision of the two connected surface (the contact condition holds for at least one contact point) a three-dimensional contact force is applied. It consists of both the normal force and the tangential friction. The respective directions can be obtained by means of the local coordinate systems in the contact points. As compared to more complex models, the continuous surface layer is replaced by a nonlinear spring/damper element. Consequently, the normal force Fn&nbsp;is determined by means of the penetration p&nbsp;and the penetration velocity. A continuous contact force model with hysteresis damping according to [9] is implemented. Nevertheless, choosing n1=1 and n=0&nbsp;one can get the linear Kelvin-Voigt model, where the coefficients are the spring and damping constant. Choosing n1=n2&nbsp;one will get the formulation according to [10].</p>
-<p><img src=\"modelica://IdealizedContact/Images/equations/Fn.jpg\"/></p>
+<p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fn.jpg\"/></p>
 <p><br/>In order to calculate the friction forces without further discontinuous events, which would decrease the simulation speed and impede controller design, we use the continuously differentiable friction model of Makkar et al. [11]. They introduced the following function of the relative velocity&nbsp;to approximate the friction coefficient&nbsp;of the characteristic Stribeck curve.</p>
-<p><img src=\"modelica://IdealizedContact/Images/equations/mue.jpg\"/></p>
+<p><img src=\"modelica://IdealizedContact/Resources/Images/equations/mue.jpg\"/></p>
 <p>In doing so, no ideal static friction can be obtained because the actual force to be applied in the static state is independent from the relative velocity&nbsp;of the two bodies. Static friction is rather represented by sliding with very small relative velocities. To set the unknown constants gamma_i we use five parameters, which can be seen in the figure. The parameters mue_s&nbsp;and mue_k&nbsp;denote the coefficients of static and kinetic friction. The limit velocity v_e1&nbsp;and v_e2&nbsp;define the beginning of mixed and viscous friction. The latter is described by the proportionality factor k_v.</p>
-<p><br/><br/><img src=\"modelica://IdealizedContact/Images/mue.jpg\"/></p>
+<p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/mue.jpg\"/></p>
 <p><br/>The complete vector of the contact force is then computed as follows.</p>
-<p><img src=\"modelica://IdealizedContact/Images/equations/Fcontact.jpg\"/></p>
+<p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fcontact.jpg\"/></p>
 <p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently seperated in two blocks. Integration of the two blocks is in progress.</p>
 <p><b>see <a href=\"modelica://IdealizedContact.UsersGuide.Literature\">Literature</a> for references.</b></p>
 </html>"));
@@ -715,10 +715,10 @@ printing and shipping costs may be recovered.</p>
         annotation (Placement(transformation(extent={{38,-10},{58,10}})));
       ElementaryContactBodies.SphericalContactBody sphericalContactBody(color={
             0,0,255})
-        annotation (Placement(transformation(extent={{-8,14},{24,28}})));
+        annotation (Placement(transformation(extent={{-4,8},{18,30}})));
       ElementaryContactBodies.SphericalContactBody sphericalContactBody1(color=
             {255,0,0}, radius=0.12)
-        annotation (Placement(transformation(extent={{-8,-26},{24,-12}})));
+        annotation (Placement(transformation(extent={{-2,-32},{20,-8}})));
     equation
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-48,20},{-60,20},{-60,-20},{-66,-20}},
@@ -732,23 +732,23 @@ printing and shipping costs may be recovered.</p>
           smooth=Smooth.None));
       connect(freeMotion.frame_b, sphericalContactBody.frame_a) annotation (
           Line(
-          points={{-32,20},{-17.5111,20},{-17.5111,19.95},{-3.02222,19.95}},
+          points={{-32,20},{-17.5111,20},{-17.5111,19.22},{-3.56,19.22}},
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
       connect(fixedRotation.frame_b, sphericalContactBody1.frame_a) annotation (
          Line(
-          points={{-34,-20},{-18.5111,-20},{-18.5111,-20.05},{-3.02222,-20.05}},
+          points={{-34,-20},{-18.5111,-20},{-18.5111,-19.76},{-1.56,-19.76}},
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
 
       connect(sphericalContactBody.contact_a,contact. Port1) annotation (Line(
-          points={{22.5778,19.95},{47.2889,19.95},{47.2889,10.9},{48,10.9}},
+          points={{17.34,19.22},{47.2889,19.22},{47.2889,10.9},{48,10.9}},
           color={255,128,0},
           smooth=Smooth.None));
       connect(sphericalContactBody1.contact_a,contact. Port2) annotation (Line(
-          points={{22.5778,-20.05},{48.2889,-20.05},{48.2889,-11.1},{48,-11.1}},
+          points={{19.34,-19.76},{48.2889,-19.76},{48.2889,-11.1},{48,-11.1}},
           color={255,128,0},
           smooth=Smooth.None));
 
@@ -775,7 +775,7 @@ printing and shipping costs may be recovered.</p>
         annotation (Placement(transformation(extent={{-48,0},{-28,20}})));
       ElementaryContactBodies.SphericalContactBody
                                                  ball(color={255,0,0})
-        annotation (Placement(transformation(extent={{-8,44},{24,58}})));
+        annotation (Placement(transformation(extent={{-4,38},{18,60}})));
       ElementaryContactBodies.CylindricalContactBody
                                                    cylinder(color={0,0,255},
           surfaceColor={0,0,255},
@@ -809,24 +809,24 @@ printing and shipping costs may be recovered.</p>
           thickness=0.5,
           smooth=Smooth.None));
       connect(freeMotion.frame_b, ball.frame_a) annotation (Line(
-          points={{-28,50},{-16,50},{-16,49.95},{-3.02222,49.95}},
+          points={{-28,50},{-16,50},{-16,49.22},{-3.56,49.22}},
           color={95,95,95},
           pattern=LinePattern.None,
           thickness=0.5,
           smooth=Smooth.None));
       connect(cylinder.frame_a, fixedRotation.frame_b) annotation (Line(
-          points={{33.28,-9.8},{34,-9.8},{34,-16},{0,-16},{0,10},{-28,10}},
+          points={{32.84,-7.82},{34,-7.82},{34,-16},{0,-16},{0,10},{-28,10}},
           color={95,95,95},
           pattern=LinePattern.None,
           thickness=0.5,
           smooth=Smooth.None));
       connect(cylinder.contact_lateral,contact. Port2) annotation (Line(
-          points={{37.68,10.3143},{37.68,11.36},{38,11.36},{38,16.9}},
+          points={{37.68,6.26},{37.68,11.36},{38,11.36},{38,16.9}},
           color={255,128,0},
           thickness=1,
           smooth=Smooth.None));
       connect(ball.contact_a,contact. Port1) annotation (Line(
-          points={{22.5778,49.95},{37.2889,49.95},{37.2889,38.9},{38,38.9}},
+          points={{17.34,49.22},{37.2889,49.22},{37.2889,38.9},{38,38.9}},
           color={255,128,0},
           smooth=Smooth.None));
       annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
@@ -854,7 +854,7 @@ printing and shipping costs may be recovered.</p>
         annotation (Placement(transformation(extent={{-48,-50},{-28,-30}})));
       ElementaryContactBodies.SphericalContactBody
                                                  ball(color={255,0,0})
-        annotation (Placement(transformation(extent={{-2,50},{28,64}})));
+        annotation (Placement(transformation(extent={{4,44},{26,66}})));
       ElementaryContactBodies.CuboidContactBody          rectangle(
         color={0,0,255}, height=0.03,
         width=0.04,
@@ -891,7 +891,7 @@ printing and shipping costs may be recovered.</p>
           thickness=0.5,
           smooth=Smooth.None));
       connect(freeMotion.frame_b, ball.frame_a) annotation (Line(
-          points={{-14,56},{-14,55.95},{2.66667,55.95}},
+          points={{-14,56},{-14,55.22},{4.44,55.22}},
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
@@ -905,7 +905,7 @@ printing and shipping costs may be recovered.</p>
           color={255,128,0},
           smooth=Smooth.None));
       connect(ball.contact_a,contact. Port1) annotation (Line(
-          points={{26.6667,55.95},{26.6667,55.975},{48,55.975},{48,23.26}},
+          points={{25.34,55.22},{25.34,55.975},{48,55.975},{48,23.26}},
           color={255,128,0},
           smooth=Smooth.None));
       annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
@@ -931,7 +931,7 @@ printing and shipping costs may be recovered.</p>
         annotation (Placement(transformation(extent={{-44,0},{-24,20}})));
       ElementaryContactBodies.SphericalContactBody
                                                  ball(color={255,0,0}, radius=0.01)
-        annotation (Placement(transformation(extent={{-8,46},{16,56}})));
+        annotation (Placement(transformation(extent={{-4,40},{16,60}})));
       ElementaryContactBodies.CylindricalContactBody circle(              color=
            {0,0,255},
         diameter=0.06,
@@ -964,22 +964,22 @@ printing and shipping costs may be recovered.</p>
           thickness=0.5,
           smooth=Smooth.None));
       connect(freeMotion.frame_b, ball.frame_a) annotation (Line(
-          points={{-24,50},{-14.1333,50},{-14.1333,50.25},{-4.26667,50.25}},
+          points={{-24,50},{-14.1333,50},{-14.1333,50.2},{-3.6,50.2}},
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
       connect(fixedRotation.frame_b, circle.frame_a) annotation (Line(
-          points={{-24,10},{-18,10},{-18,-2},{2.32,-2},{2.32,2.4}},
+          points={{-24,10},{-18,10},{-18,-2},{1.96,-2},{1.96,4.56}},
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
       connect(circle.contact_front1,contact. Port2) annotation (Line(
-          points={{15.64,13.0286},{30,13.0286},{30,18.9}},
+          points={{15.64,12},{30,12},{30,18.9}},
           color={255,128,0},
           thickness=1,
           smooth=Smooth.None));
       connect(ball.contact_a,contact. Port1) annotation (Line(
-          points={{14.9333,50.25},{30.4667,50.25},{30.4667,40.9},{30,40.9}},
+          points={{15.4,50.2},{30.4667,50.2},{30.4667,40.9},{30,40.9}},
           color={255,128,0},
           smooth=Smooth.None));
       annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
@@ -1143,12 +1143,12 @@ printing and shipping costs may be recovered.</p>
           thickness=0.5,
           smooth=Smooth.None));
       connect(freeMotion.frame_b, cylinder.frame_a) annotation (Line(
-          points={{-22,40},{-10,40},{-10,32},{2.8,32}},
+          points={{-22,40},{-10,40},{-10,33.8},{2.4,33.8}},
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
       connect(cylinder.contact_lateral,contact. Port1) annotation (Line(
-          points={{6.8,50.2857},{6.8,64},{34,64},{34,30.9}},
+          points={{6.8,46.6},{6.8,64},{34,64},{34,30.9}},
           color={255,128,0},
           thickness=1,
           smooth=Smooth.None));
@@ -1423,7 +1423,7 @@ printing and shipping costs may be recovered.</p>
         annotation (Placement(transformation(extent={{-52,-50},{-32,-30}})));
       ElementaryContactBodies.SphericalContactBody
                                                  ball(color={255,0,0})
-        annotation (Placement(transformation(extent={{-20,52},{20,70}})));
+        annotation (Placement(transformation(extent={{-6,50},{18,74}})));
       IdealizedContact.ContactSurfaces.RectangularPlaneContactSurface
                                                          rectangle(
         length=0.08,
@@ -1474,7 +1474,7 @@ printing and shipping costs may be recovered.</p>
           thickness=0.5,
           smooth=Smooth.None));
       connect(freeMotion.frame_b, ball.frame_a) annotation (Line(
-          points={{-28,60},{-20.8889,60},{-20.8889,59.65},{-13.7778,59.65}},
+          points={{-28,60},{-20.8889,60},{-20.8889,62.24},{-5.52,62.24}},
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
@@ -1504,11 +1504,11 @@ printing and shipping costs may be recovered.</p>
           smooth=Smooth.None));
       connect(ball.contact_a, contact2.Port1)
                                              annotation (Line(
-          points={{18.2222,59.65},{67.1111,59.65},{67.1111,51.08},{66,51.08}},
+          points={{17.28,62.24},{67.1111,62.24},{67.1111,51.08},{66,51.08}},
           color={255,128,0},
           smooth=Smooth.None));
       connect(ball.contact_a,contact1. Port1) annotation (Line(
-          points={{18.2222,59.65},{18.2222,62.825},{84,62.825},{84,-12.92}},
+          points={{17.28,62.24},{17.28,62.825},{84,62.825},{84,-12.92}},
           color={255,128,0},
           smooth=Smooth.None));
       annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
@@ -2423,57 +2423,54 @@ Integration of the two blocks is in progress.")}));
         height=2*radius,
         sphereDiameter=2*radius,
         I_33=0.4*4*pi*density*radius^3/3*radius^2)
-     annotation (Placement(transformation(extent={{-44,-66},{8,-14}})));
+     annotation (Placement(transformation(extent={{-42,-18},{10,34}})));
 
       Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a "center of mass"
-        annotation (Placement(transformation(extent={{-104,-62},{-60,-18}}),
-            iconTransformation(extent={{-68,-62},{-36,-30}})));
+        annotation (Placement(transformation(extent={{-102,-14},{-58,30}}),
+            iconTransformation(extent={{-112,-14},{-80,18}})));
       Interfaces.Contact_a                    contact_a
-        annotation (Placement(transformation(extent={{88,-50},{108,-30}}),
-            iconTransformation(extent={{76,-62},{108,-30}})));
+        annotation (Placement(transformation(extent={{90,-2},{110,18}}),
+            iconTransformation(extent={{78,-14},{110,18}})));
       IdealizedContact.ContactSurfaces.SphericalContactSurface
                                 sphericalContactSurface(
         animation=animation,
         radius=radius,
         color=color,
         animation_BCS=animation_BCS)
-        annotation (Placement(transformation(extent={{14,-68},{68,-12}})));
+        annotation (Placement(transformation(extent={{16,-20},{70,36}})));
     equation
 
       connect(sphericalBody.frame_a, frame_a)
                                            annotation (Line(
-          points={{-44,-40},{-82,-40}},
+          points={{-42,8},{-80,8}},
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
       connect(sphericalContactSurface.contact_a,contact_a)  annotation (Line(
-          points={{63.41,-40},{98,-40}},
+          points={{65.41,8},{100,8}},
           color={255,128,0},
           smooth=Smooth.None));
-      connect(contact_a,contact_a)  annotation (Line(
-          points={{98,-40},{98,-40}},
-          color={255,128,0},
-          smooth=Smooth.None));
+
       connect(sphericalBody.frame_b, sphericalContactSurface.frame_a)
         annotation (Line(
-          points={{8,-40},{21.02,-40}},
+          points={{10,8},{23.02,8}},
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(extent={{-80,-80},{100,0}},
+      annotation (Diagram(coordinateSystem(extent={{-100,-100},{100,100}},
               preserveAspectRatio=false),
                           graphics),
                   Diagram(graphics),
-        Icon(coordinateSystem(extent={{-80,-80},{100,0}},    preserveAspectRatio=true),
+        Icon(coordinateSystem(extent={{-100,-100},{100,100}},    preserveAspectRatio=false),
              graphics={
             Text(
-              extent={{-82,-106},{118,-146}},
+              extent={{-98,-64},{102,-104}},
               lineColor={0,0,255},
               fillColor={255,255,255},
               fillPattern=FillPattern.Solid,
               textString="%name"),
             Ellipse(
-              extent={{-42,14},{78,-106}},
+              extent={{-68,72},{74,-68}},
               lineColor={0,0,0},
               fillPattern=FillPattern.Sphere,
               fillColor={0,127,255})}),
@@ -2549,13 +2546,13 @@ Integration of the two blocks is in progress.")}));
       Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a "center of mass"
         annotation (Placement(transformation(extent={{-16,-16},{16,16}},
             rotation=90,
-            origin={-8,-28}),
+            origin={-10,-62}),
             iconTransformation(extent={{-16,-16},{16,16}},
             rotation=90,
-            origin={-52,-26})));
+            origin={-56,-62})));
 
       Interfaces.Contact_a contact_lateral if enableLateralSurface  annotation (Placement(transformation(extent={{-14,88},{6,108}}),
-            iconTransformation(extent={{-22,92},{-2,112}})));
+            iconTransformation(extent={{-10,56},{10,76}})));
       ContactSurfaces.CylindricalContactSurface cylindricalContactSurface(
         diameter=diameter,
         length=length,
@@ -2574,7 +2571,7 @@ Integration of the two blocks is in progress.")}));
         color=surfaceColor) if enableFrontSurface1 annotation (Placement(transformation(extent={{60,-10},{80,10}})));
       Interfaces.Contact_a contact_front1 if enableFrontSurface1
         annotation (Placement(transformation(extent={{92,-10},{112,10}}),
-            iconTransformation(extent={{86,26},{106,46}})));
+            iconTransformation(extent={{86,-10},{106,10}})));
       Modelica.Mechanics.MultiBody.Parts.FixedTranslation fixedTranslation1(r=length/
             2*lengthDirection) if          enableFrontSurface1
         annotation (Placement(transformation(extent={{32,-10},{52,10}})));
@@ -2583,7 +2580,7 @@ Integration of the two blocks is in progress.")}));
         annotation (Placement(transformation(extent={{-38,-10},{-18,10}})));
       Interfaces.Contact_a contact_front2 if enableFrontSurface2
         annotation (Placement(transformation(extent={{-110,-10},{-90,10}}),
-            iconTransformation(extent={{-108,28},{-90,46}})));
+            iconTransformation(extent={{-108,-8},{-90,10}})));
       ContactSurfaces.CircularPlaneContactSurface circularPlaneContactSurface2(
         diameter=diameter,
         lengthDirection=lengthDirection,
@@ -2598,7 +2595,7 @@ Integration of the two blocks is in progress.")}));
 
       connect(cylindricalBody.frame_a, frame_a)
                                            annotation (Line(
-          points={{-2,0},{-8,0},{-8,-28}},
+          points={{-2,0},{-10,0},{-10,-62}},
           color={95,95,95},
           thickness=0.5,
           smooth=Smooth.None));
@@ -2647,37 +2644,37 @@ Integration of the two blocks is in progress.")}));
           points={{-77.7,-0.1},{-87.85,-0.1},{-87.85,0},{-100,0}},
           color={255,128,0},
           smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(extent={{-100,-40},{100,100}},
-              preserveAspectRatio=true),
-                          graphics), Icon(coordinateSystem(extent={{-100,-40},{
-                100,100}}, preserveAspectRatio=true),
+      annotation (Diagram(coordinateSystem(extent={{-100,-100},{100,100}},
+              preserveAspectRatio=false),
+                          graphics), Icon(coordinateSystem(extent={{-100,-100},
+              {100,100}},  preserveAspectRatio=false),
                                           graphics={
             Ellipse(
-              extent={{-90,102},{-62,-24}},
+              extent={{-90,66},{-62,-60}},
               fillColor={0,0,255},
               fillPattern=FillPattern.Solid,
               pattern=LinePattern.None,
               lineColor={0,127,255}),
             Text(
-              extent={{-96,-28},{104,-58}},
+              extent={{-98,-70},{102,-100}},
               lineColor={0,0,255},
               fillColor={255,255,255},
               fillPattern=FillPattern.Solid,
               textString="%name"),
             Rectangle(
-              extent={{-76,102},{72,-24}},
+              extent={{-76,66},{72,-60}},
               fillPattern=FillPattern.Solid,
               fillColor={0,0,255},
               pattern=LinePattern.None,
               lineColor={0,0,0}),
             Ellipse(
-              extent={{58,102},{86,-24}},
+              extent={{58,66},{86,-60}},
               fillColor={0,0,143},
               fillPattern=FillPattern.Solid,
               pattern=LinePattern.None)}),
         Documentation(info="<!DOCTYPE html><html>
 <p>This model defines a cylindrical body that can collide with every surface. Contact surfaces can be enabled seperately. The enumeration corresponds to the chosen directions and dimensions and is displayed in the Figure.</p>
-<p><br/><br/><img src=\"modelica://IdealizedContact/Images/cylindricalContactBody.png\"/></p>
+<p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/cylindricalContactBody.png\"/></p>
 </html>"));
     end CylindricalContactBody;
 
@@ -3002,7 +2999,7 @@ Integration of the two blocks is in progress.")}));
         Documentation(
           info="<!DOCTYPE html><html>
 <p>This model defines a cuboid body that can collide with every surface. Contact surfaces can be enabled seperately. The enumeration corresponds to the chosen directions and dimensions and is displayed in the Figure.</p>
-<p><br/><br/><img src=\"modelica://IdealizedContact/Images/cuboidContactBody.png\"/></p>
+<p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/cuboidContactBody.png\"/></p>
 </html>"));
     end CuboidContactBody;
    annotation(preferredView="info", Documentation(info="<!DOCTYPE html><html>
@@ -3155,13 +3152,13 @@ Integration of the two blocks is in progress.")}));
 <p>Depending on the shape, we use 1 (sphere), 2 (cylinder) or 4 (plane) points to describe the surfaces of the contact partners. These constitute potential contact points. For each of them the collision detection is performed. For this purpose, analytic solutions for simple geometries are provided in the library. As the contact region may alter with the moving bodies, the contact points will also move on the defined surface. </p>
 <p>Then, the contact block calculates the appropriate force depending on the combination of surfaces. So, using it the respective combination of contact surface has to be chosen at first by setting the parameter contactDefinition. This will use the Modelica replaceable statement to define the appropiate components of the contact block. Then connect the contact interfaces of the two contact surfaces to the respective port of the contact block (first&nbsp;surface&nbsp;mentioned&nbsp;must&nbsp;be&nbsp;connected&nbsp;to&nbsp;port&nbsp;1).</p>
 <p>In the case of a collision of the two connected surface (the contact condition holds for at least one contact point) a three-dimensional contact force is applied. It consists of both the normal force and the tangential friction. The respective directions can be obtained by means of the local coordinate systems in the contact points. As compared to more complex models, the continuous surface layer is replaced by a nonlinear spring/damper element. Consequently, the normal force Fn&nbsp;is determined by means of the penetration p&nbsp;and the penetration velocity. A continuous contact force model with hysteresis damping according to [1] is implemented. Nevertheless, choosing n1=1 and n=0&nbsp;one can get the linear Kelvin-Voigt model, where the coefficients are the spring and damping constant. Choosing n1=n2&nbsp;one will get the formulation according to [2].</p>
-<p><img src=\"modelica://IdealizedContact/Images/equations/Fn.jpg\"/></p>
+<p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fn.jpg\"/></p>
 <p><br/>In order to calculate the friction forces without further discontinuous events, which would decrease the simulation speed and impede controller design, we use the continuously differentiable friction model of Makkar et al. [3]. They introduced the following function of the relative velocity&nbsp;to approximate the friction coefficient&nbsp;of the characteristic Stribeck curve.</p>
-<p><img src=\"modelica://IdealizedContact/Images/equations/mue.jpg\"/></p>
+<p><img src=\"modelica://IdealizedContact/Resources/Images/equations/mue.jpg\"/></p>
 <p>In doing so, no ideal static friction can be obtained because the actual force to be applied in the static state is independent from the relative velocity&nbsp;of the two bodies. Static friction is rather represented by sliding with very small relative velocities. To set the unknown constants gamma_i we use five parameters, which can be seen in the figure. The parameters mue_s&nbsp;and mue_k&nbsp;denote the coefficients of static and kinetic friction. The limit velocity v_e1&nbsp;and v_e2&nbsp;define the beginning of mixed and viscous friction. The latter is described by the proportionality factor k_v. The actual approximation can be monitored by calling the function <a href=\" IdealizedContact.ContactBlock.plotFrictionCurve\">plotFrictionCurve</a>.</p>
-<p><br/><br/><img src=\"modelica://IdealizedContact/Images/mue.jpg\"/></p>
+<p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/mue.jpg\"/></p>
 <p><br/>The complete vector of the contact force is then computed as follows.</p>
-<p><img src=\"modelica://IdealizedContact/Images/equations/Fcontact.jpg\"/></p>
+<p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fcontact.jpg\"/></p>
 <p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently seperated in two blocks. Integration of the two blocks is in progress.</p>
 <p><h4>References:</h4></p>
 <p><br/>[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H. M. Lankarani, P. E. Nikravesh: Continuous Contact Force Models for Impact Analysis in Multibody Systems, Nonlinear Dynamics, 5, 1994 </p>
@@ -3223,9 +3220,9 @@ Integration of the two blocks is in progress.")}));
       annotation (preferedView="info",interactive=true,Documentation(info="<!DOCTYPE html><html>
 <p>This function plots the Stribeck curve approximation which is implemented in the contact block.</p>
 <p>In order to calculate the friction forces without further discontinuous events, which would decrease the simulation speed and impede controller design, we use the continuously differentiable friction model of Makkar et al. [3]. They introduced the following function of the relative velocity&nbsp;to approximate the friction coefficient&nbsp;of the characteristic Stribeck curve.</p>
-<p><img src=\"modelica://IdealizedContact/Images/equations/mue.jpg\"/></p>
+<p><img src=\"modelica://IdealizedContact/Resources/Images/equations/mue.jpg\"/></p>
 <p>To set the unknown constants gamma_i we use five parameters, which can be seen in the figure. The parameters mue_s&nbsp;and mue_k&nbsp;denote the coefficients of static and kinetic friction. The limit velocity v_e1&nbsp;and v_e2&nbsp;define the beginning of mixed and viscous friction. The latter is described by the proportionality factor k_v. To display the current curve attune the inputs of the function.</p>
-<p><br/><br/><img src=\"modelica://IdealizedContact/Images/mue.jpg\"/></p>
+<p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/mue.jpg\"/></p>
 </html>"));
     end plotFrictionCurve;
 
@@ -3233,25 +3230,25 @@ Integration of the two blocks is in progress.")}));
       model SphereToSphere
        extends IdealizedContact.Components.PartialContactBlock;
         import SI = Modelica.SIunits;
-        outer parameter SI.TranslationalSpringConstant springCoefficient=1000000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=1000000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
         outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter SI.Frequency f=100000;
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter SI.Frequency f;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                                {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                                {255,0,255};
+          colorContactPoints2;
 
     protected
         parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1;   //to avoid mathematical error in case of 0^0
@@ -3358,25 +3355,25 @@ Integration of the two blocks is in progress.")}));
       model SphereToCylinder
         extends IdealizedContact.Components.PartialContactBlock;
         import SI = Modelica.SIunits;
-        outer parameter SI.TranslationalSpringConstant springCoefficient=1000000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=1000000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter SI.Frequency f=100000;
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
+        outer parameter SI.CoefficientOfFriction mue_r;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter SI.Frequency f;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                                {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                                {255,0,255};
+          colorContactPoints2;
 
     protected
         parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1; //to avoid mathematical error in case of 0^0
@@ -3482,26 +3479,26 @@ Integration of the two blocks is in progress.")}));
         extends IdealizedContact.Components.PartialContactBlock;
         import SI = Modelica.SIunits;
 
-        outer parameter SI.TranslationalSpringConstant springCoefficient=1000000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=1000000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter SI.Frequency f=10000000;
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint = 0.005;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
+        outer parameter SI.CoefficientOfFriction mue_r;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter SI.Frequency f;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
 
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                                {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                                {255,0,255};
+          colorContactPoints2;
 
     protected
         parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1;//to avoid mathematical error in case of 0^0
@@ -3608,25 +3605,25 @@ Integration of the two blocks is in progress.")}));
       model SphereToCircle
         extends IdealizedContact.Components.PartialContactBlock;
         import SI = Modelica.SIunits;
-        outer parameter SI.TranslationalSpringConstant springCoefficient=1000000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=1000000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter SI.Frequency f=100000;
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
+        outer parameter SI.CoefficientOfFriction mue_r;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter SI.Frequency f;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                                {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                                {255,0,255};
+          colorContactPoints2;
 
     protected
         parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1;//to avoid mathematical error in case of 0^0
@@ -5751,26 +5748,26 @@ Integration of the two blocks is in progress.")}));
       model CylinderToRectangle
         extends IdealizedContact.Components.PartialContactBlock;
         import SI = Modelica.SIunits;
-        outer parameter SI.TranslationalSpringConstant springCoefficient=1000000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=1000000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
         outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter Boolean exact=false;
-        outer parameter SI.Frequency f=100000;
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter Boolean exact;
+        outer parameter SI.Frequency f;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                                {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                                {255,0,255};
+          colorContactPoints2;
 
     protected
         parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1;//to avoid mathematical error in case of 0^0
@@ -5944,26 +5941,26 @@ Integration of the two blocks is in progress.")}));
       model CylinderToCircle
         extends IdealizedContact.Components.PartialContactBlock;
         import SI = Modelica.SIunits;
-        outer parameter SI.TranslationalSpringConstant springCoefficient=1000000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=1000000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter Boolean exact=false;
-        outer parameter SI.Frequency f=100000;
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
+        outer parameter SI.CoefficientOfFriction mue_r;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter Boolean exact;
+        outer parameter SI.Frequency f;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                                {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                                {255,0,255};
+          colorContactPoints2;
 
     protected
         parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1;//to avoid mathematical error in case of 0^0
@@ -6104,26 +6101,26 @@ Integration of the two blocks is in progress.")}));
         extends IdealizedContact.Components.PartialContactBlock;
 
         import SI = Modelica.SIunits;
-        outer parameter SI.TranslationalSpringConstant springCoefficient=1000000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=1000000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter Boolean exact=false;
-        outer parameter SI.Frequency f=100000;
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
+        outer parameter SI.CoefficientOfFriction mue_r;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter Boolean exact;
+        outer parameter SI.Frequency f;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                                {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                                {255,0,255};
+          colorContactPoints2;
 
     protected
         parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1;//to avoid mathematical error in case of 0^0
@@ -6231,26 +6228,26 @@ Integration of the two blocks is in progress.")}));
         extends IdealizedContact.Components.PartialContactBlock;
 
         import SI = Modelica.SIunits;
-        outer parameter SI.TranslationalSpringConstant springCoefficient=1000000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=1000000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter Boolean exact=false;
-        outer parameter SI.Frequency f=100000;
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
+        outer parameter SI.CoefficientOfFriction mue_r;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter Boolean exact;
+        outer parameter SI.Frequency f;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                                {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                                {255,0,255};
+          colorContactPoints2;
 
     protected
         parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1;//to avoid mathematical error in case of 0^0
@@ -6408,26 +6405,26 @@ Integration of the two blocks is in progress.")}));
         extends IdealizedContact.Components.PartialContactBlock;
 
         import SI = Modelica.SIunits;
-        outer parameter SI.TranslationalSpringConstant springCoefficient=1000000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=1000000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter Boolean exact=false;
-        outer parameter SI.Frequency f=100000;
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
+        outer parameter SI.CoefficientOfFriction mue_r;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter Boolean exact;
+        outer parameter SI.Frequency f;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                                {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                                {255,0,255};
+          colorContactPoints2;
       Real Length_Direction1_wf[3];
       Real Length_Direction2_wf[3];
 
@@ -9812,27 +9809,27 @@ Integration of the two blocks is in progress.")}));
       model RectangleToRectangle
         extends IdealizedContact.Components.PartialContactBlock;
         import SI = Modelica.SIunits;
-        outer parameter SI.TranslationalSpringConstant springCoefficient=10000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=10000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter Boolean exact=false;
-        outer parameter SI.Frequency f=100000;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
+        outer parameter SI.CoefficientOfFriction mue_r;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter Boolean exact;
+        outer parameter SI.Frequency f;
 
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                            {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                            {255,0,255};
+          colorContactPoints2;
 
     protected
         parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1;//to avoid mathematical error in case of 0^0
@@ -10046,27 +10043,27 @@ Integration of the two blocks is in progress.")}));
       model CircleToRectangle
         extends IdealizedContact.Components.PartialContactBlock;
         import SI = Modelica.SIunits;
-        outer parameter SI.TranslationalSpringConstant springCoefficient=10000;
-        outer parameter SI.TranslationalDampingConstant dampingCoefficient=10000;
-        outer parameter Real n1 = 1.5;
-        outer parameter Real n2 = n1;
-        outer parameter SI.CoefficientOfFriction mue_r=0.0001;
-        outer parameter Real gamma1=1;
-        outer parameter Real gamma2=1;
-        outer parameter Real gamma3=1;
-        outer parameter Real gamma4=1;
-        outer parameter Real gamma5=1;
-        outer parameter Real gamma6=1;
-        outer parameter SI.Distance p_max=0.001;
-        outer parameter Boolean exact=false;
-        outer parameter SI.Frequency f=100000;
+        outer parameter SI.TranslationalSpringConstant springCoefficient;
+        outer parameter SI.TranslationalDampingConstant dampingCoefficient;
+        outer parameter Real n1;
+        outer parameter Real n2;
+        outer parameter SI.CoefficientOfFriction mue_r;
+        outer parameter Real gamma1;
+        outer parameter Real gamma2;
+        outer parameter Real gamma3;
+        outer parameter Real gamma4;
+        outer parameter Real gamma5;
+        outer parameter Real gamma6;
+        outer parameter SI.Distance p_max;
+        outer parameter Boolean exact;
+        outer parameter SI.Frequency f;
 
-        outer parameter Boolean animation=true;
-        outer parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        outer parameter Boolean animation;
+        outer parameter Modelica.SIunits.Radius radiusContactPoint;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints1 =                                            {0,180,0};
+          colorContactPoints1;
         outer parameter Modelica.Mechanics.MultiBody.Types.Color
-          colorContactPoints2 =                                            {255,0,255};
+          colorContactPoints2;
 
     protected
         parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1;//to avoid mathematical error in case of 0^0
@@ -12238,7 +12235,7 @@ Integration of the two blocks is in progress.")}));
         // relationships between quantities of frame_a and of frame_b
         frame_b.r_0 = frame_a.r_0;
 
-        if rooted(frame_a.R) then
+        if Connections.rooted(frame_a.R) then
           R_rel = Modelica.Mechanics.MultiBody.Frames.planarRotation(e, phi_ref, w);
           frame_b.R = Modelica.Mechanics.MultiBody.Frames.absoluteRotation(frame_a.R, R_rel);
           frame_a.f = -Modelica.Mechanics.MultiBody.Frames.resolve1(R_rel, frame_b.f);
@@ -12529,7 +12526,7 @@ Possible reasons:
         // relationships between quantities of frame_a and of frame_b
         frame_b.r_0 = frame_a.r_0;
 
-        if rooted(frame_a.R) then
+        if Connections.rooted(frame_a.R) then
           R_rel = Modelica.Mechanics.MultiBody.Frames.planarRotation(e, phi_offset + phi, w);
           frame_b.R = Modelica.Mechanics.MultiBody.Frames.absoluteRotation(frame_a.R, R_rel);
           frame_a.f = -Modelica.Mechanics.MultiBody.Frames.resolve1(R_rel, frame_b.f);
