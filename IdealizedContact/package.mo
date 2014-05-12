@@ -2390,7 +2390,7 @@ Integration of the two blocks is in progress.")}));
 
   package ElementaryContactBodies "Predefined elementary contact bodies"
     extends Modelica.Icons.Package;
-    model SphericalContactBody "Predefined sperical body with contact surface"
+    model SphericalContactBody "Predefined spherical body with contact surface"
 
       import SI = Modelica.SIunits;
     parameter SI.Density density=7850 "density of the material";
