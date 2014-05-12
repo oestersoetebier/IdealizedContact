@@ -48,7 +48,7 @@ extends Modelica.Icons.Package;
 
     class Literature "Literature"
     extends Modelica.Icons.References;
-      annotation (preferredView="info", Documentation(info="<!DOCTYPE html> <html>
+      annotation (preferredView="info", Documentation(info="<!DOCTYPE html><html>
 <p>The library is described in:</p>
 <p>Felix Oesters&ouml;tebier, Peng Wang and Ansgar Tr&auml;chtler: <b><a href=\"modelica://IdealizedContact/Ressources/Documentation/Idealized Modelica Contact Library_Final_Paper.pdf\"> A Modelica Contact Library for Idealized Simulation of Independently Defined Contact Surfaces </a> </b>submitted to the <b>10th International Modelica Conference 2014</b> in Lund/Sweden.</p>
 <p><br/>It is furthermore based on the following theses: </p>
@@ -1599,8 +1599,8 @@ printing and shipping costs may be recovered.</p>
               extent={{-36,94},{40,52}},
               lineColor={255,0,0},
               textStyle={TextStyle.Bold},
-              textString="The collision of two cylinders can lead to linear or punctiform contact regions. 
-The calculation for these two cases is currently seperated in two blocks. 
+              textString="The collision of two cylinders can lead to linear or punctiform contact regions.
+The calculation for these two cases is currently seperated in two blocks.
 Integration of the two blocks is in progress.")}));
     end Example10;
 
@@ -1693,8 +1693,8 @@ Integration of the two blocks is in progress.")}));
               extent={{-44,84},{32,42}},
               lineColor={255,0,0},
               textStyle={TextStyle.Bold},
-              textString="The collision of two cylinders can lead to linear or punctiform contact regions. 
-The calculation for these two cases is currently seperated in two blocks. 
+              textString="The collision of two cylinders can lead to linear or punctiform contact regions.
+The calculation for these two cases is currently seperated in two blocks.
 Integration of the two blocks is in progress.")}));
     end Example11;
 
@@ -1782,8 +1782,8 @@ Integration of the two blocks is in progress.")}));
               extent={{-36,94},{40,52}},
               lineColor={255,0,0},
               textStyle={TextStyle.Bold},
-              textString="The collision of two cylinders can lead to linear or punctiform contact regions. 
-The calculation for these two cases is currently seperated in two blocks. 
+              textString="The collision of two cylinders can lead to linear or punctiform contact regions.
+The calculation for these two cases is currently seperated in two blocks.
 Integration of the two blocks is in progress.")}));
     end Example12;
    annotation(preferredView="info", Documentation(info="<!DOCTYPE html><html>
@@ -6677,8 +6677,8 @@ Integration of the two blocks is in progress.")}));
                 extent={{-30,106},{46,64}},
                 lineColor={255,0,0},
                 textStyle={TextStyle.Bold},
-                textString="The collision of two cylinders can lead to linear or punctiform contact regions. 
-The calculation for these two cases is currently seperated in two blocks. 
+                textString="The collision of two cylinders can lead to linear or punctiform contact regions.
+The calculation for these two cases is currently seperated in two blocks.
 Integration of the two blocks is in progress.")}));
       end CylinderToCylinderCombined;
 
@@ -11315,10 +11315,10 @@ Integration of the two blocks is in progress.")}));
            t_z=R/100;
            contact_cr = (abs(rP_cr.r_rel*V_direction_C)>=0) and abs(rP_cr.r_rel*V_direction_C)<=t_max and (sqrt((rP_cr.r_rel*Dl_direction_C)^2+(rP_cr.r_rel*Dw_direction_C)^2)<=R);
 
-           contact_bl = ((rP_l.r_rel*H_direction_R)<=0) and (rP_l.r_rel*H_direction_R)>=-t_max and (abs(rP_l.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_l.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001) 
+           contact_bl = ((rP_l.r_rel*H_direction_R)<=0) and (rP_l.r_rel*H_direction_R)>=-t_max and (abs(rP_l.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_l.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001)
     contact move point in L direction of square b based on square q";
 
-           contact_bw = ((rP_w.r_rel*H_direction_R)<=0) and (rP_w.r_rel*H_direction_R)>=-t_max and (abs(rP_w.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_w.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001) 
+           contact_bw = ((rP_w.r_rel*H_direction_R)<=0) and (rP_w.r_rel*H_direction_R)>=-t_max and (abs(rP_w.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_w.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001)
     contact move point in W direction of square b based on square q";
 
         //--------------------------------------------------------------
@@ -12728,7 +12728,7 @@ Possible reasons:
           length_=0;
         end if;
         annotation (
-          Documentation(info="<!DOCTYPE html> <HTML><p>This model is a modification of <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.FixedShape\">Modelica.Mechanics.MultiBody.Visualizers.FixedShape</a>. The animation can be disabled via the boolean input. Therefore, the dimensions of the animation are set to 0.
+          Documentation(info="<!DOCTYPE html><html><p>This model is a modification of <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.FixedShape\">Modelica.Mechanics.MultiBody.Visualizers.FixedShape</a>. The animation can be disabled via the boolean input. Therefore, the dimensions of the animation are set to 0.
 </p></HTML>"),       Icon(coordinateSystem(
               preserveAspectRatio=true,
               extent={{-100,-100},{100,100}},
