@@ -808,13 +808,11 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_b, ball.frame_a) annotation (Line(
           points={{-28,50},{-16,50},{-16,49.22},{-3.56,49.22}},
           color={95,95,95},
-          pattern=LinePattern.None,
           thickness=0.5,
           smooth=Smooth.None));
       connect(cylinder.frame_a, fixedRotation.frame_b) annotation (Line(
           points={{32.84,-7.82},{34,-7.82},{34,-16},{0,-16},{0,10},{-28,10}},
           color={95,95,95},
-          pattern=LinePattern.None,
           thickness=0.5,
           smooth=Smooth.None));
       connect(cylinder.contact_lateral,contact. Port2) annotation (Line(
@@ -1845,25 +1843,21 @@ Integration of the two blocks is in progress.")}));
       connect(shape.frame_a, contact_a.frame)     annotation (Line(
           points={{-18,22},{-18,8},{100,8}},
           color={95,95,95},
-          pattern=LinePattern.None,
           thickness=0.5,
           smooth=Smooth.None));
       connect(shape.frame_a, fixedFrame.frame_a)     annotation (Line(
           points={{-18,22},{-18,-30},{-40,-30}},
           color={95,95,95},
-          pattern=LinePattern.None,
           thickness=0.5,
           smooth=Smooth.None));
       connect(multiplex.y, contact_a.u) annotation (Line(
           points={{0.8,70},{8,70},{8,8},{100,8}},
           color={0,0,127},
-          pattern=LinePattern.None,
           thickness=0.5,
           smooth=Smooth.None));
       connect(fixedFrame.frame_a, body.frame_a) annotation (Line(
           points={{-40,-30},{-2,-30}},
           color={95,95,95},
-          pattern=LinePattern.None,
           thickness=0.5,
           smooth=Smooth.None));
       annotation (Documentation(info="<!DOCTYPE html><html>
@@ -2169,7 +2163,6 @@ Integration of the two blocks is in progress.")}));
               textString="%name"),
             Line(
               points={{-60,60},{-100,-60},{60,-60},{100,60},{-44,60},{-60,60}},
-              pattern=LinePattern.None,
               thickness=0.5,
               smooth=Smooth.None),
             Ellipse(
@@ -2838,7 +2831,6 @@ Integration of the two blocks is in progress.")}));
                                                                    annotation (Line(
           points={{-0.1,69.1},{-0.45,69.1},{-0.45,98},{0,98}},
           color={255,128,0},
-          pattern=LinePattern.None,
           smooth=Smooth.None));
       connect(bodyShape.frame_b, fixedTranslation.frame_a) annotation (Line(
           points={{-8,0},{-6.12323e-016,0},{-6.12323e-016,14}},
@@ -7334,7 +7326,6 @@ Integration of the two blocks is in progress.")}));
           connect(pos_offset.support, variablePrism.support) annotation (Line(
               points={{-25,-38},{-24,-38},{-24,-26},{-22,-26}},
               color={0,0,0},
-              pattern=LinePattern.None,
               smooth=Smooth.None));
           connect(variablePrism.axis, pos_offset.flange) annotation (Line(
               points={{-34,-26},{-34,-45},{-32,-45}},
@@ -8054,7 +8045,6 @@ Integration of the two blocks is in progress.")}));
           connect(pos_offset.support,variablePrism. support) annotation (Line(
               points={{27,-8},{26,-8},{26,-14}},
               color={0,0,0},
-              pattern=LinePattern.None,
               smooth=Smooth.None));
           connect(pos_offset.flange, variablePrism.axis) annotation (Line(
               points={{34,-1},{36,-1},{36,-14},{38,-14}},
@@ -8440,7 +8430,6 @@ Integration of the two blocks is in progress.")}));
           connect(position2.support, variablePrism_ll_cy2.support) annotation (Line(
               points={{48,-50},{48,-54},{46,-54}},
               color={0,0,0},
-              pattern=LinePattern.None,
               smooth=Smooth.None));
           connect(position2.flange, variablePrism_ll_cy2.axis) annotation (Line(
               points={{58,-40},{60,-40},{60,-54},{58,-54}},
@@ -8453,7 +8442,6 @@ Integration of the two blocks is in progress.")}));
           connect(position1.support, variablePrism_ll_cy1.support) annotation (Line(
               points={{46,74},{46,66}},
               color={0,0,0},
-              pattern=LinePattern.None,
               smooth=Smooth.None));
           annotation (Diagram(coordinateSystem(extent={{-100,-120},{100,140}},
                   preserveAspectRatio=true)), Icon(coordinateSystem(extent={{-100,
@@ -11287,7 +11275,6 @@ Integration of the two blocks is in progress.")}));
           connect(pos_L.support, variablePrism_L.support) annotation (Line(
               points={{47,-30},{51.2,-30},{51.2,-24.8}},
               color={0,0,0},
-              pattern=LinePattern.None,
               smooth=Smooth.None));
           connect(pos_L.flange, variablePrism_L.axis) annotation (Line(
               points={{40,-37},{40,-24.8},{41.6,-24.8}},
@@ -11316,7 +11303,6 @@ Integration of the two blocks is in progress.")}));
           connect(pos_W.support, variablePrism_W.support) annotation (Line(
               points={{49,-68},{51.2,-68},{51.2,-64.8}},
               color={0,0,0},
-              pattern=LinePattern.None,
               smooth=Smooth.None));
           connect(variablePrism_W.axis, pos_W.flange) annotation (Line(
               points={{41.6,-64.8},{41.6,-70.4},{42,-70.4},{42,-75}},
