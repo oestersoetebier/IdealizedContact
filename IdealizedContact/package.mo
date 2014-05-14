@@ -50,11 +50,11 @@ extends Modelica.Icons.Package;
     extends Modelica.Icons.References;
       annotation (preferredView="info", Documentation(info="<!DOCTYPE html><html>
 <p>The library is described in:</p>
-<p>Felix Oesters&ouml;tebier, Peng Wang and Ansgar Tr&auml;chtler: <b><a href=\"modelica://IdealizedContact/Ressources/Documentation/Idealized Modelica Contact Library_Final_Paper.pdf\"> A Modelica Contact Library for Idealized Simulation of Independently Defined Contact Surfaces </a> </b>submitted to the <b>10th International Modelica Conference 2014</b> in Lund/Sweden.</p>
-<p><br/>It is furthermore based on the following theses: </p>
+<p>Felix Oesters&ouml;tebier, Peng Wang and Ansgar Tr&auml;chtler: <b><a href=\"modelica://IdealizedContact/Resources/Documentation/Idealized Modelica Contact Library_Final_Paper.pdf\">A Modelica Contact Library for Idealized Simulation of Independently Defined Contact Surfaces</a> </b>submitted to the <b>10th International Modelica Conference 2014</b> in Lund/Sweden.</p>
+<p><br/>It is furthermore based on the following theses:</p>
 <dl><dt>Peng Wang:</dt>
 <dd><b>Idealisierte Modellierung von Kontakten in Dymola/Modelica</b>. Date: 21.12.2011</dd>
-<dd>Supervisor: Felix Oesters&ouml;tebier</dd>
+<dd>Supervisor: Felix Oesters&ouml;tebier</dd></dl>
 <dl><dt>Peng Wang:</dt>
 <dd><b>Aufbau einer Kontaktbibliothek f&uuml;r einfache Kontaktgeometrien in Dymola/Modelica</b>. Date: 23.11.2012</dd>
 <dd>Supervisor: Felix Oesters&ouml;tebier</dd>
@@ -99,9 +99,8 @@ extends Modelica.Icons.Package;
 <tr><td>
 <p><br><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics\">http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/</a> </p></td><td></td><td></td>
 </tr>
-<tr></tr>
+<tr><td></td></tr>
 </table>
-</p>
 </html>"),    preferredView="info");
     end Contact;
 
@@ -658,14 +657,14 @@ printing and shipping costs may be recovered.</p>
     class ReleaseNotes "Release notes"
     extends Modelica.Icons.Information;
       annotation (preferredView="info", Documentation(info="<!DOCTYPE html><html>
-<p><h4>Version 1.0.0, 2014-01-24</h4></p>
-<p>Uses Modelica Standard Library 3.2 </p>
-<p>First version of the IdealizedContact library.</p>
-<p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases are currently seperated in two blocks. Integration of the two blocks is in progress. </p>
-<p><br/><b>Licensed by Heinz Nixdorf Institute under the Modelica License 2</b></p>
+<h4>Version 0.1.0, 2014-05-07</h4>
+<p>Uses Modelica Standard Library 3.2</p>
+<p>Initial version based on the one presented at Modelica 2014.</p>
+<p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases are currently seperated in two blocks. Integration of the two blocks is in progress.</p>
+<br/><b>Licensed by Heinz Nixdorf Institute under the Modelica License 2</b>
 <p><i>This Modelica package is <u>free</u> software and the use is completely at <u>your own risk</u>; it can be redistributed and/or modified under the terms of the Modelica license 2, see <a href=\"modelica://Modelica.UsersGuide.ModelicaLicense2\">Modelica.UsersGuide.ModelicaLicense2</a> or visit <a href=\"http://www.modelica.org/licenses/ModelicaLicense2\">http://www.modelica.org/licenses/ModelicaLicense2</a>.</i></p>
-<p><br/><b>Acknowledgements:</b> </p>
-<p>This work was developed in the project ENTIME: Entwurfstechnik Intelligente Mechatronik (Design Methods for Intelligent Mechatronic Systems). The project ENTIME is funded by the state of North Rhine-Westphalia (NRW), Germany and the EUROPEAN UNION, European Regional Development Fund, Investing in your future. <a href=\"http://entime.upb.de/\">ENTIME</a> </p>
+<br/><b>Acknowledgements:</b>
+<p>This work was developed in the project ENTIME: Entwurfstechnik Intelligente Mechatronik (Design Methods for Intelligent Mechatronic Systems). The project ENTIME is funded by the state of North Rhine-Westphalia (NRW), Germany and the EUROPEAN UNION, European Regional Development Fund, Investing in your future. <a href=\"http://entime.upb.de/\">ENTIME</a></p>
 </html>"));
     end ReleaseNotes;
     annotation (Documentation(info="<!DOCTYPE html><html>
@@ -2977,21 +2976,21 @@ Integration of the two blocks is in progress.")}));
               fillPattern=FillPattern.Solid,
               textString="1")}),
         Documentation(info="<!DOCTYPE html><html>
-<p>Depending on the shape, we use 1 (sphere), 2 (cylinder) or 4 (plane) points to describe the surfaces of the contact partners. These constitute potential contact points. For each of them the collision detection is performed. For this purpose, analytic solutions for simple geometries are provided in the library. As the contact region may alter with the moving bodies, the contact points will also move on the defined surface. </p>
+<p>Depending on the shape, we use 1 (sphere), 2 (cylinder) or 4 (plane) points to describe the surfaces of the contact partners. These constitute potential contact points. For each of them the collision detection is performed. For this purpose, analytic solutions for simple geometries are provided in the library. As the contact region may alter with the moving bodies, the contact points will also move on the defined surface.</p>
 <p>Then, the contact block calculates the appropriate force depending on the combination of surfaces. So, using it the respective combination of contact surface has to be chosen at first by setting the parameter contactDefinition. This will use the Modelica replaceable statement to define the appropiate components of the contact block. Then connect the contact interfaces of the two contact surfaces to the respective port of the contact block (first&nbsp;surface&nbsp;mentioned&nbsp;must&nbsp;be&nbsp;connected&nbsp;to&nbsp;port&nbsp;1).</p>
 <p>In the case of a collision of the two connected surface (the contact condition holds for at least one contact point) a three-dimensional contact force is applied. It consists of both the normal force and the tangential friction. The respective directions can be obtained by means of the local coordinate systems in the contact points. As compared to more complex models, the continuous surface layer is replaced by a nonlinear spring/damper element. Consequently, the normal force Fn&nbsp;is determined by means of the penetration p&nbsp;and the penetration velocity. A continuous contact force model with hysteresis damping according to [1] is implemented. Nevertheless, choosing n1=1 and n=0&nbsp;one can get the linear Kelvin-Voigt model, where the coefficients are the spring and damping constant. Choosing n1=n2&nbsp;one will get the formulation according to [2].</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fn.jpg\"/></p>
 <p><br/>In order to calculate the friction forces without further discontinuous events, which would decrease the simulation speed and impede controller design, we use the continuously differentiable friction model of Makkar et al. [3]. They introduced the following function of the relative velocity&nbsp;to approximate the friction coefficient&nbsp;of the characteristic Stribeck curve.</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/mue.jpg\"/></p>
-<p>In doing so, no ideal static friction can be obtained because the actual force to be applied in the static state is independent from the relative velocity&nbsp;of the two bodies. Static friction is rather represented by sliding with very small relative velocities. To set the unknown constants gamma_i we use five parameters, which can be seen in the figure. The parameters mue_s&nbsp;and mue_k&nbsp;denote the coefficients of static and kinetic friction. The limit velocity v_e1&nbsp;and v_e2&nbsp;define the beginning of mixed and viscous friction. The latter is described by the proportionality factor k_v. The actual approximation can be monitored by calling the function <a href=\" IdealizedContact.ContactBlock.plotFrictionCurve\">plotFrictionCurve</a>.</p>
+<p>In doing so, no ideal static friction can be obtained because the actual force to be applied in the static state is independent from the relative velocity&nbsp;of the two bodies. Static friction is rather represented by sliding with very small relative velocities. To set the unknown constants gamma_i we use five parameters, which can be seen in the figure. The parameters mue_s&nbsp;and mue_k&nbsp;denote the coefficients of static and kinetic friction. The limit velocity v_e1&nbsp;and v_e2&nbsp;define the beginning of mixed and viscous friction. The latter is described by the proportionality factor k_v. The actual approximation can be monitored by calling the function <a href=\"IdealizedContact.ContactBlock.plotFrictionCurve\">plotFrictionCurve</a>.</p>
 <p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/mue.jpg\"/></p>
 <p><br/>The complete vector of the contact force is then computed as follows.</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fcontact.jpg\"/></p>
 <p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently seperated in two blocks. Integration of the two blocks is in progress.</p>
-<p><h4>References:</h4></p>
+<h4>References:</h4>
 <p><br/>[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H. M. Lankarani, P. E. Nikravesh: Continuous Contact Force Models for Impact Analysis in Multibody Systems, Nonlinear Dynamics, 5, 1994 </p>
 <p>[2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K. H. Hunt, F. R. E. Crossley: Coefficient of restitution interpreted as damping in vibroimpact, ASME J. Appl. Mech, 1975 </p>
-<p>[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C. Makkar, W. E. Dixon, W. G. Sawyer, G. Hu: A New Continuously Differentiable Friction Model for Control Systems Design, Proceedings of the 2005 IEEE/ASME International Conference on Advanced Intelligent Mechatronics, Monterey CA, July, 2005 </p>
+<p>[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C. Makkar, W. E. Dixon, W. G. Sawyer, G. Hu: A New Continuously Differentiable Friction Model for Control Systems Design, Proceedings of the 2005 IEEE/ASME International Conference on Advanced Intelligent Mechatronics, Monterey CA, July, 2005</p>
 </html>"));
     end Contact;
 
@@ -10873,10 +10872,10 @@ Integration of the two blocks is in progress.")}));
 
       algorithm
         result :=smooth(2, if Modelica.Math.Vectors.length(v) >= eps then v/Modelica.Math.Vectors.length(v) else zeros(size(v, 1)));
-        annotation (Inline=true, Documentation(info="<!DOCTYPE html><html>
-<p>The function returns the <b>unit vector</b> <code>v/length(v)</code> of vector v. If length(v) is close to zero (more precisely, if length(v) &LT; eps), a zero vector is returned to avoid division by zero. The constant eps is set to 100*Modelica.Constants.eps. The function is based on <a href=\"Modelica://Modelica.Math.Vectors.normalize\">Modelica.Math.Vectors.normalize</a>.</p>
-<p><h4>See also</h4></p>
-<p><a href=\"Modelica://Modelica.Math.Vectors.length\">Modelica.Math.Vectors.length</a> </p>
+        annotation (Inline=true, Documentation(info="<html>
+<p>The function returns the <b>unit vector</b> <code>v/length(v)</code> of vector v. If length(v) is close to zero (more precisely, if length(v) &lt; eps), a zero vector is returned to avoid division by zero. The constant eps is set to 100*Modelica.Constants.eps. The function is based on <a href=\"Modelica://Modelica.Math.Vectors.normalize\">Modelica.Math.Vectors.normalize</a>.</p>
+<h4>See also</h4>
+<p><a href=\"Modelica://Modelica.Math.Vectors.length\">Modelica.Math.Vectors.length</a></p>
 </html>"));
       end vectorNormalization;
 
