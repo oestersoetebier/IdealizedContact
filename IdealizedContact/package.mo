@@ -3585,12 +3585,12 @@ Integration of the two blocks is in progress.")}));
                 origin={-54,-110})));
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
-          "absolut anglulat velocity contact point ball1 resolved in BCS1"
+          "absolut angular velocity contact point ball1 resolved in BCS1"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={20,0})));
           Modelica.Blocks.Interfaces.RealOutput w1[3]
-          "absolut anglulat velocity contact point ball1 resolved in BCS1"
+          "absolut angular velocity contact point ball1 resolved in BCS1"
             annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
                 rotation=270,
@@ -3618,12 +3618,12 @@ Integration of the two blocks is in progress.")}));
             n4=3) annotation (Placement(transformation(extent={{-92,-36},{-80,-24}})));
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV1(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
-          "absolut anglulat velocity contact point ball2 resolved in BCS2"
+          "absolut angular velocity contact point ball2 resolved in BCS2"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={74,-80})));
           Modelica.Blocks.Interfaces.RealOutput w2[3]
-          "absolut anglulat velocity contact point ball2 resolved in BCS2"
+          "absolut angular velocity contact point ball2 resolved in BCS2"
             annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
                 rotation=270,
@@ -3800,7 +3800,7 @@ Integration of the two blocks is in progress.")}));
           "relative position center of ball1 resolved in BCS2"
             annotation (Placement(transformation(extent={{-116,-18},{-100,-2}})));
           Modelica.Blocks.Interfaces.RealInput w_mov1[3]
-          "absolut anglulat velocity contact point ball1 resolved in BCS1"
+          "absolut angular velocity contact point ball1 resolved in BCS1"
             annotation (Placement(transformation(extent={{-116,46},{-100,62}})));
           Real r1 "radius ball1";
           Real r2 "radius ball2";
@@ -3847,7 +3847,7 @@ Integration of the two blocks is in progress.")}));
             n3=3,
             n4=3) annotation (Placement(transformation(extent={{-92,-86},{-80,-74}})));
           Modelica.Blocks.Interfaces.RealInput w_mov2[3]
-          "absolut anglular velocity cantact point ball2 resolved in BCS2"
+          "absolut angular velocity contact point ball2 resolved in BCS2"
             annotation (Placement(transformation(extent={{-116,84},{-100,100}})));
           Modelica.Blocks.Interfaces.RealInput pos_rel_BCS1[3]
           "relative position center of ball2 resolved in BCS1"
@@ -4014,12 +4014,12 @@ Integration of the two blocks is in progress.")}));
                 origin={40,-110})));
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV1(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
-          "absolut anglular velocity contact point ball resolved in BCS1"
+          "absolut angular velocity contact point ball resolved in BCS1"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={-24,0})));
           Modelica.Blocks.Interfaces.RealOutput w_mov1[3]
-          "absolut anglular velocity contact point ball resolved in BCS1"
+          "absolut angular velocity contact point ball resolved in BCS1"
             annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
                 rotation=270,
@@ -4070,14 +4070,14 @@ Integration of the two blocks is in progress.")}));
             n4=3) annotation (Placement(transformation(extent={{-96,-26},{-84,
                     -14}})));
           Modelica.Blocks.Interfaces.RealOutput w_mov2[3]
-          "anglular velocitycontact point on cylinder surface resolved in BCSA"
+          "angular velocitycontact point on cylinder surface resolved in BCSA"
             annotation (Placement(transformation(
                 extent={{-10,-10},{10,10}},
                 rotation=270,
                 origin={-80,-110})));
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV2(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
-          "anglular velocity contact point on cylinder surface resolved in BCSA"
+          "angular velocity contact point on cylinder surface resolved in BCSA"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={40,-80})));
@@ -4119,9 +4119,9 @@ Integration of the two blocks is in progress.")}));
 
         //----------other connection----------
           w_mov1 = aAV1.w
-          "absolut anglular velocity center of ball mass resolved in BCSA";
+          "absolut angular velocity center of ball mass resolved in BCSA";
           w_mov2 = aAV2.w
-          "anglular velocitycontact point on cylinder surface resolved in BCSA";
+          "angular velocitycontact point on cylinder surface resolved in BCSA";
           pos_b_BCSA = rP_b_cyA.r_rel
           "relative position center of ball resolved in BCSA";
           pos_ctb_BCS4 = rP_mpb_mpcy.r_rel
@@ -4287,7 +4287,7 @@ Integration of the two blocks is in progress.")}));
                 extent={{-8,-8},{8,8}},
                 origin={-108,-100})));
           Modelica.Blocks.Interfaces.RealInput w_mov1[3]
-          "absolut anglular velocity contact point ball resolved in BCS1"
+          "absolut angular velocity contact point ball resolved in BCS1"
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
@@ -4349,7 +4349,7 @@ Integration of the two blocks is in progress.")}));
             n3=3,
             n4=3) annotation (Placement(transformation(extent={{-92,-106},{-80,-94}})));
           Modelica.Blocks.Interfaces.RealInput w_mov2[3]
-          "anglular velocitycontact point on cylinder surface resolved in BCSA"
+          "angular velocitycontact point on cylinder surface resolved in BCSA"
                                                                annotation (
               Placement(transformation(
                 extent={{-8,-8},{8,8}},
@@ -4503,12 +4503,12 @@ Integration of the two blocks is in progress.")}));
                 origin={80,-108})));
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
-          "anglulat velocity contact point ball resolved in BCS1"
+          "angular velocity contact point ball resolved in BCS1"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={-40,20})));
           Modelica.Blocks.Interfaces.RealOutput w[3]
-          "anglulat velocity contact point ball resolved in BCS1"
+          "angular velocity contact point ball resolved in BCS1"
             annotation (Placement(transformation(
                 extent={{-8,-8},{8,8}},
                 rotation=270,
@@ -4754,7 +4754,7 @@ Integration of the two blocks is in progress.")}));
           Modelica.Blocks.Interfaces.RealInput vector_ball[12] "radius ball"
             annotation (Placement(transformation(extent={{-116,-62},{-100,-46}})));
           Modelica.Blocks.Interfaces.RealInput w_mov[3]
-          "anglulat velocity contact point ball resolved in BCS1"
+          "angular velocity contact point ball resolved in BCS1"
             annotation (Placement(transformation(extent={{-116,-28},{-100,-12}})));
 
           Real length_direction[3] "length direction rectangle";
@@ -4979,7 +4979,7 @@ Integration of the two blocks is in progress.")}));
                 origin={-72,0})));
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
-          "anglulat velocity contact point ball resolved in BCS1"
+          "angular velocity contact point ball resolved in BCS1"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={-40,20})));
@@ -5027,7 +5027,7 @@ Integration of the two blocks is in progress.")}));
                 rotation=270,
                 origin={80,-108})));
           Modelica.Blocks.Interfaces.RealOutput w[3]
-          "anglulat velocity contact point ball resolved in BCS1"
+          "angular velocity contact point ball resolved in BCS1"
             annotation (Placement(transformation(
                 extent={{-8,-8},{8,8}},
                 rotation=270,
@@ -5291,7 +5291,7 @@ Integration of the two blocks is in progress.")}));
           "relative position between ball contact point and center of circle resolved in BCS2"
             annotation (Placement(transformation(extent={{-116,46},{-100,62}})));
           Modelica.Blocks.Interfaces.RealInput w_mov[3]
-          "anglulat velocity contact point ball resolved in BCS1"
+          "angular velocity contact point ball resolved in BCS1"
             annotation (Placement(transformation(extent={{-116,-22},{-100,-6}})));
           Modelica.Blocks.Interfaces.RealInput pos_ctb_BCS1[3]
           "relative position contact point ball resolved in BCS1"
@@ -8058,7 +8058,7 @@ Integration of the two blocks is in progress.")}));
          Real f_n_mp;
 
         //  Real w_l
-        //     "absolut anglulat velocity center of cylinder1 around length direction resolved in BCS2";
+        //     "absolut angular velocity center of cylinder1 around length direction resolved in BCS2";
         //  Real v_r
         //     "circumferential velocity cylinder1 around length direction resolved in BCS2";
         //
@@ -8086,7 +8086,7 @@ Integration of the two blocks is in progress.")}));
 
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV1(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
-          "anglulat velocity contact point cylinder1 resolved in BCS1"
+          "angular velocity contact point cylinder1 resolved in BCS1"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={40,60})));
@@ -8120,7 +8120,7 @@ Integration of the two blocks is in progress.")}));
                 origin={-32,-108})));
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV2(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
-          "anglulat velocity contact point cylinder1 resolved in BCS1"
+          "angular velocity contact point cylinder1 resolved in BCS1"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={-20,-60})));
@@ -8822,7 +8822,7 @@ Integration of the two blocks is in progress.")}));
                origin={10,58})));
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV1(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
-          "anglulat velocity contact point cylinder1 resolved in BCS1"
+          "angular velocity contact point cylinder1 resolved in BCS1"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={40,38})));
@@ -8914,7 +8914,7 @@ Integration of the two blocks is in progress.")}));
          Real f_n_mp;
 
         //  Real w_l
-        //     "absolut anglulat velocity center of cylinder1 around length direction resolved in BCS2";
+        //     "absolut angular velocity center of cylinder1 around length direction resolved in BCS2";
         //  Real v_r
         //     "circumferential velocity cylinder1 around length direction resolved in BCS2";
         //
@@ -8948,7 +8948,7 @@ Integration of the two blocks is in progress.")}));
                 origin={2,-100})));
           Modelica.Mechanics.MultiBody.Sensors.AbsoluteAngularVelocity aAV2(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_resolve)
-          "anglulat velocity contact point cylinder1 resolved in BCS1"
+          "angular velocity contact point cylinder1 resolved in BCS1"
             annotation (Placement(transformation(extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={-20,-60})));
