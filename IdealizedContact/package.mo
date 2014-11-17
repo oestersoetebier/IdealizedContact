@@ -112,25 +112,20 @@ extends Modelica.Icons.Package;
 
     class Contact "Contact"
     extends Modelica.Icons.Contact;
-      annotation (Documentation(info="<!DOCTYPE html><html><p><\p>
-<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\"><tr>
-<td><p><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/staff/136187502734681/\">Peng Wang </a></p><p>Heinz Nixdorf Institute </p><p>University of Paderborn </p><p>Control Engineering and Mechatronics </p><p>F&uuml;rstenallee 11 </p><p>33102 Paderborn </p><p>GERMANY </p><p>E-Mail: peng.wang(at)hni.upb.de </p></td>
+      annotation (Documentation(info="<!DOCTYPE html><html>
+  <h4>Please contact:</h4>
+  <p></p>
+<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\">
+<tr>
+<td><p><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/staff/136187502734681/\">Peng Wang</a></p><p>Heinz Nixdorf Institute</p><p>University of Paderborn</p><p>Control Engineering and Mechatronics</p><p>F&uuml;rstenallee 11</p><p>33102 Paderborn</p><p>GERMANY</p><p>E-Mail: peng.wang(at)hni.upb.de</p></td>
 <td valign=\"middle\"><p>&nbsp;&nbsp;and&nbsp;&nbsp;</p></td>
-<td><p><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/staff/118900600706213/\">Felix Oesters&ouml;tebier </a></p><p>Heinz Nixdorf Institute </p><p>University of Paderborn </p><p>Control Engineering and Mechatronics </p><p>F&uuml;rstenallee 11 </p><p>33102 Paderborn </p><p>GERMANY </p><p>E-Mail: felix.oestersoetebier(at)hni.upb.de </p></td>
-<td></td>
+<td><p><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/staff/118900600706213/\">Felix Oesters&ouml;tebier</a></p><p>Heinz Nixdorf Institute </p><p>University of Paderborn </p><p>Control Engineering and Mechatronics </p><p>F&uuml;rstenallee 11 </p><p>33102 Paderborn </p><p>GERMANY </p><p>E-Mail: felix.oestersoetebier(at)hni.upb.de </p></td>
 </tr>
+<tr></tr>
 <tr>
-<td><p><br><br><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics\">http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/</a> </p></td>
-<td></td>
-<td></td>
-<td></td>
+<td><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics\">http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/</a></td>
 </tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
+<tr></tr>
 </table>
 </html>"),    preferredView="info");
     end Contact;
