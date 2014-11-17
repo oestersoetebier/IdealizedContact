@@ -82,18 +82,18 @@ extends Modelica.Icons.Package;
     extends Modelica.Icons.References;
       annotation (preferredView="info", Documentation(info="<!DOCTYPE html><html>
 <p>The first implementation of the library is described in:</p>
-<p>Felix Oesters&ouml;tebier, Peng Wang and Ansgar Tr&auml;chtler: <b><a href=\"http://dx.doi.org/10.3384/ecp14096929\">A Modelica Contact Library for Idealized Simulation of Independently Defined Contact Surfaces </a></b>submitted to the <b>10th International Modelica Conference 2014</b> in Lund/Sweden.</p>
-<p><br>It is furthermore based on the following theses: </p>
-<dl><dt>Peng Wang:</dt>
+<p>Felix Oesters&ouml;tebier, Peng Wang and Ansgar Tr&auml;chtler: <b><a href=\"http://dx.doi.org/10.3384/ecp14096929\">A Modelica Contact Library for Idealized Simulation of Independently Defined Contact Surfaces</a></b> submitted to the <b>10th International Modelica Conference 2014</b> in Lund/Sweden.</p>
+<p><br>It is furthermore based on the following theses:</p>
+<dl><dt>Peng Wang:</dt></dl>
 <dd><b>Idealisierte Modellierung von Kontakten in Dymola/Modelica</b>. Date: 21.12.2011</dd>
 <dd>Supervisor: Felix Oesters&ouml;tebier</dd>
-<dl><dt>Peng Wang:</dt>
+<dl><dt>Peng Wang:</dt></dl>
 <dd><b>Aufbau einer Kontaktbibliothek f&uuml;r einfache Kontaktgeometrien in Dymola/Modelica</b>. Date: 23.11.2012</dd>
 <dd>Supervisor: Felix Oesters&ouml;tebier</dd>
-<dl><dt>Matthias Gringard:</dt>
+<dl><dt>Matthias Gringard:</dt></dl>
 <dd><b>Erweiterung der lehrstuhleigenen Modelica-Kontaktbibliothek um rotationssymmetrische K&ouml;rper</b>. Date: 27.02.2014</dd>
 <dd>Supervisors: Felix Oesters&ouml;tebier, Peng Wang</dd>
-</dl><p><br>And, it also refers to these publications:</p>
+<p>And, it also refers to these publications:</p>
 <p>[1] T. Juh&aacute;sz. Advanced Solutions in Object Oriented Mechatronic Simulation. Ph.D. Thesis, Dept. of Control Engineering and Information Technology, Budapest University of Technology and Economics, 2008</p>
 <p>[2] M. Otter, H. Elmqvist, J. D&iacute;az L&oacute;pez. Collision Handling for the Modelica MultiBody Library. Proceedings of the 4th International Modelica Conference, Hamburg, March 7-8, 2005</p>
 <p>[3] G. Hippmann. Modellierung von Kontakten komplex geformter K&ouml;rper in der Mehrk&ouml;rperdynamik. Ph.D. Thesis Vienna University of Technology, 2004</p>
@@ -2888,7 +2888,7 @@ printing and shipping costs may be recovered.</p>
       y[3,1]:=(h[2]+h[3]*cos(phi))*sin(phi)*cos(theta);//*r*cos(theta);
 
         annotation (Documentation(info="<!DOCTYPE html><html>
-<p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;a&nbsp;point&nbsp;on the &nbsp;surface of an egg&nbsp;in&nbsp;the&nbsp;respective coordinate&nbsp;system.&nbsp;It&nbsp;describes the contact surface using the &QUOT;eggquation&QUOT;.</p>
+<p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;a&nbsp;point&nbsp;on the &nbsp;surface of an egg&nbsp;in&nbsp;the&nbsp;respective coordinate&nbsp;system.&nbsp;It&nbsp;describes the contact surface using the &quot;eggquation&quot;.</p>
 <pre><a href=\"http://matheminutes.blogspot.de/2013/03/eggquations.html\">http://matheminutes.blogspot.de/2013/03/eggquations.html</a></pre>
 </html>"));
       end egg;
@@ -2962,7 +2962,7 @@ printing and shipping costs may be recovered.</p>
         end if;
         annotation (Documentation(info="<!DOCTYPE html><html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;first&nbsp;derivatives&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;and&nbsp;azimuthal&nbsp;angles.</p>
-<p>The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&GT;&nbsp;d/(dk),&nbsp;d!=1&nbsp;-&GT;&nbsp;d/(dl)</p>
+<p>The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&#62;&nbsp;d/(dk),&nbsp;d!=1&nbsp;-&#62;&nbsp;d/(dl)</p>
 <p>This&nbsp;function&nbsp;works&nbsp;for&nbsp;any&nbsp;ellipsoid,&nbsp;because&nbsp;the&nbsp;semi&nbsp;axis&nbsp;are&nbsp;inputs&nbsp;as&nbsp;well.</p>
 </html>"));
         end ellipsoidFirstPartialDerivatives;
@@ -2987,7 +2987,7 @@ printing and shipping costs may be recovered.</p>
 
           annotation (Documentation(info="<!DOCTYPE html><html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;first&nbsp;derivatives&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;and&nbsp;azimuthal&nbsp;angles.</p>
-<p>The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&GT;&nbsp;d/(dk),&nbsp;d!=1&nbsp;-&GT;&nbsp;d/(dl)</p>
+<p>The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&#62;&nbsp;d/(dk),&nbsp;d!=1&nbsp;-&#62;&nbsp;d/(dl)</p>
 <p>This&nbsp;function&nbsp;works&nbsp;for&nbsp;any cylinder,&nbsp;because&nbsp;the&nbsp;semi&nbsp;axis&nbsp;are&nbsp;inputs&nbsp;as&nbsp;well.</p>
 </html>"));
         end cylindricalFirstPartialDerivatives;
@@ -3012,7 +3012,7 @@ printing and shipping costs may be recovered.</p>
         end if;
         annotation (Documentation(info="<!DOCTYPE html><html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;first&nbsp;derivatives&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;and&nbsp;azimuthal&nbsp;angles.</p>
-<p>The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;(polar&nbsp;or&nbsp;azimuthal)&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&GT;&nbsp;d/(dphi),&nbsp;d!=1&nbsp;-&GT;&nbsp;d/(dtheta)</p>
+<p>The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;(polar&nbsp;or&nbsp;azimuthal)&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&#62;&nbsp;d/(dphi),&nbsp;d!=1&nbsp;-&#62;&nbsp;d/(dtheta)</p>
 </html>"));
         end eggFirstPartialDerivatives;
 
@@ -3064,7 +3064,7 @@ printing and shipping costs may be recovered.</p>
           end if;
            assert(surfaceSpecified,"First partial derivative of parametric surface is not specified.");
         annotation (Documentation(info="<!DOCTYPE html><html>
-<p>This&nbsp;wrapper function&nbsp;calculates&nbsp;the&nbsp;first&nbsp;partial&nbsp;derivatives&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;and&nbsp;azimuthal&nbsp;angles in the body coordinate system. The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;(polar&nbsp;or&nbsp;azimuthal)&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&GT;&nbsp;d/(dphi),&nbsp;d!=1&nbsp;-&GT;&nbsp;d/(dtheta)</p>
+<p>This&nbsp;wrapper function&nbsp;calculates&nbsp;the&nbsp;first&nbsp;partial&nbsp;derivatives&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;and&nbsp;azimuthal&nbsp;angles in the body coordinate system. The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;(polar&nbsp;or&nbsp;azimuthal)&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&#62;&nbsp;d/(dphi),&nbsp;d!=1&nbsp;-&#62;&nbsp;d/(dtheta)</p>
 </html>"));
         end firstPartialDerivativesWrapper;
         annotation (Documentation(info="<!DOCTYPE html><html>
@@ -3304,11 +3304,8 @@ printing and shipping costs may be recovered.</p>
                 fillPattern=FillPattern.Sphere,
                 smooth=Smooth.Bezier,
                 fillColor={0,0,255})}),  Documentation(info="<!DOCTYPE html><html>
-<p>
-Model <b>ConvexVisualizer</b> visualizes a convex surface using parametric surface definitons. The center of the visualization is located at
-connector frame_a.
-It utilizes the same method that is used by Martin Otter and Dirk Zimmer resp. in <b><a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Torus\">Torus<\a></b> model.
-</html>"),  Diagram(graphics));
+        <p>Model <b>ConvexVisualizer</b> visualizes a convex surface using parametric surface definitons. The center of the visualization is located at connector frame_a. It utilizes the same method that is used by Martin Otter and Dirk Zimmer resp. in <b><a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Torus\">Torus<\a></b> model.</p></html>"),
+            Diagram(graphics));
         end ConvexVisualizer;
 
         package SurfaceCharacteristics
@@ -4394,7 +4391,7 @@ convex contact surface object as parameter String.</p>
               fillPattern=FillPattern.Solid,
               textString="1")}),
         Documentation(info="<!DOCTYPE html><html>
-<p>Depending on the shape, we use 1 (sphere), 2 (cylinder) or 4 (plane) points to describe the surfaces of the contact partners. These constitute potential contact points. For each of them the collision detection is performed. For this purpose, analytic solutions for simple geometries are provided in the library. As the contact region may alter with the moving bodies, the contact points will also move on the defined surface. </p>
+<p>Depending on the shape, we use 1 (sphere), 2 (cylinder) or 4 (plane) points to describe the surfaces of the contact partners. These constitute potential contact points. For each of them the collision detection is performed. For this purpose, analytic solutions for simple geometries are provided in the library. As the contact region may alter with the moving bodies, the contact points will also move on the defined surface.</p>
 <p>Then, the contact block calculates the appropriate force depending on the combination of surfaces. So, using it the respective combination of contact surface has to be chosen at first by setting the parameter contactDefinition. This will use the Modelica replaceable statement to define the appropiate components of the contact block. Then connect the contact interfaces of the two contact surfaces to the respective port of the contact block (first&nbsp;surface&nbsp;mentioned&nbsp;must&nbsp;be&nbsp;connected&nbsp;to&nbsp;port&nbsp;1).</p>
 <p>In the case of a collision of the two connected surface (the contact condition holds for at least one contact point) a three-dimensional contact force is applied. It consists of both the normal force and the tangential friction. The respective directions can be obtained by means of the local coordinate systems in the contact points. As compared to more complex models, the continuous surface layer is replaced by a nonlinear spring/damper element. Consequently, the normal force Fn&nbsp;is determined by means of the penetration p&nbsp;and the penetration velocity. A continuous contact force model with hysteresis damping according to [1] is implemented. Nevertheless, choosing n1=1 and n=0&nbsp;one can get the linear Kelvin-Voigt model, where the coefficients are the spring and damping constant. Choosing n1=n2&nbsp;one will get the formulation according to [2].</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fn.jpg\"/></p>
@@ -9038,7 +9035,7 @@ convex contact surface object as parameter String.</p>
             vrel[3]:=vrelh[3, 1];
 
             annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                                graphics), Documentation(info="<!DOCTYPE html><html><p>This model calculates the relative velocity between the anticipated contact points.</font>
+                                graphics), Documentation(info="<!DOCTYPE html><html><p>This model calculates the relative velocity between the anticipated contact points.</p>
   <p>The formula used can be found in the full documentation. The velocity of an arbitrary point on an arbitrarily moving rigid body is the composition of the velocity of the origin of the coordinate system associated with the rigid body and the peripheral velocity of the point in question.</p></html>"));
           end RelativeVelocities;
 
@@ -15297,9 +15294,9 @@ convex contact surface object as parameter String.</p>
       algorithm
         result :=smooth(2, if Modelica.Math.Vectors.length(v) >= eps then v/Modelica.Math.Vectors.length(v) else zeros(size(v, 1)));
         annotation (Inline=true, Documentation(info="<!DOCTYPE html><html>
-<p>The function returns the <b>unit vector</b> <code>v/length(v)</code> of vector v. If length(v) is close to zero (more precisely, if length(v) &LT; eps), a zero vector is returned to avoid division by zero. The constant eps is set to 100*Modelica.Constants.eps. The function is based on <a href=\"Modelica://Modelica.Math.Vectors.normalize\">Modelica.Math.Vectors.normalize</a>.</p>
-<p><h4>See also</h4></p>
-<p><a href=\"Modelica://Modelica.Math.Vectors.length\">Modelica.Math.Vectors.length</a> </p>
+<p>The function returns the <b>unit vector</b> <code>v/length(v)</code> of vector v. If length(v) is close to zero (more precisely, if length(v) &#60; eps), a zero vector is returned to avoid division by zero. The constant eps is set to 100*Modelica.Constants.eps. The function is based on <a href=\"Modelica://Modelica.Math.Vectors.normalize\">Modelica.Math.Vectors.normalize</a>.</p>
+<h4>See also</h4>
+<p><a href=\"Modelica://Modelica.Math.Vectors.length\">Modelica.Math.Vectors.length</a></p>
 </html>"));
       end vectorNormalization;
 
