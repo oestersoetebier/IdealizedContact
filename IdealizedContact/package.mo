@@ -84,15 +84,15 @@ extends Modelica.Icons.Package;
 <p>The first implementation of the library is described in:</p>
 <p>Felix Oesters&ouml;tebier, Peng Wang and Ansgar Tr&auml;chtler: <b><a href=\"http://dx.doi.org/10.3384/ecp14096929\">A Modelica Contact Library for Idealized Simulation of Independently Defined Contact Surfaces</a></b> submitted to the <b>10th International Modelica Conference 2014</b> in Lund/Sweden.</p>
 <p><br>It is furthermore based on the following theses:</p>
-<dl><dt>Peng Wang:</dt></dl>
+<dl><dt>Peng Wang:</dt>
 <dd><b>Idealisierte Modellierung von Kontakten in Dymola/Modelica</b>. Date: 21.12.2011</dd>
-<dd>Supervisor: Felix Oesters&ouml;tebier</dd>
-<dl><dt>Peng Wang:</dt></dl>
+<dd>Supervisor: Felix Oesters&ouml;tebier</dd></dl>
+<dl><dt>Peng Wang:</dt>
 <dd><b>Aufbau einer Kontaktbibliothek f&uuml;r einfache Kontaktgeometrien in Dymola/Modelica</b>. Date: 23.11.2012</dd>
-<dd>Supervisor: Felix Oesters&ouml;tebier</dd>
-<dl><dt>Matthias Gringard:</dt></dl>
+<dd>Supervisor: Felix Oesters&ouml;tebier</dd></dl>
+<dl><dt>Matthias Gringard:</dt>
 <dd><b>Erweiterung der lehrstuhleigenen Modelica-Kontaktbibliothek um rotationssymmetrische K&ouml;rper</b>. Date: 27.02.2014</dd>
-<dd>Supervisors: Felix Oesters&ouml;tebier, Peng Wang</dd>
+<dd>Supervisors: Felix Oesters&ouml;tebier, Peng Wang</dd></dl>
 <p>And, it also refers to these publications:</p>
 <p>[1] T. Juh&aacute;sz. Advanced Solutions in Object Oriented Mechatronic Simulation. Ph.D. Thesis, Dept. of Control Engineering and Information Technology, Budapest University of Technology and Economics, 2008</p>
 <p>[2] M. Otter, H. Elmqvist, J. D&iacute;az L&oacute;pez. Collision Handling for the Modelica MultiBody Library. Proceedings of the 4th International Modelica Conference, Hamburg, March 7-8, 2005</p>
@@ -112,20 +112,26 @@ extends Modelica.Icons.Package;
 
     class Contact "Contact"
     extends Modelica.Icons.Contact;
-      annotation (Documentation(info="<!DOCTYPE html><html>
-  <h4>Please contact:</h4>
-  <p></p>
-<table cellspacing=\"0\" cellpadding=\"2\" border=\"0\">
-<tr>
+      annotation (Documentation(info="<html>
+<h4>Please contact:</h4>
+<table cellspacing=\"5\" cellpadding=\"2\" border=\"0\" width=\"650\"><tr>
 <td><p><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/staff/136187502734681/\">Peng Wang</a></p><p>Heinz Nixdorf Institute</p><p>University of Paderborn</p><p>Control Engineering and Mechatronics</p><p>F&uuml;rstenallee 11</p><p>33102 Paderborn</p><p>GERMANY</p><p>E-Mail: peng.wang(at)hni.upb.de</p></td>
-<td valign=\"middle\"><p>&nbsp;&nbsp;and&nbsp;&nbsp;</p></td>
-<td><p><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/staff/118900600706213/\">Felix Oesters&ouml;tebier</a></p><p>Heinz Nixdorf Institute </p><p>University of Paderborn </p><p>Control Engineering and Mechatronics </p><p>F&uuml;rstenallee 11 </p><p>33102 Paderborn </p><p>GERMANY </p><p>E-Mail: felix.oestersoetebier(at)hni.upb.de </p></td>
+<td valign=\"middle\"><p align=\"center\">and</p></td>
+<td><p><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/staff/118900600706213/\">Felix Oesters&ouml;tebier</a></p><p>Heinz Nixdorf Institute</p><p>University of Paderborn</p><p>Control Engineering and Mechatronics</p><p>F&uuml;rstenallee 11</p><p>33102 Paderborn</p><p>GERMANY</p><p>E-Mail: felix.oestersoetebier(at)hni.upb.de</p></td>
 </tr>
-<tr></tr>
 <tr>
-<td><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics\">http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/</a></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr></tr>
+<tr>
+<td colspan=\"3\"><p><b><a href=\"http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics\">http://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/</a></b></p></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </table>
 </html>"),    preferredView="info");
     end Contact;
@@ -3298,9 +3304,9 @@ printing and shipping costs may be recovered.</p>
                 lineThickness=0.5,
                 fillPattern=FillPattern.Sphere,
                 smooth=Smooth.Bezier,
-                fillColor={0,0,255})}),  Documentation(info="<!DOCTYPE html><html>
-        <p>Model <b>ConvexVisualizer</b> visualizes a convex surface using parametric surface definitons. The center of the visualization is located at connector frame_a. It utilizes the same method that is used by Martin Otter and Dirk Zimmer resp. in <b><a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Torus\">Torus<\a></b> model.</p></html>"),
-            Diagram(graphics));
+                fillColor={0,0,255})}),  Documentation(info="<html>
+<p>Model <b>ConvexVisualizer</b> visualizes a convex surface using parametric surface definitons. The center of the visualization is located at connector frame_a. It utilizes the same method that is used by Martin Otter and Dirk Zimmer resp. in <b><a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Torus\">Torus</a></b> model.</p>
+</html>"),  Diagram(graphics));
         end ConvexVisualizer;
 
         package SurfaceCharacteristics
@@ -4397,10 +4403,10 @@ convex contact surface object as parameter String.</p>
 <p><br/>The complete vector of the contact force is then computed as follows.</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fcontact.jpg\"/></p>
 <p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently seperated in two blocks. Integration of the two blocks is in progress.</p>
-<p><h4>References:</h4></p>
-<p><br/>[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H. M. Lankarani, P. E. Nikravesh: Continuous Contact Force Models for Impact Analysis in Multibody Systems, Nonlinear Dynamics, 5, 1994 </p>
-<p>[2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K. H. Hunt, F. R. E. Crossley: Coefficient of restitution interpreted as damping in vibroimpact, ASME J. Appl. Mech, 1975 </p>
-<p>[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C. Makkar, W. E. Dixon, W. G. Sawyer, G. Hu: A New Continuously Differentiable Friction Model for Control Systems Design, Proceedings of the 2005 IEEE/ASME International Conference on Advanced Intelligent Mechatronics, Monterey CA, July, 2005 </p>
+<h4>References:</h4>
+<p>[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H. M. Lankarani, P. E. Nikravesh: Continuous Contact Force Models for Impact Analysis in Multibody Systems, Nonlinear Dynamics, 5, 1994</p>
+<p>[2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K. H. Hunt, F. R. E. Crossley: Coefficient of restitution interpreted as damping in vibroimpact, ASME J. Appl. Mech, 1975</p>
+<p>[3]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C. Makkar, W. E. Dixon, W. G. Sawyer, G. Hu: A New Continuously Differentiable Friction Model for Control Systems Design, Proceedings of the 2005 IEEE/ASME International Conference on Advanced Intelligent Mechatronics, Monterey CA, July, 2005</p>
 </html>"));
     end Contact;
 
