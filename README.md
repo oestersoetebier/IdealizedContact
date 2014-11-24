@@ -14,7 +14,8 @@ Download [latest development version](../../archive/master.zip)
 
 #### Release notes
 * [Version v0.1.0 (2014-05-07)](https://github.com/oestersoetebier/IdealizedContact/archive/v0.1.0.zip): initial version based on the one presented at Modelica 2014
-  
+* [Version v0.2.0 (2014-11-24)](https://github.com/oestersoetebier/IdealizedContact/archive/v0.2.0.zip): added numerical contact point calculation for parametric convex surfaces
+
 
 ## License
 The library is licensed under the Modelica License 2
@@ -35,6 +36,7 @@ web: https://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/
 Contributers:
 * Peng Wang
 * Felix Oesters&ouml;tebier
+* Matthias Gringard
 
 You may report any issues with using the [Issues](../../issues) button.
 
