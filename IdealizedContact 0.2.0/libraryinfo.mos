@@ -1,0 +1,10 @@
+
+
+LibraryInfoMenuCommand(
+category = "libraries",
+text = "IdealizedContact",
+reference = "IdealizedContact",
+isModel = true,
+description = "idealized contact models for simple surfaces",
+ModelicaVersion = "3.2",
+pos = 5002);
