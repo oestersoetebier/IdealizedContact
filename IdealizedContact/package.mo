@@ -4248,7 +4248,7 @@ convex contact surface object as parameter String.</p>
       parameter SI.Velocity v_e1=0.01 "limit velocity of static friction" annotation(Dialog(group="Stribeck curve"));
       parameter SI.Velocity v_e2=0.1 "limit velocity of kinetic friction" annotation(Dialog(group="Stribeck curve"));
 
-      inner parameter Real gamma1=(mue_s-tanh(2*v_e1/v_e2)*gamma4-k_v*2*v_e1)/(tanh(2*v_e1/v_e1)-tanh(2*v_e1/v_e2))-gamma4
+      inner parameter Real gamma1=(mue_s-tanh(2*v_e1/v_e2)*gamma4-k_v*2*v_e1)/(tanh(2*v_e2/v_e1)-tanh(2*v_e1/v_e2))-gamma4
       "friction parameter 1"                                                                        annotation(Dialog(tab="Friction model"));
       inner parameter Real gamma2=2/v_e1 "friction parameter 2" annotation(Dialog(tab="Friction model"));
       inner parameter Real gamma3=3/v_e2 "friction parameter 3" annotation(Dialog(tab="Friction model"));
@@ -4329,6 +4329,7 @@ convex contact surface object as parameter String.</p>
       Modelica.Blocks.Interfaces.BooleanOutput contact if enableContactOutput
         annotation (Placement(transformation(extent={{94,-6},{114,14}})));
     equation
+      assert(v_e1<v_e2,"Limit velocity of static friction (v_e1) must be smaller than the limit velocity of kinetic friction (v_e2)");
       connect(contactDefinition.frame_a, Port1.frame)
                                                  annotation (Line(
           points={{-14.58,29.94},{-44,29.94},{-44,54},{12,54},{12,70}},
@@ -4421,7 +4422,7 @@ convex contact surface object as parameter String.</p>
     input SI.Velocity v_e1=0.01 "limit velocity of static friction" annotation(Dialog(group="Stribeck curve"));
     input SI.Velocity v_e2=0.1 "limit velocity of kinetic friction" annotation(Dialog(group="Stribeck curve"));
 
-    input Real gamma1=(mue_s-tanh(2*v_e1/v_e2)*gamma4-k_v*2*v_e1)/(tanh(2*v_e1/v_e1)-tanh(2*v_e1/v_e2))-gamma4
+    input Real gamma1=(mue_s-tanh(2*v_e1/v_e2)*gamma4-k_v*2*v_e1)/(tanh(2*v_e2/v_e1)-tanh(2*v_e1/v_e2))-gamma4
       "friction parameter 1"                                                                        annotation(Dialog(tab="Friction model"));
     input Real gamma2=2/v_e1 "friction parameter 2" annotation(Dialog(tab="Friction model"));
     input Real gamma3=3/v_e2 "friction parameter 3" annotation(Dialog(tab="Friction model"));
@@ -11853,12 +11854,12 @@ convex contact surface object as parameter String.</p>
       public
           IdealizedContact.Components.Utilities.variablePrism1 variablePrism_l_cy1
           "offset from point on cylinder1 surface along L-direction to face side resolved in BCS1"
-            annotation (Placement(transformation(extent={{-24,12},{-8,28}})));
+            annotation (Placement(transformation(extent={{-26,14},{-10,30}})));
           IdealizedContact.Components.Utilities.variablePrism1 variablePrism_l_cy2
           "offset from point on cylinder2 surface along L-direction to face side resolved in BCS2"
             annotation (Placement(transformation(extent={{-8,-8},{8,8}},
                 rotation=180,
-                origin={8,-20})));
+                origin={4,-20})));
           IdealizedContact.Components.Utilities.variablePrism1 variablePrism_1
           "offset from center of mass to cylinder1 surface along unit vector uv_pos_cy2_otwh resolved in BCS1"
             annotation (Placement(transformation(extent={{-60,52},{-44,68}})));
@@ -11870,13 +11871,13 @@ convex contact surface object as parameter String.</p>
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
                 rotation=180,
-                origin={10,20})));
+                origin={6,22})));
           Modelica.Mechanics.MultiBody.Sensors.RelativePosition rP1_cy2(resolveInFrame=
                 Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
             annotation (Placement(transformation(
                 extent={{-6,-6},{6,6}},
                 rotation=0,
-                origin={-18,-20})));
+                origin={-20,-20})));
           Modelica.Blocks.Routing.DeMultiplex4 deMultiplex1(
             n1=3,
             n2=3,
@@ -12036,23 +12037,23 @@ convex contact surface object as parameter String.</p>
               thickness=0.5,
               smooth=Smooth.None));
           connect(rP2_cy1.frame_b, variablePrism_l_cy1.frame_b) annotation (Line(
-              points={{4,20},{-8,20}},
+              points={{0,22},{-10,22}},
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
           connect(rP1_cy2.frame_b, variablePrism_l_cy2.frame_b) annotation (Line(
-              points={{-12,-20},{0,-20}},
+              points={{-14,-20},{-4,-20}},
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
           connect(rP1_cy2.frame_a, variablePrism_1.frame_b) annotation (Line(
-              points={{-24,-20},{-24,60},{-44,60}},
+              points={{-26,-20},{-34,-20},{-34,60},{-44,60}},
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
           connect(variablePrism_l_cy1.frame_a, variablePrism_1.frame_b) annotation (
               Line(
-              points={{-24,20},{-24,60},{-44,60}},
+              points={{-26,22},{-34,22},{-34,60},{-44,60}},
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
@@ -12077,8 +12078,7 @@ convex contact surface object as parameter String.</p>
 
           connect(variablePrism_l_cy2.frame_a, variablePrism_2.frame_b) annotation (
               Line(
-              points={{16,-20},{16,-20},{22,-20},{22,-20},{22,-20},{22,-60},{
-                  -44,-60}},
+              points={{12,-20},{22,-20},{22,-60},{-44,-60}},
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
@@ -12116,7 +12116,7 @@ convex contact surface object as parameter String.</p>
               thickness=0.5,
               smooth=Smooth.None));
           connect(variablePrism_l_cy2.frame_a, rP2_cy1.frame_a) annotation (Line(
-              points={{16,-20},{22,-20},{22,20},{16,20}},
+              points={{12,-20},{22,-20},{22,22},{12,22}},
               color={95,95,95},
               thickness=0.5,
               smooth=Smooth.None));
@@ -12268,7 +12268,7 @@ convex contact surface object as parameter String.</p>
          Real v_ct1_BCS2[3] "velocity contact point1 resolved in BCS2";
          Real v_ct2_BCS2[3] "velocity contact point2 resolved in BCS2";
          Real T_BCS12[3,3]
-          "Transmation matrix from orientation objekt to rotate BCS1 into BCS2";
+          "Transformation matrix from orientation objekt to rotate BCS1 into BCS2";
          Real v_rel_ct_BCS2[3]
           "relative velocity contact points resolved in BCS2";
 
