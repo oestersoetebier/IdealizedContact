@@ -33,7 +33,7 @@ F&uuml;rstenallee 11
 Germany  
 web: https://www.hni.uni-paderborn.de/en/control-engineering-and-mechatronics/
 
-Contributers:
+Contributors:
 * Peng Wang
 * Felix Oesters&ouml;tebier
 * Matthias Gringard
