@@ -11,7 +11,7 @@ extends Modelica.Icons.Package;
       annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
 <p>To describe elementary <a href=\"modelica://IdealizedContact.ContactSurfaces\">contact surfaces</a>, the library provides ready-to-use blocks. The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions of the surface can be parameterized. In order to be able to use the dimensions in the contact block we introduce a new interface to connect the surface definition with a contact block. The figure shows the resulting shape of the contact area for all possible combinations that are analytically solved, as well as the number of contact points to describe it.</p>
 <p><br><img src=\"modelica://IdealizedContact/Resources/Images/table_contactsurfaces.png\"/></p>
-<p>Furthermore, the library offers the possibilty to calculate contact points on convex surfaces using iterative newton algorithm. These surfaces are described in a parametric form. Currently, the following <a href=\"modelica://IdealizedContact.ContactSurfaces.ParametricSurfaceDefinition\">parametric surfaces</a> are defined:</p>
+<p>Furthermore, the library offers the possibility to calculate contact points on convex surfaces using iterative newton algorithm. These surfaces are described in a parametric form. Currently, the following <a href=\"modelica://IdealizedContact.ContactSurfaces.ParametricSurfaceDefinition\">parametric surfaces</a> are defined:</p>
 <ul>
 <li>spherical</li>
 <li>ellipsoid</li>
@@ -25,7 +25,7 @@ extends Modelica.Icons.Package;
     class ElementaryContactBodies "How to use the elementary contact bodies"
     extends Modelica.Icons.Information;
       annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
-<p>The library includes predefined, <a href=\"modelica://IdealizedContact.ElementaryContactBodies\">elementary bodies</a> like cuboids or cylinders which combine several contact surfaces and include a Multibody block. Each contact surface can be enabled seperately. These do contain masses and moments of inertia, which are calculated by the dimensions and the density of the material. The Figure displays the<b> ElementaryContactBodies</b> that are currently available.</p>
+<p>The library includes predefined, <a href=\"modelica://IdealizedContact.ElementaryContactBodies\">elementary bodies</a> like cuboids or cylinders which combine several contact surfaces and include a Multibody block. Each contact surface can be enabled separately. These do contain masses and moments of inertia, which are calculated by the dimensions and the density of the material. The Figure displays the<b> ElementaryContactBodies</b> that are currently available.</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/ElementaryContactBodies.png\"/> </p>
 </html>"));
     end ElementaryContactBodies;
@@ -33,7 +33,7 @@ extends Modelica.Icons.Package;
     class ContactBlock "How to use the contact block"
     extends Modelica.Icons.Information;
       annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
-<p>The <a href=\"modelica://IdealizedContact.ContactBlock.Contact\">contact block</a> calculates the appropriate force depending on the combination of surfaces. It is connected to a corresponding pair of contact surfaces. So, the respective combination of contact surfaces has to be chosen at first by setting the parameter contactDefinition. This will use the Modelica replaceable statement to define the appropiate components of the contact block. Then connect the contact interfaces of the two contact surfaces to the respective port of the contact block (first&nbsp;surface&nbsp;mentioned&nbsp;must&nbsp;be&nbsp;connected&nbsp;to&nbsp;port&nbsp;1).</p>
+<p>The <a href=\"modelica://IdealizedContact.ContactBlock.Contact\">contact block</a> calculates the appropriate force depending on the combination of surfaces. It is connected to a corresponding pair of contact surfaces. So, the respective combination of contact surfaces has to be chosen at first by setting the parameter contactDefinition. This will use the Modelica replaceable statement to define the appropriate components of the contact block. Then connect the contact interfaces of the two contact surfaces to the respective port of the contact block (first&nbsp;surface&nbsp;mentioned&nbsp;must&nbsp;be&nbsp;connected&nbsp;to&nbsp;port&nbsp;1).</p>
 <p>In the case of a collision of the two connected surface (the contact condition holds for at least one contact point) a three-dimensional contact force is applied. It consists of both the normal force and the tangential friction. The respective directions can be obtained by means of the local coordinate systems in the contact points. As compared to more complex models, the continuous surface layer is replaced by a nonlinear spring/damper element. Consequently, the normal force Fn&nbsp;is determined by means of the penetration p&nbsp;and the penetration velocity. A continuous contact force model with hysteresis damping according to [9] is implemented. Nevertheless, choosing n1=1 and n=0&nbsp;one can get the linear Kelvin-Voigt model, where the coefficients are the spring and damping constant. Choosing n1=n2&nbsp;one will get the formulation according to [10].</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fn.jpg\"/></p>
 <p><br/>In order to calculate the friction forces without further discontinuous events, which would decrease the simulation speed and impede controller design, we use the continuously differentiable friction model of Makkar et al. [11]. They introduced the following function of the relative velocity&nbsp;to approximate the friction coefficient&nbsp;of the characteristic Stribeck curve.</p>
@@ -42,7 +42,7 @@ extends Modelica.Icons.Package;
 <p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/mue.jpg\"/></p>
 <p><br/>The complete vector of the contact force is then computed as follows.</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fcontact.jpg\"/></p>
-<p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently seperated in two blocks. Integration of the two blocks is in progress.</p>
+<p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently separated in two blocks. Integration of the two blocks is in progress.</p>
 <p><b>see <a href=\"modelica://IdealizedContact.UsersGuide.Literature\">Literature</a> for references.</b></p>
 </html>"));
     end ContactBlock;
@@ -70,7 +70,7 @@ extends Modelica.Icons.Package;
 <h4>Version 0.1.0, 2014-01-24</h4>
 <p>Uses Modelica Standard Library 3.2 </p>
 <p>First version of the IdealizedContact library.</p>
-<p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases are currently seperated in two blocks. Integration of the two blocks is in progress. </p>
+<p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases are currently separated in two blocks. Integration of the two blocks is in progress. </p>
 <p><br><b>Licensed by Heinz Nixdorf Institute under the Modelica License 2</b></p>
 <p><i>This Modelica package is <u>free</u> software and the use is completely at <u>your own risk</u>; it can be redistributed and/or modified under the terms of the Modelica license 2, see <a href=\"modelica://Modelica.UsersGuide.ModelicaLicense2\">Modelica.UsersGuide.ModelicaLicense2</a> or visit <a href=\"http://www.modelica.org/licenses/ModelicaLicense2\">http://www.modelica.org/licenses/ModelicaLicense2</a>.</i></p>
 <p><br><b>Acknowledgements:</b> </p>
@@ -3707,7 +3707,7 @@ convex contact surface object as parameter String.</p>
               fillPattern=FillPattern.Solid,
               pattern=LinePattern.None)}),
         Documentation(info="<!DOCTYPE html><html>
-<p>This model defines a cylindrical body that can collide with every surface. Contact surfaces can be enabled seperately. The enumeration corresponds to the chosen directions and dimensions and is displayed in the Figure.</p>
+<p>This model defines a cylindrical body that can collide with every surface. Contact surfaces can be enabled separately. The enumeration corresponds to the chosen directions and dimensions and is displayed in the Figure.</p>
 <p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/cylindricalContactBody.png\"/></p>
 </html>"));
     end CylindricalContactBody;
@@ -4036,7 +4036,7 @@ convex contact surface object as parameter String.</p>
               fillPattern=FillPattern.Solid)}),
         Documentation(
           info="<!DOCTYPE html><html>
-<p>This model defines a cuboid body that can collide with every surface. Contact surfaces can be enabled seperately. The enumeration corresponds to the chosen directions and dimensions and is displayed in the Figure.</p>
+<p>This model defines a cuboid body that can collide with every surface. Contact surfaces can be enabled separately. The enumeration corresponds to the chosen directions and dimensions and is displayed in the Figure.</p>
 <p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/cuboidContactBody.png\"/></p>
 </html>"));
     end CuboidContactBody;
@@ -4394,7 +4394,7 @@ convex contact surface object as parameter String.</p>
               textString="1")}),
         Documentation(info="<!DOCTYPE html><html>
 <p>Depending on the shape, we use 1 (sphere), 2 (cylinder) or 4 (plane) points to describe the surfaces of the contact partners. These constitute potential contact points. For each of them the collision detection is performed. For this purpose, analytic solutions for simple geometries are provided in the library. As the contact region may alter with the moving bodies, the contact points will also move on the defined surface.</p>
-<p>Then, the contact block calculates the appropriate force depending on the combination of surfaces. So, using it the respective combination of contact surface has to be chosen at first by setting the parameter contactDefinition. This will use the Modelica replaceable statement to define the appropiate components of the contact block. Then connect the contact interfaces of the two contact surfaces to the respective port of the contact block (first&nbsp;surface&nbsp;mentioned&nbsp;must&nbsp;be&nbsp;connected&nbsp;to&nbsp;port&nbsp;1).</p>
+<p>Then, the contact block calculates the appropriate force depending on the combination of surfaces. So, using it the respective combination of contact surface has to be chosen at first by setting the parameter contactDefinition. This will use the Modelica replaceable statement to define the appropriate components of the contact block. Then connect the contact interfaces of the two contact surfaces to the respective port of the contact block (first&nbsp;surface&nbsp;mentioned&nbsp;must&nbsp;be&nbsp;connected&nbsp;to&nbsp;port&nbsp;1).</p>
 <p>In the case of a collision of the two connected surface (the contact condition holds for at least one contact point) a three-dimensional contact force is applied. It consists of both the normal force and the tangential friction. The respective directions can be obtained by means of the local coordinate systems in the contact points. As compared to more complex models, the continuous surface layer is replaced by a nonlinear spring/damper element. Consequently, the normal force Fn&nbsp;is determined by means of the penetration p&nbsp;and the penetration velocity. A continuous contact force model with hysteresis damping according to [1] is implemented. Nevertheless, choosing n1=1 and n=0&nbsp;one can get the linear Kelvin-Voigt model, where the coefficients are the spring and damping constant. Choosing n1=n2&nbsp;one will get the formulation according to [2].</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fn.jpg\"/></p>
 <p><br/>In order to calculate the friction forces without further discontinuous events, which would decrease the simulation speed and impede controller design, we use the continuously differentiable friction model of Makkar et al. [3]. They introduced the following function of the relative velocity&nbsp;to approximate the friction coefficient&nbsp;of the characteristic Stribeck curve.</p>
@@ -4403,7 +4403,7 @@ convex contact surface object as parameter String.</p>
 <p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/mue.jpg\"/></p>
 <p><br/>The complete vector of the contact force is then computed as follows.</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fcontact.jpg\"/></p>
-<p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently seperated in two blocks. Integration of the two blocks is in progress.</p>
+<p><b>Note:</b> The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently separated in two blocks. Integration of the two blocks is in progress.</p>
 <h4>References:</h4>
 <p>[1]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H. M. Lankarani, P. E. Nikravesh: Continuous Contact Force Models for Impact Analysis in Multibody Systems, Nonlinear Dynamics, 5, 1994</p>
 <p>[2]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K. H. Hunt, F. R. E. Crossley: Coefficient of restitution interpreted as damping in vibroimpact, ASME J. Appl. Mech, 1975</p>
@@ -4498,7 +4498,7 @@ convex contact surface object as parameter String.</p>
         mue_r=mue_r) annotation (Placement(transformation(extent={{0,-40},{40,0}})));
 
       equation
-        assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"spherical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"spherical")),"Error in contact specification: Contact definition is SphereToSphere but other contact surfaces are conected to the contact block.",AssertionLevel.error);
+        assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"spherical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"spherical")),"Error in contact specification: Contact definition is SphereToSphere but other contact surfaces are connected to the contact block.",AssertionLevel.error);
       connect(force.frame_a2, geometry.frame_b2)
         annotation (Line(
           points={{12,0},{12,28},{-19.6,28}},
@@ -4601,7 +4601,7 @@ convex contact surface object as parameter String.</p>
         gamma6=gamma6,
         mue_r=mue_r) annotation (Placement(transformation(extent={{-10,-40},{30,0}})));
       equation
-        assert(Modelica.Utilities.Strings.isEqual(surfaceType1,"spherical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"cylindrical"),"Error in contact specification: Contact definition is SphereToCylinder but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+        assert(Modelica.Utilities.Strings.isEqual(surfaceType1,"spherical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"cylindrical"),"Error in contact specification: Contact definition is SphereToCylinder but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
       connect(geometry.frame_b1, force.frame_a1)
         annotation (Line(
           points={{-19.6,28},{2,28},{2,0.4}},
@@ -4708,7 +4708,7 @@ convex contact surface object as parameter String.</p>
         gamma6=gamma6,
         mue_r=mue_r) annotation (Placement(transformation(extent={{-20,-40},{20,0}})));
       equation
-        assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"spherical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"rectangular")),"Error in contact specification: Contact definition is SphereToRectangle but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+        assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"spherical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"rectangular")),"Error in contact specification: Contact definition is SphereToRectangle but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
       connect(geometry.frame_b1, force.frame_a1)
         annotation (Line(
           points={{-19.6,28},{-12,28},{-12,0.4}},
@@ -4810,7 +4810,7 @@ convex contact surface object as parameter String.</p>
         gamma6=gamma6,
         mue_r=mue_r) annotation (Placement(transformation(extent={{0,-40},{40,0}})));
       equation
-        assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"spherical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"circular")),"Error in contact specification: Contact definition is SphereToCircle but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+        assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"spherical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"circular")),"Error in contact specification: Contact definition is SphereToCircle but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
 
       connect(geometry.frame_b1, force.frame_a1)
         annotation (Line(
@@ -5007,7 +5007,7 @@ convex contact surface object as parameter String.</p>
         gamma6=gamma6,
         mue_r=mue_r) annotation (Placement(transformation(extent={{-18,-42},{22,-2}})));
       equation
-         assert(Modelica.Utilities.Strings.isEqual(surfaceType2,"rectangular") or Modelica.Utilities.Strings.isEqual(surfaceType2,"circular"),"Error in contact specification: Contact definition is EllipsoidToRectangle but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+         assert(Modelica.Utilities.Strings.isEqual(surfaceType2,"rectangular") or Modelica.Utilities.Strings.isEqual(surfaceType2,"circular"),"Error in contact specification: Contact definition is EllipsoidToRectangle but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
 
       connect(geometry.frame_b1, force.frame_a1)
         annotation (Line(
@@ -8835,7 +8835,7 @@ convex contact surface object as parameter String.</p>
               a,
               r);
             annotation (Diagram(graphics), Documentation(info="<!DOCTYPE html><html>
-<p>This&nbsp;Model&nbsp;is&nbsp;used&nbsp;to&nbsp;route&nbsp;the&nbsp;input&nbsp;values&nbsp;into&nbsp;a&nbsp;single&nbsp;modle.&nbsp;The&nbsp;essence&nbsp;of&nbsp;this&nbsp;model&nbsp;is&nbsp;the&nbsp;call of&nbsp;the&nbsp;search&nbsp;function.</p>
+<p>This&nbsp;Model&nbsp;is&nbsp;used&nbsp;to&nbsp;route&nbsp;the&nbsp;input&nbsp;values&nbsp;into&nbsp;a&nbsp;single&nbsp;model.&nbsp;The&nbsp;essence&nbsp;of&nbsp;this&nbsp;model&nbsp;is&nbsp;the&nbsp;call of&nbsp;the&nbsp;search&nbsp;function.</p>
 </html>"));
           end FindMinimum;
 
@@ -9387,7 +9387,7 @@ convex contact surface object as parameter String.</p>
              end while;
             min:=xn;
           annotation (Documentation(info="<!DOCTYPE html><html>
-<p>Performs Newton&apos;s Algoritm to get a solution to the minimization problem. The&nbsp;input&nbsp;quantities&nbsp;are&nbsp;a&nbsp;starting&nbsp;value&nbsp;vec,&nbsp;the&nbsp;respective&nbsp;components&nbsp;of&nbsp;the&nbsp;transformation&nbsp;matrix&nbsp;between&nbsp;the&nbsp;orientations&nbsp;of&nbsp;the&nbsp;plane&nbsp;and&nbsp;the&nbsp;ellipsoid&nbsp;and&nbsp;the&nbsp;semiaxis&nbsp;parameters&nbsp;of&nbsp;the&nbsp;ellipsoid. The&nbsp;output&nbsp;quantity&nbsp;is&nbsp;a&nbsp;solution&nbsp;to&nbsp;the&nbsp;given&nbsp;multivariable&nbsp;equation.</p>
+<p>Performs Newton&apos;s Algorithm to get a solution to the minimization problem. The&nbsp;input&nbsp;quantities&nbsp;are&nbsp;a&nbsp;starting&nbsp;value&nbsp;vec,&nbsp;the&nbsp;respective&nbsp;components&nbsp;of&nbsp;the&nbsp;transformation&nbsp;matrix&nbsp;between&nbsp;the&nbsp;orientations&nbsp;of&nbsp;the&nbsp;plane&nbsp;and&nbsp;the&nbsp;ellipsoid&nbsp;and&nbsp;the&nbsp;semiaxis&nbsp;parameters&nbsp;of&nbsp;the&nbsp;ellipsoid. The&nbsp;output&nbsp;quantity&nbsp;is&nbsp;a&nbsp;solution&nbsp;to&nbsp;the&nbsp;given&nbsp;multivariable&nbsp;equation.</p>
 </html>"));
           end newtonAlgorithm;
 
@@ -9496,7 +9496,7 @@ convex contact surface object as parameter String.</p>
       Modelica.Blocks.Logical.Or or1
         annotation (Placement(transformation(extent={{68,-34},{88,-14}})));
       equation
-         assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"cylindrical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"rectangular")),"Error in contact specification: Contact definition is CylinderToRectangle but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+         assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"cylindrical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"rectangular")),"Error in contact specification: Contact definition is CylinderToRectangle but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
 
       connect(geometry[1].frame_b2, force[1].frame_a1)
         annotation (Line(
@@ -9659,7 +9659,7 @@ convex contact surface object as parameter String.</p>
       Modelica.Blocks.Logical.Or or1
         annotation (Placement(transformation(extent={{70,-24},{90,-4}})));
       equation
-           assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"cylindrical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"circular")),"Error in contact specification: Contact definition is CylinderToCircle but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+           assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"cylindrical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"circular")),"Error in contact specification: Contact definition is CylinderToCircle but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
 
       connect(geometry.pos_rel_c_l, force.pos_rel_c_L)
         annotation (Line(
@@ -9808,7 +9808,7 @@ convex contact surface object as parameter String.</p>
         t_max=p_max) annotation (Placement(transformation(extent={{-28,-68},{12,-28}})));
 
       equation
-             assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"cylindrical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"cylindrical")),"Error in contact specification: Contact definition is CylinderToCylinder but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+             assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"cylindrical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"cylindrical")),"Error in contact specification: Contact definition is CylinderToCylinder but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
 
       connect(geometry.frame_b2, force.frame_a3)
         annotation (Line(
@@ -9912,7 +9912,7 @@ convex contact surface object as parameter String.</p>
       Modelica.Blocks.Logical.Or or1
         annotation (Placement(transformation(extent={{66,-36},{86,-16}})));
       equation
-        assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"cylindrical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"cylindrical")),"Error in contact specification: Contact definition is CylinderToCylinder but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+        assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"cylindrical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"cylindrical")),"Error in contact specification: Contact definition is CylinderToCylinder but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
 
       connect(geometry[1].frame_a1, frame_a) annotation (Line(
           points={{-44.4,71.6923},{-80,71.6923},{-80,86},{-102,86}},
@@ -10101,7 +10101,7 @@ convex contact surface object as parameter String.</p>
           n3=3,
           n4=3) annotation (Placement(transformation(extent={{-20,-100},{-8,-88}})));
       equation
-             assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"cylindrical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"cylindrical")),"Error in contact specification: Contact definition is CylinderToCylinder but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+             assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"cylindrical") and Modelica.Utilities.Strings.isEqual(surfaceType2,"cylindrical")),"Error in contact specification: Contact definition is CylinderToCylinder but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
 
       Length_Direction1_wf = Modelica.Mechanics.MultiBody.Frames.resolve1(frame_a.R,deMultiplex1.y1);
       Length_Direction2_wf = Modelica.Mechanics.MultiBody.Frames.resolve1(frame_b.R,deMultiplex2.y1);
@@ -10291,7 +10291,7 @@ convex contact surface object as parameter String.</p>
                 preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
                                                                    graphics),
           Documentation(info="<!DOCTYPE html><html>
-<p>The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently seperated in two blocks. This attempts to integrate both.</p>
+<p>The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently separated in two blocks. This attempts to integrate both.</p>
 </html>"));
       end CylinderToCylinderCombined;
 
@@ -13414,7 +13414,7 @@ convex contact surface object as parameter String.</p>
         gamma6={gamma6,gamma6,gamma6,gamma6}) annotation (Placement(transformation(extent={{-42,-66},{18,-6}})));
 
       equation
-       assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"rectangular") and Modelica.Utilities.Strings.isEqual(surfaceType2,"rectangular")),"Error in contact specification: Contact definition is RectangleToRectangle but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+       assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"rectangular") and Modelica.Utilities.Strings.isEqual(surfaceType2,"rectangular")),"Error in contact specification: Contact definition is RectangleToRectangle but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
        contact=force[1].contact or force[2].contact or force[3].contact or force[4].contact;
       connect(geometry.frame_b1, force.frame_a2)
         annotation (Line(
@@ -13623,7 +13623,7 @@ convex contact surface object as parameter String.</p>
         Color_contact_point_circle={colorContactPoints1,colorContactPoints1,colorContactPoints1,colorContactPoints1},
         Animation={animation,animation,animation,animation}) annotation (Placement(transformation(extent={{-40,-72},{20,-12}})));
       equation
-         assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"circular") and Modelica.Utilities.Strings.isEqual(surfaceType2,"rectangular")),"Error in contact specification: Contact definition is CircleToRectangle but other contact surfaces are conected to the contact block.",level=AssertionLevel.error);
+         assert((Modelica.Utilities.Strings.isEqual(surfaceType1,"circular") and Modelica.Utilities.Strings.isEqual(surfaceType2,"rectangular")),"Error in contact specification: Contact definition is CircleToRectangle but other contact surfaces are connected to the contact block.",level=AssertionLevel.error);
        contact=force[1].contact or force[2].contact or force[3].contact or force[4].contact;
       connect(geometry.frame_b2, force.frame_a1)
         annotation (Line(
