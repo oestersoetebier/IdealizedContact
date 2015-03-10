@@ -11,7 +11,7 @@ extends Modelica.Icons.Package;
       annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
 <p>To describe elementary <a href=\"modelica://IdealizedContact.ContactSurfaces\">contact surfaces</a>, the library provides ready-to-use blocks. The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions of the surface can be parameterized. In order to be able to use the dimensions in the contact block we introduce a new interface to connect the surface definition with a contact block. The figure shows the resulting shape of the contact area for all possible combinations that are analytically solved, as well as the number of contact points to describe it.</p>
 <p><br><img src=\"modelica://IdealizedContact/Resources/Images/table_contactsurfaces.png\"/></p>
-<p>Furthermore, the library offers the possibility to calculate contact points on convex surfaces using iterative newton algorithm. These surfaces are described in a parametric form. Currently, the following <a href=\"modelica://IdealizedContact.ContactSurfaces.ParametricSurfaceDefinition\">parametric surfaces</a> are defined:</p>
+<p>Furthermore, the library offers the possibility to calculate contact points on convex surfaces using iterative Newton algorithm. These surfaces are described in a parametric form. Currently, the following <a href=\"modelica://IdealizedContact.ContactSurfaces.ParametricSurfaceDefinition\">parametric surfaces</a> are defined:</p>
 <ul>
 <li>spherical</li>
 <li>ellipsoid</li>
@@ -4224,7 +4224,7 @@ convex contact surface object as parameter String.</p>
   end ElementaryContactBodies;
 
 
-  package ContactBlock "Contact block and it's parts"
+  package ContactBlock "Contact block and its parts"
   extends Modelica.Icons.Package;
     model Contact "Contact block"
       import SI = Modelica.SIunits;
@@ -8013,7 +8013,7 @@ convex contact surface object as parameter String.</p>
           model R0
             //This model calculates the coordinates of the contact point of the convex surface
           //with respect to the first ellpsoid's coordinate system.
-          //The outputs are the vector itself and it's length so that
+          //The outputs are the vector itself and its length so that
           //the prismatic block can be used.
           //   Modelica.Blocks.Interfaces.RealInput x[4,1]
           //     annotation (Placement(transformation(extent={{-20,-20},{20,20}},
@@ -8177,7 +8177,7 @@ convex contact surface object as parameter String.</p>
           end RelativeVelocities;
 
           function searchMinimum
-             //This function calls the newton solver and tries it with different starting values until
+             //This function calls the Newton solver and tries it with different starting values until
             //a real minimum is found (pd check)
             //If a minimum is found the results are transformed into the range of 0 and 2*pi
           input IdealizedContact.ContactSurfaces.Types.ContactShapeType contactSurfaceType1;
@@ -8291,7 +8291,7 @@ convex contact surface object as parameter String.</p>
           y:=xn;
 
             annotation (Documentation(info="<!DOCTYPE html><html>
-<p>This&nbsp;function&nbsp;calls&nbsp;the&nbsp;newton&nbsp;solver&nbsp;and&nbsp;tries&nbsp;it&nbsp;with&nbsp;different&nbsp;starting&nbsp;values&nbsp;until a&nbsp;real&nbsp;minimum&nbsp;is&nbsp;found&nbsp;(check of positive definite hessian).</p>
+<p>This&nbsp;function&nbsp;calls&nbsp;the&nbsp;Newton&nbsp;solver&nbsp;and&nbsp;tries&nbsp;it&nbsp;with&nbsp;different&nbsp;starting&nbsp;values&nbsp;until a&nbsp;real&nbsp;minimum&nbsp;is&nbsp;found&nbsp;(check of positive definite hessian).</p>
 <p>If&nbsp;a&nbsp;minimum&nbsp;is&nbsp;found&nbsp;the&nbsp;results&nbsp;are&nbsp;transformed&nbsp;into&nbsp;the&nbsp;range&nbsp;of&nbsp;0&nbsp;and&nbsp;2*pi.</p>
 </html>"));
           end searchMinimum;
@@ -9304,7 +9304,7 @@ convex contact surface object as parameter String.</p>
             "deviation of starting value if the given starting value doesn't result in a minimum";
           algorithm
           xi:=x0;
-          //first call of the newton algorithm
+          //first call of the Newton algorithm
             xn :=
               IdealizedContact.ContactBlock.PunctiformContact.Components.CalculationsConvexToPlane.newtonAlgorithm(contactSurfaceType,
               xi,
@@ -9312,8 +9312,8 @@ convex contact surface object as parameter String.</p>
               r);
               t:=1;
 
-          //while loop to determine whether the result of the newton algorithm is a minimum.
-          //if this is not the case, the newton algorithm is called again with a slight deviation in starting values until a minimum is found
+          //while loop to determine whether the result of the Newton algorithm is a minimum.
+          //if this is not the case, the Newton algorithm is called again with a slight deviation in starting values until a minimum is found
           while not checkPositiveDefiniteHessian(contactSurfaceType,
                     xn,
                     a,
@@ -9332,12 +9332,12 @@ convex contact surface object as parameter String.</p>
           y:=xn;
 
             annotation (Documentation(info="<!DOCTYPE html><html>
-<p>This search&nbsp;function&nbsp;to&nbsp;determine&nbsp;whether&nbsp;the&nbsp;solutions&nbsp;found&nbsp;by&nbsp;the&nbsp;newton&nbsp;algorithm&nbsp;are&nbsp;in&nbsp;fact&nbsp;minima.</p>
+<p>This search&nbsp;function&nbsp;to&nbsp;determine&nbsp;whether&nbsp;the&nbsp;solutions&nbsp;found&nbsp;by&nbsp;the&nbsp;Newton&nbsp;algorithm&nbsp;are&nbsp;in&nbsp;fact&nbsp;minima.</p>
 </html>"));
           end searchMinimum;
 
           function newtonAlgorithm
-          "newton algorithm to find a solution to a multivariable equation"
+          "Newton algorithm to find a solution to a multivariable equation"
           // The input quantities are a starting value vec, the respective components of the transformation matrix
           // between the orientations of the plane and the ellipsoid and the semiaxis parameters of the ellipsoid.
           // The output quantity is a solution to the given multivariable equation
