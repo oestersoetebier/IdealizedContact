@@ -2547,19 +2547,15 @@ printing and shipping costs may be recovered.</p>
       connect(shape.frame_a, frame_a)      annotation (Line(
           points={{-10,30},{-10,8},{-100,8}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(shape.frame_a,contact_a. frame) annotation (Line(
           points={{-10,30},{-10,8},{100,8}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       annotation (Diagram(graphics), Icon(graphics={
             Line(
               points={{-60,60},{-100,-60},{60,-60},{100,60},{-44,60},{-60,60}},
-              pattern=LinePattern.None,
-              thickness=0.5,
-              smooth=Smooth.None),
+              thickness=0.5),
             Ellipse(
               extent={{55,-55},{66,-66}},
               pattern=LinePattern.None,
