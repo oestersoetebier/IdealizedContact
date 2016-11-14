@@ -712,7 +712,7 @@ printing and shipping costs may be recovered.</p>
         angles_fixed=false,
         w_rel_a_fixed=false,
         enforceStates=true,
-        r_rel_a(start={-0.1,0.3,0}, fixed=true))
+        r_rel_a(start={-0.1,0.3,0}, each fixed=true))
         annotation (Placement(transformation(extent={{-48,8},{-24,32}})));
       Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(animation=false,
         n={0,0,1},
@@ -787,7 +787,7 @@ printing and shipping costs may be recovered.</p>
         angles_fixed=false,
         w_rel_a_fixed=false,
         enforceStates=false,
-        r_rel_a(start={0,0.05,0.0025}, fixed=true))
+        r_rel_a(start={0,0.05,0.0025}, each fixed=true))
         annotation (Placement(transformation(extent={{-48,40},{-28,60}})));
       Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(animation=false,
         n={0,1,0} "y axis",
@@ -865,7 +865,7 @@ printing and shipping costs may be recovered.</p>
         angles_fixed=false,
         w_rel_a_fixed=false,
         enforceStates=false,
-        r_rel_a(start={0,0.05,0}, fixed=true))
+        r_rel_a(start={0,0.05,0}, each fixed=true))
         annotation (Placement(transformation(extent={{-34,46},{-14,66}})));
       Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(animation=false,
         n={0,0,1},
@@ -942,7 +942,7 @@ printing and shipping costs may be recovered.</p>
       Modelica.Mechanics.MultiBody.Joints.FreeMotion freeMotion(animation=false,
         angles_fixed=false,
         w_rel_a_fixed=false,
-        r_rel_a(start={0,0.03,0}, fixed=true),
+        r_rel_a(start={0,0.03,0}, each fixed=true),
         enforceStates=false)
         annotation (Placement(transformation(extent={{-44,40},{-24,60}})));
       Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(animation=false,
@@ -1016,7 +1016,7 @@ printing and shipping costs may be recovered.</p>
       Modelica.Mechanics.MultiBody.Joints.FreeMotion freeMotion(animation=false,
         w_rel_a_fixed=false,
         enforceStates=false,
-        r_rel_a(start={0,0.03,0}, fixed=true),
+        r_rel_a(start={0,0.03,0}, each fixed=true),
         angles_fixed=true,
       angles_start={0,1.5707963267949,0})
         annotation (Placement(transformation(extent={{-46,18},{-26,38}})));
@@ -1115,7 +1115,7 @@ printing and shipping costs may be recovered.</p>
         angles_fixed=false,
         w_rel_a_fixed=false,
         angles_start={0,0,0},
-        r_rel_a(start={0.005*0,0.02,0}, fixed=true))
+        r_rel_a(start={0.005*0,0.02,0}, each fixed=true))
         annotation (Placement(transformation(extent={{-42,30},{-22,50}})));
       Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(animation=false,
         angle=5,
@@ -1214,7 +1214,7 @@ printing and shipping costs may be recovered.</p>
       Modelica.Mechanics.MultiBody.Joints.FreeMotion freeMotion(animation=false,
         angles_fixed=false,
         w_rel_a_fixed=false,
-        r_rel_a(start={0,0.075,0}, fixed=true),
+        r_rel_a(start={0,0.075,0}, each fixed=true),
         angles_start={0,0.5235987755983,0})
         annotation (Placement(transformation(extent={{-42,30},{-22,50}})));
       Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(animation=false,
@@ -1356,7 +1356,7 @@ printing and shipping costs may be recovered.</p>
         animation=false,
         w_rel_a_fixed=false,
         angles_fixed=true,
-        r_rel_a(start={0,0.025,0}, fixed=true),
+        r_rel_a(start={0,0.025,0}, each fixed=true),
         angles_start={0,0.17453292519943,0})
         annotation (Placement(transformation(extent={{-44,20},{-24,40}})));
        IdealizedContact.ContactBlock.Contact contact(
@@ -1440,7 +1440,7 @@ printing and shipping costs may be recovered.</p>
         angles_fixed=false,
         w_rel_a_fixed=false,
         enforceStates=false,
-        r_rel_a(start={0,0.1,0}, fixed=true))
+        r_rel_a(start={0,0.1,0}, each fixed=true))
         annotation (Placement(transformation(extent={{-48,50},{-28,70}})));
       Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(animation=false,
         n={0,0,1},
@@ -1552,7 +1552,7 @@ printing and shipping costs may be recovered.</p>
         w_rel_a_fixed=false,
         enforceStates=false,
         angles_fixed=true,
-        r_rel_a(start={0,0.03,0.005}, fixed=true),
+        r_rel_a(start={0,0.03,0.005}, each fixed=true),
         angles_start={0.17453292519943,0.5235987755983,0})
         annotation (Placement(transformation(extent={{-40,20},{-20,40}})));
       Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(animation=false,
@@ -1645,7 +1645,7 @@ printing and shipping costs may be recovered.</p>
         enforceStates=false,
         angles_fixed=true,
         angles_start={0,0,0},
-        r_rel_a(start={0,0.1,-0.01}, fixed=true))
+        r_rel_a(start={0,0.1,-0.01}, each fixed=true))
         annotation (Placement(transformation(extent={{-56,20},{-36,40}})));
       Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(animation=false,
         n={0,0,1},
@@ -1721,7 +1721,7 @@ printing and shipping costs may be recovered.</p>
       Modelica.Mechanics.MultiBody.Joints.FreeMotion freeMotion(animation=false,
         enforceStates=false,
         angles_fixed=true,
-        r_rel_a(start={0,0.03,0.005}, fixed=true),
+        r_rel_a(start={0,0.03,0.005}, each fixed=true),
         w_rel_a_fixed=false,
         angles_start=0*{10,30,0})
         annotation (Placement(transformation(extent={{-40,20},{-20,40}})));
