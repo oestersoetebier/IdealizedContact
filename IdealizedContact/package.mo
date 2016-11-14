@@ -16731,12 +16731,10 @@ the only case where this is done.
       outer parameter SI.Distance p_max;
       outer parameter SI.Frequency f;
       outer parameter Boolean exact;
-      outer parameter Boolean animation=true;
+      outer parameter Boolean animation;
       outer parameter Modelica.SIunits.Radius radiusContactPoint;
-      outer parameter Modelica.Mechanics.MultiBody.Types.Color
-        colorContactPoints1;
-      outer parameter Modelica.Mechanics.MultiBody.Types.Color
-        colorContactPoints2;
+      outer parameter Modelica.Mechanics.MultiBody.Types.Color colorContactPoints1;
+      outer parameter Modelica.Mechanics.MultiBody.Types.Color colorContactPoints2;
 
   protected
       parameter Real N1 = if n1==0 then Modelica.Constants.eps else n1;   //to avoid mathematical error in case of 0^0
