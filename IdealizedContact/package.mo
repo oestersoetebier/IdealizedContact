@@ -3514,11 +3514,11 @@ convex contact surface object as parameter String.</p>
     "Predefined cylindrical body with contact surfaces"
       import SI = Modelica.SIunits;
     parameter Boolean enableLateralSurface = true
-      "= true, if lateral contact surface shall be enabled"   annotation (choices(__Dymola_checkBox=true));
+      "= true, if lateral contact surface shall be enabled"   annotation (choices(checkBox=true));
     parameter Boolean enableFrontSurface1 = true
-      "= true, if first front contact surface shall be enabled"   annotation (choices(__Dymola_checkBox=true));
+      "= true, if first front contact surface shall be enabled"   annotation (choices(checkBox=true));
     parameter Boolean enableFrontSurface2 = true
-      "= true, if second front contact surface shall be enabled"   annotation (choices(__Dymola_checkBox=true));
+      "= true, if second front contact surface shall be enabled"   annotation (choices(checkBox=true));
     parameter SI.Density density=7850 "density of the material";
     parameter SI.Diameter diameter=0.015 "diameter of cylindrical surface";
     parameter SI.Length length=0.05 "length of cylindrical surface";
@@ -3712,17 +3712,17 @@ convex contact surface object as parameter String.</p>
       import SI = Modelica.SIunits;
 
     parameter Boolean enableSurface1 = true
-      "= true, if contact surface 1 shall be enabled"   annotation (choices(__Dymola_checkBox=true));
+      "= true, if contact surface 1 shall be enabled"   annotation (choices(checkBox=true));
     parameter Boolean enableSurface2 = true
-      "= true, if contact surface 2 shall be enabled"   annotation (choices(__Dymola_checkBox=true));
+      "= true, if contact surface 2 shall be enabled"   annotation (choices(checkBox=true));
         parameter Boolean enableSurface3 = true
-      "= true, if contact surface 3 shall be enabled"   annotation (choices(__Dymola_checkBox=true));
+      "= true, if contact surface 3 shall be enabled"   annotation (choices(checkBox=true));
     parameter Boolean enableSurface4 = true
-      "= true, if contact surface 4 shall be enabled"   annotation (choices(__Dymola_checkBox=true));
+      "= true, if contact surface 4 shall be enabled"   annotation (choices(checkBox=true));
     parameter Boolean enableSurface5 = true
-      "= true, if contact surface 5 shall be enabled"   annotation (choices(__Dymola_checkBox=true));
+      "= true, if contact surface 5 shall be enabled"   annotation (choices(checkBox=true));
     parameter Boolean enableSurface6 = true
-      "= true, if contact surface 6 shall be enabled"   annotation (choices(__Dymola_checkBox=true));
+      "= true, if contact surface 6 shall be enabled"   annotation (choices(checkBox=true));
 
     parameter SI.Density density=7850 "density of the material";
     parameter SI.Length length=0.04 "length of the cuboid";
@@ -4267,7 +4267,7 @@ convex contact surface object as parameter String.</p>
         colorContactPoints2 = {255,0,255} "color of contact points of body 2" annotation(Dialog(tab="Animation"));
 
        parameter Boolean enableContactOutput = false
-      "enable boolean output of contact detection"                                                 annotation(choices(__Dymola_checkBox=true));
+      "enable boolean output of contact detection"                                                 annotation(choices(checkBox=true));
 
       replaceable
       IdealizedContact.ContactBlock.PunctiformContact.SphereToSphere              contactDefinition
