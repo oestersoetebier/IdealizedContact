@@ -740,38 +740,30 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-48,20},{-60,20},{-60,-20},{-66,-20}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-46,-20},{-66,-20}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b, sphericalContactBody.frame_a) annotation (
           Line(
           points={{-24,20},{-17.5111,20},{-17.5111,20.28},{-1.76,20.28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_b, sphericalContactBody1.frame_a) annotation (
          Line(
           points={{-34,-20},{-18.5111,-20},{-18.5111,-19.72},{-1.76,-19.72}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
 
       connect(sphericalContactBody.contact_a,contact. Port1) annotation (Line(
           points={{22.88,20},{47.2889,20},{47.2889,10.9},{48,10.9}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(sphericalContactBody1.contact_a,contact. Port2) annotation (Line(
           points={{22.88,-20},{48.2889,-20},{48.2889,-11.1},{48,-11.1}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
 
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example1;
 
     model Example2 "Sphere to cylinder"
@@ -821,37 +813,29 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-48,50},{-58,50},{-58,10},{-68,10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-48,10},{-68,10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b, ball.frame_a) annotation (Line(
           points={{-28,50},{-16,50},{-16,50.24},{-0.08,50.24}},
           color={95,95,95},
           pattern=LinePattern.None,
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylinder.frame_a, fixedRotation.frame_b) annotation (Line(
           points={{31.06,-7.6},{34,-7.6},{34,-16},{0,-16},{0,10},{-28,10}},
           color={95,95,95},
           pattern=LinePattern.None,
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylinder.contact_lateral,contact. Port2) annotation (Line(
           points={{37,6.48},{37,11.36},{38,11.36},{38,16.9}},
           color={255,128,0},
-          thickness=1,
-          smooth=Smooth.None));
+          thickness=1));
       connect(ball.contact_a,contact. Port1) annotation (Line(
           points={{21.04,50},{37.2889,50},{37.2889,38.9},{38,38.9}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1));
+          color={255,128,0}));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example2;
 
     model Example3 "Sphere to rectangle"
@@ -903,34 +887,26 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-34,56},{-58,56},{-58,10},{-68,10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-48,-40},{-58,-40},{-58,10},{-68,10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b, ball.frame_a) annotation (Line(
           points={{-14,56},{-14,56.2},{7.6,56.2}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_b, rectangle.frame_a) annotation (Line(
           points={{-28,-40},{-16.2,-40},{-16.2,-25.6},{-4.4,-25.6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(contact.Port2, rectangle.contact_a1) annotation (Line(
           points={{48,-7.54},{48,-14},{12,-14},{12,-23}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(ball.contact_a,contact. Port1) annotation (Line(
           points={{25.2,56},{25.2,55.975},{48,55.975},{48,23.26}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1));
+          color={255,128,0}));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example3;
 
     model Example4 "Sphere to circle"
@@ -976,35 +952,27 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-44,50},{-54,50},{-54,10},{-64,10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-44,10},{-64,10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b, ball.frame_a) annotation (Line(
           points={{-24,50},{-14.1333,50},{-14.1333,50.16},{-2.72,50.16}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_b, circle.frame_a) annotation (Line(
           points={{-24,10},{-18,10},{-18,-2},{2.14,-2},{2.14,4.8}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(circle.contact_front1,contact. Port2) annotation (Line(
           points={{15.64,12},{30,12},{30,18.9}},
           color={255,128,0},
-          thickness=1,
-          smooth=Smooth.None));
+          thickness=1));
       connect(ball.contact_a,contact. Port1) annotation (Line(
           points={{11.36,50},{30.4667,50},{30.4667,40.9},{30,40.9}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1));
+          color={255,128,0}));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example4;
 
     model Example5 "Cylinder to rectangle"
@@ -1064,42 +1032,32 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a, world.frame_b) annotation (Line(
           points={{-46,28},{-62,28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a, world.frame_b) annotation (Line(
           points={{-42,-12},{-52,-12},{-52,28},{-62,28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b, bodyShape.frame_a) annotation (Line(
           points={{-26,28},{-20,28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(bodyShape.frame_b, cylinder.frame_a) annotation (Line(
           points={{-4,28},{4.4,28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylinder.contact_a,contact. Port1) annotation (Line(
           points={{23.3,28},{50,28},{50,16.72}},
           color={255,128,0},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangle.contact_a,contact. Port2) annotation (Line(
           points={{19.3,-12},{19.3,-11.95},{50,-11.95},{50,-0.88}},
           color={255,128,0},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_b, rectangle.frame_a) annotation (Line(
           points={{-22,-12},{0.4,-12}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1),
-      __Dymola_experimentSetupOutput);
+          thickness=0.5));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example5;
 
     model Example6 "Cylinder to circle"
@@ -1157,46 +1115,36 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-42,40},{-52,40},{-52,0},{-62,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-42,0},{-62,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b, cylinder.frame_a) annotation (Line(
           points={{-22,40},{-10,40},{-10,34},{2.6,34}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylinder.contact_lateral,contact. Port1) annotation (Line(
           points={{8,46.8},{8,64},{34,64},{34,30.9}},
           color={255,128,0},
-          thickness=1,
-          smooth=Smooth.None));
+          thickness=1));
       connect(disk.contact_a, contact.Port2) annotation (Line(
           points={{17.3,0},{33.85,0},{33.85,8.9},{34,8.9}},
           color={255,128,0},
-          thickness=1,
-          smooth=Smooth.None));
+          thickness=1));
       connect(fixedRotation.frame_b, disk.frame_a) annotation (Line(
           points={{-22,0},{-1.6,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(relativeSensor.frame_a, world.frame_b) annotation (Line(
           points={{78,18},{78,-24},{-52,-24},{-52,0},{-62,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(relativeSensor.frame_b, freeMotion.frame_b) annotation (Line(
           points={{78,38},{78,78},{-10,78},{-10,40},{-22,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1));
+          thickness=0.5));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example6;
 
     model Example7 "Rectangle to rectangle"
@@ -1285,49 +1233,38 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-42,40},{-46,40},{-46,0},{-56,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-36,0},{-56,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_b, rectangle1.frame_a) annotation (Line(
           points={{-16,0},{4.4,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b, bodyShape1.frame_a) annotation (Line(
           points={{-22,40},{-18,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(bodyShape1.frame_b, rectangle.frame_a) annotation (Line(
           points={{2,40},{10.4,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(relativePosition.frame_a, world.frame_b) annotation (Line(
           points={{72,14},{72,-24},{-46,-24},{-46,0},{-56,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(relativePosition.frame_b, bodyShape1.frame_a) annotation (Line(
           points={{72,34},{72,64},{-20,64},{-20,40},{-18,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangle1.contact_a,contact. Port2) annotation (Line(
           points={{23.3,0},{39.55,0},{39.55,9.01},{39,9.01}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(rectangle.contact_a,contact. Port1) annotation (Line(
           points={{29.3,40},{29.3,40.05},{39,40.05},{39,28.81}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1));
+          color={255,128,0}));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example7;
 
     model Example8 "Circle to rectangle"
@@ -1391,42 +1328,34 @@ printing and shipping costs may be recovered.</p>
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-44,-10},{-54,-10},{-54,30},{-64,30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_a, world.frame_b)  annotation (Line(
           points={{-44,30},{-64,30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_b,body2. frame_a) annotation (Line(
           points={{-24,-10},{-16,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b, body1.frame_a) annotation (Line(
           points={{-24,30},{-14,30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangle.contact_a,contact. Port2) annotation (Line(
           points={{29.3,-10},{45.55,-10},{45.55,-1.1},{46,-1.1}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(circle.contact_a,contact. Port1) annotation (Line(
           points={{29.3,30},{46.85,30},{46.85,20.9},{46,20.9}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(body1.frame_b, circle.frame_a) annotation (Line(
           points={{2,30},{10.4,30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(body2.frame_b, rectangle.frame_a) annotation (Line(
           points={{0,-10},{10.4,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
-      annotation (Diagram(graphics),experiment(StartTime=0, StopTime=1));
+          thickness=0.5));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example8;
 
     model Example9 "Sphere to two rectangular surfaces"
@@ -1491,54 +1420,42 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-48,60},{-60,60},{-60,10},{-72,10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-52,-40},{-60,-40},{-60,10},{-72,10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b, ball.frame_a) annotation (Line(
           points={{-28,60},{-20.8889,60},{-20.8889,60.28},{-7.6,60.28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangle.contact_a, contact2.Port2)
                                                   annotation (Line(
           points={{40.6,-6},{40.6,-6},{66,-6},{66,24.68}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(rectangle1.contact_a,contact1. Port2) annotation (Line(
           points={{68.6,-72},{68.6,-72.9},{84,-72.9},{84,-39.32}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(fixedRotation1.frame_b, rectangle1.frame_a) annotation (Line(
           points={{16,-72},{30.8,-72}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation1.frame_a, world.frame_b) annotation (Line(
           points={{-4,-72},{-60,-72},{-60,10},{-72,10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_b, rectangle.frame_a) annotation (Line(
           points={{-32,-40},{-16,-40},{-16,-6},{2.8,-6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(ball.contact_a, contact2.Port1)
                                              annotation (Line(
           points={{18.8,60},{67.1111,60},{67.1111,51.08},{66,51.08}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(ball.contact_a,contact1. Port1) annotation (Line(
           points={{18.8,60},{18.8,62.825},{84,62.825},{84,-12.92}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1));
+          color={255,128,0}));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example9;
 
     model Example10 "Cylinder to Cylinder Point"
@@ -1584,43 +1501,34 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-40,30},{-48,30},{-48,-10},{-60,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-20,-10},{-60,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b,bodyShape. frame_a) annotation (Line(
           points={{-20,30},{-12,30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylindricalContactSurface.frame_a, bodyShape.frame_b) annotation (
          Line(
           points={{12.4,30},{4,30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylindricalContactSurface1.frame_a, fixedRotation.frame_b)
         annotation (Line(
           points={{12.4,-10},{0,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylindricalContactSurface.contact_a, contact.Port1) annotation (
           Line(
           points={{31.3,30},{50,30},{50,20.9}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(cylindricalContactSurface1.contact_a, contact.Port2) annotation (
           Line(
           points={{31.3,-10},{50,-10},{50,-1.1}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,
-                -100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1));
+          color={255,128,0}));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example10;
 
     model Example11 "Cylinder to cylinder"
@@ -1676,39 +1584,30 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-56,30},{-60,30},{-60,-10},{-70,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-50,-10},{-70,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b, bodyShape.frame_a) annotation (Line(
           points={{-36,30},{-30,30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(bodyShape.frame_b, cylinder.frame_a) annotation (Line(
           points={{-14,30},{-9.6,30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_b, cylinder1.frame_a) annotation (Line(
           points={{-30,-10},{-9.6,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylinder.contact_a,contact. Port1) annotation (Line(
           points={{9.3,30},{38,30},{38,20.9}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(cylinder1.contact_a,contact. Port2) annotation (Line(
           points={{9.3,-10},{38,-10},{38,-1.1}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1));
+          color={255,128,0}));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example11;
 
     model Example12 "Cylinder to Cylinder Point"
@@ -1755,43 +1654,34 @@ printing and shipping costs may be recovered.</p>
       connect(freeMotion.frame_a,world. frame_b) annotation (Line(
           points={{-40,30},{-48,30},{-48,-10},{-60,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a,world. frame_b) annotation (Line(
           points={{-20,-10},{-60,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(freeMotion.frame_b,bodyShape. frame_a) annotation (Line(
           points={{-20,30},{-12,30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylindricalContactSurface.frame_a, bodyShape.frame_b) annotation (
          Line(
           points={{12.4,30},{4,30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylindricalContactSurface1.frame_a, fixedRotation.frame_b)
         annotation (Line(
           points={{12.4,-10},{0,-10}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylindricalContactSurface.contact_a, contact.Port1) annotation (
           Line(
           points={{31.3,30},{50,30},{50,20.9}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(cylindricalContactSurface1.contact_a, contact.Port2) annotation (
           Line(
           points={{31.3,-10},{50,-10},{50,-1.1}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,
-                -100},{100,100}}),
-                          graphics),experiment(StartTime=0, StopTime=1));
+          color={255,128,0}));
+      annotation (experiment(StartTime=0, StopTime=1));
     end Example12;
 
     model Example13 "Ellipsoid spinning on a plane"
@@ -1835,43 +1725,32 @@ printing and shipping costs may be recovered.</p>
 
       connect(rectangularContactSurface.contact_a, contact.Port2) annotation (Line(
           points={{39.3,-40},{78,-40},{78,-11.1}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
     connect(Ellipsoid.contact_a, contact.Port1) annotation (Line(
         points={{60,40},{78,40},{78,10.9}},
-        color={255,128,0},
-        smooth=Smooth.None));
+        color={255,128,0}));
     connect(freeMotion.frame_b, Ellipsoid.frame_a) annotation (Line(
         points={{20,40},{40,40}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
       connect(fixedRotation.frame_a, world.frame_b) annotation (Line(
           points={{-40,40},{-40,40},{-58,40},{-58,40},{-60,40},{-60,0},{-74,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_b, freeMotion.frame_a) annotation (Line(
           points={{-20,40},{0,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(world.frame_b, fixedRotation1.frame_a) annotation (Line(
           points={{-74,0},{-60,0},{-60,-40},{-40,-40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation1.frame_b, rectangularContactSurface.frame_a)
         annotation (Line(
           points={{-20,-40},{20.4,-40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,
-                -100},{100,100}}),
-                          graphics),
-        experiment(StartTime=0,StopTime=10, Tolerance=1e-006),
-        __Dymola_experimentSetupOutput);
+          thickness=0.5));
+      annotation (        experiment(StartTime=0,StopTime=10, Tolerance=1e-006));
     end Example13;
 
     model Example14 "Ball with gyroscopic movement on a plane"
@@ -1926,53 +1805,40 @@ printing and shipping costs may be recovered.</p>
     connect(rectangularContactSurface.contact_a, contact.Port2)
       annotation (Line(
         points={{35.3,-40},{80,-40},{80,-11.1}},
-        color={255,128,0},
-        smooth=Smooth.None));
+        color={255,128,0}));
     connect(Ellipsoid.contact_a, contact.Port1) annotation (Line(
         points={{70,40},{80,40},{80,10.9}},
-        color={255,128,0},
-        smooth=Smooth.None));
+        color={255,128,0}));
     connect(freeMotion.frame_b, Ellipsoid.frame_a) annotation (Line(
         points={{36,40},{50,40}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
       connect(fixedRotation.frame_a, world.frame_b) annotation (Line(
           points={{-66,40},{-70,40},{-70,0},{-80,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(world.frame_b, fixedRotation1.frame_a) annotation (Line(
           points={{-80,0},{-70,0},{-70,-40},{-40,-40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
     connect(fixedRotation1.frame_b, rectangularContactSurface.frame_a)
       annotation (Line(
         points={{-20,-40},{16.4,-40}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
       connect(fixedRotation2.frame_a, fixedRotation.frame_b) annotation (Line(
           points={{-40,40},{-46,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation3.frame_a, fixedRotation2.frame_b) annotation (Line(
           points={{-14,40},{-20,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation3.frame_b, freeMotion.frame_a) annotation (Line(
           points={{6,40},{16,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                          graphics),
-        experiment(StartTime=0,StopTime=5, Tolerance=1e-006),
-        __Dymola_experimentSetupOutput);
+          thickness=0.5));
+      annotation (        experiment(StartTime=0,StopTime=5, Tolerance=1e-006));
     end Example14;
 
     model Example15 "Contact Ellipsoid-Ellipsoid"
@@ -2018,42 +1884,32 @@ printing and shipping costs may be recovered.</p>
       connect(fixedRotation.frame_a, world.frame_b) annotation (Line(
           points={{-40,40},{-60,40},{-60,0},{-74,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(world.frame_b, fixedRotation1.frame_a) annotation (Line(
           points={{-74,0},{-60,0},{-60,-40},{-40,-40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(Ellipsoid1.frame_a, fixedRotation1.frame_b)
                                                         annotation (Line(
           points={{40,-40},{-20,-40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(Ellipsoid1.contact_a, contact.Port2)
                                                  annotation (Line(
           points={{60,-40},{80,-40},{80,-11.1}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(fixedRotation.frame_b, freeMotion.frame_a) annotation (Line(
           points={{-20,40},{0,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(Ellipsoid2.contact_a, contact.Port1) annotation (Line(
           points={{60,40},{80,40},{80,10.9}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(freeMotion.frame_b, Ellipsoid2.frame_a) annotation (Line(
           points={{20,40},{40,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                          graphics),
-        experiment(StartTime=0,StopTime=1.5, Tolerance=1e-006),
-        __Dymola_experimentSetupOutput);
+          thickness=0.5));
+      annotation (        experiment(StartTime=0,StopTime=1.5, Tolerance=1e-006));
     end Example15;
 
     model Example16 "Contact Ellipsoid-Ellipsoid"
@@ -2102,41 +1958,30 @@ printing and shipping costs may be recovered.</p>
           Line(
           points={{4,40},{22,40},{22,39}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a, world.frame_b) annotation (Line(
           points={{-54,40},{-60,40},{-60,0},{-74,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(world.frame_b, fixedRotation1.frame_a) annotation (Line(
           points={{-74,0},{-60,0},{-60,-40},{-40,-40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(Convex2.frame_a, fixedRotation1.frame_b)  annotation (Line(
           points={{8,-40},{-20,-40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_b, freeMotion.frame_a) annotation (Line(
           points={{-34,40},{-16,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(contact.Port1, Convex1.contact_a) annotation (Line(
           points={{80,12.9},{80,39},{42,39}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(contact.Port2, Convex2.contact_a) annotation (Line(
           points={{80,-9.1},{80,-40},{28,-40}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                          graphics),
-        experiment(StartTime=0,StopTime=1.5, Tolerance=1e-006),
-        __Dymola_experimentSetupOutput);
+          color={255,128,0}));
+      annotation (        experiment(StartTime=0,StopTime=1.5, Tolerance=1e-006));
     end Example16;
 
     model Example17 "Ellipsoid with gyroscopic movement on a plane"
@@ -2187,53 +2032,41 @@ printing and shipping costs may be recovered.</p>
 
     connect(Ellipsoid.contact_a, contact.Port1) annotation (Line(
         points={{68,40},{80,40},{80,10.9}},
-        color={255,128,0},
-        smooth=Smooth.None));
+        color={255,128,0}));
     connect(freeMotion.frame_b, Ellipsoid.frame_a) annotation (Line(
         points={{30,40},{48,40}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
       connect(fixedRotation.frame_a, world.frame_b) annotation (Line(
           points={{-60,40},{-60,0},{-74,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(world.frame_b, fixedRotation1.frame_a) annotation (Line(
           points={{-74,0},{-60,0},{-60,-40},{-40,-40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation2.frame_a, fixedRotation.frame_b) annotation (Line(
           points={{-40,40},{-40,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation3.frame_a, fixedRotation2.frame_b) annotation (Line(
           points={{-20,40},{-20,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation3.frame_b, freeMotion.frame_a) annotation (Line(
           points={{0,40},{10,40}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
     connect(fixedRotation1.frame_b, circularPlaneContactSurface.frame_a)
       annotation (Line(
         points={{-20,-40},{6.4,-40}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(circularPlaneContactSurface.contact_a, contact.Port2)
       annotation (Line(
         points={{25.3,-40},{80,-40},{80,-11.1}},
-        color={255,128,0},
-        smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                          graphics),
-        experiment(StartTime=0,StopTime=5, Tolerance=1e-006),
-        __Dymola_experimentSetupOutput);
+        color={255,128,0}));
+      annotation (        experiment(StartTime=0,StopTime=5, Tolerance=1e-006));
     end Example17;
 
     model Example18 "Egg spinning on a plane"
@@ -2281,44 +2114,34 @@ printing and shipping costs may be recovered.</p>
     connect(rectangularContactSurface.contact_a,contact. Port2)
       annotation (Line(
         points={{45.3,-30},{90,-30},{90,-1.1}},
-        color={255,128,0},
-        smooth=Smooth.None));
+        color={255,128,0}));
     connect(fixedRotation1.frame_b,rectangularContactSurface. frame_a)
       annotation (Line(
         points={{-10,-30},{26.4,-30}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
       connect(world.frame_b,fixedRotation1. frame_a) annotation (Line(
           points={{-70,28},{-50,28},{-50,-30},{-30,-30}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedRotation.frame_a, world.frame_b) annotation (Line(
           points={{-26,52},{-26,52},{-28,52},{-28,52},{-50,52},{-50,28},{-70,28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
     connect(freeMotion.frame_b, egg.frame_a)
       annotation (Line(
         points={{26,52},{38,52}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(egg.contact_a, contact.Port1) annotation (Line(
         points={{64,52},{90,52},{90,20.9}},
-        color={255,128,0},
-        smooth=Smooth.None));
+        color={255,128,0}));
       connect(fixedRotation.frame_b, freeMotion.frame_a) annotation (Line(
           points={{-6,52},{6,52}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       annotation (
-          Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
-                100}}), graphics),
-      experiment(StartTime=0, StopTime=1.5),
-      __Dymola_experimentSetupOutput);
+      experiment(StartTime=0, StopTime=1.5));
     end Example18;
 
    annotation(preferredView="info", Documentation(info="<html>
@@ -2362,20 +2185,15 @@ printing and shipping costs may be recovered.</p>
       connect(shape.frame_a, frame_a)      annotation (Line(
           points={{-10,22},{-10,8},{-100,8}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(shape.frame_a, contact_a.frame)     annotation (Line(
           points={{-10,22},{-10,8},{100,8}},
           color={95,95,95},
           pattern=LinePattern.None,
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       annotation (Documentation(info="<!DOCTYPE html><html>
 <p>The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions can be parameterized. In order to be able to use them in the contact block we introduce a new interface to connect the surface definition with the contact block of this library. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library. It comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system of the contact surface. This model defines a spherical contact surface.</p>
-</html>"),     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                       graphics),
-                  Diagram(graphics),
-        Icon(graphics={
+</html>"),        Icon(graphics={
             Text(
               extent={{-100,-74},{106,-96}},
               lineColor={255,128,0},
@@ -2438,11 +2256,8 @@ printing and shipping costs may be recovered.</p>
     connect(frame_a, convexVisualizer.frame_a) annotation (Line(
         points={{-100,8},{-10,8},{-10,30}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                          graphics), Icon(graphics={
+        thickness=0.5));
+      annotation ( Icon(graphics={
             Ellipse(
               extent={{-86,60},{-42,-60}},
               lineColor={0,0,0},
@@ -2464,12 +2279,10 @@ printing and shipping costs may be recovered.</p>
               fillPattern=FillPattern.Solid),
             Line(
               points={{-64,60},{58,60}},
-              color={0,0,0},
               thickness=0.5,
               smooth=Smooth.Bezier),
             Line(
               points={{-64,-60},{58,-60}},
-              color={0,0,0},
               thickness=0.5,
               smooth=Smooth.Bezier),
             Ellipse(
@@ -2552,7 +2365,7 @@ printing and shipping costs may be recovered.</p>
           points={{-10,30},{-10,8},{100,8}},
           color={95,95,95},
           thickness=0.5));
-      annotation (Diagram(graphics), Icon(graphics={
+      annotation ( Icon(graphics={
             Line(
               points={{-60,60},{-100,-60},{60,-60},{100,60},{-44,60},{-60,60}},
               thickness=0.5),
@@ -2636,18 +2449,15 @@ printing and shipping costs may be recovered.</p>
       connect(cylinder.frame_a, frame_a)   annotation (Line(
           points={{-10,32},{-10,8},{-100,8}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylinder.frame_a, contact_a.frame)  annotation (Line(
           points={{-10,32},{-10,8},{100,8}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
     connect(frame_a, frame_a) annotation (Line(
         points={{-100,8},{-100,8}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
       annotation (Icon(graphics={
             Ellipse(
               extent={{-94,48},{96,-52}},
@@ -2688,9 +2498,6 @@ printing and shipping costs may be recovered.</p>
               fillColor={0,176,0},
               fillPattern=FillPattern.Solid,
               lineColor={0,0,0})}),
-          Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                  graphics),
         Documentation(info="<!DOCTYPE html><html>
 <p>The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions can be parameterized. In order to be able to use them in the contact block we introduce a new interface to connect the surface definition with the contact block of this library. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library. It comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system of the contact surface. This model defines a circular, plane contact surface.</p>
 </html>"));
@@ -2718,16 +2525,12 @@ printing and shipping costs may be recovered.</p>
       connect(frame_a, contact_a.frame) annotation (Line(
           points={{-100,8},{100,8}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(ellipsoid.frame_a, frame_a) annotation (Line(
           points={{8,40},{-10,40},{-10,8},{-100,8}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                          graphics), Icon(graphics={
+          thickness=0.5));
+      annotation ( Icon(graphics={
             Ellipse(
               extent={{-86,48},{86,-54}},
               lineColor={0,0,0},
@@ -2783,16 +2586,12 @@ printing and shipping costs may be recovered.</p>
     connect(frame_a, convexVisualizer.frame_a) annotation (Line(
         points={{-100,8},{-10,8},{-10,40},{2,40}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
       connect(frame_a, contact_a.frame) annotation (Line(
           points={{-100,8},{100,8}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                          graphics), Icon(graphics={
+          thickness=0.5));
+      annotation ( Icon(graphics={
             Polygon(
               points={{-60,-70},{94,-22},{96,16},{-26,94},{-112,10},{-60,-70}},
               lineColor={0,0,0},
@@ -3302,7 +3101,7 @@ printing and shipping costs may be recovered.</p>
                 smooth=Smooth.Bezier,
                 fillColor={0,0,255})}),  Documentation(info="<html>
 <p>Model <b>ConvexVisualizer</b> visualizes a convex surface using parametric surface definitons. The center of the visualization is located at connector frame_a. It utilizes the same method that is used by Martin Otter and Dirk Zimmer resp. in <b><a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Torus\">Torus</a></b> model.</p>
-</html>"),  Diagram(graphics));
+</html>"));
         end ConvexVisualizer;
 
         package SurfaceCharacteristics
@@ -3474,24 +3273,17 @@ convex contact surface object as parameter String.</p>
                                            annotation (Line(
           points={{-46,6},{-98,6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(sphericalContactSurface.contact_a,contact_a)  annotation (Line(
           points={{72.11,6},{98,6}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
 
       connect(sphericalBody.frame_b, sphericalContactSurface.frame_a)
         annotation (Line(
           points={{6,6},{21.08,6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
-    annotation (Diagram(coordinateSystem(extent={{-100,-100},{100,100}},
-              preserveAspectRatio=false),
-                          graphics),
-                  Diagram(graphics),
-        Icon(coordinateSystem(extent={{-100,-100},{100,100}},    preserveAspectRatio=false),
+          thickness=0.5));
+    annotation (        Icon(coordinateSystem(extent={{-100,-100},{100,100}},    preserveAspectRatio=false),
              graphics={
             Text(
               extent={{-98,-64},{102,-104}},
@@ -3627,56 +3419,45 @@ convex contact surface object as parameter String.</p>
                                            annotation (Line(
           points={{-2,0},{-8,0},{-8,-28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylindricalBody.frame_b, cylindricalContactSurface.frame_a)
         annotation (Line(
           points={{18,0},{24,0},{24,22},{-42,22},{-42,44},{-35.56,44}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(cylindricalContactSurface.contact_a, contact_lateral)
                                                               annotation (Line(
           points={{-14.77,44},{-4,44},{-4,98}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(circularPlaneContactSurface1.contact_a, contact_front1)
                                                                      annotation (
           Line(
           points={{79.3,0},{86,0},{86,0},{102,0}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(cylindricalBody.frame_b, fixedTranslation1.frame_a)
                                                                  annotation (Line(
           points={{18,0},{32,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedTranslation1.frame_b, circularPlaneContactSurface1.frame_a)
         annotation (Line(
           points={{52,0},{60.4,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedTranslation2.frame_b, cylindricalBody.frame_a) annotation (Line(
           points={{-18,0},{-2,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(circularPlaneContactSurface2.frame_a,fixedTranslation2. frame_a)
         annotation (Line(
           points={{-56.4,-1.20015e-015},{-50,-1.20015e-015},{-50,0},{-38,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(circularPlaneContactSurface2.contact_a, contact_front2) annotation (
           Line(
           points={{-75.3,1.13798e-015},{-87.85,1.13798e-015},{-87.85,0},{-100,0}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(extent={{-100,-100},{100,100}},
-              preserveAspectRatio=false),
-                          graphics), Icon(coordinateSystem(extent={{-100,-100},
+          color={255,128,0}));
+      annotation ( Icon(coordinateSystem(extent={{-100,-100},
               {100,100}},  preserveAspectRatio=false),
                                           graphics={
             Ellipse(
@@ -3899,112 +3680,90 @@ convex contact surface object as parameter String.</p>
       connect(bodyShape.frame_a, frame_a)  annotation (Line(
           points={{-28,0},{-36,0},{-36,34},{-78,34},{-78,82},{-90,82}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangularPlaneContactSurface1.contact_a, contact_a1)
                                                                    annotation (Line(
           points={{5.68989e-016,67.3},{-0.45,67.3},{-0.45,98},{0,98}},
           color={255,128,0},
-          pattern=LinePattern.None,
-          smooth=Smooth.None));
+          pattern=LinePattern.None));
       connect(bodyShape.frame_b, fixedTranslation.frame_a) annotation (Line(
           points={{-8,0},{-6.12323e-016,0},{-6.12323e-016,14}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedTranslation.frame_b, rectangularPlaneContactSurface1.frame_a)
         annotation (Line(
           points={{6.12323e-016,34},{6.12323e-016,38},{0,38},{0,42},{-6.00077e-016,42},{-6.00077e-016,48.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangularPlaneContactSurface2.contact_a,contact_a2)  annotation (
           Line(
           points={{-22,-51.3},{-22,-54},{-22,-54},{-22,-66}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(fixedTranslation2.frame_a, bodyShape.frame_b) annotation (Line(
           points={{14,0},{-8,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangularPlaneContactSurface3.contact_a,contact_a3)  annotation (
           Line(
           points={{67.3,0},{67.3,0},{82,0}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(rectangularPlaneContactSurface3.frame_a, fixedTranslation2.frame_b)
         annotation (Line(
           points={{48.4,0},{34,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedTranslation3.frame_a, bodyShape.frame_a) annotation (Line(
           points={{-42,-1.22465e-015},{-36,-1.22465e-015},{-36,0},{-28,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangularPlaneContactSurface4.frame_a, fixedTranslation3.frame_b)
         annotation (Line(
           points={{-70.4,-1.20015e-015},{-67.1,-1.20015e-015},{-67.1,1.22465e-015},{-62,1.22465e-015}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangularPlaneContactSurface4.contact_a,contact_a4)  annotation (
           Line(
           points={{-89.3,1.13798e-015},{-96,0},{-102,0}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(fixedTranslation5.frame_b,rectangularPlaneContactSurface5. frame_a)
         annotation (Line(
           points={{48,38},{62,38},{62,58.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedTranslation5.frame_a, bodyShape.frame_b) annotation (Line(
           points={{28,38},{20,38},{20,16},{8,16},{8,0},{-8,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangularPlaneContactSurface5.contact_a,contact_a5)  annotation (
           Line(
           points={{62,77.3},{62.95,77.3},{62.95,92},{62,92}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(rectangularPlaneContactSurface6.frame_a, fixedTranslation4.frame_b)
         annotation (Line(
           points={{-66,-42.4},{-66,-38},{-46,-38},{-46,-32}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedTranslation4.frame_a, bodyShape.frame_a) annotation (Line(
           points={{-46,-12},{-46,-10},{-36,-10},{-36,0},{-28,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(rectangularPlaneContactSurface6.contact_a,contact_a6)  annotation (
           Line(
           points={{-66,-61.3},{-83.95,-61.3},{-83.95,-68},{-82,-68}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(bodyShape.frame_b, fixedTranslation1.frame_a) annotation (Line(
           points={{-8,0},{1.83697e-015,0},{1.83697e-015,-6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(fixedTranslation1.frame_b,rectangularPlaneContactSurface2. frame_a)
         annotation (Line(
           points={{-1.83697e-015,-26},{-22,-26},{-22,-32.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(contact_a5,contact_a5)  annotation (Line(
           points={{62,92},{62,92}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{
-                -100,-100},{100,100}}),
-                          graphics), Icon(coordinateSystem(preserveAspectRatio=
+          color={255,128,0}));
+      annotation ( Icon(coordinateSystem(preserveAspectRatio=
                 false, extent={{-100,-100},{100,100}}),
                                           graphics={
             Text(
@@ -4021,13 +3780,11 @@ convex contact surface object as parameter String.</p>
             Polygon(
               points={{40,42},{60,82},{60,-6},{40,-46},{40,42}},
               lineColor={0,0,255},
-              smooth=Smooth.None,
               fillColor={0,0,136},
               fillPattern=FillPattern.Solid),
             Polygon(
               points={{-80,42},{-60,82},{60,82},{40,42},{-80,42}},
               lineColor={0,0,255},
-              smooth=Smooth.None,
               fillColor={0,0,255},
               fillPattern=FillPattern.Solid)}),
         Documentation(
@@ -4085,22 +3842,17 @@ convex contact surface object as parameter String.</p>
       connect(frame_a, bodyShape.frame_a) annotation (Line(
           points={{-100,0},{-42,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(bodyShape.frame_b, ellipsoidContactSurface.frame_a)
         annotation (Line(
           points={{-22,0},{-1.24,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(ellipsoidContactSurface.contact_a, contact_a)
         annotation (Line(
           points={{34.67,0},{100,0}},
-          color={255,128,0},
-          smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                          graphics), Icon(graphics={
+          color={255,128,0}));
+      annotation ( Icon(graphics={
             Ellipse(
               extent={{-96,44},{96,-44}},
               lineColor={0,0,0},
@@ -4186,20 +3938,16 @@ convex contact surface object as parameter String.</p>
       connect(frame_a, bodyShape.frame_a) annotation (Line(
           points={{-100,0},{-52,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
     connect(bodyShape.frame_b, convexContactSurface.frame_a)
       annotation (Line(
         points={{-32,0},{-5.24,0}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(convexContactSurface.contact_a, contact_a) annotation (Line(
         points={{30.67,0},{100,0}},
-        color={255,128,0},
-        smooth=Smooth.None));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                          graphics), Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
+        color={255,128,0}));
+      annotation ( Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
                                           graphics={Polygon(
             points={{-60,-72},{94,-24},{96,14},{-26,92},{-112,8},{-60,-72}},
             lineColor={0,0,0},
@@ -4330,43 +4078,34 @@ convex contact surface object as parameter String.</p>
                                                  annotation (Line(
           points={{-14.58,29.94},{-44,29.94},{-44,54},{12,54},{12,70}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(contactDefinition.frame_b, Port2.frame)
                                                 annotation (Line(
           points={{-14.58,-16.46},{-38,-16.46},{-38,-60},{18,-60},{18,-76}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(Port1.u, contactDefinition.vector_1)
                                              annotation (Line(
           points={{12,70},{12,54},{-52,54},{-52,15.73},{-16.03,15.73}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(contactDefinition.vector_2, Port2.u)
                                              annotation (Line(
           points={{-15.74,-3.7},{-52,-3.7},{-52,-60},{18,-60},{18,-76}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
     connect(Port1.contactShape, contactDefinition.surfaceType1) annotation (Line(
         points={{12,70},{12,54},{-52,54},{-52,10},{-34,10},{-34,9.93},{-16.03,9.93}},
-        color={255,128,0},
-        smooth=Smooth.None));
+        color={255,128,0}));
     connect(Port2.contactShape, contactDefinition.surfaceType2)
       annotation (Line(
         points={{18,-76},{18,-60},{-52,-60},{-52,-8.92},{-15.74,-8.92}},
-        color={255,128,0},
-        smooth=Smooth.None));
+        color={255,128,0}));
      if enableContactOutput then
       connect(contactDefinition.contact, contact) annotation (Line(
           points={{45.74,4.42},{66.87,4.42},{66.87,4},{104,4}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
       end if;
         annotation (Placement(transformation(extent={{-20,0},{0,20}})),
-                  Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                          graphics), Icon(graphics={Rectangle(
+ Icon(graphics={Rectangle(
               extent={{-100,100},{100,-100}},
               lineColor={255,128,0},
               fillColor={255,128,0},
@@ -4499,76 +4238,62 @@ convex contact surface object as parameter String.</p>
         annotation (Line(
           points={{12,0},{12,28},{-19.6,28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_b1, force.frame_a1)
         annotation (Line(
           points={{-19.6,52},{24,52},{24,0}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_a1, frame_a)
         annotation (Line(
           points={{-60.4,52},{-80,52},{-80,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_a2, frame_b)
         annotation (Line(
           points={{-60.4,28},{-68,28},{-68,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.vector_ball1, vector_1)
         annotation (Line(
           points={{-61.6,42},{-84,42},{-84,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.vector_ball2, vector_2)
         annotation (Line(
           points={{-61.6,34},{-78,34},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.Vector_ball1, vector_1)
         annotation (Line(
           points={{-1.6,-28},{-84,-28},{-84,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.vector_ball2, vector_2)
         annotation (Line(
           points={{-1.6,-36},{-78,-36},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.w_mov2, geometry.w2)
         annotation (Line(
           points={{-1.6,-1.6},{-25.8,-1.6},{-25.8,18},{-25.2,18}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.w_mov1, geometry.w1) annotation (Line(
           points={{-1.6,-9.2},{-36,-9.2},{-36,18}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.pos_rel_BCS1, geometry.pos_rel2)
         annotation (Line(
           points={{-1.6,-16},{-44,-16},{-44,18}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.pos_rel_BCS2, geometry.pos_rel1)
         annotation (Line(
           points={{-1.6,-22},{-50.8,-22},{-50.8,18}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.contact, contact) annotation (Line(
           points={{41.2,-20.4},{60,-20.4},{60,-2},{106,-2}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
         annotation (Icon(graphics={                   Rectangle(extent={{-100,
                     100},{100,-100}},
                                  lineColor={255,128,0}), Text(
                 extent={{-82,10},{82,-10}},
                 lineColor={0,0,255},
-              textString="%name")}),        Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),                  graphics));
+              textString="%name")}));
       end SphereToSphere;
     extends Modelica.Icons.SourcesPackage;
       model SphereToCylinder
@@ -4602,76 +4327,60 @@ convex contact surface object as parameter String.</p>
         annotation (Line(
           points={{-19.6,28},{2,28},{2,0.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_b2, force.frame_a2)
         annotation (Line(
           points={{-19.6,52},{18,52},{18,0.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_a2, frame_a)
         annotation (Line(
           points={{-60.4,52},{-80.2,52},{-80.2,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_b, geometry.frame_a1)
         annotation (Line(
           points={{-102,-74},{-68,-74},{-68,28},{-60.4,28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(vector_1, geometry.Vector_ball)
         annotation (Line(
           points={{-107,37},{-86,37},{-86,44},{-61.6,44}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_2, geometry.vector_cy)
         annotation (Line(
           points={{-106,-30},{-80,-30},{-80,36},{-61.6,36}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.Vector_ball, vector_1)
         annotation (Line(
           points={{-11.6,-32},{-86,-32},{-86,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.vector_cy, vector_2)
         annotation (Line(
           points={{-11.6,-40},{-80,-40},{-80,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.pos_ctb_BCS1, geometry.pos_ctb_BCS1)
         annotation (Line(
           points={{-11.6,0},{-24,0},{-24,18}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.pos_ctb_BCS4, geometry.pos_ctb_BCS4)
         annotation (Line(
           points={{-11.6,-6},{-32,-6},{-32,18}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.pos_b_BCSA, geometry.pos_b_BCSA)
         annotation (Line(
           points={{-11.6,-12.8},{-40,-12.8},{-40,18}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.w_mov1, geometry.w_mov1) annotation (Line(
           points={{-11.6,-20},{-48,-20},{-48,18}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.w_mov2, geometry.w_mov2) annotation (Line(
           points={{-11.6,-26},{-56,-26},{-56,18}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.contact, contact) annotation (Line(
           points={{31.2,-20.4},{64.6,-20.4},{64.6,-2},{106,-2}},
-          color={255,0,255},
-          smooth=Smooth.None));
-        annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent=
-                {{-100,-100},{100,100}}),
-                            graphics), Icon(graphics={Rectangle(extent={{-100,100},{100,
+          color={255,0,255}));
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},{100,
                     -100}},      lineColor={255,128,0}), Text(
                 extent={{-82,10},{82,-10}},
                 lineColor={0,0,255},
@@ -4709,71 +4418,56 @@ convex contact surface object as parameter String.</p>
         annotation (Line(
           points={{-19.6,28},{-12,28},{-12,0.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_b2, force.frame_a2) annotation (Line(
           points={{-19.6,52},{3.55271e-016,52},{3.55271e-016,0.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(vector_2, force.vector_r)
         annotation (Line(
           points={{-106,-30},{-80,-30},{-80,-38.8},{-21.6,-38.8}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_2, geometry.vector_r)
         annotation (Line(
           points={{-106,-30},{-80,-30},{-80,34},{-61.6,34}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_1, geometry.Vector_ball)
         annotation (Line(
           points={{-107,37},{-86,37},{-86,42},{-61.6,42}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_1, force.vector_ball)
         annotation (Line(
           points={{-107,37},{-86,37},{-86,-30.8},{-21.6,-30.8}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.pos_rel_mb_BCS2, force.r_rel1)
         annotation (Line(
           points={{-18.4,40},{9.6,40},{9.6,1.6}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.w_mov, geometry.w) annotation (Line(
           points={{-21.6,-24},{-48,-24},{-48,18.4}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.pos_ctb_BCS1, geometry.pos_ctb_BCS1)
         annotation (Line(
           points={{-21.6,-16},{-32,-16},{-32,18.4}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.pos_rel, geometry.pos_rel)
         annotation (Line(
           points={{-21.6,-9.2},{-21.6,-3.6},{-24,-3.6},{-24,18.4}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(frame_a, geometry.frame_a2)
         annotation (Line(
           points={{-102,86},{-82,86},{-82,52},{-60.4,52}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_b, geometry.frame_a1)
         annotation (Line(
           points={{-102,-74},{-74,-74},{-74,28},{-60.4,28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force.contact, contact) annotation (Line(
           points={{21.2,-20.4},{60.6,-20.4},{60.6,-2},{106,-2}},
-          color={255,0,255},
-          smooth=Smooth.None));
-        annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                            graphics), Icon(graphics={Rectangle(extent={{-100,100},{100,
+          color={255,0,255}));
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},{100,
                     -100}},      lineColor={255,128,0}), Text(
                 extent={{-82,10},{82,-10}},
                 lineColor={0,0,255},
@@ -4812,72 +4506,57 @@ convex contact surface object as parameter String.</p>
         annotation (Line(
           points={{0.4,28},{8,28},{8,0.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_b2, force.frame_a2)
         annotation (Line(
           points={{0.4,52},{20,52},{20,0.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(vector_1, geometry.Vector_ball)
         annotation (Line(
           points={{-107,37},{-85,37},{-85,42},{-41.6,42}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_1, force.vector_ball)
         annotation (Line(
           points={{-107,37},{-84,37},{-84,-30.8},{-1.6,-30.8}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_2, force.vector_c)
         annotation (Line(
           points={{-106,-30},{-56,-30},{-56,-38.8},{-1.6,-38.8}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_2, geometry.vector_circle)
         annotation (Line(
           points={{-106,-30},{-56,-30},{-56,34},{-41.6,34}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.pos_rel_mb_BCS2, force.r_rel)
         annotation (Line(
           points={{2,40},{28,40},{28,1.6}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.pos_rel, geometry.pos_rel)
         annotation (Line(
           points={{-1.6,-9.2},{-2,-9.2},{-2,18.4},{-4,18.4}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.pos_ctb_BCS1, geometry.pos_ctb_BCS1)
         annotation (Line(
           points={{-1.6,-16},{-12,-16},{-12,18.4}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.w_mov, geometry.w) annotation (Line(
           points={{-1.6,-22.8},{-28,-22.8},{-28,18.4}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.frame_a2, frame_a)
         annotation (Line(
           points={{-40.4,52},{-70.2,52},{-70.2,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_b, geometry.frame_a1)
         annotation (Line(
           points={{-102,-74},{-74,-74},{-74,28},{-40.4,28}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force.contact, contact) annotation (Line(
           points={{41.2,-20.4},{68.6,-20.4},{68.6,-2},{106,-2}},
-          color={255,0,255},
-          smooth=Smooth.None));
-        annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                            graphics), Icon(graphics={Rectangle(extent={{-100,100},{100,
+          color={255,0,255}));
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},{100,
                     -100}},      lineColor={255,128,0}), Text(
                 extent={{-82,10},{82,-10}},
                 lineColor={0,0,255},
@@ -4917,63 +4596,49 @@ convex contact surface object as parameter String.</p>
           annotation (Line(
             points={{-18,19.2},{-10,19.2},{-10,-1.6}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(geometry.frame_b,force. frame_a2)
           annotation (Line(
             points={{-18,57.2},{0,57.2},{0,-1.6},{2,-1.6}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(geometry.u1, vector_1)              annotation (Line(
             points={{-60.1313,47.2},{-82,47.2},{-82,37},{-107,37}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(geometry.u2, vector_2)              annotation (Line(
             points={{-60,33.2},{-60,36},{-70,36},{-70,-30},{-106,-30}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(geometry.distance,force. distance)
           annotation (Line(
             points={{-18,36.6},{-6,36.6},{-6,36},{11.6,36},{11.6,-0.4}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
       connect(frame_a,geometry. frame_a) annotation (Line(
           points={{-102,86},{-82,86},{-82,57.2},{-60,57.2}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_b,geometry. frame_a1) annotation (Line(
           points={{-102,-74},{-64,-74},{-64,19.2},{-60,19.2}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(surfaceType1,geometry. surfaceType1) annotation (Line(
           points={{-107,17},{-80,17},{-80,40},{-70,40},{-70,41.4},{-60,41.4}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(surfaceType2,geometry. surfaceType2)
         annotation (Line(
           points={{-106,-48},{-74,-48},{-74,28},{-60,28}},
-          color={255,128,0},
-          smooth=Smooth.None));
+          color={255,128,0}));
       connect(geometry.normal_basis_trf, force.normalbasis)
         annotation (Line(
           points={{-37.6875,15},{-37.6875,-30},{-18,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.v_rel, force.v_rel)
         annotation (Line(
           points={{-49.6313,15},{-49.6313,-14},{-18,-14}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.contact, contact) annotation (Line(
           points={{23.2,-22.4},{59.6,-22.4},{59.6,-2},{106,-2}},
-          color={255,0,255},
-          smooth=Smooth.None));
-        annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                            graphics), Icon(graphics={Rectangle(extent={{-100,100},{100,
+          color={255,0,255}));
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},{100,
                     -100}},      lineColor={255,128,0}), Text(
                 extent={{-82,10},{82,-10}},
                 lineColor={0,0,255},
@@ -5009,62 +4674,49 @@ convex contact surface object as parameter String.</p>
         annotation (Line(
           points={{-20,23.6364},{-10,23.6364},{-10,-2}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_b, force.frame_a2)
         annotation (Line(
           points={{-20,56.3636},{0,56.3636},{0,-1.6},{2,-1.6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.u1, vector_1)
         annotation (Line(
           points={{-60,45.4545},{-82,45.4545},{-82,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.u2, vector_2)
         annotation (Line(
           points={{-60,34.5455},{-60,34},{-70,34},{-70,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.vrel, force.vrel)
         annotation (Line(
           points={{-51.2,18.1818},{-52,18.1818},{-52,-10},{-18,-10}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.prel, force.prel)
         annotation (Line(
           points={{-18.6667,41.8182},{-18.6667,42},{14,42},{14,-2}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(frame_b, geometry.frame_a1) annotation (Line(
           points={{-102,-74},{-82,-74},{-82,23.6364},{-60,23.6364}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_a, geometry.frame_a)
         annotation (Line(
           points={{-102,86},{-82,86},{-82,56.3636},{-60,56.3636}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
         connect(surfaceType1, geometry.surfaceType1)
           annotation (Line(
             points={{-107,17},{-92,17},{-92,49.4545},{-60.2667,49.4545}},
-            color={255,128,0},
-            smooth=Smooth.None));
+            color={255,128,0}));
         connect(surfaceType2, geometry.surfaceType2)
           annotation (Line(
             points={{-106,-48},{-84,-48},{-84,28.7273},{-60.2667,28.7273}},
-            color={255,128,0},
-            smooth=Smooth.None));
+            color={255,128,0}));
       connect(force.contact, contact) annotation (Line(
           points={{23.2,-22.4},{61.6,-22.4},{61.6,-2},{106,-2}},
-          color={255,0,255},
-          smooth=Smooth.None));
-        annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                            graphics), Icon(graphics={Rectangle(extent={{-100,100},{100,
+          color={255,0,255}));
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},{100,
                     -100}},      lineColor={255,128,0}), Text(
                 extent={{-82,10},{82,-10}},
                 lineColor={0,0,255},
@@ -5224,101 +4876,80 @@ convex contact surface object as parameter String.</p>
           connect(rP_ball1_ball2.frame_b, frame_a1) annotation (Line(
               points={{-60,6},{-60,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ball1_ball2.frame_a, frame_a2) annotation (Line(
               points={{-60,-6},{-60,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ball2_ball1.frame_a, frame_a1) annotation (Line(
               points={{-14,6},{-14,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ball2_ball1.frame_b, frame_a2) annotation (Line(
               points={{-14,-6},{-14,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact_point_ball1.frame_a, frame_b1)
                                                      annotation (Line(
               points={{102,82},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact_point_ball2.frame_a, frame_b2)
                                                       annotation (Line(
               points={{102,-38},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ball1_ball2.r_rel, pos_rel1) annotation (Line(
               points={{-53.4,-4.04133e-016},{-54,-4.04133e-016},{-54,-110}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(aAV.w, w1)
                             annotation (Line(
               points={{20,-6.6},{20,-110}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(variablePrism1.frame_b, frame_b1) annotation (Line(
               points={{60,60},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism1.frame_a, frame_a1) annotation (Line(
               points={{40,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism2.frame_b, frame_b2) annotation (Line(
               points={{60,-60},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism2.frame_a, frame_a2) annotation (Line(
               points={{40,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(vector_ball1, deMultiplex1.u) annotation (Line(
               points={{-108,10},{-93.2,10}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex3.u, vector_ball2) annotation (Line(
               points={{-93.2,-30},{-108,-30}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(aAV1.frame_a, variablePrism2.frame_b) annotation (Line(
               points={{74,-74},{74,-60},{60,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV1.frame_resolve, frame_a2) annotation (Line(
               points={{67.94,-80},{-80,-80},{-80,-60},{-102,-60}},
               color={95,95,95},
-              pattern=LinePattern.Dot,
-              smooth=Smooth.None));
+              pattern=LinePattern.Dot));
           connect(aAV1.w, w2) annotation (Line(
               points={{74,-86.6},{74,-110}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(rP_ball2_ball1.r_rel, pos_rel2) annotation (Line(
               points={{-20.6,1.2124e-015},{-20.6,-53},{-20,-53},{-20,-110}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(aAV.frame_a, variablePrism1.frame_b) annotation (Line(
               points={{20,6},{60,6},{60,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV.frame_resolve, frame_a1) annotation (Line(
               points={{13.94,1.1132e-015},{13.94,60},{-102,60}},
               color={95,95,95},
-              pattern=LinePattern.Dot,
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              pattern=LinePattern.Dot));
         end MovePointSphereToSphere;
 
         model ForceSphereToSphere
@@ -5504,32 +5135,25 @@ convex contact surface object as parameter String.</p>
           connect(force.frame_a,frame_a2)  annotation (Line(
               points={{-16,80},{-40,80},{-40,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a1,force. frame_b) annotation (Line(
               points={{20,100},{20,80},{-4,80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_mp_1_2.frame_a, frame_a2) annotation (Line(
               points={{-16,60},{-40,60},{-40,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_mp_1_2.frame_b, frame_a1) annotation (Line(
               points={{-4,60},{20,60},{20,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex1.u, Vector_ball1) annotation (Line(
               points={{-93.2,-40},{-108,-40}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex3.u, vector_ball2) annotation (Line(
               points={{-93.2,-80},{-108,-80}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              color={0,0,127}));
         end ForceSphereToSphere;
 
         model MovePointSphereToCylinder
@@ -5736,123 +5360,99 @@ convex contact surface object as parameter String.</p>
           connect(rP_b_cy.frame_b, frame_a2) annotation (Line(
               points={{-66,6},{-66,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a1, rP_b_cy.frame_a) annotation (Line(
               points={{-102,-60},{-66,-60},{-66,-6}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a2,rP_b_cyA. frame_b) annotation (Line(
               points={{-102,60},{3.67394e-016,60},{3.67394e-016,6}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact_point_ball.frame_a, frame_b2)
                                                      annotation (Line(
               points={{102,26},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact_point_cylinder.frame_a, frame_b1)
                                                          annotation (Line(
               points={{102,-32},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cy_b.frame_a, frame_a2) annotation (Line(
               points={{40,6},{40,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ball1.frame_b, frame_b2) annotation (Line(
               points={{66,60},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ball1.frame_a, frame_a2) annotation (Line(
               points={{46,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ball1.frame_b, rP_mpb_mpcy.frame_b) annotation (
               Line(
               points={{66,60},{80,60},{80,6}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy1.frame_a, frame_a1) annotation (Line(
               points={{-56,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy1.frame_b,rP_b_cyA. frame_a) annotation (Line(
               points={{-36,-60},{-3.67394e-016,-60},{-3.67394e-016,-6}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy2.frame_b, frame_b1) annotation (Line(
               points={{30,-60},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy2.frame_a, variablePrism_cy1.frame_b)
             annotation (Line(
               points={{10,-60},{-36,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_mpb_mpcy.frame_a, variablePrism_cy2.frame_b) annotation (
               Line(
               points={{80,-6},{80,-60},{30,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex1.u, Vector_ball) annotation (Line(
               points={{-97.2,20},{-108,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex2.u, vector_cy) annotation (Line(
               points={{-97.2,-20},{-108,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(rP_cy_b.frame_b, variablePrism_cy2.frame_b) annotation (Line(
               points={{40,-6},{40,-60},{30,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV2.frame_a, variablePrism_cy2.frame_b) annotation (Line(
               points={{40,-74},{40,-60},{30,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ct_BCS1.frame_a, frame_a2) annotation (Line(
               points={{-60,80},{-80,80},{-80,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ct_BCS1.frame_b, variablePrism_ball1.frame_b) annotation (Line(
               points={{-48,80},{80,80},{80,60},{66,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV2.frame_resolve, variablePrism_cy1.frame_b) annotation (Line(
               points={{33.94,-80},{-30,-80},{-30,-60},{-36,-60}},
               color={95,95,95},
-              pattern=LinePattern.Dot,
-              smooth=Smooth.None));
+              pattern=LinePattern.Dot));
           connect(aAV1.frame_a, variablePrism_ball1.frame_b) annotation (Line(
               points={{-24,6},{-24,30},{66,30},{66,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV1.frame_resolve, frame_a2) annotation (Line(
               points={{-30.06,1.1132e-015},{-38.03,1.1132e-015},{-38.03,60},{
                   -102,60}},
               color={95,95,95},
-              pattern=LinePattern.Dot,
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              pattern=LinePattern.Dot));
         end MovePointSphereToCylinder;
 
         model ForceSphereToCylinder
@@ -6066,22 +5666,17 @@ convex contact surface object as parameter String.</p>
           connect(force.frame_a, frame_a1) annotation (Line(
               points={{-6,80},{-40,80},{-40,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force.frame_b, frame_a2) annotation (Line(
               points={{6,80},{40,80},{40,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(Vector_ball, deMultiplex1.u) annotation (Line(
               points={{-108,-60},{-93.2,-60}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_cy, deMultiplex2.u) annotation (Line(
               points={{-108,-100},{-93.2,-100}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              color={0,0,127}));
         end ForceSphereToCylinder;
 
         model MovePointSphereToRectangle
@@ -6264,116 +5859,93 @@ convex contact surface object as parameter String.</p>
                                                  annotation (Line(
               points={{-66,6},{-66,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a1, rP_ball_rectangle.frame_a)
                                                  annotation (Line(
               points={{-102,-60},{-66,-60},{-66,-6}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a2, rP_mp_rectangle_mp_ball.frame_a)
                                                     annotation (Line(
               points={{-102,60},{20,60},{20,26}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV.w, w) annotation (Line(
               points={{-40,13.4},{-40,-108}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(move_point_ball.frame_a, frame_b2)
                                                 annotation (Line(
               points={{109,31},{102,31},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(move_point_rectangle.frame_a, frame_b1)
                                                annotation (Line(
               points={{105,-41},{102,-41},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pos_rel, rP_mp_ball_rectangle.r_rel) annotation (Line(
               points={{80,-108},{80,20},{78.6,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(rP_mp_ball_rectangle.frame_a, frame_a1) annotation (Line(
               points={{72,14},{72,-20},{-66,-20},{-66,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ball.frame_b, frame_b2) annotation (Line(
               points={{64,60},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ball.frame_b, rP_mp_ball_rectangle.frame_b) annotation (
              Line(
               points={{64,60},{72,60},{72,26}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ball.frame_a, frame_a2) annotation (Line(
               points={{48,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_rLW.frame_a, frame_a1)
                                                       annotation (Line(
               points={{-62,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_rLW.frame_b, frame_b1) annotation (Line(
               points={{-46,-60},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_mp_rectangle_mp_ball.frame_b, variablePrism_rLW.frame_b)
             annotation (Line(
               points={{20,14},{20,-60},{-46,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ball_rectangle.r_rel, pos_rel_mb_BCS2)
                                                    annotation (Line(
               points={{-59.4,-4.04133e-016},{-50,-4.04133e-016},{-50,0},{108,0}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(Vector_ball, deMultiplex1.u) annotation (Line(
               points={{-108,10},{-95.2,10}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex3.u, vector_r) annotation (Line(
               points={{-93.2,-30},{-108,-30}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(rP_ctb_BCS1.frame_a, frame_a2) annotation (Line(
               points={{34,80},{-30,80},{-30,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ctb_BCS1.frame_b, variablePrism_ball.frame_b) annotation (Line(
               points={{46,80},{64,80},{64,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ctb_BCS1.r_rel, pos_ctb_BCS1) annotation (Line(
               points={{40,73.4},{40,-108}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(aAV.frame_a, variablePrism_ball.frame_b) annotation (Line(
               points={{-40,26},{-40,42},{64,42},{64,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV.frame_resolve, frame_a2) annotation (Line(
               points={{-46.06,20},{-74,20},{-74,60},{-102,60}},
               color={95,95,95},
-              pattern=LinePattern.Dot,
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              pattern=LinePattern.Dot));
         end MovePointSphereToRectangle;
 
         model ForceSphereToRectangle
@@ -6582,22 +6154,17 @@ convex contact surface object as parameter String.</p>
           connect(force.frame_a, frame_a1) annotation (Line(
               points={{-36,70},{-60,70},{-60,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a2, force.frame_b) annotation (Line(
               points={{1.77636e-015,102},{1.77636e-015,70},{-24,70}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex1.u, vector_ball) annotation (Line(
               points={{-95.2,-54},{-108,-54}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex3.u, vector_r) annotation (Line(
               points={{-95.2,-94},{-108,-94}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(graphics), Icon(graphics));
+              color={0,0,127}));
         end ForceSphereToRectangle;
 
         model MovePointSphereToCircle
@@ -6766,115 +6333,92 @@ convex contact surface object as parameter String.</p>
                                                  annotation (Line(
               points={{-72,6},{-72,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a1, rP_ball_circle.frame_a)
                                                  annotation (Line(
               points={{-102,-60},{-72,-60},{-72,-6}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV.w,w)  annotation (Line(
               points={{-40,13.4},{-40,-108}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(contact_point_ball.frame_a, frame_b2)
                                                 annotation (Line(
               points={{105,29},{102,29},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact_point_circle.frame_a, frame_b1)
                                                annotation (Line(
               points={{103,-37},{102,-37},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pos_rel, rP_mp_ball_circle.r_rel)    annotation (Line(
               points={{80,-108},{80,20},{78.6,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(rP_mp_ball_circle.frame_a, frame_a1)    annotation (Line(
               points={{72,14},{72,-18},{-72,-18},{-72,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_mp_circle_mp_ball.frame_a, frame_a2) annotation (Line(
               points={{14,26},{14,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ball.frame_a, frame_a2) annotation (Line(
               points={{46,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ball.frame_b, frame_b2) annotation (Line(
               points={{66,60},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ball.frame_b, rP_mp_ball_circle.frame_b) annotation (
               Line(
               points={{66,60},{72,60},{72,26}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_crLW.frame_a, frame_a1) annotation (Line(
               points={{-64,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_crLW.frame_b, frame_b1) annotation (Line(
               points={{-44,-60},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_crLW.frame_b, rP_mp_circle_mp_ball.frame_b) annotation (
              Line(
               points={{-44,-60},{14,-60},{14,14}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ball_circle.r_rel, pos_rel_mb_BCS2)
                                                 annotation (Line(
               points={{-65.4,-4.04133e-016},{-40,-4.04133e-016},{-40,0},{110,0}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex1.u, Vector_ball) annotation (Line(
               points={{-95.2,10},{-108,10}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex3.u, vector_circle) annotation (Line(
               points={{-95.2,-30},{-108,-30}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(aAV.frame_a, variablePrism_ball.frame_b) annotation (Line(
               points={{-40,26},{-40,42},{66,42},{66,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV.frame_resolve, frame_a2) annotation (Line(
               points={{-46.06,20},{-62,20},{-62,60},{-102,60}},
               color={95,95,95},
-              pattern=LinePattern.Dot,
-              smooth=Smooth.None));
+              pattern=LinePattern.Dot));
           connect(rP_ctb_BCS1.frame_b, variablePrism_ball.frame_b) annotation (
               Line(
               points={{46,84},{66,84},{66,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ctb_BCS1.frame_a, frame_a2) annotation (Line(
               points={{34,84},{14,84},{14,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ctb_BCS1.r_rel, pos_ctb_BCS1) annotation (Line(
               points={{40,77.4},{40,-108}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              color={0,0,127}));
         end MovePointSphereToCircle;
 
         model ForceSphereToCircle
@@ -7059,22 +6603,17 @@ convex contact surface object as parameter String.</p>
           connect(force.frame_a,frame_a1)  annotation (Line(
               points={{-36,80},{-60,80},{-60,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a2,force. frame_b) annotation (Line(
               points={{1.77636e-015,102},{1.77636e-015,80},{-24,80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(vector_ball, deMultiplex1.u) annotation (Line(
               points={{-108,-54},{-93.2,-54}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_c, deMultiplex3.u) annotation (Line(
               points={{-108,-94},{-93.2,-94}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              color={0,0,127}));
         end ForceSphereToCircle;
 
         model MovePointConvexToConvex
@@ -7188,148 +6727,119 @@ convex contact surface object as parameter String.</p>
           connect(variablePrism1_1.frame_a,frame_a)  annotation (Line(
               points={{108,192},{-300,192}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism1_1.frame_b,frame_b)  annotation (Line(
               points={{128,192},{340,192}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(fixedShape.frame_a,frame_b)  annotation (Line(
               points={{318,198},{318,192},{340,192}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(fixedShape1.frame_a,frame_b1)  annotation (Line(
               points={{320,-198},{320,-188},{340,-188}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism1_2.frame_a,frame_a1)  annotation (Line(
               points={{78,-188},{-300,-188}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism1_2.frame_b,frame_b1)  annotation (Line(
               points={{102,-188},{340,-188}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(findMinimum.a1,frame_a)  annotation (Line(
               points={{13.8286,38},{14,38},{14,192},{-300,192}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(findMinimum.a2,frame_a1)  annotation (Line(
               points={{10.6286,-20.4143},{10,-20.4143},{10,-188},{-300,-188}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(r0_2.out, variablePrism1_2.n)
             annotation (Line(
               points={{81.6,-143.2},{81.6,-174},{82,-174},{82,-178},{82.08,-178},{82.08,-180.8}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(r0_2.z, variablePrism1_2.s_ref)
             annotation (Line(
               points={{98.4,-143.2},{98.4,-150},{98,-150},{98,-166},{97.44,-166},{97.44,-180.8}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(r0_1.out, variablePrism1_1.n)
             annotation (Line(
               points={{111,147.1},{111,168},{111.4,168},{111.4,186}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(r0_1.z, variablePrism1_1.s_ref)
             annotation (Line(
               points={{125,147.1},{125,173.5},{124.2,173.5},{124.2,186}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(distance, findMinimum.distance)
             annotation (Line(
               points={{340,-14},{45.1429,-14},{45.1429,-14.4071}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(absoluteAngularVelocity.frame_a,frame_a)  annotation (Line(
               points={{-200,114},{-200,192},{-300,192}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(absoluteAngularVelocity.w, velocities.omega_1)
             annotation (Line(
               points={{-200,93},{-200,42.6},{-203.36,42.6}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(absoluteAngularVelocity1.frame_a,frame_a1)  annotation (Line(
               points={{-202,-90},{-202,-188},{-300,-188}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(absoluteAngularVelocity1.w, velocities.omega_2)
             annotation (Line(
               points={{-202,-69},{-202,-18},{-202.72,-18}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(velocities.A2, findMinimum.A2) annotation (Line(
               points={{-170.08,-18},{-170.08,-38},{62,-38},{62,-6.53571},{
                 45.1429,-6.53571}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(velocities.A1, findMinimum.A1) annotation (Line(
               points={{-182.88,-18},{-182.88,-30},{-182,-30},{-182,-70},{68,-70},
                 {68,2},{44.9143,2},{44.9143,1.54286}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(findMinimum.rc_1, velocities.rc1) annotation (Line(
               points={{45.8286,33.0286},{64,33.0286},{64,34},{86,34},{86,58},{
                 -82,58},{-82,10.8},{-156,10.8}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(findMinimum.rc_2, velocities.rc2) annotation (Line(
               points={{44.9143,23.9143},{72,23.9143},{72,24},{96,24},{96,66},{
                 -88,66},{-88,-4},{-156,-4},{-156,-5.4}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
         connect(velocities.vrel, v_rel)
           annotation (Line(
             points={{-171.68,42.3},{-171.68,66},{-142,66},{-142,-230}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(findMinimum.normal_basis_trf, normal_basis_trf) annotation (Line(
             points={{45.1429,8.79286},{45.1429,8},{74,8},{74,-102},{40,-102},{
                 40,-230}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
           connect(findMinimum.x0,findMinimum. y) annotation (Line(
               points={{-20.9143,20.6},{-42,20.6},{-42,78},{108,78},{108,16.4571},
                 {44.9143,16.4571}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(velocities.ymin, findMinimum.y) annotation (Line(
               points={{-156,25.8},{-134,25.8},{-134,26},{-106,26},{-106,78},{
                 108,78},{108,16.4571},{44.9143,16.4571}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(findMinimum.y[1, 1],r0_1. angles[1]) annotation (Line(
               points={{44.9143,13.9714},{78,13.9714},{78,14},{129,14},{129,124}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(findMinimum.y[2, 1],r0_1. angles[2])
             annotation (Line(
               points={{44.9143,15.6286},{44.9143,15.2285},{127,15.2285},{127,
                 124}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(findMinimum.y[3, 1],r0_2. angles[1])
             annotation (Line(
               points={{44.9143,17.2857},{103.2,17.2857},{103.2,-118}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(findMinimum.y[4, 1],r0_2. angles[2])
             annotation (Line(
               points={{44.9143,18.9429},{100.8,18.9429},{100.8,-118}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           annotation (Diagram(coordinateSystem(extent={{-300,-220},{340,220}},
                   preserveAspectRatio=false),graphics), Icon(coordinateSystem(
                   extent={{-300,-220},{340,220}})));
@@ -7437,20 +6947,15 @@ convex contact surface object as parameter String.</p>
           connect(force.frame_a, frame_a1) annotation (Line(
               points={{-36,70},{-60,70},{-60,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a2, force.frame_b) annotation (Line(
               points={{1.77636e-015,102},{1.77636e-015,70},{-24,70}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
-          annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                              graphics), Icon(graphics),
-            experiment(
+              thickness=0.5));
+          annotation (            experiment(
               Tolerance=1e-005,
               fixedstepsize=0.001,
-              Algorithm="Dassl"),
-            __Dymola_experimentSetupOutput);
+              Algorithm="Dassl"));
         end ForceConvexToConvex;
 
         model MovePointConvexToPlane
@@ -7552,165 +7057,129 @@ convex contact surface object as parameter String.</p>
           connect(transformBodyFrame.frame_bcs1, frame_a) annotation (Line(
               points={{69.8,20},{70,20},{70,100},{-100,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(transformBodyFrame.frame_bcs2, frame_a1) annotation (Line(
               points={{69.8,0},{70,0},{70,-80},{-100,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism1_1.frame_a, frame_a) annotation (Line(
               points={{120,100},{-100,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism1_1.frame_b, frame_b) annotation (Line(
               points={{140,100},{200,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(transformBodyFrame.trf, MIN.T) annotation (Line(
               points={{91,10},{120,10}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(MIN.y, MIN.x0) annotation (Line(
               points={{141,10},{160,10},{160,30},{130,30},{130,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(u1, splitparam1.u1) annotation (Line(
               points={{-100,40},{-90,40},{-90,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(splitparam1.u2, u2) annotation (Line(
               points={{-90,0},{-90,-20},{-100,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(MIN.u1, splitparam1.y1) annotation (Line(
               points={{120,16},{100,16},{100,40},{-70,40},{-70,21}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
 
           connect(variablePrism1_2.frame_a, frame_a1) annotation (Line(
               points={{120,-80},{-100,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism1_2.frame_b, frame_b1) annotation (Line(
               points={{140,-80},{200,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact2_1.frame_a1, frame_a1) annotation (Line(
               points={{120,-40},{100,-40},{100,-80},{-100,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact2_1.frame_a, frame_b) annotation (Line(
               points={{140,-40},{168,-40},{168,100},{200,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact2_1.y, variablePrism1_2.n) annotation (Line(
               points={{123,-51},{123,-62.5},{123.4,-62.5},{123.4,-74}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(contact2_1.z, variablePrism1_2.s_ref) annotation (Line(
               points={{137,-51},{137,-62.5},{136.2,-62.5},{136.2,-74}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(r0.k, MIN.y) annotation (Line(
               points={{138,54},{160,54},{160,10},{141,10}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(r0.out, variablePrism1_1.n) annotation (Line(
               points={{122.7,71},{122.7,82.5},{123.4,82.5},{123.4,94}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(r0.z, variablePrism1_1.s_ref) annotation (Line(
               points={{135.3,71},{135.3,82.5},{136.2,82.5},{136.2,94}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(absoluteAngularVelocity2.frame_a, frame_a) annotation (Line(
               points={{-60,80},{-60,100},{-100,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(absoluteAngularVelocity1.frame_a, frame_a1) annotation (Line(
               points={{-60,-60},{-60,-80},{-100,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
         connect(absoluteAngularVelocity1.w, relativeVelocities.omega_2) annotation (Line(
             points={{-60,-39},{-60,0}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(absoluteAngularVelocity2.w, relativeVelocities.omega_1) annotation (Line(
             points={{-60,59},{-60,20},{-59.8,20}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(transformBodyFrame.A1, relativeVelocities.A1) annotation (Line(
             points={{69,14},{16,14},{16,-12},{-52,-12},{-52,0}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(MIN.y, relativeVelocities.y) annotation (Line(
             points={{141,10},{160,10},{160,30},{-26,30},{-26,20},{-40,20}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(relativeVelocities.h1, splitparam1.y1) annotation (Line(
             points={{-40,16},{-22,16},{-22,40},{-70,40},{-70,21}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(relativeVelocities.vrel, vrel) annotation (Line(
             points={{-50,21},{-50,30},{-34,30},{-34,-110}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(transformBodyFrame.A2, relativeVelocities.A2) annotation (Line(
             points={{69,6},{66,6},{66,-10},{-48,-10},{-48,0},{-47.8,0}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(transformBodyFrame.rc1, relativeVelocities.rc1) annotation (Line(
             points={{80,-1},{80,-16},{24,-16},{24,8},{-40,8}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(transformBodyFrame.rc2, relativeVelocities.rc2) annotation (Line(
             points={{80,21},{80,26},{14,26},{14,4.2},{-40,4.2}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
           connect(relativePosition.frame_b, frame_b) annotation (Line(
               points={{184,30},{184,100},{200,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(relativePosition.frame_a, frame_b1) annotation (Line(
               points={{184,10},{184,-80},{200,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(relativePosition.r_rel, prel) annotation (Line(
               points={{195,20},{210,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(fixedShape.frame_a, frame_b)
             annotation (Line(
               points={{182,114},{184,114},{184,100},{200,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_b1, fixedShape1.frame_a)
             annotation (Line(
               points={{200,-80},{184,-80},{184,-94}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(r0.h, splitparam1.y1) annotation (Line(
               points={{120,54},{110,54},{110,40},{-70,40},{-70,21}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(surfaceType2, contact2_1.contactShapeType);
           connect(splitparam1.y2, contact2_1.h) annotation (Line(
               points={{-70,-1},{-70,-20},{133,-20},{133,-30}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(MIN.contactShapeType, surfaceType1);
           connect(r0.contactShapeType, surfaceType1);
           connect(relativeVelocities.contactShapeType, surfaceType1);
@@ -7818,14 +7287,11 @@ convex contact surface object as parameter String.</p>
           connect(force.frame_a, frame_a1) annotation (Line(
               points={{-36,70},{-60,70},{-60,100}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a2, force.frame_b) annotation (Line(
               points={{1.77636e-015,102},{1.77636e-015,70},{-24,70}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
-          annotation (Diagram(graphics), Icon(graphics));
+              thickness=0.5));
         end ForceConvexToPlane;
 
         package CalculationsConvexSurfaces
@@ -8048,9 +7514,7 @@ convex contact surface object as parameter String.</p>
           out[2]:=y[2, 1];
           out[3]:=y[3, 1];
           z:=sqrt(out[1]^2+out[2]^2+out[3]^2);
-            annotation (Diagram(graphics),
-            Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}), graphics),
-            Documentation(info="<!DOCTYPE html><html>
+            annotation (            Documentation(info="<!DOCTYPE html><html>
 <p>This&nbsp;model&nbsp;calculates&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;the&nbsp;contact&nbsp;point&nbsp;of&nbsp;the&nbsp;first convex with&nbsp;respect&nbsp;to&nbsp;the&nbsp;body&nbsp;coordinate&nbsp;system.</p>
 <p>The&nbsp;outputs&nbsp;are&nbsp;the&nbsp;vector&nbsp;itself&nbsp;and&nbsp;it&apos;s&nbsp;length&nbsp;so&nbsp;that the&nbsp;prismatic&nbsp;block&nbsp;can&nbsp;be&nbsp;used.</p>
 </html>"));
@@ -8162,12 +7626,7 @@ convex contact surface object as parameter String.</p>
             vc2:=der(rc2);
             vrel:=vc2-vc1+vu_2 - vu_1;
 
-            annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                    -100},{100,100}}),
-                                graphics), Icon(coordinateSystem(
-                  preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                graphics),
-              Documentation(info="<!DOCTYPE html><html>
+            annotation (              Documentation(info="<!DOCTYPE html><html>
 <p>This&nbsp;model&nbsp;calculates&nbsp;the&nbsp;relative&nbsp;velocity&nbsp;between&nbsp;the&nbsp;anticipated&nbsp;contact&nbsp;points with&nbsp;respect&nbsp;to&nbsp;the&nbsp;contact&nbsp;point&nbsp;on&nbsp;the&nbsp;second&nbsp;ellipsoid&nbsp;(v2-v1).</p>
 </html>"));
           end RelativeVelocities;
@@ -8830,7 +8289,7 @@ convex contact surface object as parameter String.</p>
               x0,
               a,
               r);
-            annotation (Diagram(graphics), Documentation(info="<!DOCTYPE html><html>
+            annotation ( Documentation(info="<!DOCTYPE html><html>
 <p>This&nbsp;Model&nbsp;is&nbsp;used&nbsp;to&nbsp;route&nbsp;the&nbsp;input&nbsp;values&nbsp;into&nbsp;a&nbsp;single&nbsp;model.&nbsp;The&nbsp;essence&nbsp;of&nbsp;this&nbsp;model&nbsp;is&nbsp;the&nbsp;call of&nbsp;the&nbsp;search&nbsp;function.</p>
 </html>"));
           end FindMinimum;
@@ -8868,9 +8327,7 @@ convex contact surface object as parameter String.</p>
 
             z:=sqrt(out[1]^2 + out[2]^2 + out[3]^2);
 
-            annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                                graphics),
-                     smoothOrder=20,
+            annotation (                     smoothOrder=20,
               Documentation(info="<!DOCTYPE html><html>
 <p>This&nbsp;model&nbsp;computes&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;the&nbsp;contact&nbsp;point&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;body&nbsp;frame.</p>
 </html>"));
@@ -8924,9 +8381,7 @@ convex contact surface object as parameter String.</p>
           frame_a1.f = zeros(3);
           frame_a1.t = zeros(3);
 
-            annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                      -100},{100,100}}),
-                                graphics), Documentation(info="<!DOCTYPE html><html>
+            annotation ( Documentation(info="<!DOCTYPE html><html>
 <p>This&nbsp;model&nbsp;computes&nbsp;the&nbsp;components&nbsp;of&nbsp;the&nbsp;anticipated&nbsp;contact&nbsp;point&nbsp;on&nbsp;the&nbsp;plane&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;plane&nbsp;body&nbsp;frame.</p>
 <p>The&nbsp;components&nbsp;are&nbsp;the&nbsp;difference&nbsp;of&nbsp;the&nbsp;anticipated&nbsp;contact&nbsp;point&nbsp;on&nbsp;the&nbsp;ellipsoid&nbsp;and&nbsp;the&nbsp;origin&nbsp;of&nbsp;the&nbsp;plane.</p>
 <p>These&nbsp;components&nbsp;have&nbsp;to&nbsp;be&nbsp;transformed&nbsp;into&nbsp;the&nbsp;system&nbsp;of&nbsp;the&nbsp;plane&nbsp;and&nbsp;the&nbsp;direction&nbsp;perpendicular&nbsp;to&nbsp;the&nbsp;plane is&nbsp;set&nbsp;to&nbsp;zero.</p>
@@ -9032,8 +8487,7 @@ convex contact surface object as parameter String.</p>
             vrel[2]:=vrelh[2, 1];
             vrel[3]:=vrelh[3, 1];
 
-            annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                                graphics), Documentation(info="<!DOCTYPE html><html><p>This model calculates the relative velocity between the anticipated contact points.</p>
+            annotation ( Documentation(info="<!DOCTYPE html><html><p>This model calculates the relative velocity between the anticipated contact points.</p>
   <p>The formula used can be found in the full documentation. The velocity of an arbitrary point on an arbitrarily moving rigid body is the composition of the velocity of the origin of the coordinate system associated with the rigid body and the peripheral velocity of the point in question.</p></html>"));
           end RelativeVelocities;
 
@@ -9074,7 +8528,7 @@ convex contact surface object as parameter String.</p>
              frame_bcs1.t = zeros(3);
              frame_bcs2.f = zeros(3);
              frame_bcs2.t = zeros(3);
-            annotation (                               Diagram(graphics), Documentation(info="<!DOCTYPE html><html>
+            annotation ( Documentation(info="<!DOCTYPE html><html>
 <p>This&nbsp;model&nbsp;computes&nbsp;the&nbsp;components&nbsp;of&nbsp;the&nbsp;transformation&nbsp;matrix&nbsp;between&nbsp;the&nbsp;orientations&nbsp;of&nbsp;the&nbsp;ellipsoid&nbsp;and&nbsp;the&nbsp;plane.</p>
 </html>"));
           end TransformationMatrixBetweenBodyFrames;
@@ -9107,7 +8561,7 @@ convex contact surface object as parameter String.</p>
           y2[3]=u2[11]
             "quick and dirty way to get the model runnig with the normal surface definition.";
           y2[2]=u2[12];
-            annotation (Diagram(graphics), Documentation(info="<!DOCTYPE html><html>
+            annotation ( Documentation(info="<!DOCTYPE html><html>
 <p>This&nbsp;model&nbsp;serves&nbsp;as&nbsp;an&nbsp;interface&nbsp;between&nbsp;the&nbsp;parameter&nbsp;routing&nbsp;that&nbsp;is&nbsp;used&nbsp;in&nbsp;general&nbsp;in&nbsp;these&nbsp;coupling&nbsp;models and&nbsp;the&nbsp;routing&nbsp;that&nbsp;is&nbsp;used&nbsp;in&nbsp;this&nbsp;internal&nbsp;structure.</p>
 </html>"));
           end splitparam;
@@ -9498,121 +8952,97 @@ convex contact surface object as parameter String.</p>
         annotation (Line(
           points={{-0.461538,60},{31.12,60},{31.12,0.54}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[2].frame_b2, force[2].frame_a1)
         annotation (Line(
           points={{-0.461538,60},{31.12,60},{31.12,0.54}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[1].frame_a2, frame_a)
         annotation (Line(
           points={{-60.4615,60},{-82,60},{-82,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[2].frame_a2, frame_a)
         annotation (Line(
           points={{-60.4615,60},{-82,60},{-82,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_b, geometry[1].frame_a1)
         annotation (Line(
           points={{-102,-74},{-74,-74},{-74,24},{-60.4615,24}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_b, geometry[2].frame_a1)
         annotation (Line(
           points={{-102,-74},{-74,-74},{-74,24},{-60.4615,24}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[1].frame_a3, frame_b)
         annotation (Line(
           points={{31.12,-54.54},{31.12,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[2].frame_a3, frame_b)
         annotation (Line(
           points={{31.12,-54.54},{31.12,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[1].vector_cylinder, vector_1)
         annotation (Line(
           points={{-61.8462,48},{-82,48},{-82,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[2].vector_cylinder, vector_1)
         annotation (Line(
           points={{-61.8462,48},{-82,48},{-82,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].vector_cylinder, vector_1)
         annotation (Line(
           points={{-0.08,-41.58},{-82,-41.58},{-82,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[2].vector_cylinder, vector_1)
         annotation (Line(
           points={{-0.08,-41.58},{-82,-41.58},{-82,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].vector_rectangle, vector_2)
         annotation (Line(
           points={{-0.08,-52.38},{-78,-52.38},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[2].vector_rectangle, vector_2)
         annotation (Line(
           points={{-0.08,-52.38},{-78,-52.38},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[1].vector_rectangle, vector_2)
         annotation (Line(
           points={{-61.8462,36},{-78,36},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[2].vector_rectangle, vector_2)
         annotation (Line(
           points={{-61.8462,36},{-78,36},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.frame_b1, force.frame_a2)
         annotation (Line(
           points={{-0.461538,24},{11.36,24},{11.36,0.54}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_a, force[1].frame_a4) annotation (Line(
           points={{-102,86},{-70,86},{-70,-66},{16.04,-66},{16.04,-54}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_a, force[2].frame_a4) annotation (Line(
           points={{-102,86},{-70,86},{-70,-66},{16.04,-66},{16.04,-54}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(contact, or1.y) annotation (Line(
           points={{106,-2},{92,-2},{92,-24},{89,-24}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
       connect(force[1].contact, or1.u1) annotation (Line(
           points={{55.56,-27.54},{55.56,-22.77},{66,-22.77},{66,-24}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
       connect(force[2].contact, or1.u2) annotation (Line(
           points={{55.56,-27.54},{55.56,-32.77},{66,-32.77},{66,-32}},
-          color={255,0,255},
-          smooth=Smooth.None));
-        annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                -100},{100,100}}),
-                            graphics), Icon(graphics={Rectangle(extent={{-100,100},
+          color={255,0,255}));
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-82,8},{82,-12}},
                 lineColor={0,0,255},
@@ -9660,122 +9090,100 @@ convex contact surface object as parameter String.</p>
       connect(geometry.pos_rel_c_l, force.pos_rel_c_L)
         annotation (Line(
           points={{-30,9.6},{-30,-12.6},{-1.8,-12.6}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.w_rel, force.w_rel)
         annotation (Line(
           points={{-42,9.6},{-42,-24.6},{-1.8,-24.6}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.angles, geometry.angles)
         annotation (Line(
           points={{-1.8,-36.6},{-54,-36.6},{-54,9.6}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.frame_b2, force.frame_a1)
         annotation (Line(
           points={{0.6,60},{30,60},{30,0.6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[1].frame_a2, frame_a)
         annotation (Line(
           points={{-60.6,60},{-82,60},{-82,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[2].frame_a2, frame_a)
         annotation (Line(
           points={{-60.6,60},{-82,60},{-82,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[1].frame_a1, frame_b)
         annotation (Line(
           points={{-60.6,24},{-66,24},{-66,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[2].frame_a1, frame_b)
         annotation (Line(
           points={{-60.6,24},{-66,24},{-66,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[1].frame_a3, frame_b)
         annotation (Line(
           points={{30,-60.6},{30,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[2].frame_a3, frame_b)
         annotation (Line(
           points={{30,-60.6},{30,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[1].vector_cylinder, vector_1)
         annotation (Line(
           points={{-62.4,48},{-82,48},{-82,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[2].vector_cylinder, vector_1)
         annotation (Line(
           points={{-62.4,48},{-82,48},{-82,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[1].vector_circle, vector_2)
         annotation (Line(
           points={{-62.4,36},{-76,36},{-76,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[2].vector_circle, vector_2)
         annotation (Line(
           points={{-62.4,36},{-76,36},{-76,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].vector_cylinder, vector_1)
         annotation (Line(
           points={{-2.4,-46.2},{-82,-46.2},{-82,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[2].vector_cylinder, vector_1)
         annotation (Line(
           points={{-2.4,-46.2},{-82,-46.2},{-82,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].vector_circle, vector_2)
         annotation (Line(
           points={{-2.4,-58.2},{-76,-58.2},{-76,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[2].vector_circle, vector_2)
         annotation (Line(
           points={{-2.4,-58.2},{-76,-58.2},{-76,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.pos_ctc_BCS1a, geometry.pos_ctc_BCS1a)
         annotation (Line(
           points={{-1.8,-3.6},{-18,-3.6},{-18,9.6}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(contact, or1.y) annotation (Line(
           points={{106,-2},{94,-2},{94,-14},{91,-14}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
       connect(force[1].contact, or1.u1) annotation (Line(
           points={{62.1,-11.7},{62.1,-12.77},{68,-12.77},{68,-14}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
       connect(force[2].contact, or1.u2) annotation (Line(
           points={{62.1,-11.7},{62.1,-22.77},{68,-22.77},{68,-22}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
         annotation (Icon(graphics={                   Rectangle(extent={{-100,100},{100,
                     -100}},      lineColor={255,128,0}), Text(
                 extent={{-84,10},{80,-10}},
                 lineColor={0,0,255},
-              textString="%name")}),     Diagram(graphics));
+              textString="%name")}));
       end CylinderToCircle;
 
       model CylinderToCylinderPoint
@@ -9810,70 +9218,57 @@ convex contact surface object as parameter String.</p>
         annotation (Line(
           points={{-20.1429,32.4444},{-12,32.4444},{-12,-27.6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_b1, force.frame_a4)
         annotation (Line(
           points={{-20,61.7778},{0,61.7778},{0,-27.6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_a1, frame_a) annotation (Line(
           points={{-60.2857,63.3333},{-71.7857,63.3333},{-71.7857,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_a2, frame_b) annotation (Line(
           points={{-59.5714,32.4444},{-76,32.4444},{-76,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force.frame_a2, frame_b)
         annotation (Line(
           points={{-28.4,-60},{-66,-60},{-66,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force.frame_a1, frame_a)
         annotation (Line(
           points={{-28.4,-36},{-72,-36},{-72,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.vector_cylinder1, vector_1)
         annotation (Line(
           points={{-60.5714,49.7778},{-88,49.7778},{-88,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.vector_cylinder2, vector_2)
         annotation (Line(
           points={{-60.5714,45.3333},{-82,45.3333},{-82,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.vector_cylinder2, vector_2)
         annotation (Line(
           points={{-29.6,-52},{-82,-52},{-82,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force.vector_cylinder1, vector_1)
         annotation (Line(
           points={{-29.6,-44},{-88,-44},{-88,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
 
       force.enabled=true;
       geometry.enabled=true;
       connect(force.contact, contact) annotation (Line(
           points={{13.2,-48.4},{42,-48.4},{42,-2},{106,-2}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
         annotation (Icon(graphics={                   Rectangle(extent={{-100,100},
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
-              textString="%name")}),                       Diagram(
-              coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}}),                                        graphics));
+              textString="%name")}));
       end CylinderToCylinderPoint;
 
       model CylinderToCylinderLine
@@ -9913,99 +9308,81 @@ convex contact surface object as parameter String.</p>
       connect(geometry[1].frame_a1, frame_a) annotation (Line(
           points={{-44.4,71.6923},{-80,71.6923},{-80,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[2].frame_a1, frame_a) annotation (Line(
           points={{-44.4,71.6923},{-80,71.6923},{-80,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[1].frame_a2, frame_b) annotation (Line(
           points={{-44.4,53.2308},{-74,53.2308},{-74,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[2].frame_a2, frame_b) annotation (Line(
           points={{-44.4,53.2308},{-74,53.2308},{-74,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[1].vector_cylinder1, vector_1)
         annotation (Line(
           points={{-45.6,65.5385},{-92,65.5385},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[2].vector_cylinder1, vector_1)
         annotation (Line(
           points={{-45.6,65.5385},{-92,65.5385},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[1].vector_cylinder2, vector_2)
         annotation (Line(
           points={{-45.6,59.3846},{-84,59.3846},{-84,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[2].vector_cylinder2, vector_2)
         annotation (Line(
           points={{-45.6,59.3846},{-84,59.3846},{-84,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.frame_b2, force.frame_a3)
         annotation (Line(
           points={{-3.6,53.2308},{26,53.2308},{26,-9.6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_b1, force.frame_a4)
         annotation (Line(
           points={{-3.6,71.6923},{38,71.6923},{38,-9.6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[1].frame_a2, frame_b)
         annotation (Line(
           points={{9.6,-42},{-52,-42},{-52,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[2].frame_a2, frame_b)
         annotation (Line(
           points={{9.6,-42},{-52,-42},{-52,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[1].vector_cylinder2, vector_2)
         annotation (Line(
           points={{8.4,-34},{-84,-34},{-84,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[2].vector_cylinder2, vector_2)
         annotation (Line(
           points={{8.4,-34},{-84,-34},{-84,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].vector_cylinder1, vector_1)
         annotation (Line(
           points={{8.4,-26},{-92,-26},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[2].vector_cylinder1, vector_1)
         annotation (Line(
           points={{8.4,-26},{-92,-26},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].frame_a1, frame_a)
         annotation (Line(
           points={{9.6,-18},{-80,-18},{-80,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[2].frame_a1, frame_a)
         annotation (Line(
           points={{9.6,-18},{-80,-18},{-80,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
 
       force[1].enabled=true;
       force[2].enabled=true;
@@ -10013,23 +9390,18 @@ convex contact surface object as parameter String.</p>
       geometry[2].enabled=true;
       connect(contact, or1.y) annotation (Line(
           points={{106,-2},{90,-2},{90,-26},{87,-26}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
       connect(force[1].contact, or1.u1) annotation (Line(
           points={{51.2,-30.4},{51.2,-24.77},{64,-24.77},{64,-26}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
       connect(force[2].contact, or1.u2) annotation (Line(
           points={{51.2,-30.4},{51.2,-34.77},{64,-34.77},{64,-34}},
-          color={255,0,255},
-          smooth=Smooth.None));
+          color={255,0,255}));
         annotation (Icon(graphics={                   Rectangle(extent={{-100,100},
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
-              textString="%name")}),                       Diagram(
-              coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
-                100,100}}),                                        graphics));
+              textString="%name")}));
       end CylinderToCylinderLine;
 
       model CylinderToCylinderCombined
@@ -10119,174 +9491,141 @@ convex contact surface object as parameter String.</p>
         annotation (Line(
           points={{-20.1429,32.4444},{-12,32.4444},{-12,-27.6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry1.frame_b1, force1.frame_a4)
         annotation (Line(
           points={{-20,61.7778},{0,61.7778},{0,-27.6}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry1.frame_a1, frame_a) annotation (Line(
           points={{-60.2857,63.3333},{-66,63.3333},{-66,64},{-72,64},{-72,86},{
               -102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry1.frame_a2, frame_b) annotation (Line(
           points={{-59.5714,32.4444},{-76,32.4444},{-76,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force1.frame_a2, frame_b)
         annotation (Line(
           points={{-28.4,-60},{-66,-60},{-66,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force1.frame_a1, frame_a)
         annotation (Line(
           points={{-28.4,-36},{-72,-36},{-72,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry1.vector_cylinder1, vector_1)
         annotation (Line(
           points={{-60.5714,49.7778},{-88,49.7778},{-88,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry1.vector_cylinder2, vector_2)
         annotation (Line(
           points={{-60.5714,45.3333},{-82,45.3333},{-82,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force1.vector_cylinder2, vector_2)
         annotation (Line(
           points={{-29.6,-52},{-82,-52},{-82,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force1.vector_cylinder1, vector_1)
         annotation (Line(
           points={{-29.6,-44},{-88,-44},{-88,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry2[1].frame_a1, frame_a) annotation (Line(
           points={{39.6,75.6923},{16,75.6923},{16,76},{-72,76},{-72,86},{-102,
               86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry2[2].frame_a1, frame_a) annotation (Line(
           points={{39.6,75.6923},{16,75.6923},{16,76},{-72,76},{-72,86},{-102,
               86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry2[1].frame_a2, frame_b) annotation (Line(
           points={{39.6,57.2308},{20,57.2308},{20,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry2[2].frame_a2, frame_b) annotation (Line(
           points={{39.6,57.2308},{20,57.2308},{20,-6},{-76,-6},{-76,-74},{-102,
               -74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry2[1].vector_cylinder1, vector_1)
         annotation (Line(
           points={{38.4,69.5385},{4,69.5385},{4,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry2[2].vector_cylinder1, vector_1)
         annotation (Line(
           points={{38.4,69.5385},{4,69.5385},{4,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry2[1].vector_cylinder2, vector_2)
         annotation (Line(
           points={{38.4,63.3846},{12,63.3846},{12,2},{-64,2},{-64,-30},{-106,
               -30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry2[2].vector_cylinder2, vector_2)
         annotation (Line(
           points={{38.4,63.3846},{12,63.3846},{12,2},{-64,2},{-64,-30},{-106,
               -30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry2.frame_b2, force2.frame_a3)
         annotation (Line(
           points={{80.4,57.2308},{84,57.2308},{84,42},{60,42},{60,26.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry2.frame_b1, force2.frame_a4)
         annotation (Line(
           points={{80.4,75.6923},{86,75.6923},{86,76},{92,76},{92,38},{72,38},{
               72,26.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force2[1].frame_a2, frame_b)
         annotation (Line(
           points={{43.6,-6},{-76,-6},{-76,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force2[2].frame_a2, frame_b)
         annotation (Line(
           points={{43.6,-6},{-76,-6},{-76,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force2[1].vector_cylinder2, vector_2)
         annotation (Line(
           points={{42.4,2},{-64,2},{-64,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force2[2].vector_cylinder2, vector_2)
         annotation (Line(
           points={{42.4,2},{-64,2},{-64,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force2[1].vector_cylinder1, vector_1)
         annotation (Line(
           points={{42.4,10},{-16,10},{-16,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force2[2].vector_cylinder1, vector_1)
         annotation (Line(
           points={{42.4,10},{-16,10},{-16,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force2[1].frame_a1, frame_a) annotation (Line(
           points={{43.6,18},{16,18},{16,76},{-72,76},{-72,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force2[2].frame_a1, frame_a) annotation (Line(
           points={{43.6,18},{16,18},{16,76},{-72,76},{-72,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
         connect(vector_1, deMultiplex1.u) annotation (Line(
             points={{-107,37},{-88,37},{-88,-86},{-39.2,-86}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
         connect(vector_2, deMultiplex2.u) annotation (Line(
             points={{-106,-30},{-82,-30},{-82,-94},{-21.2,-94}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
 
         annotation (Icon(graphics={                   Rectangle(extent={{-100,100},
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
-              textString="%name")}),                       Diagram(coordinateSystem(
-                preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                                                                   graphics),
-          Documentation(info="<!DOCTYPE html><html>
+              textString="%name")}),          Documentation(info="<!DOCTYPE html><html>
 <p>The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently separated in two blocks. This attempts to integrate both.</p>
 </html>"));
       end CylinderToCylinderCombined;
@@ -10629,147 +9968,117 @@ convex contact surface object as parameter String.</p>
           connect(rP_p_lc.frame_a, frame_a1) annotation (Line(
               points={{-60,0},{-60,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
 
           connect(tansformRelativeVector.frame_b, frame_a2) annotation (Line(
               points={{-76,6},{-76,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(tansformRelativeVector.frame_a, frame_a1) annotation (Line(
               points={{-76,-6},{-76,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cc_mpr.frame_a, frame_a2) annotation (Line(
               points={{36,8},{36,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy.frame_a, frame_a2) annotation (Line(
               points={{-60,54},{-60,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_rt1.frame_a, frame_a1) annotation (Line(
               points={{-52,-20},{-60,-20},{-60,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_rt2.frame_b, rP_cc_mpr.frame_b) annotation (Line(
               points={{36,-20},{36,-4}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variableRevol_2.frame_b, variablePrism_rt2.frame_a) annotation (Line(
               points={{12,-20},{20,-20}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variableRevol_1.frame_b, variableRevol_2.frame_a) annotation (Line(
               points={{-12,-20},{-4,-20}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variableRevol_1.frame_a, variablePrism_rt1.frame_b) annotation (Line(
               points={{-28,-20},{-36,-20}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy.frame_b, rP_p_lc.frame_b) annotation (Line(
               points={{-60,34},{-60,12}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex2.u, vector_cylinder) annotation (Line(
               points={{-97.2,20},{-108,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex3.u, vector_rectangle) annotation (Line(
               points={{-97.2,-20},{-108,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(variablePrism_mpr.frame_a, frame_a1) annotation (Line(
               points={{32,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_mpr.frame_b, frame_b1) annotation (Line(
               points={{48,-60},{158,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cc_mpcy.frame_b, variablePrism_cy1.frame_b) annotation (Line(
               points={{0,-40},{62,-40},{62,60},{54,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cc_mpcy.frame_a, frame_a1) annotation (Line(
               points={{-12,-40},{-60,-40},{-60,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact_point_rectangle.frame_a, frame_b1)
                                                             annotation (Line(
               points={{152,-36},{152,-60},{158,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(filter.u, angle_LotW.angle) annotation (Line(
               points={{-62,78},{-70,78},{-70,95},{-80,95}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(variablePrism_cy1.frame_a, frame_a2) annotation (Line(
               points={{38,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ctc_BCS1a.frame_a, variablePrism_cy.frame_b) annotation (Line(
               points={{-14,26},{-60,26},{-60,34}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ctc_BCS1a.frame_b, variablePrism_cy1.frame_b) annotation (Line(
               points={{-2,26},{62,26},{62,60},{54,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pos_offset.support,variablePrism. support) annotation (Line(
               points={{119,40},{120,40},{120,54}},
-              color={0,0,0},
-              pattern=LinePattern.None,
-              smooth=Smooth.None));
+              pattern=LinePattern.None));
           connect(variablePrism.axis,pos_offset. flange) annotation (Line(
               points={{132,54},{132,33},{126,33}},
-              color={0,127,0},
-              smooth=Smooth.None));
+              color={0,127,0}));
           connect(contact_point_cylinder.frame_a,variablePrism. frame_b)
             annotation (Line(
               points={{146,86},{146,60},{134,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cm_l.frame_a, frame_a1) annotation (Line(
               points={{104,-30},{104,-86},{-76,-86},{-76,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism.frame_a, rP_cm_l.frame_b) annotation (Line(
               points={{114,60},{104,60},{104,-18}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy1.frame_b, rP_cm_l.frame_b) annotation (Line(
               points={{54,60},{104,60},{104,-18}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism.frame_b, frame_b2) annotation (Line(
               points={{134,60},{158,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           annotation (Diagram(coordinateSystem(preserveAspectRatio=false,
                 extent={{-100,-100},{160,100}}),
                               graphics), Icon(coordinateSystem(extent={{-100,-100},{160,100}}),
@@ -10963,70 +10272,55 @@ convex contact surface object as parameter String.</p>
          connect(frame_a3, frame_a3) annotation (Line(
              points={{12,-102},{12,-102}},
              color={95,95,95},
-             thickness=0.5,
-             smooth=Smooth.None));
+             thickness=0.5));
           connect(vector_cylinder, deMultiplex2.u) annotation (Line(
               points={{-108,-54},{-95.2,-54}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_rectangle, deMultiplex3.u) annotation (Line(
               points={{-108,-94},{-95.2,-94}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(f_l.frame_a, frame_a2) annotation (Line(
               points={{-60,-20},{-64,-20},{-64,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_p_cpl.frame_a, f_l.frame_a) annotation (Line(
               points={{-60,-42},{-64,-42},{-64,-20},{-60,-20}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_p_cpl.frame_b, f_l.frame_b) annotation (Line(
               points={{-48,-42},{-40,-42},{-40,-20},{-48,-20}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a1, frame_a1)
             annotation (Line(
               points={{12,102},{12,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a2, frame_a2)
             annotation (Line(
               points={{-64,102},{-64,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a2, relativeVelocities_.frame1cp) annotation (Line(
               points={{-64,102},{-64,92},{-8.8,92},{-8.8,21.8}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a4, relativeVelocities_.frame2) annotation (Line(
               points={{-46,-100},{-46,-86},{2,-86},{2,2.2},{1.8,2.2}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a3, relativeVelocities_.frame1) annotation (Line(
               points={{12,-102},{12,30},{1.6,30},{1.6,22}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a1, relativeVelocities_.frame2cp) annotation (Line(
               points={{12,102},{10,102},{10,64},{26,64},{26,-20},{-8.6,-20},{-8.6,2.2}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(f_l.frame_b, relativeVelocities_.frame2cp) annotation (Line(
               points={{-48,-20},{-8.6,-20},{-8.6,2.2}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
-         annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                             graphics));
+              thickness=0.5));
         end ForceCylinderToRectangle;
 
         model MovePointCylinderToCircle
@@ -11303,121 +10597,96 @@ convex contact surface object as parameter String.</p>
           connect(rP_p_lc.frame_a,frame_a1)  annotation (Line(
               points={{-32,-6},{-32,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(tansformRelativeVector.frame_b,frame_a2)  annotation (Line(
               points={{-72,6},{-72,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(tansformRelativeVector.frame_a,frame_a1)  annotation (Line(
               points={{-72,-6},{-72,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_c_cymp.frame_a, frame_a1) annotation (Line(
               points={{-4,-82},{-32,-82},{-32,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cc_mpr.frame_a, frame_a2) annotation (Line(
               points={{50,6},{50,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy.frame_a, frame_a2) annotation (Line(
               points={{-32,50},{-32,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy.frame_b, rP_p_lc.frame_b) annotation (Line(
               points={{-32,30},{-32,6}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cr_cy.frame_a, frame_a1) annotation (Line(
               points={{-52,-6},{-52,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cr_cy.frame_b, frame_a2) annotation (Line(
               points={{-52,6},{-52,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy1.frame_b, frame_b2) annotation (Line(
               points={{78,60},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_cy1.frame_a, frame_a2) annotation (Line(
               points={{62,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variableRevol_2.frame_b, variablePrism_rt2.frame_a) annotation (Line(
               points={{22,-60},{30,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variableRevol_1.frame_b, variableRevol_2.frame_a) annotation (Line(
               points={{0,-60},{10,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_rt1.frame_b, variableRevol_1.frame_a) annotation (Line(
               points={{-20,-60},{-12,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_rt1.frame_a, frame_a1) annotation (Line(
               points={{-32,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cc_mpr.frame_b, variablePrism_rt2.frame_b) annotation (Line(
               points={{50,-6},{50,-60},{42,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_rt2.frame_b, rP_c_cymp.frame_b) annotation (Line(
               points={{42,-60},{50,-60},{50,-82},{8,-82}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex2.u, vector_cylinder) annotation (Line(
               points={{-97.2,20},{-108,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex3.u, vector_circle) annotation (Line(
               points={{-97.2,-20},{-108,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(filter.u, angle_LotDW.angle) annotation (Line(
               points={{-22,90},{-34,90},{-34,95},{-40,95}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(aAV.frame_b, variablePrism_cy1.frame_b)  annotation (Line(
               points={{92,16},{92,60},{78,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV.frame_a, variablePrism_cy.frame_b)  annotation (Line(
               points={{80,16},{-32,16},{-32,30}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ctc_BCS1a.frame_a, variablePrism_cy.frame_b) annotation (Line(
               points={{-2,24},{-32,24},{-32,30}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ctc_BCS1a.frame_b, variablePrism_cy1.frame_b) annotation (Line(
               points={{10,24},{78,24},{78,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              thickness=0.5));
         end MovePointCylinderToCircle;
 
         model ForceCylinderToCircle
@@ -11692,74 +10961,56 @@ convex contact surface object as parameter String.</p>
          connect(aA.frame_a,frame_a3)  annotation (Line(
              points={{22,-102},{0,-102}},
              color={95,95,95},
-             thickness=0.5,
-             smooth=Smooth.None));
+             thickness=0.5));
          connect(frame_a3,frame_a3)  annotation (Line(
              points={{0,-102},{0,-102}},
              color={95,95,95},
-             thickness=0.5,
-             smooth=Smooth.None));
+             thickness=0.5));
           connect(rP_p_cpl.frame_a,frame_a3)  annotation (Line(
               points={{60,-46},{60,-60},{0,-60},{0,-102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(f_l.frame_a,frame_a3)  annotation (Line(
               points={{80,-46},{80,-60},{0,-60},{0,-102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cm_l.frame_a, frame_a3) annotation (Line(
               points={{-3.67394e-016,-46},{0,-46},{0,-102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cm_l.frame_b, frame_a1) annotation (Line(
               points={{3.67394e-016,-34},{0,-34},{0,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact_point_cylinder.frame_a, f_l.frame_b)
                                                    annotation (Line(
               points={{78,-6},{80,-6},{80,-34}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pos_offset.support,variablePrism. support) annotation (Line(
               points={{27,-8},{26,-8},{26,-14}},
-              color={0,0,0},
-              pattern=LinePattern.None,
-              smooth=Smooth.None));
+              pattern=LinePattern.None));
           connect(pos_offset.flange, variablePrism.axis) annotation (Line(
               points={{34,-1},{36,-1},{36,-14},{38,-14}},
-              color={0,127,0},
-              smooth=Smooth.None));
+              color={0,127,0}));
           connect(variablePrism.frame_b, rP_p_cpl.frame_b) annotation (Line(
               points={{40,-20},{60,-20},{60,-34}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(f_l.frame_b, variablePrism.frame_b) annotation (Line(
               points={{80,-34},{80,-20},{40,-20}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism.frame_a, frame_a1) annotation (Line(
               points={{20,-20},{0,-20},{0,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex2.u, vector_cylinder) annotation (Line(
               points={{-95.2,-54},{-108,-54}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex3.u, vector_circle) annotation (Line(
               points={{-95.2,-94},{-108,-94}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(coordinateSystem(preserveAspectRatio=true,  extent={{-100,
-                    -100},{100,100}}),
-                              graphics));
+              color={0,0,127}));
         end ForceCylinderToCircle;
 
         model MovePointCylinderToCylinderLine
@@ -12005,135 +11256,107 @@ convex contact surface object as parameter String.</p>
           connect(rP_c2_c1.frame_b, frame_a1) annotation (Line(
               points={{-68,6},{-68,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_c2_c1.frame_a, frame_a2) annotation (Line(
               points={{-68,-6},{-68,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_c1_c2.frame_a, frame_a1) annotation (Line(
               points={{-50,6},{-50,20},{-68,20},{-68,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_c1_c2.frame_b, frame_a2) annotation (Line(
               points={{-50,-6},{-50,-20},{-68,-20},{-68,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_1.frame_a, frame_a1) annotation (Line(
               points={{-60,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_2.frame_a, frame_a2) annotation (Line(
               points={{-60,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP2_cy1.frame_b, variablePrism_l_cy1.frame_b) annotation (Line(
               points={{0,22},{-10,22}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP1_cy2.frame_b, variablePrism_l_cy2.frame_b) annotation (Line(
               points={{-14,-20},{-4,-20}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP1_cy2.frame_a, variablePrism_1.frame_b) annotation (Line(
               points={{-26,-20},{-34,-20},{-34,60},{-44,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_l_cy1.frame_a, variablePrism_1.frame_b) annotation (
               Line(
               points={{-26,22},{-34,22},{-34,60},{-44,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex1.u, vector_cylinder1) annotation (Line(
               points={{-93.2,20},{-108,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex2.u, vector_cylinder2) annotation (Line(
               points={{-93.2,-20},{-108,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(tansformVectorCylinder1.frame_a, frame_a1) annotation (Line(
               points={{-86,70},{-86,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(tansformVectorCylinder2.frame_a, frame_a2) annotation (Line(
               points={{-86,-50},{-86,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
 
           connect(variablePrism_l_cy2.frame_a, variablePrism_2.frame_b) annotation (
               Line(
               points={{12,-20},{22,-20},{22,-60},{-44,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
 
           connect(move_point_cylinder8.frame_a, frame_b1) annotation (Line(
               points={{90,110},{90,60},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(move_point_cylinder7.frame_a, frame_b2) annotation (Line(
               points={{90,-110},{90,-60},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ll_cy1.frame_b, frame_b1) annotation (Line(
               points={{60,60},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ll_cy1.frame_a, variablePrism_1.frame_b) annotation (
               Line(
               points={{40,60},{-44,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ll_cy2.frame_b, frame_b2) annotation (Line(
               points={{60,-60},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_ll_cy2.frame_a, variablePrism_2.frame_b) annotation (
               Line(
               points={{40,-60},{-44,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_l_cy2.frame_a, rP2_cy1.frame_a) annotation (Line(
               points={{12,-20},{22,-20},{22,22},{12,22}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(position2.support, variablePrism_ll_cy2.support) annotation (Line(
               points={{48,-50},{48,-54},{46,-54}},
-              color={0,0,0},
-              pattern=LinePattern.None,
-              smooth=Smooth.None));
+              pattern=LinePattern.None));
           connect(position2.flange, variablePrism_ll_cy2.axis) annotation (Line(
               points={{58,-40},{60,-40},{60,-54},{58,-54}},
-              color={0,127,0},
-              smooth=Smooth.None));
+              color={0,127,0}));
           connect(position1.flange, variablePrism_ll_cy1.axis) annotation (Line(
               points={{56,84},{58,84},{58,66}},
-              color={0,127,0},
-              smooth=Smooth.None));
+              color={0,127,0}));
           connect(position1.support, variablePrism_ll_cy1.support) annotation (Line(
               points={{46,74},{46,66}},
-              color={0,0,0},
-              pattern=LinePattern.None,
-              smooth=Smooth.None));
+              pattern=LinePattern.None));
           annotation (Diagram(coordinateSystem(extent={{-100,-120},{100,140}},
                   preserveAspectRatio=true),
                               graphics), Icon(coordinateSystem(extent={{-100,
@@ -12396,82 +11619,65 @@ convex contact surface object as parameter String.</p>
           connect(rP_mp12.frame_a, frame_a3)    annotation (Line(
               points={{4,70},{-20,70},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_mp12.frame_b, frame_a4)    annotation (Line(
               points={{16,70},{40,70},{40,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_c12.frame_a, frame_a2) annotation (Line(
               points={{-68,-6},{-68,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_c12.frame_b, frame_a1) annotation (Line(
               points={{-68,6},{-68,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force.frame_a, frame_a3) annotation (Line(
               points={{4,88},{-20,88},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force.frame_b, frame_a4) annotation (Line(
               points={{16,88},{40,88},{40,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex1.u, vector_cylinder1) annotation (Line(
               points={{-91.2,20},{-108,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex2.u, vector_cylinder2) annotation (Line(
               points={{-91.2,-20},{-108,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(aAV1.frame_a, frame_a4) annotation (Line(
               points={{40,66},{40,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV1.frame_resolve, frame_a1) annotation (Line(
               points={{33.94,60},{-102,60}},
               color={95,95,95},
-              pattern=LinePattern.Dot,
-              smooth=Smooth.None));
+              pattern=LinePattern.Dot));
           connect(aAV2.frame_resolve, frame_a2) annotation (Line(
               points={{-26.06,-60},{-102,-60}},
               color={95,95,95},
-              pattern=LinePattern.Dot,
-              smooth=Smooth.None));
+              pattern=LinePattern.Dot));
           connect(aAV2.frame_a, frame_a3) annotation (Line(
               points={{-20,-54},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ct2_BCS2.frame_a, frame_a2) annotation (Line(
               points={{-50,-36},{-50,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ct2_BCS2.frame_b, frame_a3) annotation (Line(
               points={{-38,-36},{-20,-36},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ct1_BCS1.frame_a, frame_a1) annotation (Line(
               points={{48,26},{-68,26},{-68,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ct1_BCS1.frame_b, frame_a4) annotation (Line(
               points={{60,26},{62,26},{62,102},{40,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              thickness=0.5));
         end ForceCylinderToCylinderLine;
 
         model MovePointCylinderToCylinderPoint
@@ -12839,196 +12045,158 @@ convex contact surface object as parameter String.</p>
 
           connect(deMultiplex1.u,vector_cylinder1)  annotation (Line(
               points={{-345.2,16},{-368,16}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex2.u,vector_cylinder2)  annotation (Line(
               points={{-345.2,-26},{-356,-26},{-356,-24},{-368,-24}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(tansformVectorCy1.frame_a,frame_a1)        annotation (Line(
               points={{-88,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(tansformVectorCy2.frame_a,frame_a2)        annotation (Line(
               points={{-88,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ins1_ins2.frame_a,bt_ins_cy1. frame_b) annotation (Line(
               points={{-20,10},{-20,50},{-20,50},{-20,90}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ins1_ins2.frame_b,bt_ins_cy2. frame_b) annotation (Line(
               points={{-20,-10},{-20,-48},{-20,-48},{-20,-86}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ins2_ins1.frame_b,bt_ins_cy1. frame_b) annotation (Line(
               points={{-48,10},{-20,10},{-20,90}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ins2_ins1.frame_a,bt_ins_cy2. frame_b) annotation (Line(
               points={{-48,-10},{-20,-10},{-20,-86}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(cm_auxp1_cy1.frame_b,auxp1_auxcp1_cy1. frame_a)    annotation (Line(
               points={{-68,128},{-40,128}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(cm_auxp1_cy2.frame_b,auxp1_auxcp1_cy2. frame_a)    annotation (Line(
               points={{-66,-128},{-40,-128}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(cm_auxp1_cy2.frame_a,frame_a2)  annotation (Line(
               points={{-86,-128},{-102,-128},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(cm_auxp1_cy1.frame_a,frame_a1)  annotation (Line(
               points={{-88,128},{-102,128},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ins1_c2.frame_a,frame_a2)  annotation (Line(
               points={{-138,-10},{-138,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ins2_c1.frame_a,frame_a1)  annotation (Line(
               points={{-172,10},{-172,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_auxp1cy1_auxp1cy2.frame_b,cm_auxp1_cy1. frame_b) annotation (Line(
               points={{-200,10},{-200,140},{-68,140},{-68,128}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_auxp1cy1_auxp1cy2.frame_a,cm_auxp1_cy2. frame_b) annotation (Line(
               points={{-200,-10},{-200,-144},{-66,-144},{-66,-128}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_auxp1cy2_auxp1cy1.frame_a,rP_auxp1cy1_auxp1cy2. frame_b)
             annotation (Line(
               points={{-232,10},{-200,10}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_auxp1cy2_auxp1cy1.frame_b,rP_auxp1cy1_auxp1cy2. frame_a)
             annotation (Line(
               points={{-232,-10},{-200,-10}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ins1_c2.frame_b,bt_ins_cy1. frame_b) annotation (Line(
               points={{-138,10},{-138,112},{-20,112},{-20,90}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ins2_c1.frame_b,bt_ins_cy2. frame_b) annotation (Line(
               points={{-172,-10},{-172,-108},{-20,-108},{-20,-86}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_auxcp1cy1_c2.frame_b,auxp1_auxcp1_cy1. frame_b)    annotation (
               Line(
               points={{-266,10},{-266,140},{-20,140},{-20,128}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_auxcp1cy1_c2.frame_a,frame_a2)  annotation (Line(
               points={{-266,-10},{-266,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_auxcp1cy2_c1.frame_a,frame_a1)  annotation (Line(
               points={{-300,10},{-300,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_auxcp1cy2_c1.frame_b,auxp1_auxcp1_cy2. frame_b)    annotation (
               Line(
               points={{-300,-10},{-300,-144},{-20,-144},{-20,-128}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(auxp2_cp_cy1.frame_a,cm_auxp2_cy1. frame_b)        annotation (Line(
               points={{-40,160},{-68,160}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(cm_auxp2_cy1.frame_a,frame_a1)  annotation (Line(
               points={{-88,160},{-102,160},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(auxp2_cp_cy2.frame_a,cm_auxp2_cy2. frame_b)        annotation (Line(
               points={{-40,-164},{-66,-164}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(cm_auxp2_cy2.frame_a,frame_a2)  annotation (Line(
               points={{-86,-164},{-102,-164},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_b1,auxp2_cp_cy1. frame_b)        annotation (Line(
               points={{200,124},{20,124},{20,160},{-20,160}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_b2,auxp2_cp_cy2. frame_b)        annotation (Line(
               points={{198,-140},{20,-140},{20,-164},{-20,-164}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(cm_bt_cy1.frame_b, bt_ins_cy1.frame_a) annotation (Line(
               points={{-66,90},{-40,90}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(cm_bt_cy1.frame_a, frame_a1) annotation (Line(
               points={{-86,90},{-102,90},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(absP_bt_cy1.frame_a, cm_bt_cy1.frame_b) annotation (Line(
               points={{-60,68},{-60,90},{-66,90}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pointMass.frame_a, frame_b1) annotation (Line(
               points={{60,30},{60,124},{200,124}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(cm_bt_cy2.frame_b, bt_ins_cy2.frame_a) annotation (Line(
               points={{-66,-86},{-40,-86}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(cm_bt_cy2.frame_a, frame_a2) annotation (Line(
               points={{-86,-86},{-102,-86},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(absP_bt_cy2.frame_a, cm_bt_cy2.frame_b) annotation (Line(
               points={{-60,-60},{-60,-86},{-66,-86}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pointMass1.frame_a, frame_b2) annotation (Line(
               points={{60,-32},{60,-140},{198,-140}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           annotation (Diagram(coordinateSystem(extent={{-360,-180},{200,180}},
                   preserveAspectRatio=false),
                               graphics), Icon(coordinateSystem(extent={{-360,
@@ -13289,85 +12457,67 @@ convex contact surface object as parameter String.</p>
           connect(rP_mp12.frame_a,frame_a3)     annotation (Line(
               points={{4,58},{-20,58},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_mp12.frame_b,frame_a4)     annotation (Line(
               points={{16,58},{40,58},{40,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_c12.frame_a,frame_a2)  annotation (Line(
               points={{-68,-6},{-68,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_c12.frame_b,frame_a1)  annotation (Line(
               points={{-68,6},{-68,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force.frame_a,frame_a3)  annotation (Line(
               points={{4,80},{-20,80},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force.frame_b,frame_a4)  annotation (Line(
               points={{16,80},{40,80},{40,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex1.u,vector_cylinder1)  annotation (Line(
               points={{-91.2,20},{-108,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex2.u,vector_cylinder2)  annotation (Line(
               points={{-91.2,-20},{-108,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(aAV1.frame_a, frame_a4)
                                          annotation (Line(
               points={{40,44},{40,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV1.frame_resolve, frame_a1)
                                                annotation (Line(
               points={{33.94,38},{-34,38},{-34,60},{-102,60}},
               color={95,95,95},
-              pattern=LinePattern.Dot,
-              smooth=Smooth.None));
+              pattern=LinePattern.Dot));
           connect(aAV2.frame_a, frame_a3) annotation (Line(
               points={{-20,-54},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(aAV2.frame_resolve, frame_a2) annotation (Line(
               points={{-26.06,-60},{-102,-60}},
               color={95,95,95},
-              pattern=LinePattern.Dot,
-              smooth=Smooth.None));
+              pattern=LinePattern.Dot));
           connect(rP_ct2_BCS2.frame_b, frame_a3) annotation (Line(
               points={{-38,-36},{-20,-36},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ct2_BCS2.frame_a, frame_a2) annotation (Line(
               points={{-50,-36},{-68,-36},{-68,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ct1_BCS1.frame_a, frame_a1) annotation (Line(
               points={{34,12},{-34,12},{-34,60},{-102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_ct1_BCS1.frame_b, frame_a4) annotation (Line(
               points={{46,12},{64,12},{64,102},{40,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
-          annotation (Diagram(coordinateSystem(preserveAspectRatio=true,
-                  extent={{-100,-100},{100,100}}), graphics));
+              thickness=0.5));
         end ForceCylinderToCylinderPoint;
          annotation(preferredView="info");
       end Components;
@@ -13416,172 +12566,141 @@ convex contact surface object as parameter String.</p>
         annotation (Line(
           points={{6,5.4},{6,-5.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[1].frame_a1, frame_a)
         annotation (Line(
           points={{-42.6,60},{-82,60},{-82,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[2].frame_a1, frame_a)
         annotation (Line(
           points={{-42.6,60},{-82,60},{-82,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[3].frame_a1, frame_a)
         annotation (Line(
           points={{-42.6,60},{-82,60},{-82,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[4].frame_a1, frame_a)
         annotation (Line(
           points={{-42.6,60},{-82,60},{-82,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry[1].vector_b, vector_1)
         annotation (Line(
           points={{-44.4,42},{-92,42},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[2].vector_b, vector_1)
         annotation (Line(
           points={{-44.4,42},{-92,42},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[3].vector_b, vector_1)
         annotation (Line(
           points={{-44.4,42},{-92,42},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry[4].vector_b, vector_1)
         annotation (Line(
           points={{-44.4,42},{-92,42},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].vector_b, vector_1)
         annotation (Line(
           points={{-44.4,-24},{-92,-24},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[2].vector_b, vector_1)
         annotation (Line(
           points={{-44.4,-24},{-92,-24},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[3].vector_b, vector_1)
         annotation (Line(
           points={{-44.4,-24},{-92,-24},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[4].vector_b, vector_1)
         annotation (Line(
           points={{-44.4,-24},{-92,-24},{-92,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].vector_q, vector_2)
         annotation (Line(
           points={{-44.4,-48},{-80,-48},{-80,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[2].vector_q, vector_2)
         annotation (Line(
           points={{-44.4,-48},{-80,-48},{-80,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[3].vector_q, vector_2)
         annotation (Line(
           points={{-44.4,-48},{-80,-48},{-80,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[4].vector_q, vector_2)
         annotation (Line(
           points={{-44.4,-48},{-80,-48},{-80,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_2, geometry[1].vector_q)
         annotation (Line(
           points={{-106,-30},{-80,-30},{-80,24},{-44.4,24}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_2, geometry[2].vector_q)
         annotation (Line(
           points={{-106,-30},{-80,-30},{-80,24},{-44.4,24}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_2, geometry[3].vector_q)
         annotation (Line(
           points={{-106,-30},{-80,-30},{-80,24},{-44.4,24}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(vector_2, geometry[4].vector_q)
         annotation (Line(
           points={{-106,-30},{-80,-30},{-80,24},{-44.4,24}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(frame_b, geometry[1].frame_a2)
         annotation (Line(
           points={{-102,-74},{-68,-74},{-68,12},{-42.6,12}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_b, geometry[2].frame_a2)
         annotation (Line(
           points={{-102,-74},{-68,-74},{-68,12},{-42.6,12}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_b, geometry[3].frame_a2)
         annotation (Line(
           points={{-102,-74},{-68,-74},{-68,12},{-42.6,12}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(frame_b, geometry[4].frame_a2)
         annotation (Line(
           points={{-102,-74},{-68,-74},{-68,12},{-42.6,12}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_b2, force.frame_a1)
         annotation (Line(
           points={{-18,5.4},{-18,-5.4}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[1].frame_a3, frame_b)
         annotation (Line(
           points={{-42.6,-60},{-68,-60},{-68,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[2].frame_a3, frame_b)
         annotation (Line(
           points={{-42.6,-60},{-68,-60},{-68,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[3].frame_a3, frame_b)
         annotation (Line(
           points={{-42.6,-60},{-68,-60},{-68,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[4].frame_a3, frame_b)
         annotation (Line(
           points={{-42.6,-60},{-68,-60},{-68,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.angle, force.angle)
         annotation (Line(
           points={{21,30},{32,30},{32,-29.7},{21.3,-29.7}},
-          color={0,0,127},
-          smooth=Smooth.None));
-        annotation (Diagram(graphics), Icon(graphics={Rectangle(extent={{-100,100},
+          color={0,0,127}));
+        annotation ( Icon(graphics={Rectangle(extent={{-100,100},
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
@@ -13625,130 +12744,107 @@ convex contact surface object as parameter String.</p>
         annotation (Line(
           points={{20.6,24},{32,24},{32,-24},{20.6,-24}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_b1, force.frame_a2)
         annotation (Line(
           points={{20.6,60},{40,60},{40,-60},{20.6,-60}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_a1, frame_a)
         annotation (Line(
           points={{-41.2,60},{-72,60},{-72,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.frame_a2, frame_b)
         annotation (Line(
           points={{-40.6,24},{-60,24},{-60,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(geometry.vector_circle, vector_1)
         annotation (Line(
           points={{-41.8,48},{-74,48},{-74,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(geometry.vector_rectangle, vector_2)
         annotation (Line(
           points={{-41.8,36},{-78,36},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].frame_a4, frame_b)
         annotation (Line(
           points={{-40.6,-60},{-72,-60},{-72,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[2].frame_a4, frame_b)
         annotation (Line(
           points={{-40.6,-60},{-72,-60},{-72,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[3].frame_a4, frame_b)
         annotation (Line(
           points={{-40.6,-60},{-72,-60},{-72,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[4].frame_a4, frame_b)
         annotation (Line(
           points={{-40.6,-60},{-72,-60},{-72,-74},{-102,-74}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[1].vector_rectangle, vector_2)
         annotation (Line(
           points={{-41.8,-48},{-78,-48},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[2].vector_rectangle, vector_2)
         annotation (Line(
           points={{-41.8,-48},{-78,-48},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[3].vector_rectangle, vector_2)
         annotation (Line(
           points={{-41.8,-48},{-78,-48},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[4].vector_rectangle, vector_2)
         annotation (Line(
           points={{-41.8,-48},{-78,-48},{-78,-30},{-106,-30}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].vector_circle, vector_1)
         annotation (Line(
           points={{-41.8,-36},{-74,-36},{-74,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[2].vector_circle, vector_1)
         annotation (Line(
           points={{-41.8,-36},{-74,-36},{-74,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[3].vector_circle, vector_1)
         annotation (Line(
           points={{-41.8,-36},{-74,-36},{-74,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[4].vector_circle, vector_1)
         annotation (Line(
           points={{-41.8,-36},{-74,-36},{-74,37},{-107,37}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(force[1].frame_a3, frame_a)
         annotation (Line(
           points={{-32.8,-24},{-88,-24},{-88,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[2].frame_a3, frame_a)
         annotation (Line(
           points={{-32.8,-24},{-88,-24},{-88,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[3].frame_a3, frame_a)
         annotation (Line(
           points={{-32.8,-24},{-88,-24},{-88,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
       connect(force[4].frame_a3, frame_a)
         annotation (Line(
           points={{-32.8,-24},{-88,-24},{-88,86},{-102,86}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
         annotation (Icon(graphics={                   Rectangle(extent={{-100,100},
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
-              textString="%name")}),     Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                                                 graphics));
+              textString="%name")}));
       end CircleToRectangle;
 
       package Components
@@ -13890,46 +12986,36 @@ convex contact surface object as parameter String.</p>
           connect(variablePrism_r1.frame_a, frame_a1)  annotation (Line(
               points={{-34,80},{-102,80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_r2.frame_a, frame_a2)  annotation (Line(
               points={{-52,-80},{-102,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(angle_LL.angle, angle) annotation (Line(
               points={{90,-19},{90,-20},{110,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(tansformRelativeVector.frame_a, frame_a2) annotation (Line(
               points={{-66,-8},{-66,-80},{-102,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(tansformRelativeVector.frame_b, frame_a1) annotation (Line(
               points={{-66,4},{-66,80},{-102,80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_r1.frame_b, frame_b1) annotation (Line(
               points={{-14,80},{60,80},{60,-102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_r2.frame_b, frame_b2) annotation (Line(
               points={{-32,-80},{-20,-80},{-20,-102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(vector_b, deMultiplex3.u) annotation (Line(
               points={{-108,20},{-95.2,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_q, deMultiplex3_2.u) annotation (Line(
               points={{-108,-40},{-95.2,-40}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              color={0,0,127}));
         end MovePointRectangleToRectangle;
 
         model ForceRectangleToRectangle
@@ -14230,113 +13316,91 @@ convex contact surface object as parameter String.</p>
           connect(rP.frame_b, frame_a2) annotation (Line(
               points={{-44,80},{60,80},{60,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force_r1.frame_a, frame_a1) annotation (Line(
               points={{12,-1},{-20,-1},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force_r1.frame_b, rP_l.frame_b) annotation (Line(
               points={{26,-1},{40,-1},{40,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force_r2.frame_a, frame_a1) annotation (Line(
               points={{-20,-21},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(contact_point_rectangle2.frame_a, frame_a1)
                                                 annotation (Line(
               points={{-1,61},{-19.5,61},{-19.5,102},{-20,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP.frame_a, frame_a3) annotation (Line(
               points={{-56,80},{-56,-80},{-102,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_w.frame_a, frame_a3) annotation (Line(
               points={{68,-80},{-102,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_l.frame_a, frame_a3) annotation (Line(
               points={{28,-60},{28,-80},{-102,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(offset1_cp1.frame_a, force_r1.frame_b) annotation (Line(
               points={{59,-1},{26,-1}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force_r2.frame_b, offset2_cp1.frame_a) annotation (Line(
               points={{-6,-21},{97,-21}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_l.frame_b, force_r1.frame_b)
                                                             annotation (Line(
               points={{40,44},{40,-1},{26,-1}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_w.frame_b, force_r2.frame_b)
                                                             annotation (Line(
               points={{80,44},{80,-21},{-6,-21}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_w.frame_b, rP_w.frame_b)
                                                         annotation (Line(
               points={{80,44},{80,-80}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_l.support, pos_l.support)
                                                          annotation (Line(
               points={{44.8,55.2},{47.4,55.2},{47.4,53},{48,53}},
-              color={0,127,0},
-              smooth=Smooth.None));
+              color={0,127,0}));
           connect(pos_l.flange, variablePrism_l.axis)
                                                      annotation (Line(
               points={{55,46},{52,46},{52,45.6},{44.8,45.6}},
-              color={0,127,0},
-              smooth=Smooth.None));
+              color={0,127,0}));
           connect(variablePrism_w.support, pos_w.support)
                                                          annotation (Line(
               points={{84.8,55.2},{87.4,55.2},{87.4,51},{88,51}},
-              color={0,127,0},
-              smooth=Smooth.None));
+              color={0,127,0}));
           connect(pos_w.flange, variablePrism_w.axis)
                                                      annotation (Line(
               points={{95,44},{90,44},{90,45.6},{84.8,45.6}},
-              color={0,127,0},
-              smooth=Smooth.None));
+              color={0,127,0}));
           connect(variablePrism_l.frame_a, frame_a2)
                                                     annotation (Line(
               points={{40,60},{40,80},{60,80},{60,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_w.frame_a, frame_a2)
                                                     annotation (Line(
               points={{80,60},{80,80},{60,80},{60,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex3_1.u, vector_b) annotation (Line(
               points={{-93.2,40},{-108,40}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex3_2.u, vector_q) annotation (Line(
               points={{-95.2,-40},{-100.6,-40},{-100.6,-40},{-108,-40}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(graphics), Icon(graphics));
+              color={0,0,127}));
         end ForceRectangleToRectangle;
 
         model MovePointCircleToRectangle
@@ -14459,133 +13523,105 @@ convex contact surface object as parameter String.</p>
               Line(
               points={{-20,-28.4},{-20,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(subsystem_mp_circle_rectangle1[2].frame_a2, frame_a2) annotation (
               Line(
               points={{-20,-28.4},{-20,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_a2, subsystem_mp_circle_rectangle1[3].frame_a2) annotation (
               Line(
               points={{-102,-60},{-20,-60},{-20,-28.4}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(subsystem_mp_circle_rectangle1[4].frame_a2, frame_a2) annotation (
               Line(
               points={{-20,-28.4},{-20,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(frame_b2, subsystem_mp_circle_rectangle1.frame_b2) annotation (Line(
               points={{102,-60},{20,-60},{20,-16},{0.4,-16}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
 
           connect(tansformRelativeVector1.frame_a, frame_a2) annotation (Line(
               points={{-60,0},{-60,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(tansformRelativeVector1.frame_b, frame_a1) annotation (Line(
               points={{-60,12},{-60,60},{-104,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(subsystem_mp_circle_rectangle1.frame_b1, frame_b1) annotation (Line(
               points={{0.4,0},{20,0},{20,60},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(angle_1.support, variableRevol_1.support) annotation (Line(
-              points={{-49,76},{-48.8,76},{-48.8,68}},
-              color={0,0,0},
-              smooth=Smooth.None));
+              points={{-49,76},{-48.8,76},{-48.8,68}}));
           connect(angle_1.flange, variableRevol_1.axis) annotation (Line(
-              points={{-42,83},{-42,68},{-44,68}},
-              color={0,0,0},
-              smooth=Smooth.None));
+              points={{-42,83},{-42,68},{-44,68}}));
           connect(variableRevol_1.frame_a, frame_a1) annotation (Line(
               points={{-52,60},{-104,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variableRevol_1.frame_b, subsystem_mp_circle_rectangle1[1].frame_a1)
             annotation (Line(
               points={{-36,60},{-20,60},{-20,12.4}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variableRevol_1.frame_b, subsystem_mp_circle_rectangle1[2].frame_a1)
             annotation (Line(
               points={{-36,60},{-20,60},{-20,12.4}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variableRevol_1.frame_b, subsystem_mp_circle_rectangle1[3].frame_a1)
             annotation (Line(
               points={{-36,60},{-20,60},{-20,12.4}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variableRevol_1.frame_b, subsystem_mp_circle_rectangle1[4].frame_a1)
             annotation (Line(
               points={{-36,60},{-20,60},{-20,12.4}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex3.u, vector_rectangle) annotation (Line(
               points={{-95.2,-6},{-98,-6},{-98,-20},{-106,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex2.u, vector_circle) annotation (Line(
               points={{-95.2,34},{-98,34},{-98,20},{-106,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_circle, subsystem_mp_circle_rectangle1[1].vector_circle)
             annotation (Line(
               points={{-106,20},{-74,20},{-74,-12},{-41.2,-12}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_circle, subsystem_mp_circle_rectangle1[2].vector_circle)
             annotation (Line(
               points={{-106,20},{-74,20},{-74,-12},{-41.2,-12}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_circle, subsystem_mp_circle_rectangle1[3].vector_circle)
             annotation (Line(
               points={{-106,20},{-74,20},{-74,-12},{-41.2,-12}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_circle, subsystem_mp_circle_rectangle1[4].vector_circle)
             annotation (Line(
               points={{-106,20},{-74,20},{-74,-12},{-41.2,-12}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_rectangle, subsystem_mp_circle_rectangle1[1].vector_rectangle)
             annotation (Line(
               points={{-106,-20},{-41.2,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_rectangle, subsystem_mp_circle_rectangle1[2].vector_rectangle)
             annotation (Line(
               points={{-106,-20},{-41.2,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_rectangle, subsystem_mp_circle_rectangle1[3].vector_rectangle)
             annotation (Line(
               points={{-106,-20},{-41.2,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_rectangle, subsystem_mp_circle_rectangle1[4].vector_rectangle)
             annotation (Line(
               points={{-106,-20},{-41.2,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              color={0,0,127}));
         end MovePointCircleToRectangle;
 
         model ForceCircleToRectangle
@@ -14851,10 +13887,10 @@ convex contact surface object as parameter String.</p>
            t_z=R/100;
            contact_cr = (abs(rP_cr.r_rel*V_direction_C)>=0) and abs(rP_cr.r_rel*V_direction_C)<=t_max and (sqrt((rP_cr.r_rel*Dl_direction_C)^2+(rP_cr.r_rel*Dw_direction_C)^2)<=R);
 
-           contact_bl = ((rP_l.r_rel*H_direction_R)<=0) and (rP_l.r_rel*H_direction_R)>=-t_max and (abs(rP_l.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_l.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001) 
+           contact_bl = ((rP_l.r_rel*H_direction_R)<=0) and (rP_l.r_rel*H_direction_R)>=-t_max and (abs(rP_l.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_l.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001)
     contact move point in L direction of square b based on square q";
 
-           contact_bw = ((rP_w.r_rel*H_direction_R)<=0) and (rP_w.r_rel*H_direction_R)>=-t_max and (abs(rP_w.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_w.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001) 
+           contact_bw = ((rP_w.r_rel*H_direction_R)<=0) and (rP_w.r_rel*H_direction_R)>=-t_max and (abs(rP_w.r_rel*L_direction_R)<=L_W_H_R[1]/2+t_z) and (abs(rP_w.r_rel*W_direction_R)<=L_W_H_R[2]/2+t_z) "and (abs(angle_VH-pi/2)>0.001)
     contact move point in W direction of square b based on square q";
            contact=contact_cr or contact_bl or contact_bw;
         //--------------------------------------------------------------
@@ -14917,136 +13953,106 @@ convex contact surface object as parameter String.</p>
           connect(force_cr.frame_b, frame_a1) annotation (Line(
               points={{-38,60},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force_cr.frame_a, frame_a3) annotation (Line(
               points={{-54,60},{-76,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cr.frame_a, frame_a3) annotation (Line(
               points={{-52,80},{-54,80},{-54,60},{-76,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force_rc1.frame_a, frame_a4) annotation (Line(
               points={{-38,-24},{-48,-24},{-48,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP.frame_a, frame_a4)     annotation (Line(
               points={{-2,-92},{-64,-92},{-64,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force_rc2.frame_a, frame_a4) annotation (Line(
               points={{-40,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_l.frame_a, frame_a4) annotation (Line(
               points={{-34,6},{-48,6},{-48,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_w.frame_a, frame_a4) annotation (Line(
               points={{-38,-80},{-48,-80},{-48,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(movepointRechtangle.frame_a, frame_a1)
                                                 annotation (Line(
               points={{74,82},{74,60},{102,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP.frame_b, frame_a2) annotation (Line(
               points={{10,-92},{92,-92},{92,-60},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP1.frame_a, frame_a4) annotation (Line(
               points={{-64,0},{-64,-60},{-102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP1.frame_b, frame_a3) annotation (Line(
               points={{-64,12},{-64,60},{-76,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_cr.frame_b, force_cr.frame_b) annotation (Line(
               points={{-40,80},{-38,80},{-38,60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pos_L.support, variablePrism_L.support) annotation (Line(
               points={{47,-30},{51.2,-30},{51.2,-24.8}},
-              color={0,0,0},
-              pattern=LinePattern.None,
-              smooth=Smooth.None));
+              pattern=LinePattern.None));
           connect(pos_L.flange, variablePrism_L.axis) annotation (Line(
               points={{40,-37},{40,-24.8},{41.6,-24.8}},
-              color={0,127,0},
-              smooth=Smooth.None));
+              color={0,127,0}));
           connect(rP_l.frame_b, variablePrism_L.frame_b) annotation (Line(
               points={{-22,6},{-3,6},{-3,-20},{40,-20}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_L.frame_a, frame_a2) annotation (Line(
               points={{56,-20},{80,-20},{80,-60},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(force_rc1.frame_b, variablePrism_L.frame_b) annotation (Line(
               points={{-22,-24},{-2,-24},{-2,-20},{40,-20}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(fixpoint1.frame_a, variablePrism_L.frame_b) annotation (Line(
               points={{17,-1},{17,-20.5},{40,-20.5},{40,-20}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pos_W.support, variablePrism_W.support) annotation (Line(
               points={{49,-68},{51.2,-68},{51.2,-64.8}},
-              color={0,0,0},
-              pattern=LinePattern.None,
-              smooth=Smooth.None));
+              pattern=LinePattern.None));
           connect(variablePrism_W.axis, pos_W.flange) annotation (Line(
               points={{41.6,-64.8},{41.6,-70.4},{42,-70.4},{42,-75}},
-              color={0,127,0},
-              smooth=Smooth.None));
+              color={0,127,0}));
           connect(variablePrism_W.frame_a, frame_a2) annotation (Line(
               points={{56,-60},{102,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(variablePrism_W.frame_b, force_rc2.frame_b) annotation (Line(
               points={{40,-60},{-24,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(rP_w.frame_b, variablePrism_W.frame_b) annotation (Line(
               points={{-26,-80},{-12,-80},{-12,-60},{40,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(fixpoint2.frame_a, variablePrism_W.frame_b) annotation (Line(
               points={{-1,-49},{-0.5,-49},{-0.5,-60},{40,-60}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex2.u, vector_circle) annotation (Line(
               points={{-93.2,20},{-106,20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(deMultiplex3.u, vector_rectangle) annotation (Line(
               points={{-93.2,-20},{-106,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              color={0,0,127}));
         end ForceCircleToRectangle;
 
         model SubsystemMovePointCircleToRectangle
@@ -15159,32 +14165,25 @@ convex contact surface object as parameter String.</p>
           connect(pris_r.frame_a, frame_a2) annotation (Line(
               points={{60,-40},{0,-40},{0,-102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pris_r.frame_b, frame_b2) annotation (Line(
               points={{80,-40},{102,-40}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pris_c.frame_a, frame_a1) annotation (Line(
               points={{60,40},{0,40},{0,102}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(pris_c.frame_b, frame_b1) annotation (Line(
               points={{80,40},{102,40}},
               color={95,95,95},
-              thickness=0.5,
-              smooth=Smooth.None));
+              thickness=0.5));
           connect(deMultiplex2.u, vector_circle) annotation (Line(
               points={{-87.2,-20},{-106,-20}},
-              color={0,0,127},
-              smooth=Smooth.None));
+              color={0,0,127}));
           connect(vector_rectangle, deMultiplex3.u) annotation (Line(
               points={{-106,-60},{-87.2,-60}},
-              color={0,0,127},
-              smooth=Smooth.None));
-          annotation (Diagram(graphics));
+              color={0,0,127}));
         end SubsystemMovePointCircleToRectangle;
        annotation(preferredView="info");
       end Components;
@@ -15336,7 +14335,7 @@ convex contact surface object as parameter String.</p>
        angle=smooth(2, if norm1*norm2>0.0001 then Modelica.Math.acos((vector1*vector2)/(norm1*norm2)) else t);
         //angle=  Modelica.Math.acos((vector1*vector2));
 
-        annotation (Diagram(graphics), Documentation(info="<!DOCTYPE html><html>
+        annotation ( Documentation(info="<!DOCTYPE html><html>
 <p>Block to calculate the angle between two given vectors. The vector1 and vector2 are three-dimensional Euclidean vector and should not be zero vector.</p>
 </html>"));
       end angleBetweenTwoVectorsBlock;
@@ -15360,7 +14359,7 @@ convex contact surface object as parameter String.</p>
           c =smooth(2, abs(a*abs(cos(beta*sign(beta-pi/2))) - 0.5*sqrt(abs((2*a*abs(cos(beta*sign(beta-pi/2))))^2 - 4*(a^2 - b^2)))));
           //c =smooth(2, abs(a*abs(cos(beta*sign(beta-pi/2))) - 0.5*sqrt(abs((2*a*abs(cos(beta*sign(beta-pi/2))))^2 - 4*(a^2 - b^2)))));
           //beta*sign(beta-pi/2) singularitätspunkt bei beta=pi/2 vermeiden
-        annotation (Diagram(graphics), Documentation(info="<!DOCTYPE html><html>
+        annotation ( Documentation(info="<!DOCTYPE html><html>
 <p>According to the cosine rules, the length <i><b>c</b> </i>of the side of a triangle is calculated. The two sides <i><b>a</b></i> and <i><b>b</b></i> and the angle beta between them are given.</p>
 </html>"));
       end cosineRulesBlock;
@@ -15384,7 +14383,7 @@ convex contact surface object as parameter String.</p>
                   {120,30}})));
       equation
         vector_out = (vector_in*u)*u + (vector_in*v)*v;
-        annotation (Diagram(graphics), Documentation(info="<!DOCTYPE html><html>
+        annotation ( Documentation(info="<!DOCTYPE html><html>
 <p>Block to calculate the orthogonal projection of vector_in on a plane, which is defined by vector_u and vector_v. The inputs vector_u and vector_v can be perpendicular but cannot be parallel.</p>
 </html>"));
       end orthogonalProjectionBlock;
@@ -15445,9 +14444,8 @@ convex contact surface object as parameter String.</p>
 
         connect(limiterBlock.y, t) annotation (Line(
             points={{75,0},{110,0}},
-            color={0,0,127},
-            smooth=Smooth.None));
-        annotation (Diagram(graphics), Documentation(info="<!DOCTYPE html><html>
+            color={0,0,127}));
+        annotation ( Documentation(info="<!DOCTYPE html><html>
 <p>Block to locate the intersection points on two lines in space with limiter.</p>
 </html>"));
       end intersectionOfTwoLinesBlock;
@@ -15472,8 +14470,7 @@ convex contact surface object as parameter String.</p>
 
         connect(filter.y, y) annotation (Line(
             points={{95,0},{110,0}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
          annotation (
           Documentation(info="<!DOCTYPE html><html>
 <p>The Limiter block passes its input signal as output signal as long as the input is within the specified upper and lower limits. If this is not the case, the corresponding limit is passed as output. Furthermore, the output of the variable limiter is filtered with the help of a bessel filter (low pass).</p>
@@ -15493,7 +14490,7 @@ convex contact surface object as parameter String.</p>
             lineColor={192,192,192},
             fillColor={192,192,192},
             fillPattern=FillPattern.Solid),
-          Line(points={{-80,-70},{-50,-70},{50,70},{80,70}}, color={0,0,0}),
+          Line(points={{-80,-70},{-50,-70},{50,70},{80,70}}),
           Text(
             extent={{-150,-150},{150,-110}},
             lineColor={0,0,0},
@@ -15518,7 +14515,7 @@ convex contact surface object as parameter String.</p>
             lineColor={192,192,192},
             fillColor={192,192,192},
             fillPattern=FillPattern.Solid),
-          Line(points={{-50,-40},{-30,-40},{30,40},{50,40}}, color={0,0,0}),
+          Line(points={{-50,-40},{-30,-40},{30,40},{50,40}}),
           Text(
             extent={{46,-6},{68,-18}},
             lineColor={128,128,128},
@@ -15555,8 +14552,7 @@ convex contact surface object as parameter String.</p>
 
         connect(filter.y, y) annotation (Line(
             points={{95,0},{110,0}},
-            color={0,0,127},
-            smooth=Smooth.None));
+            color={0,0,127}));
          annotation (
           Documentation(info="<!DOCTYPE html><html>
 <p>The Limiter block passes its input signal as output signal as long as the input is within the specified upper and lower limits. If this is not the case, the corresponding limits are passed as output. Furthermore, the output of the variable limiter is filtered with the help of a bessel filter (low pass).</p>
@@ -15576,7 +14572,7 @@ convex contact surface object as parameter String.</p>
             lineColor={192,192,192},
             fillColor={192,192,192},
             fillPattern=FillPattern.Solid),
-          Line(points={{-80,-70},{-50,-70},{50,70},{80,70}}, color={0,0,0}),
+          Line(points={{-80,-70},{-50,-70},{50,70},{80,70}}),
           Text(
             extent={{-150,-150},{150,-110}},
             lineColor={0,0,0},
@@ -15601,7 +14597,7 @@ convex contact surface object as parameter String.</p>
             lineColor={192,192,192},
             fillColor={192,192,192},
             fillPattern=FillPattern.Solid),
-          Line(points={{-50,-40},{-30,-40},{30,40},{50,40}}, color={0,0,0}),
+          Line(points={{-50,-40},{-30,-40},{30,40},{50,40}}),
           Text(
             extent={{46,-6},{68,-18}},
             lineColor={128,128,128},
@@ -15698,31 +14694,24 @@ convex contact surface object as parameter String.</p>
         connect(frame1, absoluteAngularVelocity1.frame_a) annotation (Line(
             points={{-56,100},{-56,86},{-78,86},{-78,74}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
 
         connect(frame2, absoluteAngularVelocity2.frame_a) annotation (Line(
             points={{-58,-98},{-58,-86},{-82,-86},{-82,-80}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(frame1, absoluteVelocity1.frame_a) annotation (Line(
             points={{-56,100},{-56,86},{-34,86},{-34,74}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(frame2, absoluteVelocity2.frame_a) annotation (Line(
             points={{-58,-98},{-58,-86},{-36,-86},{-36,-80}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(absoluteVelocity2.frame_resolve, frame1) annotation (Line(
             points={{-26,-70},{-8,-70},{-8,94},{-54,94},{-54,100},{-56,100}},
             color={95,95,95},
-            pattern=LinePattern.Dot,
-            smooth=Smooth.None));
-        annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
-                            graphics));
+            pattern=LinePattern.Dot));
       end RelativeVelocities;
 
       model RelativeVelocities_
@@ -15818,52 +14807,41 @@ convex contact surface object as parameter String.</p>
         connect(frame1, absoluteAngularVelocity1.frame_a) annotation (Line(
             points={{-56,100},{-56,86},{-78,86},{-78,74}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
 
         connect(frame2, absoluteAngularVelocity2.frame_a) annotation (Line(
             points={{-58,-98},{-58,-86},{-82,-86},{-82,-80}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(frame1, absoluteVelocity1.frame_a) annotation (Line(
             points={{-56,100},{-56,86},{-34,86},{-34,74}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(frame2, absoluteVelocity2.frame_a) annotation (Line(
             points={{-58,-98},{-58,-86},{-36,-86},{-36,-80}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(absoluteVelocity2.frame_resolve, frame1) annotation (Line(
             points={{-26,-70},{-8,-70},{-8,94},{-54,94},{-54,100},{-56,100}},
             color={95,95,95},
-            pattern=LinePattern.Dot,
-            smooth=Smooth.None));
+            pattern=LinePattern.Dot));
         connect(frame2, r2.frame_a) annotation (Line(
             points={{-58,-98},{-58,-86},{1.77636e-015,-86}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(r2.frame_b, frame2cp) annotation (Line(
             points={{16,-86},{46,-86},{46,-98}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(r1.frame_a, absoluteVelocity1.frame_a) annotation (Line(
             points={{6,86},{-34,86},{-34,74}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
+            thickness=0.5));
         connect(r1.frame_b, frame1cp) annotation (Line(
             points={{22,86},{48,86},{48,98}},
             color={95,95,95},
-            thickness=0.5,
-            smooth=Smooth.None));
-        annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-                  -100},{100,100}}),
-                            graphics), Icon(coordinateSystem(preserveAspectRatio=false,
+            thickness=0.5));
+        annotation ( Icon(coordinateSystem(preserveAspectRatio=false,
                 extent={{-100,-100},{100,100}}), graphics={
               Text(
                 extent={{-98,78},{-2,64}},
@@ -15963,8 +14941,8 @@ convex contact surface object as parameter String.</p>
                 fillColor={0,0,0},
                 fillPattern=FillPattern.Solid,
                 lineColor={0,0,255}),
-              Line(points={{-30,-50},{-30,50}}, color={0,0,0}),
-              Line(points={{100,-30},{100,21}}, color={0,0,0}),
+              Line(points={{-30,-50},{-30,50}}),
+              Line(points={{100,-30},{100,21}}),
               Text(
                 extent={{60,12},{96,-13}},
                 lineColor={128,128,128},
@@ -15993,10 +14971,6 @@ convex contact surface object as parameter String.</p>
                 extent={{17,-101},{107,-80}},
                 lineColor={0,0,0},
                 textString="s_ref")}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics),
           Documentation(info="<!DOCTYPE html><html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Prismatic joint. The axis of translation can be now be set via the input n. Furthermore, the input s_ref sets the distance between the to frames (compare to useAxisFlange option of the original block).</p>
 </html>"));
@@ -16114,10 +15088,6 @@ convex contact surface object as parameter String.</p>
                 extent={{34,-129},{91,-98}},
                 lineColor={0,0,0},
                 textString="phi")}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics),
           Documentation(info="<!DOCTYPE html><html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Revolute joint. The axis of rotation can be now be set via the input n. Furthermore, the input phi_ref sets the angle between the to frames (compare to useAxisFlange option of the original block).</p>
 </html>"));
@@ -16195,12 +15165,10 @@ Possible reasons:
 
         connect(fixed.flange, support) annotation (Line(
             points={{-40,40},{-40,60}},
-            color={0,127,0},
-            smooth=Smooth.None));
+            color={0,127,0}));
         connect(internalAxis.flange, axis)    annotation (Line(
             points={{80,40},{80,60}},
-            color={0,127,0},
-            smooth=Smooth.None));
+            color={0,127,0}));
 
         annotation (
           Icon(coordinateSystem(
@@ -16231,8 +15199,8 @@ Possible reasons:
                 fillColor={0,0,0},
                 fillPattern=FillPattern.Solid,
                 lineColor={0,0,255}),
-              Line(points={{-30,-50},{-30,50}}, color={0,0,0}),
-              Line(points={{100,-30},{100,21}}, color={0,0,0}),
+              Line(points={{-30,-50},{-30,50}}),
+              Line(points={{100,-30},{100,21}}),
               Text(
                 extent={{60,12},{96,-13}},
                 lineColor={128,128,128},
@@ -16257,10 +15225,6 @@ Possible reasons:
                 fillColor={192,192,192},
                 fillPattern=FillPattern.Solid,
                 lineColor={0,0,255})}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics),
           Documentation(info="<!DOCTYPE html><html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Prismatic joint. The axis of translation can be now be set via the input n.</p>
 </html>"));
@@ -16369,13 +15333,9 @@ Possible reasons:
         phi = internalAxis.phi;
 
         connect(fixed.flange, support) annotation (Line(
-            points={{-60,80},{-60,100}},
-            color={0,0,0},
-            smooth=Smooth.None));
+            points={{-60,80},{-60,100}}));
         connect(internalAxis.flange, axis) annotation (Line(
-            points={{0,80},{0,100}},
-            color={0,0,0},
-            smooth=Smooth.None));
+            points={{0,80},{0,100}}));
         annotation (
           Icon(coordinateSystem(
               preserveAspectRatio=true,
@@ -16403,12 +15363,10 @@ Possible reasons:
                 textString="b"),
               Line(
                 visible=useAxisFlange,
-                points={{-20,80},{-20,60}},
-                color={0,0,0}),
+                points={{-20,80},{-20,60}}),
               Line(
                 visible=useAxisFlange,
-                points={{20,80},{20,60}},
-                color={0,0,0}),
+                points={{20,80},{20,60}}),
               Rectangle(
                 visible=useAxisFlange,
                 extent={{-10,100},{10,50}},
@@ -16443,34 +15401,22 @@ Possible reasons:
                 lineColor={0,0,255}),
               Line(
                 visible=useAxisFlange,
-                points={{-20,70},{-60,70},{-60,60}},
-                color={0,0,0},
-                smooth=Smooth.None),
+                points={{-20,70},{-60,70},{-60,60}}),
               Line(
                 visible=useAxisFlange,
-                points={{20,70},{50,70},{50,60}},
-                color={0,0,0},
-                smooth=Smooth.None),
+                points={{20,70},{50,70},{50,60}}),
               Line(
                 visible=useAxisFlange,
-                points={{-90,100},{-30,100}},
-                color={0,0,0}),
+                points={{-90,100},{-30,100}}),
               Line(
                 visible=useAxisFlange,
-                points={{-30,100},{-50,80}},
-                color={0,0,0}),
+                points={{-30,100},{-50,80}}),
               Line(
                 visible=useAxisFlange,
-                points={{-49,100},{-70,80}},
-                color={0,0,0}),
+                points={{-49,100},{-70,80}}),
               Line(
                 visible=useAxisFlange,
-                points={{-70,100},{-90,80}},
-                color={0,0,0})}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics),
+                points={{-70,100},{-90,80}})}),
           Documentation(info="<!DOCTYPE html><html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Revolute joint. The axis of rotation can be now be set via the input n.</p>
 </html>"));
@@ -16582,11 +15528,7 @@ Possible reasons:
               Text(
                 extent={{-150,100},{150,60}},
                 textString="%name",
-                lineColor={0,0,255})}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics));
+                lineColor={0,0,255})}));
       end FixedShapeVarAnimation;
 
       model PointMassVarAnimation
@@ -16705,10 +15647,6 @@ the only case where this is done.
                 lineColor={0,0,0},
                 fillPattern=FillPattern.Sphere,
                 fillColor={0,127,255})}),
-          Diagram(coordinateSystem(
-              preserveAspectRatio=false,
-              extent={{-100,-100},{100,100}},
-              grid={1,1}), graphics),
           Documentation(info="<!DOCTYPE html><HTML><p>This rigid body is a modification of <a href=\"modelica://Modelica.Mechanics.MultiBody.Parts.PointMass\">Modelica.Mechanics.MultiBody.Parts.PointMass</a>. The animation can be disabled via the boolean input. Therefore, the diameter of the sphere is set to 0.
 </p></HTML>"));
       end PointMassVarAnimation;
@@ -16760,9 +15698,6 @@ the only case where this is done.
     Interfaces.ShapeTypeInput surfaceType2 annotation (Placement(transformation(extent={{-114,-56},{-98,-40}})));
       Modelica.Blocks.Interfaces.BooleanOutput contact
         annotation (Placement(transformation(extent={{96,-12},{116,8}})));
-      annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-              -100},{100,100}}),
-                          graphics));
     end PartialContactBlock;
 
     partial model PartialContactSurface "Partial model to define a surface"
@@ -16812,22 +15747,18 @@ the only case where this is done.
     connect(frame_a, fixedFrame.frame_a) annotation (Line(
         points={{-100,8},{-10,8},{-10,-24},{-26,-24}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
     connect(fixedFrame.frame_a, body.frame_a) annotation (Line(
         points={{-26,-24},{22,-24}},
         color={95,95,95},
-        thickness=0.5,
-        smooth=Smooth.None));
+        thickness=0.5));
       connect(multiplex.y, contact_a.u) annotation (Line(
           points={{-5.2,80},{44,80},{44,8},{100,8}},
-          color={0,0,127},
-          smooth=Smooth.None));
+          color={0,0,127}));
       connect(frame_a, contact_a.frame) annotation (Line(
           points={{-100,8},{100,8}},
           color={95,95,95},
-          thickness=0.5,
-          smooth=Smooth.None));
+          thickness=0.5));
      annotation (
         Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
              graphics={
@@ -16956,13 +15887,7 @@ Connector with one input signal of type IdealizedContact.ContactSurfaces.Types.C
   end Interfaces;
 
 
-  annotation (Window(
-    x=0.45,
-    y=0.01,
-    width=0.44,
-    height=0.65,
-    library=1,
-    autolayout=1),version="0.2.0", uses(Modelica(version="3.2.1")), preferredView="info",
+  annotation (version="0.2.0", uses(Modelica(version="3.2.1")), preferredView="info",
   Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
       graphics={
       Rectangle(
