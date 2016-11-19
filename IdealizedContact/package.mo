@@ -8,7 +8,7 @@ extends Modelica.Icons.Package;
 
     class ContactSurfaces "How to use the contact surfaces"
     extends Modelica.Icons.Information;
-      annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
+      annotation (preferredView="info",Documentation(info="<html>
 <p>To describe elementary <a href=\"modelica://IdealizedContact.ContactSurfaces\">contact surfaces</a>, the library provides ready-to-use blocks. The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions of the surface can be parameterized. In order to be able to use the dimensions in the contact block we introduce a new interface to connect the surface definition with a contact block. The figure shows the resulting shape of the contact area for all possible combinations that are analytically solved, as well as the number of contact points to describe it.</p>
 <p><br><img src=\"modelica://IdealizedContact/Resources/Images/table_contactsurfaces.png\"/></p>
 <p>Furthermore, the library offers the possibility to calculate contact points on convex surfaces using iterative Newton algorithm. These surfaces are described in a parametric form. Currently, the following <a href=\"modelica://IdealizedContact.ContactSurfaces.ParametricSurfaceDefinition\">parametric surfaces</a> are defined:</p>
@@ -24,7 +24,7 @@ extends Modelica.Icons.Package;
 
     class ElementaryContactBodies "How to use the elementary contact bodies"
     extends Modelica.Icons.Information;
-      annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
+      annotation (preferredView="info",Documentation(info="<html>
 <p>The library includes predefined, <a href=\"modelica://IdealizedContact.ElementaryContactBodies\">elementary bodies</a> like cuboids or cylinders which combine several contact surfaces and include a Multibody block. Each contact surface can be enabled separately. These do contain masses and moments of inertia, which are calculated by the dimensions and the density of the material. The Figure displays the<b> ElementaryContactBodies</b> that are currently available.</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/ElementaryContactBodies.png\"/> </p>
 </html>"));
@@ -32,7 +32,7 @@ extends Modelica.Icons.Package;
 
     class ContactBlock "How to use the contact block"
     extends Modelica.Icons.Information;
-      annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
+      annotation (preferredView="info",Documentation(info="<html>
 <p>The <a href=\"modelica://IdealizedContact.ContactBlock.Contact\">contact block</a> calculates the appropriate force depending on the combination of surfaces. It is connected to a corresponding pair of contact surfaces. So, the respective combination of contact surfaces has to be chosen at first by setting the parameter contactDefinition. This will use the Modelica replaceable statement to define the appropriate components of the contact block. Then connect the contact interfaces of the two contact surfaces to the respective port of the contact block (first&nbsp;surface&nbsp;mentioned&nbsp;must&nbsp;be&nbsp;connected&nbsp;to&nbsp;port&nbsp;1).</p>
 <p>In the case of a collision of the two connected surface (the contact condition holds for at least one contact point) a three-dimensional contact force is applied. It consists of both the normal force and the tangential friction. The respective directions can be obtained by means of the local coordinate systems in the contact points. As compared to more complex models, the continuous surface layer is replaced by a nonlinear spring/damper element. Consequently, the normal force Fn&nbsp;is determined by means of the penetration p&nbsp;and the penetration velocity. A continuous contact force model with hysteresis damping according to [9] is implemented. Nevertheless, choosing n1=1 and n=0&nbsp;one can get the linear Kelvin-Voigt model, where the coefficients are the spring and damping constant. Choosing n1=n2&nbsp;one will get the formulation according to [10].</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/Fn.jpg\"/></p>
@@ -49,7 +49,7 @@ extends Modelica.Icons.Package;
 
     class ContactInterface "How to use the contact interface"
     extends Modelica.Icons.Information;
-      annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
+      annotation (preferredView="info",Documentation(info="<html>
 <p>In order to be able to use the dimensions of the contact surfaces in the contact block a new <a href=\"modelica://IdealizedContact.Interfaces\">interface</a> to connect the surface definition with a contact block  is introduced. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library that comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system (BCS) of the contact surface.</p>
 </html>"));
     end ContactInterface;
@@ -80,7 +80,7 @@ extends Modelica.Icons.Package;
 
     class Literature "Literature"
     extends Modelica.Icons.References;
-      annotation (preferredView="info", Documentation(info="<!DOCTYPE html><html>
+      annotation (preferredView="info", Documentation(info="<html>
 <p>The first implementation of the library is described in:</p>
 <p>Felix Oesters&ouml;tebier, Peng Wang and Ansgar Tr&auml;chtler: <b><a href=\"http://dx.doi.org/10.3384/ecp14096929\">A Modelica Contact Library for Idealized Simulation of Independently Defined Contact Surfaces</a></b> submitted to the <b>10th International Modelica Conference 2014</b> in Lund/Sweden.</p>
 <p><br>It is furthermore based on the following theses:</p>
@@ -139,7 +139,7 @@ extends Modelica.Icons.Package;
   class ModelicaLicense2 "Modelica License 2"
     extends Modelica.Icons.Information;
 
-    annotation (preferredView="info",Documentation(info="<!DOCTYPE html><html>
+    annotation (preferredView="info",Documentation(info="<html>
 <head>
 <title>RealTimeCoordinationLibrary.UsersGuide.The Modelica License 2</title>
 <style type=\"text/css\">
@@ -686,7 +686,7 @@ printing and shipping costs may be recovered.</p>
 </html>"));
   end ModelicaLicense2;
 
-    annotation (Documentation(info="<!DOCTYPE html><html>
+    annotation (Documentation(info="<html>
 <p>The<b> Idealized Contact</b> Library is a free Modelica package for modeling and handling of collisions in MultiBody Systems.</p>
 <p>Modeling of multibody mechanics plays a central role in the design of mechatronic systems. In technical use-cases, these often contain loose couplings, where contact is possible. The IdealizedContact library is ready-to-use contact library for Modelica. It comprises surface definitions for simple contact surfaces, which can be connected with the multibodies of the Modelica Standard Library. It furthermore implements a force-based approach between single contact points. The contact forces are calculated in configurable non-central contact blocks. </p>
 <p>The aim is to bring the designer in the position to perform simulations of industrial applications including contacts. Thereby, the analysis of the principle functional capability of the system in the course of the conceptual design is focused. This entails specialized modeling principles concerning the usability and the interpretation of the simulation results, which both should be relatively easy. In addition, it should be possible to define each component separately in order to be able to reuse and combine approved patterns in new applications (c.f. [4]).</p>
@@ -2191,7 +2191,7 @@ printing and shipping costs may be recovered.</p>
           color={95,95,95},
           pattern=LinePattern.None,
           thickness=0.5));
-      annotation (Documentation(info="<!DOCTYPE html><html>
+      annotation (Documentation(info="<html>
 <p>The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions can be parameterized. In order to be able to use them in the contact block we introduce a new interface to connect the surface definition with the contact block of this library. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library. It comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system of the contact surface. This model defines a spherical contact surface.</p>
 </html>"),        Icon(graphics={
             Text(
@@ -2319,7 +2319,7 @@ printing and shipping costs may be recovered.</p>
               fillColor={0,176,0},
               fillPattern=FillPattern.Solid,
               lineColor={0,0,0})}),
-        Documentation(info="<!DOCTYPE html><html>
+        Documentation(info="<html>
 <p>The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions can be parameterized. In order to be able to use them in the contact block we introduce a new interface to connect the surface definition with the contact block of this library. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library. It comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system of the contact surface. This model defines a cylindrical skin surface.</p>
 </html>"));
     end CylindricalContactSurface;
@@ -2405,7 +2405,7 @@ printing and shipping costs may be recovered.</p>
               fillPattern=FillPattern.Solid,
               lineColor={0,0,0})}),
         Documentation(revisions="<html>
-</html>", info="<!DOCTYPE html><html>
+</html>", info="<html>
 <p>The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions can be parameterized. In order to be able to use them in the contact block we introduce a new interface to connect the surface definition with the contact block of this library. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library. It comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system of the contact surface. This model defines a rectangular, plane contact surface.</p>
 </html>"));
     end RectangularPlaneContactSurface;
@@ -2498,7 +2498,7 @@ printing and shipping costs may be recovered.</p>
               fillColor={0,176,0},
               fillPattern=FillPattern.Solid,
               lineColor={0,0,0})}),
-        Documentation(info="<!DOCTYPE html><html>
+        Documentation(info="<html>
 <p>The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions can be parameterized. In order to be able to use them in the contact block we introduce a new interface to connect the surface definition with the contact block of this library. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library. It comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system of the contact surface. This model defines a circular, plane contact surface.</p>
 </html>"));
     end CircularPlaneContactSurface;
@@ -2553,7 +2553,7 @@ printing and shipping costs may be recovered.</p>
               fillColor={0,176,0},
               fillPattern=FillPattern.Solid,
               lineColor={0,0,0})}),
-        Documentation(info="<!DOCTYPE html><html>
+        Documentation(info="<html>
 <p>The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions can be parameterized. In order to be able to use them in the contact block we introduce a new interface to connect the surface definition with the contact block of this library. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library. It comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system of the contact surface. This model defines an ellipsoid contact surface.</p>
 </html>"));
     end EllipsoidContactSurface;
@@ -2617,7 +2617,7 @@ printing and shipping costs may be recovered.</p>
               fillColor={0,176,0},
               fillPattern=FillPattern.Solid,
               lineColor={0,0,0})}),
-        Documentation(info="<!DOCTYPE html><html>
+        Documentation(info="<html>
 <p>The surface definition represents a thin and massless layer, which can be connected to any kind of rigid body by a frame connector. The dimensions can be parameterized. In order to be able to use them in the contact block we introduce a new interface to connect the surface definition with the contact block of this library. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library. It comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system of the contact surface. This model can be used for any convex contact surface defined.</p>
 </html>"));
     end ConvexContactSurface;
@@ -2633,7 +2633,7 @@ printing and shipping costs may be recovered.</p>
           y[1,1]:=h[1]*l;
           y[2,1]:=h[2]*cos(k);
           y[3,1]:=h[2]*sin(k);
-      annotation (Documentation(info="<!DOCTYPE html><html>
+      annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;a&nbsp;point&nbsp;on&nbsp;the&nbsp;cylindrical&nbsp;surface&nbsp;in&nbsp;the&nbsp;respective coordinate&nbsp;system.&nbsp;This&nbsp;function&nbsp;can&nbsp;be&nbsp;used&nbsp;for&nbsp;any&nbsp;parametric cylinder,&nbsp;because&nbsp;the&nbsp;parameters have&nbsp;to&nbsp;be&nbsp;put&nbsp;in&nbsp;as&nbsp;well.</p>
 </html>"));
       end cylindrical;
@@ -2648,7 +2648,7 @@ printing and shipping costs may be recovered.</p>
       y[2,1]:=h[2]*sin(phi)*sin(theta);
       y[3,1]:=h[3]*cos(theta);
 
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;a&nbsp;point&nbsp;on&nbsp;the ellipsoid&nbsp;surface&nbsp;in&nbsp;the&nbsp;respective coordinate&nbsp;system.&nbsp;This&nbsp;function&nbsp;can&nbsp;be&nbsp;used&nbsp;for&nbsp;any&nbsp;parametric ellipsod,&nbsp;because&nbsp;the&nbsp;parameters have&nbsp;to&nbsp;be&nbsp;put&nbsp;in&nbsp;as&nbsp;well.</p>
 </html>"));
       end ellipsoid;
@@ -2667,7 +2667,7 @@ printing and shipping costs may be recovered.</p>
           phi,
           theta);
 
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;a&nbsp;point&nbsp;on&nbsp;the spherical surface&nbsp;in&nbsp;the&nbsp;respective coordinate&nbsp;system.</p>
 </html>"));
       end spherical;
@@ -2683,7 +2683,7 @@ printing and shipping costs may be recovered.</p>
       y[2,1]:=(h[2]+h[3]*cos(phi))*sin(phi)*sin(theta);
       y[3,1]:=(h[2]+h[3]*cos(phi))*sin(phi)*cos(theta);//*r*cos(theta);
 
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;a&nbsp;point&nbsp;on the &nbsp;surface of an egg&nbsp;in&nbsp;the&nbsp;respective coordinate&nbsp;system.&nbsp;It&nbsp;describes the contact surface using the &quot;eggquation&quot;.</p>
 <pre><a href=\"http://matheminutes.blogspot.de/2013/03/eggquations.html\">http://matheminutes.blogspot.de/2013/03/eggquations.html</a></pre>
 </html>"));
@@ -2730,7 +2730,7 @@ printing and shipping costs may be recovered.</p>
           surfaceSpecified:=false;
         end if;
          assert(surfaceSpecified,"Parametric surface is not specified.",level=AssertionLevel.error);
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>This&nbsp;wrapper function&nbsp;calculates&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;a&nbsp;point&nbsp;on&nbsp;the&nbsp;convex&nbsp;surface in&nbsp;the&nbsp;respective body&nbsp;coordinate&nbsp;system.&nbsp;It&nbsp;can&nbsp;be&nbsp;used&nbsp;for&nbsp;the&nbsp;specified&nbsp;parametric&nbsp;convex&nbsp;surface.&nbsp;The surface type is defined by a parameter.</p>
 </html>"));
       end parametricSurfaceWrapper;
@@ -2756,7 +2756,7 @@ printing and shipping costs may be recovered.</p>
             y[2,1]:=h[2]*sin(phi)*cos(theta);
             y[3,1]:=-h[3]*sin(theta);
         end if;
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;first&nbsp;derivatives&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;and&nbsp;azimuthal&nbsp;angles.</p>
 <p>The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&#62;&nbsp;d/(dk),&nbsp;d!=1&nbsp;-&#62;&nbsp;d/(dl)</p>
 <p>This&nbsp;function&nbsp;works&nbsp;for&nbsp;any&nbsp;ellipsoid,&nbsp;because&nbsp;the&nbsp;semi&nbsp;axis&nbsp;are&nbsp;inputs&nbsp;as&nbsp;well.</p>
@@ -2781,7 +2781,7 @@ printing and shipping costs may be recovered.</p>
               y[3,1]:=0;
             end if;
 
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;first&nbsp;derivatives&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;and&nbsp;azimuthal&nbsp;angles.</p>
 <p>The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&#62;&nbsp;d/(dk),&nbsp;d!=1&nbsp;-&#62;&nbsp;d/(dl)</p>
 <p>This&nbsp;function&nbsp;works&nbsp;for&nbsp;any cylinder,&nbsp;because&nbsp;the&nbsp;semi&nbsp;axis&nbsp;are&nbsp;inputs&nbsp;as&nbsp;well.</p>
@@ -2806,7 +2806,7 @@ printing and shipping costs may be recovered.</p>
             y[2,1]:=(h[2]+h[3]*cos(phi))*sin(phi)*cos(theta);
             y[3,1]:=-(h[2]+h[3]*cos(phi))*sin(phi)*sin(theta);
         end if;
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;first&nbsp;derivatives&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;and&nbsp;azimuthal&nbsp;angles.</p>
 <p>The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;(polar&nbsp;or&nbsp;azimuthal)&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&#62;&nbsp;d/(dphi),&nbsp;d!=1&nbsp;-&#62;&nbsp;d/(dtheta)</p>
 </html>"));
@@ -2859,11 +2859,11 @@ printing and shipping costs may be recovered.</p>
             surfaceSpecified:=false;
           end if;
            assert(surfaceSpecified,"First partial derivative of parametric surface is not specified.");
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>This&nbsp;wrapper function&nbsp;calculates&nbsp;the&nbsp;first&nbsp;partial&nbsp;derivatives&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;and&nbsp;azimuthal&nbsp;angles in the body coordinate system. The&nbsp;input&nbsp;d&nbsp;specifies&nbsp;which&nbsp;derivative&nbsp;(polar&nbsp;or&nbsp;azimuthal)&nbsp;is&nbsp;used.&nbsp;d=1&nbsp;-&#62;&nbsp;d/(dphi),&nbsp;d!=1&nbsp;-&#62;&nbsp;d/(dtheta)</p>
 </html>"));
         end firstPartialDerivativesWrapper;
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>Package of the first partial derivatives of the surface functions.</p>
 </html>"));
       end FirstPartialDerivatives;
@@ -2894,7 +2894,7 @@ printing and shipping costs may be recovered.</p>
             y[3,1]:=0;
         end if;
 
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;second&nbsp;partial&nbsp;derivatives&nbsp;of&nbsp;an&nbsp;ellipsoid&nbsp;surface&nbsp;function. The&nbsp;combination&nbsp;of&nbsp;the&nbsp;inputs&nbsp;d&nbsp;and&nbsp;e&nbsp;specifies&nbsp;which&nbsp;second&nbsp;derivative&nbsp;is&nbsp;used.</p>
 <p><br>d=e=1&nbsp;provides&nbsp;the&nbsp;second&nbsp;derivative&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;angle&nbsp;(phi)&nbsp;twice.</p>
 <p>d=e=2&nbsp;provides&nbsp;the&nbsp;second&nbsp;derivative&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;azimuthal&nbsp;angle&nbsp;(theta)&nbsp;twice.</p>
@@ -2926,7 +2926,7 @@ printing and shipping costs may be recovered.</p>
             y[3,1]:=0;
         end if;
 
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;second&nbsp;partial&nbsp;derivatives&nbsp;of&nbsp;an&nbsp;ellipsoid&nbsp;surface&nbsp;function. The&nbsp;combination&nbsp;of&nbsp;the&nbsp;inputs&nbsp;d&nbsp;and&nbsp;e&nbsp;specifies&nbsp;which&nbsp;second&nbsp;derivative&nbsp;is&nbsp;used.</p>
 <p><br>d=e=1&nbsp;provides&nbsp;the&nbsp;second&nbsp;derivative&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;angle&nbsp;(phi)&nbsp;twice.</p>
 <p>d=e=2&nbsp;provides&nbsp;the&nbsp;second&nbsp;derivative&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;azimuthal&nbsp;angle&nbsp;(theta)&nbsp;twice.</p>
@@ -2958,7 +2958,7 @@ printing and shipping costs may be recovered.</p>
             y[3,1]:=-sin(theta)*(h[2]*cos(phi) - h[3] + 2*h[3]*cos(phi)^2);//-(h[2]*cos(phi)+h[3]*cos(2*phi))*sin(theta);
         end if;
 
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;second&nbsp;partial&nbsp;derivatives&nbsp;of&nbsp;an&nbsp;ellipsoid&nbsp;surface&nbsp;function. The&nbsp;combination&nbsp;of&nbsp;the&nbsp;inputs&nbsp;d&nbsp;and&nbsp;e&nbsp;specifies&nbsp;which&nbsp;second&nbsp;derivative&nbsp;is&nbsp;used.</p>
 <p><br>d=e=1&nbsp;provides&nbsp;the&nbsp;second&nbsp;derivative&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;angle&nbsp;(phi)&nbsp;twice.</p>
 <p>d=e=2&nbsp;provides&nbsp;the&nbsp;second&nbsp;derivative&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;azimuthal&nbsp;angle&nbsp;(theta)&nbsp;twice.</p>
@@ -3017,7 +3017,7 @@ printing and shipping costs may be recovered.</p>
           end if;
            assert(surfaceSpecified,"Second partial derivative of parametric surface is not specified.");
 
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;is a wrapper function, which calculates&nbsp;the&nbsp;second&nbsp;partial&nbsp;derivatives&nbsp;for the specified&nbsp;surface&nbsp;functions (in the body coordinate system). The&nbsp;combination&nbsp;of&nbsp;the&nbsp;inputs&nbsp;d&nbsp;and&nbsp;e&nbsp;specifies&nbsp;which&nbsp;second&nbsp;derivative&nbsp;is&nbsp;used. </p>
 <p><br>d=e=1&nbsp;provides&nbsp;the&nbsp;second&nbsp;derivative&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;polar&nbsp;angle&nbsp;(phi)&nbsp;twice.</p>
 <p>d=e=2&nbsp;provides&nbsp;the&nbsp;second&nbsp;derivative&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;azimuthal&nbsp;angle&nbsp;(theta)&nbsp;twice.</p>
@@ -3025,7 +3025,7 @@ printing and shipping costs may be recovered.</p>
 <p><br>Because&nbsp;the&nbsp;surface&nbsp;of&nbsp;an&nbsp;ellipsoid&nbsp;is&nbsp;a&nbsp;continuosly&nbsp;differentiable&nbsp;function Schwartz&apos;s&nbsp;theorem&nbsp;says&nbsp;that&nbsp;the&nbsp;order&nbsp;of&nbsp;the&nbsp;second&nbsp;derivatives&nbsp;doesn&apos;t&nbsp;matter.</p>
 </html>"));
         end secondPartialDerivativesWrapper;
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>Package of the second partial derivatives of the surface functions.</p>
 </html>"));
       end SecondPartialDerivatives;
@@ -3157,7 +3157,7 @@ printing and shipping costs may be recovered.</p>
                     Z[i,j] := temp[3,1];
                 end for;
             end for;
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>
 Function <b>torus</b> computes the X,Y,Z arrays to visualize a torus
 with model <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.Torus\">Torus</a>.
@@ -3179,7 +3179,7 @@ settings:
         end SurfaceCharacteristics;
       end Visualizers;
 
-      annotation (Documentation(info="<!DOCTYPE html><html>
+      annotation (Documentation(info="<html>
 <p>Package of functions to describe a parametric surface.</p>
 </html>"));
     end ParametricSurfaceDefinition;
@@ -3194,7 +3194,7 @@ settings:
           choice="circular" "\"circular\"",
           choice="ellipsoid" "\"ellipsoid\"",
           choice="egg" "\"egg\""),
-        Documentation(info="<!DOCTYPE html><html>
+        Documentation(info="<html>
 <p>Type <b>ContactShapeType</b> is used to define the shape of the
 contact surface object as parameter String.</p>
 </html>"));
@@ -3206,12 +3206,12 @@ contact surface object as parameter String.</p>
           choice="cylindrical" "\"cylindrical\"",
           choice="ellipsoid" "\"ellipsoid\"",
           choice="egg" "\"egg\""),
-        Documentation(info="<!DOCTYPE html><html>
+        Documentation(info="<html>
 <p>Type <b>ConvexContactShapeType</b> is used to define the shape of the
 convex contact surface object as parameter String.</p>
 </html>"));
     end Types;
-   annotation(preferredView="info", Documentation(info="<!DOCTYPE html><html>
+   annotation(preferredView="info", Documentation(info="<html>
 <p>This package includes the defined contact surfaces.</p>
 </html>"));
   end ContactSurfaces;
@@ -3297,7 +3297,7 @@ convex contact surface object as parameter String.</p>
               fillPattern=FillPattern.Sphere,
               fillColor={0,127,255})}),
         Documentation(
-          info="<!DOCTYPE html><html>
+          info="<html>
 <p>This model defines a spherical body with a contact surface.</p>
 </html>"));
     end SphericalContactBody;
@@ -3483,7 +3483,7 @@ convex contact surface object as parameter String.</p>
               fillColor={0,0,143},
               fillPattern=FillPattern.Solid,
               pattern=LinePattern.None)}),
-        Documentation(info="<!DOCTYPE html><html>
+        Documentation(info="<html>
 <p>This model defines a cylindrical body that can collide with every surface. Contact surfaces can be enabled separately. The enumeration corresponds to the chosen directions and dimensions and is displayed in the Figure.</p>
 <p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/cylindricalContactBody.png\"/></p>
 </html>"));
@@ -3788,7 +3788,7 @@ convex contact surface object as parameter String.</p>
               fillColor={0,0,255},
               fillPattern=FillPattern.Solid)}),
         Documentation(
-          info="<!DOCTYPE html><html>
+          info="<html>
 <p>This model defines a cuboid body that can collide with every surface. Contact surfaces can be enabled separately. The enumeration corresponds to the chosen directions and dimensions and is displayed in the Figure.</p>
 <p><br/><br/><img src=\"modelica://IdealizedContact/Resources/Images/cuboidContactBody.png\"/></p>
 </html>"));
@@ -3962,7 +3962,7 @@ convex contact surface object as parameter String.</p>
               fillPattern=FillPattern.Solid,
               textString="%name")}));
     end ConvexContactBody;
-   annotation(preferredView="info", Documentation(info="<!DOCTYPE html><html>
+   annotation(preferredView="info", Documentation(info="<html>
 <p>This package includes predefined elementary bodies with contact surfaces.</p>
 </html>"));
   end ElementaryContactBodies;
@@ -4127,7 +4127,7 @@ convex contact surface object as parameter String.</p>
               fillColor={255,255,255},
               fillPattern=FillPattern.Solid,
               textString="1")}),
-        Documentation(info="<!DOCTYPE html><html>
+        Documentation(info="<html>
 <p>Depending on the shape, we use 1 (sphere), 2 (cylinder) or 4 (plane) points to describe the surfaces of the contact partners. These constitute potential contact points. For each of them the collision detection is performed. For this purpose, analytic solutions for simple geometries are provided in the library. As the contact region may alter with the moving bodies, the contact points will also move on the defined surface.</p>
 <p>Then, the contact block calculates the appropriate force depending on the combination of surfaces. So, using it the respective combination of contact surface has to be chosen at first by setting the parameter contactDefinition. This will use the Modelica replaceable statement to define the appropriate components of the contact block. Then connect the contact interfaces of the two contact surfaces to the respective port of the contact block (first&nbsp;surface&nbsp;mentioned&nbsp;must&nbsp;be&nbsp;connected&nbsp;to&nbsp;port&nbsp;1).</p>
 <p>In the case of a collision of the two connected surface (the contact condition holds for at least one contact point) a three-dimensional contact force is applied. It consists of both the normal force and the tangential friction. The respective directions can be obtained by means of the local coordinate systems in the contact points. As compared to more complex models, the continuous surface layer is replaced by a nonlinear spring/damper element. Consequently, the normal force Fn&nbsp;is determined by means of the penetration p&nbsp;and the penetration velocity. A continuous contact force model with hysteresis damping according to [1] is implemented. Nevertheless, choosing n1=1 and n=0&nbsp;one can get the linear Kelvin-Voigt model, where the coefficients are the spring and damping constant. Choosing n1=n2&nbsp;one will get the formulation according to [2].</p>
@@ -4197,7 +4197,7 @@ convex contact surface object as parameter String.</p>
     plotArray(x=0:v_e1/100:3*v_e2,y=IdealizedContact.ContactBlock.plotFrictionCurve.frictionCoefficient(gamma1, gamma2, gamma3, gamma4, gamma5, gamma6, 0:v_e1/100:3*v_e2),legend="Stribeck curve approximation",id=   0);
     Modelica.Utilities.Streams.print("gamma1="+String(gamma1)+"\n"+"gamma2="+String(gamma2)+"\n"+"gamma3="+String(gamma3)+"\n"+"gamma4="+String(gamma4)+"\n"+"gamma5="+String(gamma5)+"\n"+"gamma6="+String(gamma6));
 
-      annotation (preferedView="info",interactive=true,Documentation(info="<!DOCTYPE html><html>
+      annotation (preferedView="info",interactive=true,Documentation(info="<html>
 <p>This function plots the Stribeck curve approximation which is implemented in the contact block.</p>
 <p>In order to calculate the friction forces without further discontinuous events, which would decrease the simulation speed and impede controller design, we use the continuously differentiable friction model of Makkar et al. [3]. They introduced the following function of the relative velocity&nbsp;to approximate the friction coefficient&nbsp;of the characteristic Stribeck curve.</p>
 <p><img src=\"modelica://IdealizedContact/Resources/Images/equations/mue.jpg\"/></p>
@@ -7464,7 +7464,7 @@ convex contact surface object as parameter String.</p>
           annotation (Diagram(coordinateSystem(extent={{-100,-180},{180,100}}, preserveAspectRatio=false),
                               graphics), Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
                     -180},{180,100}}),                                                                                     graphics),
-              Documentation(info="<!DOCTYPE html><html>
+              Documentation(info="<html>
 <p>This&nbsp;model&nbsp;routes&nbsp;the&nbsp;necessary&nbsp;signals&nbsp;into&nbsp;one&nbsp;block&nbsp;to&nbsp;call&nbsp;the&nbsp;search&nbsp;function.</p>
 <p>It&nbsp;also&nbsp;generates&nbsp;an&nbsp;output&nbsp;value&nbsp;for&nbsp;the&nbsp;distance&nbsp;of&nbsp;the&nbsp;anticipated&nbsp;contact&nbsp;points,</p>
 <p>as&nbsp;well&nbsp;as&nbsp;the&nbsp;continuous&nbsp;basis&nbsp;transformation&nbsp;matrix&nbsp;which&nbsp;of&nbsp;course&nbsp;is&nbsp;an&nbsp;orthonormal</p>
@@ -7514,7 +7514,7 @@ convex contact surface object as parameter String.</p>
           out[2]:=y[2, 1];
           out[3]:=y[3, 1];
           z:=sqrt(out[1]^2+out[2]^2+out[3]^2);
-            annotation (            Documentation(info="<!DOCTYPE html><html>
+            annotation (            Documentation(info="<html>
 <p>This&nbsp;model&nbsp;calculates&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;the&nbsp;contact&nbsp;point&nbsp;of&nbsp;the&nbsp;first convex with&nbsp;respect&nbsp;to&nbsp;the&nbsp;body&nbsp;coordinate&nbsp;system.</p>
 <p>The&nbsp;outputs&nbsp;are&nbsp;the&nbsp;vector&nbsp;itself&nbsp;and&nbsp;it&apos;s&nbsp;length&nbsp;so&nbsp;that the&nbsp;prismatic&nbsp;block&nbsp;can&nbsp;be&nbsp;used.</p>
 </html>"));
@@ -7626,7 +7626,7 @@ convex contact surface object as parameter String.</p>
             vc2:=der(rc2);
             vrel:=vc2-vc1+vu_2 - vu_1;
 
-            annotation (              Documentation(info="<!DOCTYPE html><html>
+            annotation (              Documentation(info="<html>
 <p>This&nbsp;model&nbsp;calculates&nbsp;the&nbsp;relative&nbsp;velocity&nbsp;between&nbsp;the&nbsp;anticipated&nbsp;contact&nbsp;points with&nbsp;respect&nbsp;to&nbsp;the&nbsp;contact&nbsp;point&nbsp;on&nbsp;the&nbsp;second&nbsp;ellipsoid&nbsp;(v2-v1).</p>
 </html>"));
           end RelativeVelocities;
@@ -7745,7 +7745,7 @@ convex contact surface object as parameter String.</p>
           end if;
           y:=xn;
 
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calls&nbsp;the&nbsp;Newton&nbsp;solver&nbsp;and&nbsp;tries&nbsp;it&nbsp;with&nbsp;different&nbsp;starting&nbsp;values&nbsp;until a&nbsp;real&nbsp;minimum&nbsp;is&nbsp;found&nbsp;(check of positive definite hessian).</p>
 <p>If&nbsp;a&nbsp;minimum&nbsp;is&nbsp;found&nbsp;the&nbsp;results&nbsp;are&nbsp;transformed&nbsp;into&nbsp;the&nbsp;range&nbsp;of&nbsp;0&nbsp;and&nbsp;2*pi.</p>
 </html>"));
@@ -7818,7 +7818,7 @@ convex contact surface object as parameter String.</p>
               end while;
               y:=xn;
 
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>Performs multivariable&nbsp;Newton&nbsp;Algorithm</p>
 </html>"));
           end newtonAlgorithm;
@@ -7853,7 +7853,7 @@ convex contact surface object as parameter String.</p>
               theta2);
           y:=rc2 - rc1 + A2*hv2 - A1*hv1;
 
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;components&nbsp;of&nbsp;the&nbsp;difference&nbsp;vector&nbsp;between&nbsp;the&nbsp;anticipated&nbsp;contact&nbsp;points&nbsp;with respect&nbsp;to&nbsp;the&nbsp;inertial&nbsp;frame&nbsp;of&nbsp;reference. The&nbsp;coordinates&nbsp;of&nbsp;body&nbsp;coordinate&nbsp;frames&nbsp;are&nbsp;given&nbsp;in&nbsp;the&nbsp;inertial&nbsp;frame&nbsp;of&nbsp;reference. The&nbsp;coordinates&nbsp;calculated&nbsp;with&nbsp;the&nbsp;r0-function&nbsp;have&nbsp;to&nbsp;be&nbsp;transformed&nbsp;into&nbsp;the&nbsp;inertial&nbsp;frame&nbsp;of&nbsp;reference, before&nbsp;they&nbsp;can&nbsp;be&nbsp;compared&nbsp;with&nbsp;the&nbsp;body-frame&nbsp;coordinates.</p>
 </html>"));
           end differenceVector;
@@ -7931,7 +7931,7 @@ convex contact surface object as parameter String.</p>
               y[4,1]:=g[1, 1];
               y:=2*y;
 
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;gradient&nbsp;of&nbsp;the&nbsp;difference&nbsp;function&nbsp;which&nbsp;is&nbsp;a&nbsp;function&nbsp;of&nbsp;the&nbsp;4&nbsp;variables&nbsp;describing the&nbsp;respective&nbsp;surfaces. This&nbsp;gradient&nbsp;is&nbsp;put&nbsp;together&nbsp;from&nbsp;the&nbsp;difference&nbsp;functions&nbsp;and&nbsp;the&nbsp;first derivatives&nbsp;through&nbsp;matrix&nbsp;algebra,&nbsp;without&nbsp;calculating&nbsp;each&nbsp;component&nbsp;individually.</p>
 </html>"));
           end gradient;
@@ -8050,7 +8050,7 @@ convex contact surface object as parameter String.</p>
           else
             y:=hv;
           end if;
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;hessian&nbsp;matrix&nbsp;of&nbsp;the&nbsp;4-variable-difference&nbsp;function.&nbsp;Like&nbsp;in&nbsp;the&nbsp;case&nbsp;of&nbsp;the&nbsp;gradient, the&nbsp;hessian&nbsp;matrix&nbsp;is&nbsp;put&nbsp;together&nbsp;from&nbsp;the&nbsp;difference&nbsp;vector-function&nbsp;itself&nbsp;and&nbsp;the&nbsp;first&nbsp;and&nbsp;second&nbsp;order&nbsp;derivatives through&nbsp;matrix&nbsp;algebra.&nbsp;So, it is not necessary&nbsp;to calculate each&nbsp;of&nbsp;the&nbsp;16&nbsp;components&nbsp;individually.</p>
 </html>"));
           end hessian;
@@ -8083,7 +8083,7 @@ convex contact surface object as parameter String.</p>
               ds:=transpose(vecd)*vecd;
               d:=(ds[1, 1])^0.5;
 
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>Calculates scalar&nbsp;distance&nbsp;value</p>
 </html>"));
           end distance;
@@ -8137,7 +8137,7 @@ convex contact surface object as parameter String.</p>
                 y:=false;
               end if;
 
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;checks&nbsp;whether the hessian matrix is&nbsp;positive&nbsp;definite. Because&nbsp;4x4&nbsp;still&nbsp;is&nbsp;a&nbsp;small&nbsp;matrix&nbsp;dimension,&nbsp;the&nbsp;positive-definite-check&nbsp;is done&nbsp;through&nbsp;checking&nbsp;the&nbsp;subdeterminants&nbsp;of&nbsp;the&nbsp;hessian&nbsp;matrix.</p>
 </html>"));
           end checkPositiveDefiniteHessian;
@@ -8148,7 +8148,7 @@ convex contact surface object as parameter String.</p>
           output Real y;
           algorithm
           y:=(x[1,1]^2 + x[2,1]^2 + x[3,1]^2 + x[4,1]^2)^0.5;
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>Calculates the absolute&nbsp;value&nbsp;of&nbsp;a&nbsp;4-valued&nbsp;vector</p>
 </html>"));
           end absoluteValue;
@@ -8212,7 +8212,7 @@ convex contact surface object as parameter String.</p>
           zn:=z;
           diff:=[xn,yn,zn];
 
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;generates&nbsp;the&nbsp;normal&nbsp;basis&nbsp;in&nbsp;the&nbsp;anticipated&nbsp;contact&nbsp;points so&nbsp;that&nbsp;the&nbsp;forces&nbsp;can&nbsp;be&nbsp;applied&nbsp;correctly.</p>
 </html>"));
           end normalBasis;
@@ -8225,7 +8225,7 @@ convex contact surface object as parameter String.</p>
           c[1,1]:=a[2, 1]*b[3, 1] - a[3, 1]*b[2, 1];
           c[2,1]:=-(a[1, 1]*b[3, 1] - a[3, 1]*b[1, 1]);
           c[3,1]:=a[1, 1]*b[2, 1] - a[2, 1]*b[1, 1];
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>Cross&nbsp;product&nbsp;of&nbsp;vectors&nbsp;given&nbsp;in&nbsp;3x1 matrix&nbsp;variables</p>
 </html>"));
           end crossproduct;
@@ -8244,12 +8244,12 @@ convex contact surface object as parameter String.</p>
 
           abs:=(c[1, 1]^2 + c[2, 1]^2 + c[3, 1]^2)^0.5;
           c:=c/abs;
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>Normalized&nbsp;cross&nbsp;product&nbsp;of&nbsp;vectors&nbsp;given&nbsp;in&nbsp;3x1-Matrix&nbsp;variables</p>
 </html>"));
           end normalizedCrossproduct;
 
-         annotation(preferredView="info", Documentation(info="<!DOCTYPE html><html>
+         annotation(preferredView="info", Documentation(info="<html>
 <p>Package of functions and blocks to calculate contact points on two convex surfaces.</p>
 </html>"));
         end CalculationsConvexSurfaces;
@@ -8289,7 +8289,7 @@ convex contact surface object as parameter String.</p>
               x0,
               a,
               r);
-            annotation ( Documentation(info="<!DOCTYPE html><html>
+            annotation ( Documentation(info="<html>
 <p>This&nbsp;Model&nbsp;is&nbsp;used&nbsp;to&nbsp;route&nbsp;the&nbsp;input&nbsp;values&nbsp;into&nbsp;a&nbsp;single&nbsp;model.&nbsp;The&nbsp;essence&nbsp;of&nbsp;this&nbsp;model&nbsp;is&nbsp;the&nbsp;call of&nbsp;the&nbsp;search&nbsp;function.</p>
 </html>"));
           end FindMinimum;
@@ -8328,7 +8328,7 @@ convex contact surface object as parameter String.</p>
             z:=sqrt(out[1]^2 + out[2]^2 + out[3]^2);
 
             annotation (                     smoothOrder=20,
-              Documentation(info="<!DOCTYPE html><html>
+              Documentation(info="<html>
 <p>This&nbsp;model&nbsp;computes&nbsp;the&nbsp;coordinates&nbsp;of&nbsp;the&nbsp;contact&nbsp;point&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;body&nbsp;frame.</p>
 </html>"));
           end R0_1;
@@ -8381,7 +8381,7 @@ convex contact surface object as parameter String.</p>
           frame_a1.f = zeros(3);
           frame_a1.t = zeros(3);
 
-            annotation ( Documentation(info="<!DOCTYPE html><html>
+            annotation ( Documentation(info="<html>
 <p>This&nbsp;model&nbsp;computes&nbsp;the&nbsp;components&nbsp;of&nbsp;the&nbsp;anticipated&nbsp;contact&nbsp;point&nbsp;on&nbsp;the&nbsp;plane&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;plane&nbsp;body&nbsp;frame.</p>
 <p>The&nbsp;components&nbsp;are&nbsp;the&nbsp;difference&nbsp;of&nbsp;the&nbsp;anticipated&nbsp;contact&nbsp;point&nbsp;on&nbsp;the&nbsp;ellipsoid&nbsp;and&nbsp;the&nbsp;origin&nbsp;of&nbsp;the&nbsp;plane.</p>
 <p>These&nbsp;components&nbsp;have&nbsp;to&nbsp;be&nbsp;transformed&nbsp;into&nbsp;the&nbsp;system&nbsp;of&nbsp;the&nbsp;plane&nbsp;and&nbsp;the&nbsp;direction&nbsp;perpendicular&nbsp;to&nbsp;the&nbsp;plane is&nbsp;set&nbsp;to&nbsp;zero.</p>
@@ -8487,7 +8487,7 @@ convex contact surface object as parameter String.</p>
             vrel[2]:=vrelh[2, 1];
             vrel[3]:=vrelh[3, 1];
 
-            annotation ( Documentation(info="<!DOCTYPE html><html><p>This model calculates the relative velocity between the anticipated contact points.</p>
+            annotation ( Documentation(info="<html><p>This model calculates the relative velocity between the anticipated contact points.</p>
   <p>The formula used can be found in the full documentation. The velocity of an arbitrary point on an arbitrarily moving rigid body is the composition of the velocity of the origin of the coordinate system associated with the rigid body and the peripheral velocity of the point in question.</p></html>"));
           end RelativeVelocities;
 
@@ -8528,7 +8528,7 @@ convex contact surface object as parameter String.</p>
              frame_bcs1.t = zeros(3);
              frame_bcs2.f = zeros(3);
              frame_bcs2.t = zeros(3);
-            annotation ( Documentation(info="<!DOCTYPE html><html>
+            annotation ( Documentation(info="<html>
 <p>This&nbsp;model&nbsp;computes&nbsp;the&nbsp;components&nbsp;of&nbsp;the&nbsp;transformation&nbsp;matrix&nbsp;between&nbsp;the&nbsp;orientations&nbsp;of&nbsp;the&nbsp;ellipsoid&nbsp;and&nbsp;the&nbsp;plane.</p>
 </html>"));
           end TransformationMatrixBetweenBodyFrames;
@@ -8561,7 +8561,7 @@ convex contact surface object as parameter String.</p>
           y2[3]=u2[11]
             "quick and dirty way to get the model runnig with the normal surface definition.";
           y2[2]=u2[12];
-            annotation ( Documentation(info="<!DOCTYPE html><html>
+            annotation ( Documentation(info="<html>
 <p>This&nbsp;model&nbsp;serves&nbsp;as&nbsp;an&nbsp;interface&nbsp;between&nbsp;the&nbsp;parameter&nbsp;routing&nbsp;that&nbsp;is&nbsp;used&nbsp;in&nbsp;general&nbsp;in&nbsp;these&nbsp;coupling&nbsp;models and&nbsp;the&nbsp;routing&nbsp;that&nbsp;is&nbsp;used&nbsp;in&nbsp;this&nbsp;internal&nbsp;structure.</p>
 </html>"));
           end splitparam;
@@ -8602,7 +8602,7 @@ convex contact surface object as parameter String.</p>
            //f:=a_21*r_1*cos(x)*sin(y)+a_22*r_2*sin(x)*sin(y)+a_23*r_3*cos(y);
             f:=a_21*f_[1,1] + a_22*f_[2, 1] + a_23*f_[3, 1];
 
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>This&nbsp;scalar&nbsp;function&nbsp;computes&nbsp;the&nbsp;component&nbsp;of&nbsp;the&nbsp;ellipsoid&nbsp;surface&nbsp;in&nbsp;the&nbsp;direction&nbsp;perpendicular&nbsp;to&nbsp;the&nbsp;plane. The&nbsp;input&nbsp;values&nbsp;are&nbsp;the&nbsp;parameters&nbsp;which&nbsp;determine&nbsp;the&nbsp;points&nbsp;on&nbsp;the&nbsp;surface&nbsp;of&nbsp;the&nbsp;ellipsoid, the&nbsp;respective&nbsp;components&nbsp;of&nbsp;the&nbsp;transformation&nbsp;matrix&nbsp;and&nbsp;the&nbsp;semiaxis&nbsp;parameters&nbsp;of&nbsp;the&nbsp;ellipsoid.</p>
 </html>"));
           end f;
@@ -8655,7 +8655,7 @@ convex contact surface object as parameter String.</p>
               // gradient[2,1]:=a_21*h_1*cos(phi)*cos(theta) + a_22*h_2*sin(phi)*cos(theta) - a_23*h_3*sin(theta);
             gradient[1,1]:=a_21*df_1[1,1] + a_22*df_1[2,1] + a_23*df_1[3,1];
             gradient[2,1]:=a_21*df_2[1,1] + a_22*df_2[2,1] + a_23*df_2[3,1];
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;computes&nbsp;the&nbsp;components&nbsp;of&nbsp;the&nbsp;gradient&nbsp;of&nbsp;the&nbsp;function&nbsp;f. The&nbsp;input&nbsp;values&nbsp;are&nbsp;the&nbsp;parameters&nbsp;which&nbsp;determine&nbsp;the&nbsp;points&nbsp;on&nbsp;the&nbsp;surface&nbsp;of&nbsp;the&nbsp;ellipsoid, the&nbsp;respective&nbsp;components&nbsp;of&nbsp;the&nbsp;transformation&nbsp;matrix&nbsp;and&nbsp;the&nbsp;semiaxis&nbsp;parameters&nbsp;of&nbsp;the&nbsp;ellipsoid.</p>
 </html>"));
           end gradient;
@@ -8732,7 +8732,7 @@ convex contact surface object as parameter String.</p>
             else
               hessian:=hessian_;
             end if;
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;computes&nbsp;the&nbsp;components&nbsp;of&nbsp;the&nbsp;hessian&nbsp;matrix&nbsp;of&nbsp;the&nbsp;function&nbsp;f&nbsp;and&nbsp;arranges&nbsp;them&nbsp;into&nbsp;a&nbsp;[2x2]-matrix&nbsp;representation. The&nbsp;input&nbsp;values&nbsp;are&nbsp;the&nbsp;parameters&nbsp;which&nbsp;determine&nbsp;the&nbsp;points&nbsp;on&nbsp;the&nbsp;surface&nbsp;of&nbsp;the&nbsp;ellipsoid, the&nbsp;respective&nbsp;components&nbsp;of&nbsp;the&nbsp;transformation&nbsp;matrix&nbsp;and&nbsp;the&nbsp;semiaxis&nbsp;parameters&nbsp;of&nbsp;the&nbsp;ellipsoid.</p>
 </html>"));
           end hessian;
@@ -8781,7 +8781,7 @@ convex contact surface object as parameter String.</p>
 
           y:=xn;
 
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>This search&nbsp;function&nbsp;to&nbsp;determine&nbsp;whether&nbsp;the&nbsp;solutions&nbsp;found&nbsp;by&nbsp;the&nbsp;Newton&nbsp;algorithm&nbsp;are&nbsp;in&nbsp;fact&nbsp;minima.</p>
 </html>"));
           end searchMinimum;
@@ -8836,7 +8836,7 @@ convex contact surface object as parameter String.</p>
                xn:=xn1;
              end while;
             min:=xn;
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>Performs Newton&apos;s Algorithm to get a solution to the minimization problem. The&nbsp;input&nbsp;quantities&nbsp;are&nbsp;a&nbsp;starting&nbsp;value&nbsp;vec,&nbsp;the&nbsp;respective&nbsp;components&nbsp;of&nbsp;the&nbsp;transformation&nbsp;matrix&nbsp;between&nbsp;the&nbsp;orientations&nbsp;of&nbsp;the&nbsp;plane&nbsp;and&nbsp;the&nbsp;ellipsoid&nbsp;and&nbsp;the&nbsp;semiaxis&nbsp;parameters&nbsp;of&nbsp;the&nbsp;ellipsoid. The&nbsp;output&nbsp;quantity&nbsp;is&nbsp;a&nbsp;solution&nbsp;to&nbsp;the&nbsp;given&nbsp;multivariable&nbsp;equation.</p>
 </html>"));
           end newtonAlgorithm;
@@ -8862,7 +8862,7 @@ convex contact surface object as parameter String.</p>
             else
               def:=false;
             end if;
-          annotation (Documentation(info="<!DOCTYPE html><html>
+          annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;checks&nbsp;whether&nbsp;the&nbsp;hessian&nbsp;matrix&nbsp;of&nbsp;the&nbsp;function&nbsp;f&nbsp;is&nbsp;positive&nbsp;definite.</p>
 </html>"));
           end checkPositiveDefiniteHessian;
@@ -8894,11 +8894,11 @@ convex contact surface object as parameter String.</p>
 
             end if;
 
-            annotation (Documentation(info="<!DOCTYPE html><html>
+            annotation (Documentation(info="<html>
 <p>This&nbsp;function&nbsp;limits&nbsp;the&nbsp;contact&nbsp;point&nbsp;on&nbsp;the&nbsp;plane&nbsp;to&nbsp;the&nbsp;plane dimensions.</p>
 </html>"));
           end limiter;
-         annotation(preferredView="info", Documentation(info="<!DOCTYPE html><html>
+         annotation(preferredView="info", Documentation(info="<html>
 <p>Package of functions and blocks to calculate contact points on a convex and a plane surface.</p>
 </html>"));
         end CalculationsConvexToPlane;
@@ -9047,7 +9047,7 @@ convex contact surface object as parameter String.</p>
                 extent={{-82,8},{82,-12}},
                 lineColor={0,0,255},
               textString="%name")}),
-          Documentation(info="<!DOCTYPE html><html>
+          Documentation(info="<html>
 </html>"));
       end CylinderToRectangle;
 
@@ -9625,7 +9625,7 @@ convex contact surface object as parameter String.</p>
                     {100,-100}}, lineColor={255,128,0}), Text(
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
-              textString="%name")}),          Documentation(info="<!DOCTYPE html><html>
+              textString="%name")}),          Documentation(info="<html>
 <p>The collision of two cylinders can lead to linear or punctiform contact regions. The calculation for these two cases is currently separated in two blocks. This attempts to integrate both.</p>
 </html>"));
       end CylinderToCylinderCombined;
@@ -12705,7 +12705,7 @@ convex contact surface object as parameter String.</p>
                 extent={{-80,10},{84,-10}},
                 lineColor={0,0,255},
               textString="%name")}),
-          Documentation(info="<!DOCTYPE html><html>
+          Documentation(info="<html>
 </html>"));
       end RectangleToRectangle;
 
@@ -14197,7 +14197,7 @@ convex contact surface object as parameter String.</p>
             fillColor={255,128,0},
             fillPattern=FillPattern.Solid)}),
               preferredView="info",
-      Documentation(info="<!DOCTYPE html><html>
+      Documentation(info="<html>
 <p>This package includes the contact block and its components.</p>
 </html>"));
   end ContactBlock;
@@ -14218,7 +14218,7 @@ convex contact surface object as parameter String.</p>
         angle:=smooth(2,if Modelica.Math.Vectors.norm(vector1)>0 then Modelica.Math.acos((vector1*vector2)/(Modelica.Math.Vectors.norm(vector1)*Modelica.Math.Vectors.norm(vector2))) else pi/2);
         //angle:=Modelica.Math.acos((vector1*vector2)/(Modelica.Math.Vectors.norm(vector1)*Modelica.Math.Vectors.norm(vector2)));
 
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>Function to calculate the angle between two given vectors. Vector1 and vector2 are three-dimensional Euclidean vectors and should not be zero vector.</p>
 </html>"));
       end angleBetweenTwoVectors;
@@ -14233,7 +14233,7 @@ convex contact surface object as parameter String.</p>
       algorithm
        vector_out :=(vector_in*vector_u)*vector_u + (vector_in*vector_v)*vector_v;
 
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>Function to calculate the orthogonal projection of vector_in on a plane, which is defined by vector_u and vector_v. The inputs vector_u and vector_v can be perpendicular but cannot be parallel.</p>
 </html>"));
       end orthogonalProjection;
@@ -14249,7 +14249,7 @@ convex contact surface object as parameter String.</p>
         c:=smooth(2, abs(a*abs(cos(beta*sign(beta-pi/2))) - 0.5*sqrt(abs((2*a*abs(cos(beta*sign(beta-pi/2))))^2 - 4*(a^2 - b^2)))));
         //beta*sign(beta-pi/2) avoid singularity at beta=pi/2
 
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>Using the cosine rules, the length <i><b>c </b></i>of the side of a triangle is calculated. The two sides <i><b>a</b></i> and <i><b>b</b></i> and the angle beta between them are given.</p>
 </html>"));
       end cosineRules;
@@ -14274,7 +14274,7 @@ convex contact surface object as parameter String.</p>
         n:=cross(s, w);
         t[1]:=(cross((d - c), w)*n)/(n*n) "intersection line 1";
         t[2]:=(cross((d - c), s)*n)/(n*n) "intersection line 2";
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <p>Function to locate the intersection points on two lines in space.</p>
 </html>"));
       end intersectionOfTwoLines;
@@ -14289,7 +14289,7 @@ convex contact surface object as parameter String.</p>
 
       algorithm
         result :=smooth(2, if Modelica.Math.Vectors.length(v) >= eps then v/Modelica.Math.Vectors.length(v) else zeros(size(v, 1)));
-        annotation (Inline=true, Documentation(info="<!DOCTYPE html><html>
+        annotation (Inline=true, Documentation(info="<html>
 <p>The function returns the <b>unit vector</b> <code>v/length(v)</code> of vector v. If length(v) is close to zero (more precisely, if length(v) &#60; eps), a zero vector is returned to avoid division by zero. The constant eps is set to 100*Modelica.Constants.eps. The function is based on <a href=\"Modelica://Modelica.Math.Vectors.normalize\">Modelica.Math.Vectors.normalize</a>.</p>
 <h4>See also</h4>
 <p><a href=\"Modelica://Modelica.Math.Vectors.length\">Modelica.Math.Vectors.length</a></p>
@@ -14308,7 +14308,7 @@ convex contact surface object as parameter String.</p>
       c[2,1]:=-(a[1, 1]*b[3, 1] - a[3, 1]*b[1, 1]);
       c[3,1]:=a[1, 1]*b[2, 1] - a[2, 1]*b[1, 1];
 
-        annotation (Documentation(info="<!DOCTYPE html><html>
+        annotation (Documentation(info="<html>
 <pre><font style=\"color: #006400; \">This&nbsp;function&nbsp;calculates&nbsp;the&nbsp;cross&nbsp;product&nbsp;between&nbsp;two&nbsp;vectors&nbsp;that are&nbsp;given&nbsp;in&nbsp;a&nbsp;3x1-Matrix&nbsp;form&nbsp;and&nbsp;not&nbsp;in an&nbsp;array&nbsp;of&nbsp;3.</font></pre>
 </html>"));
       end crossProductMatrix;
@@ -14335,7 +14335,7 @@ convex contact surface object as parameter String.</p>
        angle=smooth(2, if norm1*norm2>0.0001 then Modelica.Math.acos((vector1*vector2)/(norm1*norm2)) else t);
         //angle=  Modelica.Math.acos((vector1*vector2));
 
-        annotation ( Documentation(info="<!DOCTYPE html><html>
+        annotation ( Documentation(info="<html>
 <p>Block to calculate the angle between two given vectors. The vector1 and vector2 are three-dimensional Euclidean vector and should not be zero vector.</p>
 </html>"));
       end angleBetweenTwoVectorsBlock;
@@ -14359,7 +14359,7 @@ convex contact surface object as parameter String.</p>
           c =smooth(2, abs(a*abs(cos(beta*sign(beta-pi/2))) - 0.5*sqrt(abs((2*a*abs(cos(beta*sign(beta-pi/2))))^2 - 4*(a^2 - b^2)))));
           //c =smooth(2, abs(a*abs(cos(beta*sign(beta-pi/2))) - 0.5*sqrt(abs((2*a*abs(cos(beta*sign(beta-pi/2))))^2 - 4*(a^2 - b^2)))));
           //beta*sign(beta-pi/2) singularitätspunkt bei beta=pi/2 vermeiden
-        annotation ( Documentation(info="<!DOCTYPE html><html>
+        annotation ( Documentation(info="<html>
 <p>According to the cosine rules, the length <i><b>c</b> </i>of the side of a triangle is calculated. The two sides <i><b>a</b></i> and <i><b>b</b></i> and the angle beta between them are given.</p>
 </html>"));
       end cosineRulesBlock;
@@ -14383,7 +14383,7 @@ convex contact surface object as parameter String.</p>
                   {120,30}})));
       equation
         vector_out = (vector_in*u)*u + (vector_in*v)*v;
-        annotation ( Documentation(info="<!DOCTYPE html><html>
+        annotation ( Documentation(info="<html>
 <p>Block to calculate the orthogonal projection of vector_in on a plane, which is defined by vector_u and vector_v. The inputs vector_u and vector_v can be perpendicular but cannot be parallel.</p>
 </html>"));
       end orthogonalProjectionBlock;
@@ -14445,7 +14445,7 @@ convex contact surface object as parameter String.</p>
         connect(limiterBlock.y, t) annotation (Line(
             points={{75,0},{110,0}},
             color={0,0,127}));
-        annotation ( Documentation(info="<!DOCTYPE html><html>
+        annotation ( Documentation(info="<html>
 <p>Block to locate the intersection points on two lines in space with limiter.</p>
 </html>"));
       end intersectionOfTwoLinesBlock;
@@ -14472,7 +14472,7 @@ convex contact surface object as parameter String.</p>
             points={{95,0},{110,0}},
             color={0,0,127}));
          annotation (
-          Documentation(info="<!DOCTYPE html><html>
+          Documentation(info="<html>
 <p>The Limiter block passes its input signal as output signal as long as the input is within the specified upper and lower limits. If this is not the case, the corresponding limit is passed as output. Furthermore, the output of the variable limiter is filtered with the help of a bessel filter (low pass).</p>
 </html>"),Icon(coordinateSystem(
           preserveAspectRatio=true,
@@ -14554,7 +14554,7 @@ convex contact surface object as parameter String.</p>
             points={{95,0},{110,0}},
             color={0,0,127}));
          annotation (
-          Documentation(info="<!DOCTYPE html><html>
+          Documentation(info="<html>
 <p>The Limiter block passes its input signal as output signal as long as the input is within the specified upper and lower limits. If this is not the case, the corresponding limits are passed as output. Furthermore, the output of the variable limiter is filtered with the help of a bessel filter (low pass).</p>
 </html>"),Icon(coordinateSystem(
           preserveAspectRatio=true,
@@ -14971,7 +14971,7 @@ convex contact surface object as parameter String.</p>
                 extent={{17,-101},{107,-80}},
                 lineColor={0,0,0},
                 textString="s_ref")}),
-          Documentation(info="<!DOCTYPE html><html>
+          Documentation(info="<html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Prismatic joint. The axis of translation can be now be set via the input n. Furthermore, the input s_ref sets the distance between the to frames (compare to useAxisFlange option of the original block).</p>
 </html>"));
       end variablePrism1;
@@ -15088,7 +15088,7 @@ convex contact surface object as parameter String.</p>
                 extent={{34,-129},{91,-98}},
                 lineColor={0,0,0},
                 textString="phi")}),
-          Documentation(info="<!DOCTYPE html><html>
+          Documentation(info="<html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Revolute joint. The axis of rotation can be now be set via the input n. Furthermore, the input phi_ref sets the angle between the to frames (compare to useAxisFlange option of the original block).</p>
 </html>"));
       end variableRevol1;
@@ -15225,7 +15225,7 @@ Possible reasons:
                 fillColor={192,192,192},
                 fillPattern=FillPattern.Solid,
                 lineColor={0,0,255})}),
-          Documentation(info="<!DOCTYPE html><html>
+          Documentation(info="<html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Prismatic joint. The axis of translation can be now be set via the input n.</p>
 </html>"));
       end variablePrism2;
@@ -15417,7 +15417,7 @@ Possible reasons:
               Line(
                 visible=useAxisFlange,
                 points={{-70,100},{-90,80}})}),
-          Documentation(info="<!DOCTYPE html><html>
+          Documentation(info="<html>
 <p>This joint is a modification of the Modelica.Mechanics.MultiBody.Joints.Revolute joint. The axis of rotation can be now be set via the input n.</p>
 </html>"));
       end variableRevol2;
@@ -15500,7 +15500,7 @@ Possible reasons:
           length_=0;
         end if;
         annotation (
-          Documentation(info="<!DOCTYPE html> <HTML><p>This model is a modification of <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.FixedShape\">Modelica.Mechanics.MultiBody.Visualizers.FixedShape</a>. The animation can be disabled via the boolean input. Therefore, the dimensions of the animation are set to 0.
+          Documentation(info=" <HTML><p>This model is a modification of <a href=\"modelica://Modelica.Mechanics.MultiBody.Visualizers.FixedShape\">Modelica.Mechanics.MultiBody.Visualizers.FixedShape</a>. The animation can be disabled via the boolean input. Therefore, the dimensions of the animation are set to 0.
 </p></HTML>"),       Icon(coordinateSystem(
               preserveAspectRatio=true,
               extent={{-100,-100},{100,100}},
@@ -15647,7 +15647,7 @@ the only case where this is done.
                 lineColor={0,0,0},
                 fillPattern=FillPattern.Sphere,
                 fillColor={0,127,255})}),
-          Documentation(info="<!DOCTYPE html><HTML><p>This rigid body is a modification of <a href=\"modelica://Modelica.Mechanics.MultiBody.Parts.PointMass\">Modelica.Mechanics.MultiBody.Parts.PointMass</a>. The animation can be disabled via the boolean input. Therefore, the diameter of the sphere is set to 0.
+          Documentation(info="<HTML><p>This rigid body is a modification of <a href=\"modelica://Modelica.Mechanics.MultiBody.Parts.PointMass\">Modelica.Mechanics.MultiBody.Parts.PointMass</a>. The animation can be disabled via the boolean input. Therefore, the diameter of the sphere is set to 0.
 </p></HTML>"));
       end PointMassVarAnimation;
 
@@ -15788,7 +15788,7 @@ the only case where this is done.
               extent={{-60,60},{60,-60}},
               lineColor={255,128,0},
               fillColor={255,128,0},
-              fillPattern=FillPattern.Solid)}), Documentation(info="<!DOCTYPE html><html>
+              fillPattern=FillPattern.Solid)}), Documentation(info="<html>
 <p>Interface of the surface definition.</p>
 </html>"));
     end Contact_a;
@@ -15804,7 +15804,7 @@ the only case where this is done.
               extent={{-60,60},{60,-60}},
               lineColor={255,128,0},
               fillColor={255,128,0},
-              fillPattern=FillPattern.Solid)}), Documentation(info="<!DOCTYPE html><html>
+              fillPattern=FillPattern.Solid)}), Documentation(info="<html>
 <p>Interface of the contact block.</p>
 </html>"));
     end Contact_b;
@@ -15841,7 +15841,7 @@ the only case where this is done.
               extent={{-10,85},{-10,60}},
               lineColor={255,128,0},
             textString="%name")}),
-        Documentation(info="<!DOCTYPE html><html>
+        Documentation(info="<html>
 <p>
 Connector with one input signal of type IdealizedContact.ContactSurfaces.Types.ContactShapeType.
 </p>
@@ -15876,12 +15876,12 @@ Connector with one input signal of type IdealizedContact.ContactSurfaces.Types.C
               extent={{-10,85},{-10,60}},
               lineColor={255,128,0},
             textString="%name")}),
-        Documentation(info="<!DOCTYPE html><html>
+        Documentation(info="<html>
 <p>
 Connector with one input signal of type IdealizedContact.ContactSurfaces.Types.ContactShapeType.
 </p>
 </html>"));
-   annotation(preferredView="info", Documentation(info="<!DOCTYPE html><html>
+   annotation(preferredView="info", Documentation(info="<html>
 <p>In order to be able to use the dimensions of the contact surfaces in the contact block a new interfaces to connect the surface definition with a contact block is introduced. This adds a scalar vector to the MultiBody frame of the Modelica Standard Library that comprises maximum three terms to describe the surface geometry and the three direction vectors to resolve them in the connected frame. The latter constitutes the body coordinate system (BCS) of the contact surface.</p>
 </html>"));
   end Interfaces;
@@ -15914,7 +15914,7 @@ Connector with one input signal of type IdealizedContact.ContactSurfaces.Types.C
         fillPattern=FillPattern.Solid,
         pattern=LinePattern.None,
         lineColor={0,0,0})}),
-    Documentation(info="<!DOCTYPE html><html>
+    Documentation(info="<html>
 <p>The Idealized Contact Library is ready-to-use contact library for Modelica. It comprises surface definitions for simple contact surfaces, which can be connected with the multibodies of the Modelica Standard Library. It implements a force-based approach between single contact points. The contact forces are calculated in configurable non-central contact blocks. </p>
 </html>"));
 end IdealizedContact;
