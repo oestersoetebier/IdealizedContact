@@ -13899,7 +13899,7 @@ convex contact surface object as parameter String.</p>
 
            f_n_cr = sign(rP_cr.r_rel*V_direction_C)*(-c*abs(rP_cr.r_rel*V_direction_C)^n1) - d*abs(rP_cr.r_rel*V_direction_C)^n2*der(rP_cr.r_rel*V_direction_C);
            f_n_bl = sign(rP_l.r_rel*H_direction_R)*(-c*abs(rP_l.r_rel*H_direction_R)^n1) - d*abs(rP_l.r_rel*H_direction_R)^n2*der(rP_l.r_rel*H_direction_R);
-           f_n_bw = sign(rP_w.r_rel*H_direction_R)*(-c*abs(rP_w.r_rel*H_direction_R)^n1) - d*abs(rP_w.r_rel*H_direction_R)^n2*der(rP_w.r_rel*H_direction_R);   //ich würde hier auch gerne das vorzeichen umdrehen
+           f_n_bw = sign(rP_w.r_rel*H_direction_R)*(-c*abs(rP_w.r_rel*H_direction_R)^n1) - d*abs(rP_w.r_rel*H_direction_R)^n2*der(rP_w.r_rel*H_direction_R);   //ich wuerde hier auch gerne das vorzeichen umdrehen
 
         //--------------------------------------------------------------
         //friction
@@ -14358,7 +14358,7 @@ convex contact surface object as parameter String.</p>
       equation
           c =smooth(2, abs(a*abs(cos(beta*sign(beta-pi/2))) - 0.5*sqrt(abs((2*a*abs(cos(beta*sign(beta-pi/2))))^2 - 4*(a^2 - b^2)))));
           //c =smooth(2, abs(a*abs(cos(beta*sign(beta-pi/2))) - 0.5*sqrt(abs((2*a*abs(cos(beta*sign(beta-pi/2))))^2 - 4*(a^2 - b^2)))));
-          //beta*sign(beta-pi/2) singularitätspunkt bei beta=pi/2 vermeiden
+          //beta*sign(beta-pi/2) singularitaetspunkt bei beta=pi/2 vermeiden
         annotation ( Documentation(info="<html>
 <p>According to the cosine rules, the length <i><b>c</b> </i>of the side of a triangle is calculated. The two sides <i><b>a</b></i> and <i><b>b</b></i> and the angle beta between them are given.</p>
 </html>"));
