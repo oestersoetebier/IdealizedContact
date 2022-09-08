@@ -6,5 +6,5 @@ text = "IdealizedContact",
 reference = "IdealizedContact",
 isModel = true,
 description = "idealized contact models for simple surfaces",
-ModelicaVersion = "3.2",
+ModelicaVersion = "4.0",
 pos = 5002);

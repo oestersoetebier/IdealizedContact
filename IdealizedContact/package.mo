@@ -57,7 +57,7 @@ extends Modelica.Icons.Package;
     class ReleaseNotes "Release notes"
     extends Modelica.Icons.ReleaseNotes;
       annotation (preferredView="info", Documentation(info="<html>
-<h4>Version 0.2.1, 2022-09-08</h4>
+<h4>Version 0.3.0, 2022-09-08</h4>
 <p>Uses Modelica Standard Library 4.0.0 </p>
 <h4>Version 0.2.0, 2014-12-01</h4>
 <p>Uses Modelica Standard Library 3.2.1 </p>
@@ -15824,7 +15824,7 @@ Connector with one input signal of type IdealizedContact.ContactSurfaces.Types.C
   end Interfaces;
 
 
-  annotation (version="0.2.1", uses(Modelica(version="4.0.0")), preferredView="info",
+  annotation (version="0.3.0", uses(Modelica(version="4.0.0")), preferredView="info",
   Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
       graphics={
       Rectangle(
