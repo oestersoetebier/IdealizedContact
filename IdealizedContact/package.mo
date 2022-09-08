@@ -57,6 +57,8 @@ extends Modelica.Icons.Package;
     class ReleaseNotes "Release notes"
     extends Modelica.Icons.ReleaseNotes;
       annotation (preferredView="info", Documentation(info="<html>
+<h4>Version 0.2.1, 2022-09-08</h4>
+<p>Uses Modelica Standard Library 4.0.0 </p>
 <h4>Version 0.2.0, 2014-12-01</h4>
 <p>Uses Modelica Standard Library 3.2.1 </p>
 <p>The main changes are:</p>
@@ -1149,7 +1151,7 @@ printing and shipping costs may be recovered.</p>
 
     model Example7 "Rectangle to rectangle"
     extends Modelica.Icons.Example;
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
     parameter SI.Density density=7850;
     parameter SI.Length length=0.07;
     parameter SI.Length width=0.1;
@@ -2156,7 +2158,7 @@ printing and shipping costs may be recovered.</p>
     model SphericalContactSurface "Model to define a spherical contact surface"
       extends IdealizedContact.Components.PartialContactSurface(final contactShape="spherical",
         fixedFrame(length=3*radius));
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
       parameter SI.Radius radius=0.015
       "radius of the spherical contact surface";
 
@@ -2228,7 +2230,7 @@ printing and shipping costs may be recovered.</p>
     "Model to define a cylindrical contact surface"
         extends IdealizedContact.Components.PartialContactSurface(final contactShape="cylindrical",
         fixedFrame(length=2*diameter));
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
     parameter SI.Diameter diameter=0.015 "diameter of cylindrical surface";
     parameter SI.Length length=0.05 "length of cylindrical surface";
     parameter Modelica.Mechanics.MultiBody.Types.Axis diameterDirection={0,0,1}
@@ -2328,7 +2330,7 @@ printing and shipping costs may be recovered.</p>
     "Model to define a rectangular and plane contact surface"
       extends IdealizedContact.Components.PartialContactSurface(final contactShape="rectangular",
         fixedFrame(length=2*length));
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
 
     parameter SI.Length length=0.04;
     parameter SI.Length width=0.02;
@@ -2414,7 +2416,7 @@ printing and shipping costs may be recovered.</p>
     "Model to define a circular and plane contact surface"
       extends IdealizedContact.Components.PartialContactSurface(final contactShape="circular",
         fixedFrame(length=1.3*diameter));
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
     parameter SI.Diameter diameter=0.015;
     parameter Modelica.Mechanics.MultiBody.Types.Axis lengthDirection={0,1,0}
       "Length Direction";
@@ -2507,9 +2509,9 @@ printing and shipping costs may be recovered.</p>
       extends IdealizedContact.Components.PartialContactSurface(final contactShape="ellipsoid",
           fixedFrame(length=2*max({a,b,c})));
 
-    parameter Modelica.SIunits.Length a "radius of the 1st semiaxis";
-    parameter Modelica.SIunits.Length b "radius of the 2nd semiaxis";
-    parameter Modelica.SIunits.Length c "radius of the 3rd semiaxis";
+    parameter Modelica.Units.SI.Length a "radius of the 1st semiaxis";
+    parameter Modelica.Units.SI.Length b "radius of the 2nd semiaxis";
+    parameter Modelica.Units.SI.Length c "radius of the 3rd semiaxis";
 
       ParametricSurfaceDefinition.Visualizers.ConvexVisualizer ellipsoid(
         h={a,b,c},
@@ -2565,8 +2567,7 @@ printing and shipping costs may be recovered.</p>
       "shape of the contact surface";
       parameter Real h[3] "parameters of convex contact shape";
 
-      IdealizedContact.ContactSurfaces.ParametricSurfaceDefinition.Visualizers.ConvexVisualizer
-                                                                                                convexVisualizer(
+      IdealizedContact.ContactSurfaces.ParametricSurfaceDefinition.Visualizers.ConvexVisualizer convexVisualizer(
       animation=animation,
       color=color,
         h=h,
@@ -3043,12 +3044,9 @@ printing and shipping costs may be recovered.</p>
 
           parameter Boolean animation=true
           "= true, if animation shall be enabled";
-          parameter Modelica.SIunits.Angle opening=0
-          "Opening angle of ellipsoid"                                            annotation(Dialog(enable=animation));
-          parameter Modelica.SIunits.Angle alphaStartAngle=-Modelica.Constants.pi
-          "Start angle of ellipsoid slice"   annotation(Dialog(enable=animation));
-          parameter Modelica.SIunits.Angle alphaStopAngle=Modelica.Constants.pi
-          "End angle of ellipsoid slice"   annotation(Dialog(enable=animation));
+        parameter Modelica.Units.SI.Angle opening=0 "Opening angle of ellipsoid" annotation (Dialog(enable=animation));
+        parameter Modelica.Units.SI.Angle alphaStartAngle=-Modelica.Constants.pi "Start angle of ellipsoid slice" annotation (Dialog(enable=animation));
+        parameter Modelica.Units.SI.Angle alphaStopAngle=Modelica.Constants.pi "End angle of ellipsoid slice" annotation (Dialog(enable=animation));
         //   parameter Modelica.SIunits.Angle betaStartAngle=-Modelica.Constants.pi
         //     "Start angle of ellipsoid slice" annotation(Dialog(enable=animation));
         //   parameter Modelica.SIunits.Angle betaStopAngle=Modelica.Constants.pi
@@ -3069,8 +3067,8 @@ printing and shipping costs may be recovered.</p>
       protected
         Modelica.Mechanics.MultiBody.Visualizers.Advanced.Surface surface(
           redeclare function surfaceCharacteristic =
-             IdealizedContact.ContactSurfaces.ParametricSurfaceDefinition.Visualizers.SurfaceCharacteristics.convexSurfaceCharacteristic
-              (  shape=shape, h=h, opening=opening, alphaStartAngle=alphaStartAngle, alphaStopAngle=alphaStopAngle),
+             IdealizedContact.ContactSurfaces.ParametricSurfaceDefinition.Visualizers.SurfaceCharacteristics.convexSurfaceCharacteristic (
+                 shape=shape, h=h, opening=opening, alphaStartAngle=alphaStartAngle, alphaStopAngle=alphaStopAngle),
           nu=n_ri,
           nv=n_ro,
           multiColoredSurface=false,
@@ -3079,7 +3077,7 @@ printing and shipping costs may be recovered.</p>
           specularCoefficient=specularCoefficient,
           transparency=transparency,
           R=frame_a.R,
-          r_0=frame_a.r_0) if   world.enableAnimation and animation
+          r_0=frame_a.r_0)   if world.enableAnimation and animation
           annotation (Placement(transformation(extent={{-20,-10},{0,10}})));
         //         betaStartAngle=betaStartAngle,
         //         betaStopAngle=betaStopAngle,
@@ -3115,14 +3113,9 @@ printing and shipping costs may be recovered.</p>
             input IdealizedContact.ContactSurfaces.Types.ContactShapeType shape;
             input Real h[3] "parameters of convex surface";
 
-            input Modelica.SIunits.Angle opening=0 "Opening angle of ellipsoid"
-                                                                                annotation(Dialog);
-            input Modelica.SIunits.Angle alphaStartAngle= -Modelica.Constants.pi
-            "Start angle of ellipsoid slice"
-                                           annotation(Dialog);
-            input Modelica.SIunits.Angle alphaStopAngle= Modelica.Constants.pi
-            "End angle of ellipsoid slice"
-                                         annotation(Dialog);
+          input Modelica.Units.SI.Angle opening=0 "Opening angle of ellipsoid" annotation (Dialog);
+          input Modelica.Units.SI.Angle alphaStartAngle=-Modelica.Constants.pi "Start angle of ellipsoid slice" annotation (Dialog);
+          input Modelica.Units.SI.Angle alphaStopAngle=Modelica.Constants.pi "End angle of ellipsoid slice" annotation (Dialog);
           //   input Modelica.SIunits.Angle betaStartAngle= -Modelica.Constants.pi
           //     "Start angle of ellipsoid slice"
           //                                  annotation(Dialog);
@@ -3130,10 +3123,10 @@ printing and shipping costs may be recovered.</p>
           //     "End angle of ellipsoid slice"
           //                                annotation(Dialog);
         protected
-            Modelica.SIunits.Angle alpha;
-            Modelica.SIunits.Angle beta;
-            Modelica.SIunits.Angle phi_start;
-            Modelica.SIunits.Angle phi_stop;
+          Modelica.Units.SI.Angle alpha;
+          Modelica.Units.SI.Angle beta;
+          Modelica.Units.SI.Angle phi_start;
+          Modelica.Units.SI.Angle phi_stop;
             Real temp[3,1];
           algorithm
             phi_start :=-Modelica.Constants.pi + opening;
@@ -3221,7 +3214,7 @@ convex contact surface object as parameter String.</p>
     extends Modelica.Icons.Package;
     model SphericalContactBody "Predefined spherical body with contact surface"
 
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
     parameter SI.Density density=7850 "density of the material";
     parameter SI.Radius radius=0.015 "radius of the spherical contact surface";
     parameter Boolean animation=true "= true, if animation shall be enabled";
@@ -3304,7 +3297,7 @@ convex contact surface object as parameter String.</p>
 
     model CylindricalContactBody
     "Predefined cylindrical body with contact surfaces"
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
     parameter Boolean enableLateralSurface = true
       "= true, if lateral contact surface shall be enabled"   annotation (choices(checkBox=true));
     parameter Boolean enableFrontSurface1 = true
@@ -3329,8 +3322,7 @@ convex contact surface object as parameter String.</p>
     parameter Boolean surfaceAnimation=true
       "= true, if animation of contact surfaces shall be enabled"                                       annotation (Dialog(group="contact surface animation"));
     parameter Boolean surfaceAnimation_BCS = true
-      "= true, if animation of body coordinate system of contact surfaces shall be enabled"
-                                                                                             annotation (Dialog(group="contact surface animation"));
+      "= true, if animation of body coordinate system of contact surfaces shall be enabled"  annotation (Dialog(group="contact surface animation"));
 
     parameter Modelica.Mechanics.MultiBody.Types.Color surfaceColor={255,128,0}
       "color of the contact surface"   annotation (Dialog(group="contact surface animation"));
@@ -3382,8 +3374,8 @@ convex contact surface object as parameter String.</p>
         lengthDirection=lengthDirection,
         animation=surfaceAnimation,
         animation_BCS=surfaceAnimation_BCS,
-        color=surfaceColor) if
-          enableLateralSurface annotation (Placement(transformation(extent={{-36,32},{-14,56}})));
+        color=surfaceColor)
+       if enableLateralSurface annotation (Placement(transformation(extent={{-36,32},{-14,56}})));
       ContactSurfaces.CircularPlaneContactSurface circularPlaneContactSurface1(
         diameter=diameter,
         lengthDirection=lengthDirection,
@@ -3395,10 +3387,10 @@ convex contact surface object as parameter String.</p>
         annotation (Placement(transformation(extent={{92,-10},{112,10}}),
             iconTransformation(extent={{86,-10},{106,10}})));
       Modelica.Mechanics.MultiBody.Parts.FixedTranslation fixedTranslation1(r=length/
-            2*lengthDirection) if          enableFrontSurface1
+            2*lengthDirection)          if enableFrontSurface1
         annotation (Placement(transformation(extent={{32,-10},{52,10}})));
       Modelica.Mechanics.MultiBody.Parts.FixedTranslation fixedTranslation2(r=length/
-            2*lengthDirection) if          enableFrontSurface2
+            2*lengthDirection)          if enableFrontSurface2
         annotation (Placement(transformation(extent={{-38,-10},{-18,10}})));
       Interfaces.Contact_a contact_front2 if enableFrontSurface2
         annotation (Placement(transformation(extent={{-110,-10},{-90,10}}),
@@ -3490,7 +3482,7 @@ convex contact surface object as parameter String.</p>
     end CylindricalContactBody;
 
     model CuboidContactBody "Predefined cuboid body with contact surfaces"
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
 
     parameter Boolean enableSurface1 = true
       "= true, if contact surface 1 shall be enabled"   annotation (choices(checkBox=true));
@@ -3521,8 +3513,7 @@ convex contact surface object as parameter String.</p>
     parameter Boolean surfaceAnimation=true
       "= true, if animation of contact surfaces shall be enabled"                                       annotation (Dialog(group="contact surface animation"));
     parameter Boolean surfaceAnimation_BCS = true
-      "= true, if animation of body coordinate system of contact surfaces shall be enabled"
-                                                                                             annotation (Dialog(group="contact surface animation"));
+      "= true, if animation of body coordinate system of contact surfaces shall be enabled"  annotation (Dialog(group="contact surface animation"));
     parameter Modelica.Mechanics.MultiBody.Types.Color surfaceColor={255,128,0}
       "color of the contact surface"   annotation (Dialog(group="contact surface animation"));
 
@@ -3797,18 +3788,16 @@ convex contact surface object as parameter String.</p>
     model EllipsoidContactBody
     "Predefined ellipsoid body with contact surfaces"
 
-      parameter Modelica.SIunits.Length a=1 "radius of the 1st semiaxis";
-      parameter Modelica.SIunits.Length b=1 "radius of the 2nd semiaxis";
-      parameter Modelica.SIunits.Length c=1 "radius of the 3rd semiaxis";
-      parameter Modelica.SIunits.Density rho=7850 "density";
+    parameter Modelica.Units.SI.Length a=1 "radius of the 1st semiaxis";
+    parameter Modelica.Units.SI.Length b=1 "radius of the 2nd semiaxis";
+    parameter Modelica.Units.SI.Length c=1 "radius of the 3rd semiaxis";
+    parameter Modelica.Units.SI.Density rho=7850 "density";
       final parameter Real pi=Modelica.Constants.pi;
-      final parameter Modelica.SIunits.Mass m=(4/3)*pi*a*b*c*rho
-      "mass of ellipsoid";
+    final parameter Modelica.Units.SI.Mass m=(4/3)*pi*a*b*c*rho "mass of ellipsoid";
       parameter Boolean animation=true
       "= true, if animation of the body shall be enabled"                                  annotation(Dialog(group="animation"));
       parameter Boolean animation_BCS = true
-      "= true,  if animation of body coordinate system of contact surfaces shall be enabled"
-                                                                                                    annotation(Dialog(group="animation"));
+      "= true,  if animation of body coordinate system of contact surfaces shall be enabled"        annotation(Dialog(group="animation"));
       parameter Modelica.Mechanics.MultiBody.Types.Color color={255,128,0}
       "color of shape"                                                                    annotation(Dialog(group="animation"));
 
@@ -3868,7 +3857,7 @@ convex contact surface object as parameter String.</p>
 
     model ConvexContactBody "Predefined convex body with contact surfaces"
 
-    import SI = Modelica.SIunits;
+    import      Modelica.Units.SI;
     parameter IdealizedContact.ContactSurfaces.Types.ConvexContactShapeType convexContactShape = "ellipsoid"
       "shape of the contact surface";
     parameter Real h[3] "parameters of convex surface";
@@ -3905,8 +3894,7 @@ convex contact surface object as parameter String.</p>
     parameter Modelica.Mechanics.MultiBody.Types.Color color={255,128,0}
       "color of shape"                                                                  annotation (Dialog(group="animation"));
     parameter Boolean animation_BCS = true
-      "= true, if animation of body coordinate system of contact surfaces shall be enabled"
-                                                                                             annotation (Dialog(group="animation"));
+      "= true, if animation of body coordinate system of contact surfaces shall be enabled"  annotation (Dialog(group="animation"));
 
       Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a
         annotation (Placement(transformation(extent={{-116,-16},{-84,16}}),
@@ -3971,7 +3959,7 @@ convex contact surface object as parameter String.</p>
   package ContactBlock "Contact block and its parts"
   extends Modelica.Icons.Package;
     model Contact "Contact block"
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
       inner parameter SI.TranslationalSpringConstant springCoefficient=1000000
       "spring coefficient to calculate normal force"   annotation(Dialog(group="Normal force"));
       inner parameter SI.TranslationalDampingConstant dampingCoefficient=100000
@@ -4005,10 +3993,8 @@ convex contact surface object as parameter String.</p>
       inner parameter SI.Frequency f=10000
       "filter frequency to filter contact point movement"                                       annotation(Dialog(enable=not exact));
 
-      inner parameter Boolean animation=true "= true to animate contact points"
-                                                                                annotation(Dialog(tab="Animation"));
-      inner parameter Modelica.SIunits.Radius radiusContactPoint=0.0025
-      "radius of contact point animation"   annotation(Dialog(tab="Animation"));
+      inner parameter Boolean animation=true "= true to animate contact points" annotation(Dialog(tab="Animation"));
+    inner parameter Modelica.Units.SI.Radius radiusContactPoint=0.0025 "radius of contact point animation" annotation (Dialog(tab="Animation"));
       inner parameter Modelica.Mechanics.MultiBody.Types.Color
         colorContactPoints1 = {0,180,0} "color of contact points of body 1" annotation(Dialog(tab="Animation"));
       inner parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -4047,8 +4033,7 @@ convex contact surface object as parameter String.</p>
             IdealizedContact.ContactBlock.LinearContact.CylinderToCylinderPoint
               contactDefinition "CylinderToCylinderPoint"),
               choice(redeclare
-            IdealizedContact.ContactBlock.LinearContact.CylinderToCylinderCombined
-                                                                                                    contactDefinition
+            IdealizedContact.ContactBlock.LinearContact.CylinderToCylinderCombined                  contactDefinition
             "CylinderToCylinderCombined"),
               choice(redeclare
             IdealizedContact.ContactBlock.PlanarContact.RectangleToRectangle
@@ -4105,7 +4090,8 @@ convex contact surface object as parameter String.</p>
           color={255,0,255}));
       end if;
         annotation (Placement(transformation(extent={{-20,0},{0,20}})),
- Icon(graphics={Rectangle(
+      Icon(graphics={
+          Rectangle(
               extent={{-100,100},{100,-100}},
               lineColor={255,128,0},
               fillColor={255,128,0},
@@ -4148,7 +4134,7 @@ convex contact surface object as parameter String.</p>
 
     function plotFrictionCurve
     "Visualize approximation of Stribeck friction curve"
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
     input SI.CoefficientOfFriction mue_k=0.03 "coefficient of kinetic friction"
                                           annotation(Dialog(group="Stribeck curve"));
     input SI.CoefficientOfFriction mue_s=0.04 "coefficient of static friction"
@@ -4181,20 +4167,20 @@ convex contact surface object as parameter String.</p>
     end frictionCoefficient;
 
     algorithm
-    createPlot(id=  0,
-     position=  {15, 10, 610, 454},
-     y=  fill("", 0),
-     range=  {0.0, 0.3, -0.005, 0.04},
-     autoscale=  true,
-     autoerase=  true,
-     autoreplot=  true,
-     description=  false,
-     grid=  true,
-     color=  true,
-     online=  false,
-     leftTitle=  "mue",
-     bottomTitle=  "v_rel");
-    plotArray(x=0:v_e1/100:3*v_e2,y=IdealizedContact.ContactBlock.plotFrictionCurve.frictionCoefficient(gamma1, gamma2, gamma3, gamma4, gamma5, gamma6, 0:v_e1/100:3*v_e2),legend="Stribeck curve approximation",id=   0);
+    createPlot(id = 0,
+     position = {15, 10, 610, 454},
+     y = fill("", 0),
+     range = {0.0, 0.3, -0.005, 0.04},
+     autoscale = true,
+     autoerase = true,
+     autoreplot = true,
+     description = false,
+     grid = true,
+     color = true,
+     online = false,
+     leftTitle = "mue",
+     bottomTitle = "v_rel");
+    plotArray(x=0:v_e1/100:3*v_e2,y=IdealizedContact.ContactBlock.plotFrictionCurve.frictionCoefficient(gamma1, gamma2, gamma3, gamma4, gamma5, gamma6, 0:v_e1/100:3*v_e2),legend="Stribeck curve approximation",id =  0);
     Modelica.Utilities.Streams.print("gamma1="+String(gamma1)+"\n"+"gamma2="+String(gamma2)+"\n"+"gamma3="+String(gamma3)+"\n"+"gamma4="+String(gamma4)+"\n"+"gamma5="+String(gamma5)+"\n"+"gamma6="+String(gamma6));
 
       annotation (preferedView="info",interactive=true,Documentation(info="<html>
@@ -4211,14 +4197,12 @@ convex contact surface object as parameter String.</p>
        extends IdealizedContact.Components.PartialContactBlock;
 
     public
-        IdealizedContact.ContactBlock.PunctiformContact.Components.MovePointSphereToSphere
-                                                                                           geometry(
+        IdealizedContact.ContactBlock.PunctiformContact.Components.MovePointSphereToSphere geometry(
         colorContactPoint_Ball1=colorContactPoints1,
         colorContactPoint_Ball2=colorContactPoints2,
         radiusContactPoint=radiusContactPoint,
         Animation=animation) annotation (Placement(transformation(extent={{-60,20},{-20,60}})));
-        IdealizedContact.ContactBlock.PunctiformContact.Components.ForceSphereToSphere
-                                                                                       force(
+        IdealizedContact.ContactBlock.PunctiformContact.Components.ForceSphereToSphere force(
         c=springCoefficient,
         d=dampingCoefficient,
         n1=N1,
@@ -4300,15 +4284,13 @@ convex contact surface object as parameter String.</p>
         extends IdealizedContact.Components.PartialContactBlock;
 
     public
-        IdealizedContact.ContactBlock.PunctiformContact.Components.MovePointSphereToCylinder
-                                                                                             geometry(
+        IdealizedContact.ContactBlock.PunctiformContact.Components.MovePointSphereToCylinder geometry(
         f=f,
         Animation=animation,
         radiusContactPoint=radiusContactPoint,
         colorContactPoints1=colorContactPoints1,
         Color_contact_point_cylinder=colorContactPoints2) annotation (Placement(transformation(extent={{-60,20},{-20,60}})));
-        IdealizedContact.ContactBlock.PunctiformContact.Components.ForceSphereToCylinder
-                                                                                         force(
+        IdealizedContact.ContactBlock.PunctiformContact.Components.ForceSphereToCylinder force(
         c=springCoefficient,
         d=dampingCoefficient,
         n1=N1,
@@ -4391,15 +4373,13 @@ convex contact surface object as parameter String.</p>
         extends IdealizedContact.Components.PartialContactBlock;
 
     public
-        IdealizedContact.ContactBlock.PunctiformContact.Components.MovePointSphereToRectangle
-                                                                                              geometry(
+        IdealizedContact.ContactBlock.PunctiformContact.Components.MovePointSphereToRectangle geometry(
         f=f,
         Animation=animation,
         radiusContactPoint=radiusContactPoint,
         colorContactPoints1=colorContactPoints1,
         Color_contact_point_rectangle=colorContactPoints2) annotation (Placement(transformation(extent={{-60,20},{-20,60}})));
-        IdealizedContact.ContactBlock.PunctiformContact.Components.ForceSphereToRectangle
-                                                                                          force(
+        IdealizedContact.ContactBlock.PunctiformContact.Components.ForceSphereToRectangle force(
         c=springCoefficient,
         d=dampingCoefficient,
         n1=N1,
@@ -4478,15 +4458,13 @@ convex contact surface object as parameter String.</p>
         extends IdealizedContact.Components.PartialContactBlock;
 
     public
-        IdealizedContact.ContactBlock.PunctiformContact.Components.MovePointSphereToCircle
-                                                                                           geometry(
+        IdealizedContact.ContactBlock.PunctiformContact.Components.MovePointSphereToCircle geometry(
         f=f,
         Animation=animation,
         radiusContactPoint=radiusContactPoint,
         colorContactPoints1=colorContactPoints1,
         Color_contact_point_circle=colorContactPoints2) annotation (Placement(transformation(extent={{-40,20},{0,60}})));
-        IdealizedContact.ContactBlock.PunctiformContact.Components.ForceSphereToCircle
-                                                                                       force(
+        IdealizedContact.ContactBlock.PunctiformContact.Components.ForceSphereToCircle force(
         c=springCoefficient,
         d=dampingCoefficient,
         n1=N1,
@@ -4728,7 +4706,7 @@ convex contact surface object as parameter String.</p>
         model MovePointSphereToSphere
          // parameter Modelica.SIunits.Frequency f=100000;
           parameter Boolean Animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
             colorContactPoint_Ball1 =                                                {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -4954,7 +4932,7 @@ convex contact surface object as parameter String.</p>
 
         model ForceSphereToSphere
 
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
 
           parameter SI.TranslationalSpringConstant c=1000000;
           parameter SI.TranslationalDampingConstant d=1000;
@@ -5159,7 +5137,7 @@ convex contact surface object as parameter String.</p>
         model MovePointSphereToCylinder
           parameter Real f=100000;
           parameter Boolean Animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
             colorContactPoints1 =                                                {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -5456,7 +5434,7 @@ convex contact surface object as parameter String.</p>
         end MovePointSphereToCylinder;
 
         model ForceSphereToCylinder
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
           parameter SI.TranslationalSpringConstant c=1000000;
           parameter SI.TranslationalDampingConstant d=1000;
           parameter Real n1 = 1.5;
@@ -5680,9 +5658,9 @@ convex contact surface object as parameter String.</p>
         end ForceSphereToCylinder;
 
         model MovePointSphereToRectangle
-          parameter Modelica.SIunits.Frequency f=100000;
+        parameter Modelica.Units.SI.Frequency f=100000;
           parameter Boolean Animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
             colorContactPoints1 =                                                {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -5950,7 +5928,7 @@ convex contact surface object as parameter String.</p>
 
         model ForceSphereToRectangle
 
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
 
           parameter SI.TranslationalSpringConstant c=1000000 "spring constant";
           parameter SI.TranslationalDampingConstant d=1000 "damping constant";
@@ -6171,7 +6149,7 @@ convex contact surface object as parameter String.</p>
 
           parameter Real f=100000;
           parameter Boolean Animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
             colorContactPoints1 =                                                {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -6423,7 +6401,7 @@ convex contact surface object as parameter String.</p>
 
         model ForceSphereToCircle
 
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
 
           parameter SI.TranslationalSpringConstant c=1000000;
           parameter SI.TranslationalDampingConstant d=1000;
@@ -6618,9 +6596,9 @@ convex contact surface object as parameter String.</p>
 
         model MovePointConvexToConvex
 
-          parameter Modelica.SIunits.Frequency f=100000;
+        parameter Modelica.Units.SI.Frequency f=100000;
           parameter Boolean Animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
             colorContactPoint1 =                                                {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -6670,14 +6648,12 @@ convex contact surface object as parameter String.</p>
           IdealizedContact.ContactBlock.PunctiformContact.Components.CalculationsConvexSurfaces.FindMinimum
             findMinimum
             annotation (Placement(transformation(extent={{-20,-20},{44,38}})));
-          IdealizedContact.ContactBlock.PunctiformContact.Components.CalculationsConvexSurfaces.R0
-                                                                                                            r0_1
+          IdealizedContact.ContactBlock.PunctiformContact.Components.CalculationsConvexSurfaces.R0          r0_1
             annotation (Placement(transformation(
                 extent={{-11,-10},{11,10}},
                 rotation=90,
                 origin={118,135})));
-          IdealizedContact.ContactBlock.PunctiformContact.Components.CalculationsConvexSurfaces.R0
-                                                                                                            r0_2
+          IdealizedContact.ContactBlock.PunctiformContact.Components.CalculationsConvexSurfaces.R0          r0_2
             annotation (Placement(transformation(
                 extent={{12,-12},{-12,12}},
                 rotation=90,
@@ -6847,7 +6823,7 @@ convex contact surface object as parameter String.</p>
 
         model ForceConvexToConvex
 
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
 
           parameter SI.TranslationalSpringConstant c;
           parameter SI.TranslationalDampingConstant d;
@@ -6960,7 +6936,7 @@ convex contact surface object as parameter String.</p>
 
         model MovePointConvexToPlane
            parameter Boolean animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
             colorContactPoint1 =                                                {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -7191,7 +7167,7 @@ convex contact surface object as parameter String.</p>
         model ForceConvexToPlane
         //This model calculates the force between an ellipsoid and a plane.
         //The force vector is resolved in the body frame of the plane.
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
 
           parameter SI.TranslationalSpringConstant c;
           parameter SI.TranslationalDampingConstant d;
@@ -8351,14 +8327,12 @@ convex contact surface object as parameter String.</p>
               annotation (Placement(transformation(extent={{-10,-10},{10,10}},
                   rotation=270,
                   origin={70,-110})));
-            Modelica.Blocks.Interfaces.RealInput h[3] "parameters of the plane"
-                                                                                annotation (Placement(
+            Modelica.Blocks.Interfaces.RealInput h[3] "parameters of the plane" annotation (Placement(
                   transformation(
                   extent={{-20,-20},{20,20}},
                   rotation=270,
                   origin={30,100})));
-            Interfaces.ShapeTypeInput contactShapeType "shape of plane surface"
-                                                                                annotation (Placement(transformation(extent={{-20,-20},
+            Interfaces.ShapeTypeInput contactShapeType "shape of plane surface" annotation (Placement(transformation(extent={{-20,-20},
                       {20,20}},
                   rotation=270,
                   origin={-60,100})));
@@ -8915,8 +8889,7 @@ convex contact surface object as parameter String.</p>
         extends IdealizedContact.Components.PartialContactBlock;
 
     public
-        IdealizedContact.ContactBlock.LinearContact.Components.MovePointCylinderToRectangle
-                                                                                            geometry[2](
+        IdealizedContact.ContactBlock.LinearContact.Components.MovePointCylinderToRectangle geometry[2](
         q={1,-1},
         f={f,f},
         exact={exact,exact},
@@ -8926,8 +8899,7 @@ convex contact surface object as parameter String.</p>
         Color_contact_point_cylinder={colorContactPoints2,colorContactPoints2})
         "move point detection"
         annotation (Placement(transformation(extent={{-60,12},{0,72}})));
-       IdealizedContact.ContactBlock.LinearContact.Components.ForceCylinderToRectangle
-                                                                                       force[2](
+       IdealizedContact.ContactBlock.LinearContact.Components.ForceCylinderToRectangle force[2](
         q={1,-1},
         c={springCoefficient,springCoefficient},
         d={dampingCoefficient,dampingCoefficient},
@@ -9055,13 +9027,11 @@ convex contact surface object as parameter String.</p>
         extends IdealizedContact.Components.PartialContactBlock;
 
     public
-        IdealizedContact.ContactBlock.LinearContact.Components.MovePointCylinderToCircle
-                                                                                         geometry[2](
+        IdealizedContact.ContactBlock.LinearContact.Components.MovePointCylinderToCircle geometry[2](
         q={1,-1},
         f={f,f},
         exact={exact,exact}) "move point detection" annotation (Placement(transformation(extent={{-60,12},{0,72}})));
-        IdealizedContact.ContactBlock.LinearContact.Components.ForceCylinderToCircle
-                                                                                     force[2](
+        IdealizedContact.ContactBlock.LinearContact.Components.ForceCylinderToCircle force[2](
         c={springCoefficient,springCoefficient},
         d={dampingCoefficient,dampingCoefficient},
         n1={N1,N1},
@@ -9636,12 +9606,12 @@ convex contact surface object as parameter String.</p>
         model MovePointCylinderToRectangle
 
           parameter Boolean exact=true;
-          parameter Modelica.SIunits.Frequency f=10000000;
+        parameter Modelica.Units.SI.Frequency f=10000000;
           parameter Real q=1 "1=left   -1=right";
           parameter Modelica.Mechanics.MultiBody.Types.Color
             Color_contact_point_rectangle = {255,0,255};
           parameter Modelica.Mechanics.MultiBody.Types.Color Color_contact_point_cylinder = {255,0,255};
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           final parameter Modelica.Mechanics.MultiBody.Types.Axis y_direction={0,1,0}
           "cartesian coordinate system in y direction -- direction of gravity";
           final parameter Modelica.Mechanics.MultiBody.Types.Axis x_direction={1,0,0};
@@ -9693,13 +9663,10 @@ convex contact surface object as parameter String.</p>
                 rotation=0,
                 origin={-108,20}), iconTransformation(extent={{-116,12},{-100,28}})));
 
-          Modelica.Mechanics.MultiBody.Sensors.TansformRelativeVector
-            tansformRelativeVector(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_b,
-              frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
-          "Transformation cylinder Length-Vektor from BCS-cylinder to BCS-rectangle"
-            annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-                rotation=90,
-                origin={-76,0})));
+        Modelica.Mechanics.MultiBody.Sensors.TransformRelativeVector tansformRelativeVector(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_b, frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a) "Transformation cylinder Length-Vektor from BCS-cylinder to BCS-rectangle" annotation (Placement(transformation(
+              extent={{-6,-6},{6,6}},
+              rotation=90,
+              origin={-76,0})));
           Modelica.Blocks.Interfaces.RealOutput angles[3]     annotation (Placement(
                 transformation(
                 extent={{-8,-8},{8,8}},
@@ -10086,7 +10053,7 @@ convex contact surface object as parameter String.</p>
         end MovePointCylinderToRectangle;
 
         model ForceCylinderToRectangle
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
 
         // parameter Boolean exact=true;
          parameter SI.Frequency f=10000000;
@@ -10326,7 +10293,7 @@ convex contact surface object as parameter String.</p>
         model MovePointCylinderToCircle
 
           parameter Boolean exact=true;
-          parameter Modelica.SIunits.Frequency f=100000;
+        parameter Modelica.Units.SI.Frequency f=100000;
           parameter Real q=1 "1=left   -1=right";
           final parameter Modelica.Mechanics.MultiBody.Types.Axis y_direction={0,1,0}
           "cartesian coordinate system in y direction -- direction of gravity";
@@ -10353,13 +10320,10 @@ convex contact surface object as parameter String.</p>
                 extent={{-6,-6},{6,6}},
                 rotation=270,
                 origin={50,0})));
-          Modelica.Mechanics.MultiBody.Sensors.TansformRelativeVector
-            tansformRelativeVector(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_b,
-              frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
-          "Transformation cylinder Length-Vektor from BCS-cylinder to BCS-rectangle"
-            annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-                rotation=90,
-                origin={-72,0})));
+        Modelica.Mechanics.MultiBody.Sensors.TransformRelativeVector tansformRelativeVector(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_b, frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a) "Transformation cylinder Length-Vektor from BCS-cylinder to BCS-rectangle" annotation (Placement(transformation(
+              extent={{-6,-6},{6,6}},
+              rotation=90,
+              origin={-72,0})));
           Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a2
           "center of cylinder mass BCS1"
             annotation (Placement(transformation(extent={{-112,50},{-92,70}})));
@@ -10690,7 +10654,7 @@ convex contact surface object as parameter String.</p>
         end MovePointCylinderToCircle;
 
         model ForceCylinderToCircle
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
          parameter Boolean exact=true;
          parameter SI.Frequency f=10000000;
          parameter SI.TranslationalSpringConstant c=100000;
@@ -10715,7 +10679,7 @@ convex contact surface object as parameter String.</p>
          final parameter Modelica.Mechanics.MultiBody.Types.Axis z_direction=cross(x_direction, y_direction);
 
           parameter Boolean Animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
             Color_contact_point_cylinder =                                                {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -11017,7 +10981,7 @@ convex contact surface object as parameter String.</p>
           import VC =
            IdealizedContact.Components.VectorCalculations;
 
-          parameter Modelica.SIunits.Frequency f=100000;
+        parameter Modelica.Units.SI.Frequency f=100000;
           parameter Real q=1 "1=left   -1=right";
           final parameter Modelica.Mechanics.MultiBody.Types.Axis y_direction={0,1,0}
           "cartesian coordinate system in y direction -- direction of gravity";
@@ -11026,7 +10990,7 @@ convex contact surface object as parameter String.</p>
           constant Real pi=Modelica.Constants.pi;
 
           parameter Boolean animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
             Color_contact_point_cylinder1 =                                                {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -11135,22 +11099,14 @@ convex contact surface object as parameter String.</p>
             n2=3,
             n3=3,
             n4=3) annotation (Placement(transformation(extent={{-92,-26},{-80,-14}})));
-          Modelica.Mechanics.MultiBody.Sensors.TansformAbsoluteVector
-            tansformVectorCylinder1(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_a,
-              frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.world)
-          "Transformation length-direction cylinder1 from BCS1 to ICS"
-            annotation (Placement(transformation(
-                extent={{-6,-6},{6,6}},
-                rotation=90,
-                origin={-86,76})));
-          Modelica.Mechanics.MultiBody.Sensors.TansformAbsoluteVector
-            tansformVectorCylinder2(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_a,
-              frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.world)
-          "Transformation length-direction cylinder2 from BCS2 to ICS"
-            annotation (Placement(transformation(
-                extent={{-6,-6},{6,6}},
-                rotation=90,
-                origin={-86,-44})));
+        Modelica.Mechanics.MultiBody.Sensors.TransformAbsoluteVector tansformVectorCylinder1(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_a, frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.world) "Transformation length-direction cylinder1 from BCS1 to ICS" annotation (Placement(transformation(
+              extent={{-6,-6},{6,6}},
+              rotation=90,
+              origin={-86,76})));
+        Modelica.Mechanics.MultiBody.Sensors.TransformAbsoluteVector tansformVectorCylinder2(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_a, frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.world) "Transformation length-direction cylinder2 from BCS2 to ICS" annotation (Placement(transformation(
+              extent={{-6,-6},{6,6}},
+              rotation=90,
+              origin={-86,-44})));
          IdealizedContact.Components.SpecialVisualizers.PointMassVarAnimation                              move_point_cylinder7(
           m=0,
           animation=animation,
@@ -11364,7 +11320,7 @@ convex contact surface object as parameter String.</p>
         end MovePointCylinderToCylinderLine;
 
         model ForceCylinderToCylinderLine
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
 
          parameter SI.Frequency f=10000000;
          parameter SI.TranslationalSpringConstant c=100000;
@@ -11685,7 +11641,7 @@ convex contact surface object as parameter String.</p>
           import VC =
            IdealizedContact.Components.VectorCalculations;
 
-          parameter Modelica.SIunits.Frequency f=100000;
+        parameter Modelica.Units.SI.Frequency f=100000;
           parameter Real q=1 "1=left   -1=right";
           final parameter Modelica.Mechanics.MultiBody.Types.Axis y_direction={0,1,0}
           "cartesian coordinate system in y direction -- direction of gravity";
@@ -11694,7 +11650,7 @@ convex contact surface object as parameter String.</p>
           constant Real pi=Modelica.Constants.pi;
 
           parameter Boolean animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
              Color_contact_point_cylinder1 =                                                {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -11713,22 +11669,14 @@ convex contact surface object as parameter String.</p>
             n2=3,
             n3=3,
             n4=3) annotation (Placement(transformation(extent={{-344,-32},{-332,-20}})));
-          Modelica.Mechanics.MultiBody.Sensors.TansformAbsoluteVector tansformVectorCy1(
-              frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_a,
-              frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.world)
-          "Transformation length-direction cylinder1 from BCS1 to ICS"
-            annotation (Placement(transformation(
-                extent={{-8,-8},{8,8}},
-                rotation=0,
-                origin={-80,60})));
-          Modelica.Mechanics.MultiBody.Sensors.TansformAbsoluteVector tansformVectorCy2(
-              frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_a,
-              frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.world)
-          "Transformation length-direction cylinder2 from BCS2 to ICS"
-            annotation (Placement(transformation(
-                extent={{-8,-8},{8,8}},
-                rotation=0,
-                origin={-80,-60})));
+        Modelica.Mechanics.MultiBody.Sensors.TransformAbsoluteVector tansformVectorCy1(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_a, frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.world) "Transformation length-direction cylinder1 from BCS1 to ICS" annotation (Placement(transformation(
+              extent={{-8,-8},{8,8}},
+              rotation=0,
+              origin={-80,60})));
+        Modelica.Mechanics.MultiBody.Sensors.TransformAbsoluteVector tansformVectorCy2(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.frame_a, frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.world) "Transformation length-direction cylinder2 from BCS2 to ICS" annotation (Placement(transformation(
+              extent={{-8,-8},{8,8}},
+              rotation=0,
+              origin={-80,-60})));
           Modelica.Mechanics.MultiBody.Sensors.AbsolutePosition absP_bt_cy1(
               resolveInFrame=Modelica.Mechanics.MultiBody.Types.ResolveInFrameA.world)
           "absolute position of cy1 bottom resolved in ICS"   annotation (
@@ -12205,7 +12153,7 @@ convex contact surface object as parameter String.</p>
 
         model ForceCylinderToCylinderPoint
         "Force Calculation between contact points for Block MovePointCylinderToCylinderP "
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
 
           parameter SI.Frequency f=10000000;
           parameter SI.TranslationalSpringConstant c=100000;
@@ -12531,14 +12479,12 @@ convex contact surface object as parameter String.</p>
         extends IdealizedContact.Components.PartialContactBlock;
 
     public
-        IdealizedContact.ContactBlock.PlanarContact.Components.MovePointRectangleToRectangle
-                                                                                             geometry[4](
+        IdealizedContact.ContactBlock.PlanarContact.Components.MovePointRectangleToRectangle geometry[4](
         q_L={1,-1,-1,1},
         q_W={1,1,-1,-1},
         f={f,f,f,f},
         exact={exact,exact,exact,exact}) annotation (Placement(transformation(extent={{-42,6},{18,66}})));
-        IdealizedContact.ContactBlock.PlanarContact.Components.ForceRectangleToRectangle
-                                                                                         force[4](
+        IdealizedContact.ContactBlock.PlanarContact.Components.ForceRectangleToRectangle force[4](
         d={dampingCoefficient,dampingCoefficient,dampingCoefficient,dampingCoefficient},
         n1={N1,N1,N1,N1},
         n2={N2,N2,N2,N2},
@@ -12713,11 +12659,9 @@ convex contact surface object as parameter String.</p>
         extends IdealizedContact.Components.PartialContactBlock;
 
     public
-        IdealizedContact.ContactBlock.PlanarContact.Components.MovePointCircleToRectangle
-                                                                                          geometry(f=f, exact=exact)
+        IdealizedContact.ContactBlock.PlanarContact.Components.MovePointCircleToRectangle geometry(f=f, exact=exact)
         annotation (Placement(transformation(extent={{-40,12},{20,72}})));
-        IdealizedContact.ContactBlock.PlanarContact.Components.ForceCircleToRectangle
-                                                                                      force[4](
+        IdealizedContact.ContactBlock.PlanarContact.Components.ForceCircleToRectangle force[4](
         d={dampingCoefficient,dampingCoefficient,dampingCoefficient,dampingCoefficient},
         n1={N1,N1,N1,N1},
         n2={N2,N2,N2,N2},
@@ -12852,7 +12796,7 @@ convex contact surface object as parameter String.</p>
         model MovePointRectangleToRectangle
 
           parameter Boolean exact=true;
-          parameter Modelica.SIunits.Frequency f=10000000;
+        parameter Modelica.Units.SI.Frequency f=10000000;
           parameter Real q_L=1;
           parameter Real q_W=1;
           //parameter Real q_H=1;
@@ -12927,12 +12871,10 @@ convex contact surface object as parameter String.</p>
             otprojektion
             annotation (Placement(transformation(extent={{80,80},{100,100}})));
       public
-          Modelica.Mechanics.MultiBody.Sensors.TansformRelativeVector
-            tansformRelativeVector(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a,
-              frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_b)
-            annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-                rotation=90,
-                origin={-66,-2})));
+        Modelica.Mechanics.MultiBody.Sensors.TransformRelativeVector tansformRelativeVector(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a, frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_b) annotation (Placement(transformation(
+              extent={{-6,-6},{6,6}},
+              rotation=90,
+              origin={-66,-2})));
           Modelica.Blocks.Routing.DeMultiplex4 deMultiplex3(
             n1=3,
             n2=3,
@@ -13020,7 +12962,7 @@ convex contact surface object as parameter String.</p>
 
         model ForceRectangleToRectangle
 
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
           parameter Boolean exact=true;
           parameter SI.Frequency f=10000000;
           parameter SI.TranslationalSpringConstant c=600000000;
@@ -13046,7 +12988,7 @@ convex contact surface object as parameter String.</p>
           final parameter Modelica.Mechanics.MultiBody.Types.Axis z_direction=cross(x_direction, y_direction);
 
           parameter Boolean Animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
             Color_contact_point_rectangle1 =                                            {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -13406,7 +13348,7 @@ convex contact surface object as parameter String.</p>
         model MovePointCircleToRectangle
 
           parameter Boolean exact=true;
-          parameter Modelica.SIunits.Frequency f=10000000;
+        parameter Modelica.Units.SI.Frequency f=10000000;
           final parameter Modelica.Mechanics.MultiBody.Types.Axis y_direction={0,1,0}
           "cartesian coordinate system in y direction -- direction of gravity";
           final parameter Modelica.Mechanics.MultiBody.Types.Axis x_direction={1,0,0}
@@ -13464,13 +13406,10 @@ convex contact surface object as parameter String.</p>
             angleWDw(t=0)
           "angle between Vector_Dw_otlwr and Width direction Rectangle"
             annotation (Placement(transformation(extent={{-20,80},{0,100}})));
-          Modelica.Mechanics.MultiBody.Sensors.TansformRelativeVector
-            tansformRelativeVector1(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_b,
-              frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a)
-          "Vektor Transformation from BCS-rectangle to BCS-circle"
-            annotation (Placement(transformation(extent={{-6,-6},{6,6}},
-                rotation=90,
-                origin={-60,6})));
+        Modelica.Mechanics.MultiBody.Sensors.TransformRelativeVector tansformRelativeVector1(frame_r_in=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_b, frame_r_out=Modelica.Mechanics.MultiBody.Types.ResolveInFrameAB.frame_a) "Vektor Transformation from BCS-rectangle to BCS-circle" annotation (Placement(transformation(
+              extent={{-6,-6},{6,6}},
+              rotation=90,
+              origin={-60,6})));
           IdealizedContact.Components.Utilities.variableRevol2  variableRevol_1
             annotation (Placement(transformation(extent={{-52,52},{-36,68}})));
           Modelica.Mechanics.Rotational.Sources.Position angle_1(
@@ -13626,7 +13565,7 @@ convex contact surface object as parameter String.</p>
 
         model ForceCircleToRectangle
 
-          import SI = Modelica.SIunits;
+          import      Modelica.Units.SI;
           parameter Boolean exact=true;
           parameter SI.Frequency f=10000000;
           parameter SI.TranslationalSpringConstant c=10000;
@@ -13653,7 +13592,7 @@ convex contact surface object as parameter String.</p>
           final parameter Modelica.Mechanics.MultiBody.Types.Axis z_direction=cross(x_direction, y_direction);
 
           parameter Boolean Animation=true;
-          parameter Modelica.SIunits.Radius radiusContactPoint=0.005;
+        parameter Modelica.Units.SI.Radius radiusContactPoint=0.005;
           parameter Modelica.Mechanics.MultiBody.Types.Color
             Color_contact_point_rectangle =                                                {0,180,0};
           parameter Modelica.Mechanics.MultiBody.Types.Color
@@ -14058,7 +13997,7 @@ convex contact surface object as parameter String.</p>
         model SubsystemMovePointCircleToRectangle
 
           parameter Boolean exact=true;
-          parameter Modelica.SIunits.Frequency f=10000000;
+        parameter Modelica.Units.SI.Frequency f=10000000;
           parameter Real q_L=1;
           parameter Real q_W=1;
           parameter Real p_L=1;
@@ -14391,7 +14330,7 @@ convex contact surface object as parameter String.</p>
       block intersectionOfTwoLinesBlock
         parameter Real eps = 1000*Modelica.Constants.eps;
         parameter Real inf = Modelica.Constants.inf;
-        parameter Modelica.SIunits.Frequency f=100000;
+      parameter Modelica.Units.SI.Frequency f=100000;
       Modelica.Blocks.Interfaces.RealInput c[3] "start point line 1"
                                                       annotation (Placement(transformation(extent={{-120,70},
                   {-80,110}})));
@@ -14453,7 +14392,7 @@ convex contact surface object as parameter String.</p>
       block LimiterBlockReferenceIn
       "Limit the range of a signal with bessel filter and input signal as reference"
          extends Modelica.Blocks.Interfaces.SISO;
-         parameter Modelica.SIunits.Frequency f=100000;
+      parameter Modelica.Units.SI.Frequency f=100000;
 
         Modelica.Blocks.Continuous.Filter filter(
           filterType=Modelica.Blocks.Types.FilterType.LowPass,
@@ -14539,7 +14478,7 @@ convex contact surface object as parameter String.</p>
          parameter Real uMax= 1 "Upper limits of input signals";
          parameter Real uMin= Modelica.Constants.eps
         "Lower limits of input signals";
-         parameter Modelica.SIunits.Frequency f=100000;
+      parameter Modelica.Units.SI.Frequency f=100000;
 
         Modelica.Blocks.Continuous.Filter filter(
           filterType=Modelica.Blocks.Types.FilterType.LowPass,
@@ -14874,7 +14813,7 @@ convex contact surface object as parameter String.</p>
       model variablePrism1
       "Prismatic joint (1 translational degree-of-freedom, 2 potential states, optional axis flange)"
 
-        import SI = Modelica.SIunits;
+        import      Modelica.Units.SI;
         extends Modelica.Mechanics.MultiBody.Interfaces.PartialElementaryJoint;
         Real e[3] "Unit vector in direction of prismatic axis n";
         Real eps = 100*Modelica.Constants.eps;
@@ -14979,7 +14918,7 @@ convex contact surface object as parameter String.</p>
       model variableRevol1
       "Revolute joint (1 rotational degree-of-freedom, 2 potential states, optional axis flange)"
 
-        import SI = Modelica.SIunits;
+        import      Modelica.Units.SI;
 
         Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a
         "Coordinate system fixed to the joint with one cut-force and cut-torque"
@@ -15096,7 +15035,7 @@ convex contact surface object as parameter String.</p>
       model variablePrism2
       "Prismatic joint (1 translational degree-of-freedom, 2 potential states, optional axis flange)"
 
-        import SI = Modelica.SIunits;
+        import      Modelica.Units.SI;
         extends Modelica.Mechanics.MultiBody.Interfaces.PartialElementaryJoint;
         Modelica.Mechanics.Translational.Interfaces.Flange_a axis
         "1-dim. translational flange that drives the joint"
@@ -15233,7 +15172,7 @@ Possible reasons:
       model variableRevol2
       "Revolute joint (1 rotational degree-of-freedom, 2 potential states, optional axis flange)"
 
-        import SI = Modelica.SIunits;
+        import      Modelica.Units.SI;
 
         Modelica.Mechanics.Rotational.Interfaces.Flange_a axis
         "1-dim. rotational flange that drives the joint"
@@ -15429,7 +15368,7 @@ Possible reasons:
     extends Modelica.Icons.BasesPackage;
       model FixedShapeVarAnimation
       "Visualizing an elementary shape with dynamically varying shape attributes (has one frame connector)"
-        import SI = Modelica.SIunits;
+        import      Modelica.Units.SI;
         import Modelica.Mechanics.MultiBody.Types;
         extends Modelica.Mechanics.MultiBody.Interfaces.PartialVisualizer;
 
@@ -15534,7 +15473,7 @@ Possible reasons:
       model PointMassVarAnimation
       "Rigid body where body rotation and inertia tensor is neglected (6 potential states)"
 
-        import SI = Modelica.SIunits;
+        import      Modelica.Units.SI;
         import Modelica.Mechanics.MultiBody.Types;
         Modelica.Mechanics.MultiBody.Interfaces.Frame_a frame_a
         "Coordinate system fixed at center of mass point"
@@ -15654,7 +15593,7 @@ the only case where this is done.
     end SpecialVisualizers;
 
     partial model PartialContactBlock "Partial model for the contact blocks"
-      import SI = Modelica.SIunits;
+      import      Modelica.Units.SI;
       outer parameter SI.TranslationalSpringConstant springCoefficient;
       outer parameter SI.TranslationalDampingConstant dampingCoefficient;
       outer parameter Real n1;
@@ -15670,7 +15609,7 @@ the only case where this is done.
       outer parameter SI.Frequency f;
       outer parameter Boolean exact;
       outer parameter Boolean animation;
-      outer parameter Modelica.SIunits.Radius radiusContactPoint;
+    outer parameter Modelica.Units.SI.Radius radiusContactPoint;
       outer parameter Modelica.Mechanics.MultiBody.Types.Color colorContactPoints1;
       outer parameter Modelica.Mechanics.MultiBody.Types.Color colorContactPoints2;
 
@@ -15809,8 +15748,7 @@ the only case where this is done.
 </html>"));
     end Contact_b;
 
-    connector ShapeTypeInput =   input
-      IdealizedContact.ContactSurfaces.Types.ContactShapeType
+    connector ShapeTypeInput =   input IdealizedContact.ContactSurfaces.Types.ContactShapeType
     "'input ContactShapeType' as connector"
       annotation (defaultComponentName="contactShapeType",
       Icon(graphics={Rectangle(
@@ -15846,8 +15784,7 @@ the only case where this is done.
 Connector with one input signal of type IdealizedContact.ContactSurfaces.Types.ContactShapeType.
 </p>
 </html>"));
-    connector ShapeTypeOutput =  output
-      IdealizedContact.ContactSurfaces.Types.ContactShapeType
+    connector ShapeTypeOutput =  output IdealizedContact.ContactSurfaces.Types.ContactShapeType
     "'output ContactShapeType' as connector"
       annotation (defaultComponentName="contactShapeType",
       Icon(graphics={Rectangle(
@@ -15887,7 +15824,7 @@ Connector with one input signal of type IdealizedContact.ContactSurfaces.Types.C
   end Interfaces;
 
 
-  annotation (version="0.2.0", uses(Modelica(version="3.2.1")), preferredView="info",
+  annotation (version="0.2.1", uses(Modelica(version="4.0.0")), preferredView="info",
   Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
       graphics={
       Rectangle(
@@ -15916,5 +15853,6 @@ Connector with one input signal of type IdealizedContact.ContactSurfaces.Types.C
         lineColor={0,0,0})}),
     Documentation(info="<html>
 <p>The Idealized Contact Library is ready-to-use contact library for Modelica. It comprises surface definitions for simple contact surfaces, which can be connected with the multibodies of the Modelica Standard Library. It implements a force-based approach between single contact points. The contact forces are calculated in configurable non-central contact blocks. </p>
-</html>"));
+</html>"),
+  conversion(from(version="0.2.0", script="modelica://IdealizedContact/Resources/ConvertFromIdealizedContact_0.2.0.mos")));
 end IdealizedContact;
